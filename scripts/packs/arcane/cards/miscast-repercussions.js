@@ -25,9 +25,8 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "serious",
     impact: "light",
     fallbackTitle: "Feedback Pulse",
-    fallbackDescription: "The target feels the spell's return path and learns its rhythm. It gains a +1 circumstance bonus to AC against your next spell attack before the end of your next turn. The benefit is consumed when that attack resolves.",
-    weight: 2,
-    tags: ["target-defense", "spell-attack", "one-use", "manual"]
+    fallbackDescription: "The failed spell rebounds as a visible pulse in the air around you. The original target chooses one unoccupied 5-foot space adjacent to you that it can perceive. Until the start of your next turn, that space is difficult terrain for you, and creatures gain standard cover against your spell attacks when the attack's line passes through it. If no such space can be chosen, you cannot Step until the start of your next turn.",
+    tags: ["feedback-zone", "target-choice", "difficult-terrain", "standard-cover", "step-restriction", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-004-spellshock",
@@ -60,11 +59,10 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     id: "mr-007-lingering-syllable",
     localizationKey: "LingeringSyllable",
     tone: "neutral",
-    impact: "light",
+    impact: "moderate",
     fallbackTitle: "Lingering Syllable",
-    fallbackDescription: "One fragment of the incantation refuses to stop repeating. Until the start of your next turn, every creature that can hear you knows which space you occupy. This does not remove concealment or invisibility, but it prevents your location from being acoustically uncertain.",
-    weight: 2,
-    tags: ["auditory", "location", "stealth", "manual"]
+    fallbackDescription: "One fragment of the incantation refuses to stop repeating. Until the start of your next turn, creatures that can hear the syllable may use reactions triggered by your movement, manipulate actions, or Cast a Spell actions even if they cannot see you. They still need line of effect and must succeed at any flat check normally required to affect a hidden or concealed creature. The syllable does not make you observed.",
+    tags: ["auditory", "reaction-trigger", "movement", "manipulate", "cast-a-spell", "stealth", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-008-crossed-intent",
@@ -72,8 +70,8 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "light",
     fallbackTitle: "Crossed Intent",
-    fallbackDescription: "The spell still expects the target to be somewhere else. Your next spell attack against the same target before the end of your next turn takes a -1 circumstance penalty unless you have moved to a different space since the miscast. The repercussion is consumed only when it applies to an attack.",
-    tags: ["spell-attack", "positioning", "circumstance-penalty", "conditional-consumption", "manual"]
+    fallbackDescription: "The spell's purpose remains crossed with its target. The next spell you Cast before the end of your next turn must either be a different spell from the failed spell or exclude the original target from its targets and area. If it would repeat both the spell and the target, you must first spend a single action with the concentrate trait to realign your intent. The repercussion ends when you Cast that next spell or realign it.",
+    tags: ["spell-choice", "target-selection", "concentrate", "action-tax", "one-use", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-009-forced-recalculation",
@@ -109,7 +107,7 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Unstable Casting Ground",
-    fallbackDescription: "The space beneath you continues to hum with the failed spell. Until the start of your next turn, the first time you Cast a Spell without first leaving that space, the original target may Step as a free action after the spell resolves. Moving to a different space ends the repercussion without triggering it.",
+    fallbackDescription: "The space beneath you continues to hum with the failed spell. Until the end of your next turn, the first time you Cast a Spell without first leaving that space, the original target may Step as a free action after the spell resolves. Moving to a different space ends the repercussion without triggering it.",
     tags: ["positioning", "target-movement", "cast-a-spell", "conditional", "manual"]
   }),
   defineMiscastRepercussion({
@@ -137,8 +135,8 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Folded Distance",
-    fallbackDescription: "For a moment, the distance to the target folds the wrong way. Until the end of your next turn, the original target counts as 10 feet farther away when determining the range of your next spell attack against it. The repercussion is consumed when that spell attack is declared, even if the altered distance places the target out of range.",
-    tags: ["range", "spell-attack", "target-specific", "one-use", "manual"]
+    fallbackDescription: "For a moment, the distance to the target folds the wrong way. Until the end of your next turn, the original target counts as 10 feet farther away when determining whether it is within range for your next spell attack against it. Check the altered distance before you commit the action or expend resources. If the target is out of range, you may choose another eligible target or another action, and the repercussion remains. It is consumed only when you make a legal spell attack against the original target using the altered distance.",
+    tags: ["range", "spell-attack", "target-specific", "legal-target", "conditional-consumption", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-016-afterimage",
@@ -155,7 +153,7 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Luminous Outline",
-    fallbackDescription: "Residual magic sketches your outline in light, ash, frost, shadow, or some equally unhelpful medium. Until the start of your next turn, the original target always knows which space you occupy, and you cannot become hidden or undetected from it. Concealment and invisibility still function normally.",
+    fallbackDescription: "Residual magic sketches your outline in light, ash, frost, shadow, or some equally unhelpful medium. Until the start of your next turn, the original target always knows which space you occupy, and you cannot become undetected from it. Concealment or invisibility can still make you concealed or hidden and impose their normal flat checks.",
     weight: 2,
     tags: ["visibility", "location", "stealth", "target-specific", "manual"]
   }),
@@ -163,10 +161,10 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     id: "mr-018-echoing-presence",
     localizationKey: "EchoingPresence",
     tone: "serious",
-    impact: "light",
+    impact: "moderate",
     fallbackTitle: "Echoing Presence",
-    fallbackDescription: "Your magical presence echoes from several directions, but never quietly. Until the start of your next turn, creatures that can hear you gain a +2 circumstance bonus to Seek you. On a failed, but not critically failed, Seek attempt, they still learn the direction of your space.",
-    tags: ["auditory", "seek", "stealth", "circumstance-bonus", "manual"]
+    fallbackDescription: "An echo of you remains in the space where the spell failed. Until the end of your next turn, when you next make a spell attack, its target chooses whether range, cover, and line of effect are determined from your current space or the echo's space. It must choose an origin from which the attack is legal; if both are legal, it chooses either. If neither is legal, choose another eligible target or another action. You may spend a single action with the concentrate trait before the attack to collapse the echo. The repercussion ends after an origin is chosen or the echo is collapsed.",
+    tags: ["echo", "false-origin", "range", "cover", "line-of-effect", "target-choice", "concentrate", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-019-colors-out-of-order",
@@ -213,8 +211,8 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Delayed Spark",
-    fallbackDescription: "A fragment of the failed spell remains behind, waiting for its cue. At the start of your next turn, before you take your first action, you must either Step, spend a single action with the concentrate trait to disperse it, or let it flare. If it flares, your first spell attack that turn takes a -1 circumstance penalty, and every creature that can see the flare knows your space.",
-    tags: ["delayed", "choice", "concentrate", "spell-attack", "location", "manual"]
+    fallbackDescription: "A fragment of the failed spell remains behind, waiting for its cue. At the start of your next turn, your first action must be a Step or a single action with the concentrate trait used to disperse the spark. If you take any other first action, the spark flares before that action resolves. If it flares, your first spell attack that turn takes a -1 circumstance penalty, and every creature that can see the flare knows your space. The repercussion then ends.",
+    tags: ["delayed", "first-action", "choice", "concentrate", "spell-attack", "location", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-024-spell-snag",
@@ -231,8 +229,8 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Unfinished Ending",
-    fallbackDescription: "The spell's final structure keeps asking to be completed. Until the end of your next turn, the first time you use an action with the concentrate trait, your immediately following action cannot also have the concentrate trait. You may instead spend a single action with the concentrate trait solely to finish the ending; doing so ends the repercussion without restricting the following action.",
-    tags: ["concentrate", "action-sequencing", "stabilization", "one-use", "manual"]
+    fallbackDescription: "The spell's final gesture freezes halfway complete. Until the end of your next turn, one hand or equivalent casting appendage of your choice is occupied maintaining the unfinished pattern. It may continue holding an item already in it, but it cannot manipulate that item, pick up or receive another item, satisfy a free-hand requirement, or be used for an action that requires two hands. You may spend a single action with the manipulate trait to complete the gesture and end the repercussion. If you have no relevant hand or appendage, the first action with the manipulate trait you use before then requires one additional action instead, after which the repercussion ends.",
+    tags: ["unfinished-pattern", "occupied-hand", "free-hand", "manipulate", "action-cost", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-026-shadow-arrives-late",
@@ -259,18 +257,17 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "neutral",
     impact: "strong",
     fallbackTitle: "Familiar Geometry",
-    fallbackDescription: "The surroundings snap into one impossibly perfect line. Draw a line from the center of your space through the center of the original target's space and extend it 30 feet in both directions. Until the start of your next turn, creatures making attacks entirely along that line ignore lesser cover. Standard and greater cover still apply. This benefit is available to allies and enemies alike.",
-    tags: ["geometry", "firing-line", "lesser-cover", "all-creatures", "strong", "manual"]
+    fallbackDescription: "The surroundings snap into a 5-foot-wide corridor centered on a line from your space through the original target's space and extending 30 feet beyond both spaces. Until the start of your next turn, an attack ignores lesser cover if the attacker and target each occupy at least one square in the corridor and the attack's line of effect remains inside it. Standard and greater cover still apply. This benefit is available to allies and enemies alike.",
+    tags: ["geometry", "corridor", "firing-line", "lesser-cover", "all-creatures", "strong", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-029-applause-from-nowhere",
     localizationKey: "ApplauseFromNowhere",
     tone: "humorous",
     impact: "light",
-    fallbackTitle: "Applause from Nowhere",
-    fallbackDescription: "An unseen audience responds with one round of impeccably timed, deeply unhelpful applause. Until the start of your next turn, you cannot Hide or Create a Diversion from creatures that can hear the applause, and the first enemy to attempt to Demoralize you gains a +1 circumstance bonus to that check. The audience offers no further notes.",
-    weight: 2,
-    tags: ["auditory", "stealth", "demoralize", "circumstance-bonus", "humorous", "manual"]
+    fallbackTitle: "Unsolicited Footnotes",
+    fallbackDescription: "Glowing runes orbit you, labeling every gesture and correcting your technique in aggressively tidy script. Until the start of your next turn, you cannot Hide or Create a Diversion from creatures that can see the annotations, and the first enemy to attempt to Demoralize you gains a +1 circumstance bonus to that check. The notes cite no sources.",
+    tags: ["visual", "annotations", "stealth", "demoralize", "circumstance-bonus", "humorous", "manual"]
   }),
   defineMiscastRepercussion({
     id: "mr-030-reality-takes-notes",
@@ -278,7 +275,7 @@ export const MISCAST_REPERCUSSION_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Reality Takes Notes",
-    fallbackDescription: "Runes, sparks, or whispering marks record the failed spell's target, angle, and cadence. Before the end of your next turn, if you repeat the same spell attack against the original target, it may use its reaction after you select it but before the attack roll to Step. If the Step makes it an invalid target, you may choose another eligible target for the same spell attack. The record then vanishes whether or not the reaction was used.",
-    tags: ["prediction", "repeat-spell", "target-reaction", "step", "retarget", "manual"]
-  })
+    fallbackDescription: "Runes, sparks, or whispering marks record the failed spell's target, angle, and cadence. Before the end of your next turn, if you repeat the same spell attack against the original target, it may use its reaction after you select it but before the attack roll to Raise a Shield, Take Cover, or Drop Prone. If none of those options is available, the record grants it lesser cover against that attack. The record then vanishes whether or not the reaction was used.",
+    tags: ["prediction", "repeat-spell", "target-reaction", "raise-shield", "take-cover", "drop-prone", "lesser-cover", "manual"]
+  }),
 ]);

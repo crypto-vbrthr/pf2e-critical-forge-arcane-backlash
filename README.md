@@ -6,13 +6,13 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.1.2
+## Version 0.1.3
 
-The initial release contains one optional pack:
+The current release contains one optional pack:
 
 - **Miscast Repercussions** - 30 cards for critical failures on spell attacks.
 
-The complete 30-card draft explores magical recoil, disrupted casting sequences, warped space and range, revealed magical signatures, unstable terrain, distorted perception, frayed spell patterns, delayed residue, impossible geometry, and reality itself becoming an uninvited critic.
+The mechanically reviewed 30-card pack explores magical recoil, disrupted casting sequences, warped space and range, revealed magical signatures, unstable terrain, distorted perception, frayed spell patterns, delayed residue, impossible geometry, and reality itself becoming an uninvited critic.
 
 ## Installation
 
@@ -52,11 +52,11 @@ Manual resolution is intentional. Each card is written to be applied in one or t
 
 ## Planned Packs
 
-- Miscast Repercussions - 30/30 (mechanical review pending)
+- Miscast Repercussions - 30/30 (mechanical review passed)
 - Defiant Reversals - planned
 - Spell Attack Surges - planned
 - Overwhelming Resonance - planned
 
 Each pack grows in blocks of ten cards. At 30 cards, it receives a full mechanical review for redundancy, rules clarity, balance, and pack identity.
 
-See [docs/PACKS.md](docs/PACKS.md) and [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md).
+See [docs/PACKS.md](docs/PACKS.md), [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md), and [docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md](docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md).

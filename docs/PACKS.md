@@ -10,7 +10,7 @@ Its cards focus on magical resonance, unstable patterns, warped perception, disr
 
 ## Miscast Repercussions
 
-**Status:** 30 of 30 cards - mechanical review pending
+**Status:** 30 of 30 cards - mechanical review passed
 
 **Trigger:** Critical failure on a spell attack
 
@@ -22,14 +22,14 @@ Its cards focus on magical resonance, unstable patterns, warped perception, disr
 
 - magical recoil and forced repositioning
 - action-sequence restrictions
-- target-specific defenses against the caster's next spell attack
-- revealed casting position or magical signature
+- target-chosen feedback zones and predictive defenses
+- audible reaction windows, visible annotations, and magical signatures
 - temporary difficult terrain or disturbed surroundings
 - optional stabilization or recalculation actions
 - warped range, false images, and selective perception
 - Seek opportunities and temporary magical tells
 - frayed spell patterns, delayed residue, and unfinished magical structures
-- impossible geometry, audible anomalies, and predictive magical echoes
+- impossible geometry, false spell origins, unfinished gestures, and predictive magical records
 
 **Not included:**
 

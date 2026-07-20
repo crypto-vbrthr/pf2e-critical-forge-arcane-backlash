@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.3
+
+- Applied the full mechanical review of Miscast Repercussions.
+- Redesigned MR-003, MR-007, MR-008, MR-018, MR-025, MR-029, and MR-030 to remove redundant defense bonuses, location-only auditory effects, duplicate action sequencing, repeated applause, and duplicate reactive Steps.
+- Renamed the displayed title of MR-029 from **Applause from Nowhere** to **Unsolicited Footnotes** while retaining its stable card ID.
+- Corrected MR-012 timing, MR-015 legal-target handling, MR-017 invisibility wording, MR-023 first-action timing, and MR-028 grid geometry.
+- Added `docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md`.
+- Updated English and German localization, pack documentation, the Card Bible, and validation tests.
+- Marked Miscast Repercussions as mechanically reviewed and passed.
+
 ## 0.1.2
 
 - Added MR-021 through MR-030 to Miscast Repercussions.

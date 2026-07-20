@@ -25,7 +25,7 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.1.2");
+assert.equal(manifest.version, "0.1.3");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) => entry.id === "pf2e-critical-forge"));
@@ -39,7 +39,7 @@ assert.equal(disabled[0].id, ARCANE_PACK_IDS.miscastRepercussions);
 assert.equal(disabled[0].enabled, false);
 assert.equal(enabled[0].enabled, true);
 assert.equal(disabled[0].cards.length, 30);
-assert.equal(disabled[0].version, "0.1.2");
+assert.equal(disabled[0].version, "0.1.3");
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
 
 for (const dictionary of [de, en]) {
@@ -105,8 +105,6 @@ assert.deepEqual(slugs, [
 ]);
 
 const bySlug = new Map(disabled[0].cards.map((card) => [card.id.split(".").at(-1), card]));
-assert.equal(bySlug.get("mr-003-feedback-pulse").weight, 2);
-assert.equal(bySlug.get("mr-007-lingering-syllable").weight, 2);
 assert.equal(bySlug.get("mr-010-empty-follow-through").weight, 2);
 assert.equal(bySlug.get("mr-010-empty-follow-through").tone, "humorous");
 assert.ok(bySlug.get("mr-001-arcane-recoil").tags.includes("forced-movement"));
@@ -125,22 +123,33 @@ assert.ok(bySlug.get("mr-012-unstable-casting-ground").tags.includes("cast-a-spe
 assert.ok(bySlug.get("mr-014-targeted-by-the-echo").tags.includes("seek"));
 assert.ok(bySlug.get("mr-015-folded-distance").tags.includes("range"));
 assert.ok(bySlug.get("mr-016-afterimage").tags.includes("flat-check"));
-assert.ok(bySlug.get("mr-018-echoing-presence").tags.includes("circumstance-bonus"));
+assert.ok(bySlug.get("mr-018-echoing-presence").tags.includes("false-origin"));
 assert.ok(bySlug.get("mr-019-colors-out-of-order").tags.includes("concealment"));
 assert.ok(bySlug.get("mr-020-magical-tell").tags.includes("saving-throw"));
 
 assert.equal(bySlug.get("mr-022-wrong-shape").weight, 2);
 assert.equal(bySlug.get("mr-027-voice-of-the-wrong-element").weight, 2);
-assert.equal(bySlug.get("mr-029-applause-from-nowhere").weight, 2);
 assert.equal(bySlug.get("mr-028-familiar-geometry").impact, "strong");
 assert.equal(bySlug.get("mr-027-voice-of-the-wrong-element").tone, "humorous");
 assert.equal(bySlug.get("mr-029-applause-from-nowhere").tone, "humorous");
 assert.ok(bySlug.get("mr-021-frayed-pattern").tags.includes("step-restriction"));
 assert.ok(bySlug.get("mr-023-delayed-spark").tags.includes("delayed"));
 assert.ok(bySlug.get("mr-024-spell-snag").tags.includes("magical-link"));
-assert.ok(bySlug.get("mr-025-unfinished-ending").tags.includes("action-sequencing"));
+assert.ok(bySlug.get("mr-025-unfinished-ending").tags.includes("occupied-hand"));
 assert.ok(bySlug.get("mr-026-shadow-arrives-late").tags.includes("retarget"));
 assert.ok(bySlug.get("mr-028-familiar-geometry").tags.includes("firing-line"));
 assert.ok(bySlug.get("mr-030-reality-takes-notes").tags.includes("repeat-spell"));
+assert.ok(bySlug.get("mr-003-feedback-pulse").tags.includes("feedback-zone"));
+assert.ok(bySlug.get("mr-007-lingering-syllable").tags.includes("reaction-trigger"));
+assert.ok(bySlug.get("mr-008-crossed-intent").tags.includes("spell-choice"));
+assert.ok(bySlug.get("mr-029-applause-from-nowhere").tags.includes("annotations"));
+assert.ok(bySlug.get("mr-030-reality-takes-notes").tags.includes("drop-prone"));
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.1.2 validation passed.");
+const impactCounts = disabled[0].cards.reduce((counts, card) => {
+  counts[card.impact] = (counts[card.impact] ?? 0) + 1;
+  return counts;
+}, {});
+assert.deepEqual(impactCounts, { moderate: 18, light: 10, strong: 2 });
+assert.equal(disabled[0].cards.filter((card) => card.weight === 2).length, 6);
+
+console.log("PF2E Critical Forge: Arcane Backlash 0.1.3 validation passed.");

@@ -6,13 +6,13 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.1.0
+## Version 0.1.2
 
 The initial release contains one optional pack:
 
-- **Miscast Repercussions** - 10 cards for critical failures on spell attacks.
+- **Miscast Repercussions** - 30 cards for critical failures on spell attacks.
 
-The first block focuses on magical recoil, disrupted casting sequences, revealed magical signatures, unstable terrain, and target-specific feedback.
+The complete 30-card draft explores magical recoil, disrupted casting sequences, warped space and range, revealed magical signatures, unstable terrain, distorted perception, frayed spell patterns, delayed residue, impossible geometry, and reality itself becoming an uninvited critic.
 
 ## Installation
 
@@ -46,13 +46,13 @@ The pack does not include:
 
 ## Automation
 
-All first-block cards are resolved manually. Their effects depend on immediate movement, one-use target-specific bonuses, action sequencing, temporary reaction restrictions, environmental terrain, or conditional action costs that the current Effect Engine does not model precisely.
+All current cards are resolved manually. Their effects depend on immediate movement, one-use target-specific bonuses, action sequencing, temporary reaction restrictions, environmental terrain, or conditional action costs that the current Effect Engine does not model precisely.
 
 Manual resolution is intentional. Each card is written to be applied in one or two quick rulings without additional bookkeeping.
 
 ## Planned Packs
 
-- Miscast Repercussions - 10/30
+- Miscast Repercussions - 30/30 (mechanical review pending)
 - Defiant Reversals - planned
 - Spell Attack Surges - planned
 - Overwhelming Resonance - planned

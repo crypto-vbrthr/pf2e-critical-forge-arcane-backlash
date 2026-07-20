@@ -52,6 +52,86 @@
       "EmptyFollowThrough": {
         "Title": "Empty Follow-Through",
         "Description": "Your body completes a magnificent casting motion for a spell that has already left the building. Your next action cannot include a spell attack. If you have no actions remaining this turn, this restriction applies to your first action on your next turn."
+      },
+      "RealityPushesBack": {
+        "Title": "Reality Pushes Back",
+        "Description": "The spell distorts the space beside you instead of crossing it cleanly. The GM chooses an unoccupied space adjacent to you that is neither closer to nor farther from the target. You are pushed 5 feet into that space, if possible. If no such space exists, the target gains a +1 circumstance bonus to AC against your next spell attack before the end of your next turn."
+      },
+      "UnstableCastingGround": {
+        "Title": "Unstable Casting Ground",
+        "Description": "The space beneath you continues to hum with the failed spell. Until the start of your next turn, the first time you Cast a Spell without first leaving that space, the original target may Step as a free action after the spell resolves. Moving to a different space ends the repercussion without triggering it."
+      },
+      "CollapsedAngle": {
+        "Title": "Collapsed Angle",
+        "Description": "The failed trajectory leaves a magical blind angle behind. The original target gains lesser cover against your next spell attack made from your current space before the end of your next turn. The repercussion is consumed only when that cover applies; moving to another space ends it harmlessly."
+      },
+      "TargetedByTheEcho": {
+        "Title": "Targeted by the Echo",
+        "Description": "The returning resonance points straight back to you. The target may immediately Seek as a free action, and the area it searches must include your space. If the target already observes you, it may instead Step toward available cover."
+      },
+      "FoldedDistance": {
+        "Title": "Folded Distance",
+        "Description": "For a moment, the distance to the target folds the wrong way. Until the end of your next turn, the original target counts as 10 feet farther away when determining the range of your next spell attack against it. The repercussion is consumed when that spell attack is declared, even if the altered distance places the target out of range."
+      },
+      "Afterimage": {
+        "Title": "Afterimage",
+        "Description": "The spell leaves the target half a heartbeat away from its own image. Your next attack against the original target before the end of your next turn must pass a DC 5 flat check as though the target were concealed. If another effect already requires an equal or higher flat check, this repercussion does not add a second check and is not consumed."
+      },
+      "LuminousOutline": {
+        "Title": "Luminous Outline",
+        "Description": "Residual magic sketches your outline in light, ash, frost, shadow, or some equally unhelpful medium. Until the start of your next turn, the original target always knows which space you occupy, and you cannot become hidden or undetected from it. Concealment and invisibility still function normally."
+      },
+      "EchoingPresence": {
+        "Title": "Echoing Presence",
+        "Description": "Your magical presence echoes from several directions, but never quietly. Until the start of your next turn, creatures that can hear you gain a +2 circumstance bonus to Seek you. On a failed, but not critically failed, Seek attempt, they still learn the direction of your space."
+      },
+      "ColorsOutOfOrder": {
+        "Title": "Colors Out of Order",
+        "Description": "The world keeps the target in focus and rearranges everything else. Until the start of your next turn, every creature other than the original target is concealed from you. You may spend a single action with the concentrate trait to restore the proper order and end this repercussion early."
+      },
+      "MagicalTell": {
+        "Title": "Magical Tell",
+        "Description": "The failure exposes a repeatable flaw in your technique. Before the end of your next turn, the original target gains a +1 circumstance bonus to AC or to a saving throw against the next spell you cast that includes it. The benefit is consumed only when it modifies that spell's defense."
+      },
+      "FrayedPattern": {
+        "Title": "Frayed Pattern",
+        "Description": "The spell unravels into loose magical threads around your current space. Until the start of your next turn, the first 5 feet of movement you make from that space costs 5 additional feet, and you cannot Step from it. Leaving the space ends the repercussion."
+      },
+      "WrongShape": {
+        "Title": "Wrong Shape",
+        "Description": "The spell briefly forms a shield where an attack shape should have been. Until the start of your next turn, the original target provides lesser cover against your spell attacks to every creature adjacent to it, regardless of relative size. The target does not gain this cover itself."
+      },
+      "DelayedSpark": {
+        "Title": "Delayed Spark",
+        "Description": "A fragment of the failed spell remains behind, waiting for its cue. At the start of your next turn, before you take your first action, you must either Step, spend a single action with the concentrate trait to disperse it, or let it flare. If it flares, your first spell attack that turn takes a -1 circumstance penalty, and every creature that can see the flare knows your space."
+      },
+      "SpellSnag": {
+        "Title": "Spell Snag",
+        "Description": "A loose strand of the spell catches on the original target. Until the end of your next turn, the first time you Cast a Spell that does not include that target, the target may use its reaction to Step or Take Cover after the spell resolves. You may spend a single action with the concentrate trait before casting to sever the strand and end the repercussion."
+      },
+      "UnfinishedEnding": {
+        "Title": "Unfinished Ending",
+        "Description": "The spell's final structure keeps asking to be completed. Until the end of your next turn, the first time you use an action with the concentrate trait, your immediately following action cannot also have the concentrate trait. You may instead spend a single action with the concentrate trait solely to finish the ending; doing so ends the repercussion without restricting the following action."
+      },
+      "ShadowArrivesLate": {
+        "Title": "Shadow Arrives Late",
+        "Description": "Your shadow repeats the failed spell a heartbeat after you do. Before the end of your next turn, when you next select the original target for a spell attack, it may use its reaction to Step before the attack roll. If that Step makes the target invalid, you may choose another eligible target for the same spell attack; otherwise the attack continues normally. The repercussion then ends."
+      },
+      "VoiceOfTheWrongElement": {
+        "Title": "Voice of the Wrong Element",
+        "Description": "Your voice emerges as crackling flame, grinding stone, distant thunder, grave-cold whispering, or another sound that has never paid rent in a throat. Until the start of your next turn, your speech can be heard clearly out to 60 feet, you cannot whisper, and the original target gains a +1 circumstance bonus to saves against auditory or linguistic effects you create."
+      },
+      "FamiliarGeometry": {
+        "Title": "Familiar Geometry",
+        "Description": "The surroundings snap into one impossibly perfect line. Draw a line from the center of your space through the center of the original target's space and extend it 30 feet in both directions. Until the start of your next turn, creatures making attacks entirely along that line ignore lesser cover. Standard and greater cover still apply. This benefit is available to allies and enemies alike."
+      },
+      "ApplauseFromNowhere": {
+        "Title": "Applause from Nowhere",
+        "Description": "An unseen audience responds with one round of impeccably timed, deeply unhelpful applause. Until the start of your next turn, you cannot Hide or Create a Diversion from creatures that can hear the applause, and the first enemy to attempt to Demoralize you gains a +1 circumstance bonus to that check. The audience offers no further notes."
+      },
+      "RealityTakesNotes": {
+        "Title": "Reality Takes Notes",
+        "Description": "Runes, sparks, or whispering marks record the failed spell's target, angle, and cadence. Before the end of your next turn, if you repeat the same spell attack against the original target, it may use its reaction after you select it but before the attack roll to Step. If the Step makes it an invalid target, you may choose another eligible target for the same spell attack. The record then vanishes whether or not the reaction was used."
       }
     },
     "Effects": {},

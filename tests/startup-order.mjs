@@ -43,8 +43,8 @@ assert.equal(registeredSettings.size, 1);
 assert.ok(registeredSettings.has("pf2e-critical-forge-arcane-backlash.enableMiscastRepercussions"));
 assert.equal(registeredPackBatches.length, 1);
 assert.equal(registeredPackBatches[0].packs.length, 1);
-assert.equal(registeredPackBatches[0].packs[0].cards.length, 10);
+assert.equal(registeredPackBatches[0].packs[0].cards.length, 30);
 assert.equal(registeredPackBatches[0].packs[0].enabled, false);
 assert.equal(registeredPackBatches[0].options.replace, false);
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.1.0 startup-order validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.1.2 startup-order validation passed.");

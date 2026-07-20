@@ -10,7 +10,7 @@ Its cards focus on magical resonance, unstable patterns, warped perception, disr
 
 ## Miscast Repercussions
 
-**Status:** 10 of 30 cards
+**Status:** 30 of 30 cards - mechanical review pending
 
 **Trigger:** Critical failure on a spell attack
 
@@ -26,6 +26,10 @@ Its cards focus on magical resonance, unstable patterns, warped perception, disr
 - revealed casting position or magical signature
 - temporary difficult terrain or disturbed surroundings
 - optional stabilization or recalculation actions
+- warped range, false images, and selective perception
+- Seek opportunities and temporary magical tells
+- frayed spell patterns, delayed residue, and unfinished magical structures
+- impossible geometry, audible anomalies, and predictive magical echoes
 
 **Not included:**
 

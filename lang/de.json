@@ -52,6 +52,86 @@
       "EmptyFollowThrough": {
         "Title": "Leere Zaubergeste",
         "Description": "Dein Körper vollendet eine prachtvolle Zaubergeste für einen Zauber, der das Gebäude bereits verlassen hat. Deine nächste Aktion darf keinen Zauberangriff enthalten. Hast du in diesem Zug keine Aktionen mehr, gilt diese Einschränkung für deine erste Aktion im nächsten Zug."
+      },
+      "RealityPushesBack": {
+        "Title": "Die Wirklichkeit drängt zurück",
+        "Description": "Der Zauber verzerrt den Raum neben dir, statt ihn sauber zu durchqueren. Die Spielleitung wählt ein unbesetztes angrenzendes Feld, das weder näher am Ziel noch weiter von ihm entfernt liegt. Du wirst nach Möglichkeit 1,5 Meter auf dieses Feld geschoben. Gibt es kein solches Feld, erhält das Ziel einen +1-Umstandsbonus auf seine RK gegen deinen nächsten Zauberangriff vor Ende deines nächsten Zuges."
+      },
+      "UnstableCastingGround": {
+        "Title": "Instabiler Zaubergrund",
+        "Description": "Das Feld unter dir summt weiterhin vom fehlgeschlagenen Zauber. Wenn du vor Beginn deines nächsten Zuges erstmals einen Zauber wirkst, ohne dieses Feld zuvor zu verlassen, darf das ursprüngliche Ziel nach Abschluss des Zaubers als freie Aktion einen Schritt ausführen. Bewegst du dich auf ein anderes Feld, endet die Nachwirkung, ohne ausgelöst zu werden."
+      },
+      "CollapsedAngle": {
+        "Title": "Zusammengebrochener Winkel",
+        "Description": "Die fehlgeschlagene Flugbahn hinterlässt einen magischen blinden Winkel. Das ursprüngliche Ziel erhält schwache Deckung gegen deinen nächsten Zauberangriff, den du vor Ende deines nächsten Zuges von deinem aktuellen Feld aus ausführst. Die Nachwirkung wird nur verbraucht, wenn diese Deckung tatsächlich gilt; bewegst du dich auf ein anderes Feld, endet sie wirkungslos."
+      },
+      "TargetedByTheEcho": {
+        "Title": "Vom Echo anvisiert",
+        "Description": "Die zurückkehrende Resonanz weist direkt auf dich. Das Ziel darf sofort als freie Aktion Suchen verwenden; der durchsuchte Bereich muss dein Feld einschließen. Beobachtet das Ziel dich bereits, darf es stattdessen einen Schritt in Richtung verfügbarer Deckung ausführen."
+      },
+      "FoldedDistance": {
+        "Title": "Gefaltete Entfernung",
+        "Description": "Für einen Augenblick faltet sich die Entfernung zum Ziel in die falsche Richtung. Bis zum Ende deines nächsten Zuges gilt das ursprüngliche Ziel bei der Bestimmung der Reichweite deines nächsten Zauberangriffs gegen es als 3 Meter weiter entfernt. Die Nachwirkung wird verbraucht, sobald du diesen Zauberangriff ankündigst, selbst wenn die veränderte Entfernung das Ziel außerhalb der Reichweite bringt."
+      },
+      "Afterimage": {
+        "Title": "Nachbild",
+        "Description": "Der Zauber lässt das Ziel einen halben Herzschlag neben seinem eigenen Bild zurück. Dein nächster Angriff gegen das ursprüngliche Ziel vor Ende deines nächsten Zuges erfordert einen Flachwurf gegen SG 5, als wäre das Ziel verborgen. Verlangt ein anderer Effekt bereits einen gleich hohen oder höheren Flachwurf, kommt kein zweiter Wurf hinzu und diese Nachwirkung wird nicht verbraucht."
+      },
+      "LuminousOutline": {
+        "Title": "Leuchtende Kontur",
+        "Description": "Magische Restenergie zeichnet deine Umrisse aus Licht, Asche, Reif, Schatten oder einem ähnlich wenig hilfreichen Material nach. Bis zum Beginn deines nächsten Zuges kennt das ursprüngliche Ziel stets dein Feld, und du kannst ihm gegenüber nicht versteckt oder unentdeckt werden. Verbergung und Unsichtbarkeit funktionieren weiterhin normal."
+      },
+      "EchoingPresence": {
+        "Title": "Widerhallende Präsenz",
+        "Description": "Deine magische Präsenz hallt aus mehreren Richtungen wider, aber aus keiner davon leise. Bis zum Beginn deines nächsten Zuges erhalten Kreaturen, die dich hören können, einen +2-Umstandsbonus auf Suchen gegen dich. Bei einem fehlgeschlagenen, aber nicht kritisch fehlgeschlagenen Versuch erfahren sie dennoch die Richtung deines Feldes."
+      },
+      "ColorsOutOfOrder": {
+        "Title": "Farben in falscher Reihenfolge",
+        "Description": "Die Welt behält das Ziel im Fokus und ordnet alles andere neu. Bis zum Beginn deines nächsten Zuges ist jede Kreatur außer dem ursprünglichen Ziel für dich verborgen. Du kannst eine einzelne Aktion mit dem Merkmal Konzentration aufwenden, um die richtige Ordnung wiederherzustellen und diese Nachwirkung vorzeitig zu beenden."
+      },
+      "MagicalTell": {
+        "Title": "Verräterisches Muster",
+        "Description": "Der Fehlschlag offenbart einen wiederkehrenden Fehler in deiner Technik. Vor Ende deines nächsten Zuges erhält das ursprüngliche Ziel einen +1-Umstandsbonus auf seine RK oder auf einen Rettungswurf gegen den nächsten von dir gewirkten Zauber, der es einschließt. Der Vorteil wird nur verbraucht, wenn er die Verteidigung gegen diesen Zauber tatsächlich verändert."
+      },
+      "FrayedPattern": {
+        "Title": "Ausgefranstes Muster",
+        "Description": "Der Zauber zerfasert zu losen magischen Fäden um dein aktuelles Feld. Bis zum Beginn deines nächsten Zuges kosten die ersten 1,5 Meter Bewegung, mit denen du dieses Feld verlässt, zusätzliche 1,5 Meter, und du kannst von dort keinen Schritt ausführen. Sobald du das Feld verlassen hast, endet die Nachwirkung."
+      },
+      "WrongShape": {
+        "Title": "Falsche Form",
+        "Description": "Der Zauber bildet kurz einen Schild, wo eine Angriffsform hätte entstehen sollen. Bis zum Beginn deines nächsten Zuges gewährt das ursprüngliche Ziel jeder an es angrenzenden Kreatur schwache Deckung gegen deine Zauberangriffe, unabhängig von der relativen Größenkategorie. Das Ziel selbst erhält diese Deckung nicht."
+      },
+      "DelayedSpark": {
+        "Title": "Verspäteter Funke",
+        "Description": "Ein Bruchstück des fehlgeschlagenen Zaubers bleibt zurück und wartet auf seinen Einsatz. Zu Beginn deines nächsten Zuges, bevor du deine erste Aktion ausführst, musst du entweder einen Schritt ausführen, eine einzelne Aktion mit dem Merkmal Konzentration zum Zerstreuen aufwenden oder den Funken aufflammen lassen. Flammt er auf, erhält dein erster Zauberangriff in diesem Zug einen -1-Umstandsmalus, und jede Kreatur, die das Aufflammen sehen kann, kennt dein Feld."
+      },
+      "SpellSnag": {
+        "Title": "Verhaktes Zaubergeflecht",
+        "Description": "Ein loser Faden des Zaubers verhakt sich am ursprünglichen Ziel. Wenn du vor Ende deines nächsten Zuges erstmals einen Zauber wirkst, der dieses Ziel nicht einschließt, darf das Ziel nach Abschluss des Zaubers seine Reaktion verwenden, um einen Schritt oder In Deckung gehen auszuführen. Vor dem Zaubern kannst du eine einzelne Aktion mit dem Merkmal Konzentration aufwenden, um den Faden zu trennen und die Nachwirkung zu beenden."
+      },
+      "UnfinishedEnding": {
+        "Title": "Unvollendeter Abschluss",
+        "Description": "Die abschließende Struktur des Zaubers verlangt weiterhin danach, vollendet zu werden. Wenn du vor Ende deines nächsten Zuges erstmals eine Aktion mit dem Merkmal Konzentration verwendest, darf deine unmittelbar folgende Aktion nicht ebenfalls das Merkmal Konzentration besitzen. Du kannst stattdessen eine einzelne Aktion mit dem Merkmal Konzentration ausschließlich dazu verwenden, den Abschluss zu vollenden; dadurch endet die Nachwirkung, ohne die folgende Aktion einzuschränken."
+      },
+      "ShadowArrivesLate": {
+        "Title": "Der Schatten kommt zu spät",
+        "Description": "Dein Schatten wiederholt den fehlgeschlagenen Zauber einen Herzschlag nach dir. Wenn du vor Ende deines nächsten Zuges das ursprüngliche Ziel das nächste Mal für einen Zauberangriff auswählst, darf es vor dem Angriffswurf seine Reaktion verwenden, um einen Schritt auszuführen. Wird das Ziel dadurch ungültig, darfst du ein anderes zulässiges Ziel für denselben Zauberangriff wählen; andernfalls wird der Angriff normal fortgesetzt. Danach endet die Nachwirkung."
+      },
+      "VoiceOfTheWrongElement": {
+        "Title": "Stimme des falschen Elements",
+        "Description": "Deine Stimme erklingt als knisterndes Feuer, mahlender Stein, ferner Donner, grabkaltes Flüstern oder ein anderes Geräusch, das in einer Kehle noch nie Miete gezahlt hat. Bis zum Beginn deines nächsten Zuges ist deine Sprache auf 18 Meter deutlich hörbar, du kannst nicht flüstern, und das ursprüngliche Ziel erhält einen +1-Umstandsbonus auf Rettungswürfe gegen von dir erzeugte Effekte mit den Merkmalen Hörbar oder Sprachabhängig."
+      },
+      "FamiliarGeometry": {
+        "Title": "Vertraute Geometrie",
+        "Description": "Die Umgebung rastet in einer unmöglich perfekten Linie ein. Ziehe eine Linie vom Mittelpunkt deines Feldes durch den Mittelpunkt des Feldes des ursprünglichen Ziels und verlängere sie in beide Richtungen um 9 Meter. Bis zum Beginn deines nächsten Zuges ignorieren Kreaturen bei Angriffen, die vollständig entlang dieser Linie verlaufen, schwache Deckung. Normale und starke Deckung gelten weiterhin. Dieser Vorteil steht Verbündeten und Gegnern gleichermaßen offen."
+      },
+      "ApplauseFromNowhere": {
+        "Title": "Applaus aus dem Nichts",
+        "Description": "Ein unsichtbares Publikum antwortet mit einer Runde tadellos getimten, zutiefst nutzlosen Applauses. Bis zum Beginn deines nächsten Zuges kannst du dich vor Kreaturen, die den Applaus hören können, weder Verstecken noch Ablenkung erzeugen, und der erste Gegner, der dich einzuschüchtern versucht, erhält einen +1-Umstandsbonus auf seinen Wurf. Das Publikum bietet keine weiteren Anmerkungen an."
+      },
+      "RealityTakesNotes": {
+        "Title": "Die Wirklichkeit macht sich Notizen",
+        "Description": "Runen, Funken oder flüsternde Zeichen protokollieren Ziel, Winkel und Rhythmus des fehlgeschlagenen Zaubers. Wiederholst du vor Ende deines nächsten Zuges denselben Zauberangriff gegen das ursprüngliche Ziel, darf es seine Reaktion verwenden, nachdem du es ausgewählt hast, aber bevor du den Angriffswurf ausführst, um einen Schritt auszuführen. Wird es dadurch zu einem ungültigen Ziel, darfst du ein anderes zulässiges Ziel für denselben Zauberangriff wählen. Die Aufzeichnung verschwindet danach unabhängig davon, ob die Reaktion verwendet wurde."
       }
     },
     "Effects": {},

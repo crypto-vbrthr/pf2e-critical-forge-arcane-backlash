@@ -1,0 +1,63 @@
+{
+  "PF2ECFAB": {
+    "Settings": {
+      "MiscastRepercussions": {
+        "Name": "Fehlzauber-Nachwirkungen aktivieren",
+        "Hint": "Fügt Karten für kritische Fehlschläge bei Zauberangriffen aller arkanen, göttlichen, okkulten und naturmagischen Traditionen hinzu."
+      }
+    },
+    "Packs": {
+      "MiscastRepercussions": {
+        "Title": "Arcane Backlash: Fehlzauber-Nachwirkungen",
+        "Description": "Kritische Fehlschläge bei Zauberangriffen, die instabile magische Rückstöße, gestörten Zauberrhythmus und seltsame taktische Nachwirkungen hinterlassen."
+      }
+    },
+    "Cards": {
+      "ArcaneRecoil": {
+        "Title": "Magischer Rückstoß",
+        "Description": "Der fehlgeschlagene Zauber schnappt entlang seines eigenen Weges zurück. Du wirst nach Möglichkeit 1,5 Meter direkt vom Ziel weggeschoben. Dies ist erzwungene Bewegung. Kannst du nicht bewegt werden, kosten die ersten 1,5 Meter deiner nächsten freiwilligen Bewegung vor Beginn deines nächsten Zuges zusätzliche 1,5 Meter Bewegung."
+      },
+      "ResonantHands": {
+        "Title": "Resonierende Hände",
+        "Description": "Magische Restenergie haftet an jeder präzisen Bewegung. Wenn du vor Beginn deines nächsten Zuges erstmals eine Aktion mit dem Merkmal Handhaben verwendest, darf das Ziel nach Abschluss dieser Aktion als freie Aktion einen Schritt ausführen. Kann oder möchte es keinen Schritt ausführen, erhält es stattdessen einen +1-Umstandsbonus auf seine RK gegen deinen nächsten Zauberangriff vor Ende deines nächsten Zuges. Danach endet die Nachwirkung."
+      },
+      "FeedbackPulse": {
+        "Title": "Rückkopplungsimpuls",
+        "Description": "Das Ziel spürt den Rückweg des Zaubers und erkennt seinen Rhythmus. Es erhält einen +1-Umstandsbonus auf seine RK gegen deinen nächsten Zauberangriff vor Ende deines nächsten Zuges. Der Vorteil wird verbraucht, sobald dieser Angriff abgewickelt wurde."
+      },
+      "Spellshock": {
+        "Title": "Zauberschock",
+        "Description": "Der Rückschlag betäubt deinen instinktiven Zugriff auf die Magie. Bis zum Beginn deines nächsten Zuges kannst du keine Reaktionen verwenden, die einen Zauber wirken oder das Merkmal Zauber besitzen."
+      },
+      "EnergyGrounding": {
+        "Title": "Energieableitung",
+        "Description": "Die entwichene Kraft gräbt sich in die Umgebung, statt zu vergehen. Die Spielleitung wählt ein geeignetes Feld von 1,5 Metern Kantenlänge, das an dich angrenzt und ungefähr auf der Linie zum Ziel liegt. Dieses Feld ist bis zum Beginn deines nächsten Zuges schwieriges Gelände. Gibt es kein geeignetes Feld, kosten beim ersten Schritt oder Laufen vor diesem Zeitpunkt die ersten 1,5 Meter der Bewegung zusätzliche 1,5 Meter."
+      },
+      "BrokenCadence": {
+        "Title": "Gebrochener Rhythmus",
+        "Description": "Dein Zauberrhythmus hat einen unerwünschten zusätzlichen Takt erhalten. Bis zum Ende deines nächsten Zuges kann nach jeder Aktion Zauber wirken deine unmittelbar folgende Aktion nicht ebenfalls Zauber wirken sein. Die Nachwirkung endet, nachdem sie deine Aktionsfolge einmal verändert hat."
+      },
+      "LingeringSyllable": {
+        "Title": "Nachhallende Silbe",
+        "Description": "Ein Bruchstück der Formel weigert sich hartnäckig zu verstummen. Bis zum Beginn deines nächsten Zuges kennt jede Kreatur, die dich hören kann, das Feld, auf dem du dich befindest. Dies hebt weder Verbergung noch Unsichtbarkeit auf, verhindert aber, dass dein Aufenthaltsort akustisch ungewiss bleibt."
+      },
+      "CrossedIntent": {
+        "Title": "Fehlgeleitete Absicht",
+        "Description": "Der Zauber erwartet das Ziel noch immer an einem anderen Ort. Dein nächster Zauberangriff gegen dasselbe Ziel vor Ende deines nächsten Zuges erhält einen -1-Umstandsmalus, sofern du dich seit dem Fehlzauber nicht auf ein anderes Feld bewegt hast. Die Nachwirkung wird nur verbraucht, wenn sie auf einen Angriff angewendet wird."
+      },
+      "ForcedRecalculation": {
+        "Title": "Erzwungene Neuberechnung",
+        "Description": "Entfernung, Winkel und magischer Fokus sind unterschiedlicher Meinung. Vor deinem nächsten Zauberangriff vor Ende deines nächsten Zuges kannst du eine einzelne Aktion mit dem Merkmal Konzentration aufwenden, um neu zu berechnen. Tust du dies nicht, erhält dieser Zauberangriff einen -2-Umstandsmalus. Danach ist die Nachwirkung verbraucht."
+      },
+      "EmptyFollowThrough": {
+        "Title": "Leere Zaubergeste",
+        "Description": "Dein Körper vollendet eine prachtvolle Zaubergeste für einen Zauber, der das Gebäude bereits verlassen hat. Deine nächste Aktion darf keinen Zauberangriff enthalten. Hast du in diesem Zug keine Aktionen mehr, gilt diese Einschränkung für deine erste Aktion im nächsten Zug."
+      }
+    },
+    "Effects": {},
+    "Notifications": {
+      "RegistrationFailed": "Arcane Backlash konnte seine Kartenpakete nicht bei Critical Forge registrieren. Weitere Informationen stehen in der Konsole.",
+      "PackSelectionUpdated": "Die Auswahl der Arcane-Backlash-Kartenpakete wurde aktualisiert."
+    }
+  }
+}

@@ -12,6 +12,10 @@
       "SpellAttackSurges": {
         "Name": "Zauberangriffsresonanzen aktivieren",
         "Hint": "Fügt positive Resonanzkarten für kritische Erfolge bei Zauberangriffen aller arkanen, göttlichen, okkulten und naturmagischen Traditionen hinzu."
+      },
+      "OverwhelmingResonance": {
+        "Name": "Überwältigende Resonanz aktivieren",
+        "Hint": "Fügt kurze magische Nachwirkungskarten für kritische Fehlschläge bei Rettungswürfen gegen Zauber hinzu. Effekte werden auf die Kreatur angewendet, die den Rettungswurf ausgeführt hat."
       }
     },
     "Packs": {
@@ -26,6 +30,10 @@
       "SpellAttackSurges": {
         "Title": "Arcane Backlash: Zauberangriffsresonanzen",
         "Description": "Kritische Erfolge bei Zauberangriffen, die nützliche Resonanz, offengelegte magische Muster und kontrollierbare Kraftüberschüsse hinterlassen."
+      },
+      "OverwhelmingResonance": {
+        "Title": "Arcane Backlash: Überwältigende Resonanz",
+        "Description": "Kritische Fehlschläge bei Rettungswürfen gegen Zauber, die kurzzeitige magische Sättigung, gebrochene Verteidigungen und instabile Resonanz hinterlassen."
       }
     },
     "Cards": {
@@ -388,6 +396,46 @@
       "TheWeaveTakesInterest": {
         "Title": "Das Gewebe wird aufmerksam",
         "Description": "Die umgebende Magie bietet drei leise Korrekturen an. Wähle eine, wenn diese Karte gezogen wird. Dämpfen: Vor dem Ende deines nächsten Zuges können die hörbaren Manifestationen beim Wirken deines nächsten Zaubers aus mehr als 9 Metern Entfernung nicht gehört werden; dies entfernt weder das Merkmal Hörbar noch unterdrückt es Geräusche, die der Zauber selbst erzeugt. Umhüllen: Dein nächster Zauber vor dem Ende deines nächsten Zuges kann einen unbeaufsichtigten Gegenstand von leichter Last oder weniger in seinem Wirkungsbereich von seinem Schaden und seinen nichtschädigenden Effekten ausnehmen; dies kann keine Kreatur und keinen gehaltenen oder getragenen Gegenstand schützen. Verknoten: Vor dem Ende deines nächsten Zuges erhöhst du den Gegenwirken-SG gegen den ersten Versuch des ursprünglichen Ziels, einen von dir erzeugten Zauber oder magischen Effekt gegenzuwirken, um 2. Die gewählte Korrektur wird nur verbraucht, wenn sie genutzt wird, und kann später nicht geändert werden."
+      },
+      "ResonanceLeak": {
+        "Title": "Resonanzleck",
+        "Description": "Der Zauber hinterlässt ein Leck in den Verteidigungen des Ziels, durch das Magie in das umgebende Gewebe sickert. Für 1 Runde erhält das Ziel einen Statusmalus von -1 auf Rettungswürfe gegen Zauber."
+      },
+      "SpellglassFracture": {
+        "Title": "Riss im Zauberglas",
+        "Description": "In der magischen Verteidigung des Ziels entsteht ein haarfeiner Riss. Für 1 Runde erhält das Ziel einen Umstandsmalus von -1 auf RK gegen Zauberangriffe."
+      },
+      "DraggedThroughTheWeave": {
+        "Title": "Durch das Gewebe gezerrt",
+        "Description": "Der Zauber hinterlässt unsichtbare Fäden, die jeder Bewegung folgen. Für 1 Runde erhält das Ziel einen Statusmalus von 1,5 Metern auf alle Bewegungsraten."
+      },
+      "SomaticDesynchronization": {
+        "Title": "Somatische Desynchronisation",
+        "Description": "Körper und magisches Echo bewegen sich um den Bruchteil eines Herzschlags versetzt. Für 1 Runde erhält das Ziel einen Umstandsmalus von -1 auf Athletikwürfe und seinen Zähigkeits-SG."
+      },
+      "GeometryOutOfStep": {
+        "Title": "Geometrie aus dem Takt",
+        "Description": "Das Ziel stimmt nicht länger mit den Winkeln seiner Umgebung überein. Für 1 Runde erhält es einen Umstandsmalus von -1 auf Akrobatikwürfe und seinen Reflex-SG."
+      },
+      "ThoughtsLeakSideways": {
+        "Title": "Gedanken sickern seitwärts",
+        "Description": "Die Absicht erreicht den Raum, bevor Worte oder Bewegung sie verbergen können. Für 1 Runde erhält das Ziel einen Umstandsmalus von -1 auf Täuschungswürfe und seinen Willens-SG."
+      },
+      "StaticBetweenMoments": {
+        "Title": "Störrauschen zwischen den Momenten",
+        "Description": "Magisches Rauschen drängt sich in den Augenblick, in dem Instinkt zur Handlung wird. Bevor der nächste Zug des Ziels beginnt, muss es vor dem Einsatz seiner ersten Reaktion einen einfachen Wurf gegen SG 5 ablegen. Bei einem Fehlschlag wird die Reaktion nicht verbraucht, doch der Auslöser verstreicht und die Reaktion kann dafür nicht eingesetzt werden. Danach endet die Resonanz."
+      },
+      "UnmooredFromPlace": {
+        "Title": "Vom Ort gelöst",
+        "Description": "Die Position des Ziels wird eher zu einem Vorschlag als zu einer Tatsache. Bis zum Beginn seines nächsten Zuges wird es beim ersten Mal, wenn ein Zauber es zwangsweise bewegt, entlang desselben legalen Weges 1,5 Meter weiter bewegt. Teleportiert oder versetzt ein Zauber es stattdessen an einen genauen Ort, darf der Zaubernde das legale Ziel um 1,5 Meter auf ein anderes Feld verschieben, das der Zauber hätte wählen können. Danach endet die Resonanz."
+      },
+      "GroundItOrGlow": {
+        "Title": "Erden oder leuchten",
+        "Description": "Der Zauber hat dem Ziel deutlich zu viel sichtbare Magie hinterlassen. Zu Beginn seines nächsten Zuges darf das Ziel als erste Aktion die Resonanz erden, eine Aktion mit dem Merkmal Konzentration. Tut es dies nicht, strahlt es bis zum Ende dieses Zuges offensichtliches Licht, Geräusche, Symbole oder ähnliche Zeichen aus: Es kann sich nicht Verstecken und erhält einen Umstandsmalus von -1 auf Heimlichkeitswürfe. Danach endet die Resonanz."
+      },
+      "WardlineFracture": {
+        "Title": "Riss in der Schutzlinie",
+        "Description": "Der kritische Fehlschlag hinterlässt eine sichtbare Naht in der nächsten magischen Verteidigung des Ziels. Bevor der nächste Zug des Ziels endet, wird das nächste Mal, wenn es gegen einen Zauber einen Status- oder Umstandsbonus auf RK oder einen Rettungswurf erhalten würde, dieser einzelne Bonus um 1 reduziert, mindestens jedoch auf 0. Die Resonanz wird nur verbraucht, wenn sie einen Bonus reduziert."
       }
     },
     "Effects": {
@@ -417,6 +465,24 @@
       },
       "HelpfulAfterimage": {
         "Name": "Hilfreiches Nachbild"
+      },
+      "ResonanceLeak": {
+        "Name": "Resonanzleck"
+      },
+      "SpellglassFracture": {
+        "Name": "Riss im Zauberglas"
+      },
+      "DraggedThroughTheWeave": {
+        "Name": "Durch das Gewebe gezerrt"
+      },
+      "SomaticDesynchronization": {
+        "Name": "Somatische Desynchronisation"
+      },
+      "GeometryOutOfStep": {
+        "Name": "Geometrie aus dem Takt"
+      },
+      "ThoughtsLeakSideways": {
+        "Name": "Gedanken sickern seitwärts"
       }
     },
     "Notifications": {

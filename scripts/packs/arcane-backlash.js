@@ -2,6 +2,7 @@ import { ARCANE_PACK_IDS } from "./arcane/card-factory.js";
 import { DEFIANT_REVERSAL_CARDS } from "./arcane/cards/defiant-reversals.js";
 import { MISCAST_REPERCUSSION_CARDS } from "./arcane/cards/miscast-repercussions.js";
 import { SPELL_ATTACK_SURGE_CARDS } from "./arcane/cards/spell-attack-surges.js";
+import { OVERWHELMING_RESONANCE_CARDS } from "./arcane/cards/overwhelming-resonance.js";
 
 export const ARCANE_PACK_CONFIGS = Object.freeze([
   Object.freeze({
@@ -48,6 +49,21 @@ export const ARCANE_PACK_CONFIGS = Object.freeze([
       category: "spell-critical-hit",
       scope: "spell-attacks-all-traditions"
     })
+  }),
+  Object.freeze({
+    settingKey: "enableOverwhelmingResonance",
+    id: ARCANE_PACK_IDS.overwhelmingResonance,
+    titleKey: "PF2ECFAB.Packs.OverwhelmingResonance.Title",
+    descriptionKey: "PF2ECFAB.Packs.OverwhelmingResonance.Description",
+    fallbackTitle: "Arcane Backlash: Overwhelming Resonance",
+    fallbackDescription: "Critical failures on saving throws against spells that leave brief magical saturation, fractured defenses, and unstable resonance behind.",
+    cards: OVERWHELMING_RESONANCE_CARDS,
+    metadata: Object.freeze({
+      theme: "arcane-backlash",
+      family: "arcane-backlash",
+      category: "saving-throw-critical-failure",
+      scope: "spell-saves-all-traditions"
+    })
   })
 ]);
 
@@ -59,7 +75,7 @@ export function buildArcaneBacklashPacks(isEnabled = () => false) {
     descriptionKey: config.descriptionKey,
     fallbackTitle: config.fallbackTitle,
     fallbackDescription: config.fallbackDescription,
-    version: "0.3.3",
+    version: "0.4.0",
     priority: 10,
     enabled: Boolean(isEnabled(config.settingKey)),
     metadata: config.metadata,

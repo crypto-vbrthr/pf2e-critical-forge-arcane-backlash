@@ -39,14 +39,15 @@ const extensionController = {
 extensionReady({ cards: { extensions: { forModule() { return extensionController; } } } });
 assert.equal(registeredPackBatches.length, 0);
 init();
-assert.equal(registeredSettings.size, 3);
+assert.equal(registeredSettings.size, 4);
 assert.ok(registeredSettings.has("pf2e-critical-forge-arcane-backlash.enableMiscastRepercussions"));
 assert.ok(registeredSettings.has("pf2e-critical-forge-arcane-backlash.enableDefiantReversals"));
 assert.ok(registeredSettings.has("pf2e-critical-forge-arcane-backlash.enableSpellAttackSurges"));
+assert.ok(registeredSettings.has("pf2e-critical-forge-arcane-backlash.enableOverwhelmingResonance"));
 assert.equal(registeredPackBatches.length, 1);
-assert.equal(registeredPackBatches[0].packs.length, 3);
-assert.deepEqual(registeredPackBatches[0].packs.map((pack) => pack.cards.length), [30, 30, 30]);
+assert.equal(registeredPackBatches[0].packs.length, 4);
+assert.deepEqual(registeredPackBatches[0].packs.map((pack) => pack.cards.length), [30, 30, 30, 10]);
 assert.ok(registeredPackBatches[0].packs.every((pack) => pack.enabled === false));
 assert.equal(registeredPackBatches[0].options.replace, false);
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.3.3 startup-order validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.4.0 startup-order validation passed.");

@@ -6,13 +6,14 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.3.3
+## Version 0.4.0
 
-The current release contains three optional packs:
+The current release contains four optional packs:
 
 - **Miscast Repercussions** - 30 mechanically reviewed cards for critical failures on spell attacks.
 - **Defiant Reversals** - 30 mechanically reviewed cards for critical successes on saving throws against spells.
 - **Spell Attack Surges** - 30 mechanically reviewed cards for critical successes on spell attacks.
+- **Overwhelming Resonance** - 10 cards for critical failures on saving throws against spells.
 
 Spell Attack Surges turns an exceptionally accurate spell into beneficial resonance. Its complete 30-card draft includes protected casting, warped range and line geometry, brief magical defenses, reaction suppression, harmonic resistance, allied resonance, conduit casting, immediate Sustain opportunities, helpful afterimages, improved magical analysis, reactive tracking, and spellshadows that cling to the target.
 
@@ -60,18 +61,34 @@ The pack does not include:
 - permanent weakness, resistance, or immunity
 - outcomes for saving throws against spells
 
+### Overwhelming Resonance
+
+Applies to `savingThrowCriticalFailure` and requires the context trait `spell`. It therefore reacts only when a creature critically fails a saving throw against a recognized spell. The affected creature is the saving creature (`source`), never the original caster.
+
+The first ten cards focus on brief magical saturation rather than additional damage. They include direct penalties to spell defenses, movement, Athletics, Acrobatics, Deception, and defensive DCs, alongside reaction static, unstable relocation, visible resonance, and fractured magical wards.
+
+The pack does not include:
+
+- additional direct damage as its default consequence
+- permanent reductions to defenses or movement
+- lost spell slots, focus points, or equipment
+- critical failures against nonmagical hazards
+- effects applied to the original caster by mistake
+
 ## Automation
 
 Miscast Repercussions and Defiant Reversals remain intentionally manual because they depend on the original caster, immediate actions, battlefield geometry, ongoing spell identity, or conditional consumption.
 
 Spell Attack Surges uses the Effect Engine directly. Nine of its thirty cards create applicable effects, while twenty-one remain manual where ally selection, target identity, one-use timing, range, area origins, line of effect, spell traits, cover, concealment, reactions, immediate actions, Sustain, or conditional consumption matter.
 
+Overwhelming Resonance begins with six direct Effect Engine cards and four manual cards. The direct effects are intentionally brief and apply to the creature that critically failed the saving throw. The manual cards handle reaction timing, forced movement, teleportation, deliberate grounding, and one-use ward fractures.
+
 ## Planned Packs
 
 - Miscast Repercussions - 30/30 (mechanical review passed)
 - Defiant Reversals - 30/30 (mechanical review passed)
 - Spell Attack Surges - 30/30 (mechanical review passed)
-- Overwhelming Resonance - planned
+- Overwhelming Resonance - 10/30
 
 Each pack grows in blocks of ten cards. At 30 cards, it receives a full mechanical review for redundancy, rules clarity, balance, and pack identity.
 

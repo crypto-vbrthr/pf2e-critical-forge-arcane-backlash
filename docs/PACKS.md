@@ -98,11 +98,35 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Overwhelming Resonance
 
-**Status:** Planned
+**Status:** 10/30 cards
 
 **Trigger:** Critical failure on a saving throw against a spell
 
-**Purpose:** The spell leaves a thematic magical aftermath beyond its normal critical-failure result, without merely adding another packet of damage.
+**Technical filter:** `category: "savingThrowCriticalFailure"` with `attackTraits: ["spell"]`
+
+**Purpose:** The spell leaves a brief magical aftermath beyond its normal critical-failure result. The pack emphasizes saturation, fractured defenses, unstable position, and resonance that remains tactically relevant without simply adding more damage.
+
+**Effect direction:** Consequences apply to the creature that made the saving throw. In Critical Forge saving-throw contexts, that creature is the `source`; the original caster is the opposing `target`.
+
+**Current consequences:**
+
+- penalties to saving throws against spells and AC against spell attacks
+- a short penalty to all Speeds
+- Fortitude-, Reflex-, and Will-specific effects on skills and defensive DCs
+- magical static that can delay a reaction
+- increased forced movement or shifted magical relocation
+- a choice between grounding visible resonance and remaining unable to Hide
+- a one-use fracture in a later status or circumstance defense against a spell
+
+**Automation:** Six of the first ten cards create direct Effect Engine effects. Four remain manual because they depend on reaction timing, the source of forced movement, legal teleport destinations, a first-action choice, or conditional consumption.
+
+**Not included:**
+
+- additional direct damage as the default consequence
+- generic copies of prone, slowed, clumsy, enfeebled, stupefied, frightened, or off-guard from the Core pack
+- permanent weakness, resistance loss, or defense penalties
+- lost magical resources or damaged spellcasting equipment
+- critical failures against nonmagical effects
 
 ## Review Process
 

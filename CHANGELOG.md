@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.0
+
+- Added the optional **Overwhelming Resonance** pack.
+- Added OR-001 through OR-010 for critical failures on saving throws against spells.
+- Added explicit `attackTraits: ["spell"]` filtering so nonmagical saving throws cannot enter the pack.
+- Added six direct Effect Engine cards targeting the saving creature: penalties to saving throws against spells, AC against spell attacks, all Speeds, Athletics and Fortitude DC, Acrobatics and Reflex DC, and Deception and Will DC.
+- Added four manual resonance cards for reaction static, increased spell-based forced movement or relocation, deliberate grounding versus visible magical overflow, and a one-use fracture in a later spell defense.
+- Avoided the generic Core save-failure conditions and additional direct damage as the pack's default consequence.
+- Added the world setting and localization required to enable Overwhelming Resonance independently.
+- Expanded Arcane Backlash to 100 cards across four optional packs.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+
 ## 0.3.3
 
 - Applied the full mechanical review of **Spell Attack Surges**.

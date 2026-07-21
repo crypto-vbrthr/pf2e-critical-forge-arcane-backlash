@@ -5,7 +5,8 @@ export const MODULE_ID = "pf2e-critical-forge-arcane-backlash";
 const SETTING_LOCALIZATION = Object.freeze({
   enableMiscastRepercussions: "MiscastRepercussions",
   enableDefiantReversals: "DefiantReversals",
-  enableSpellAttackSurges: "SpellAttackSurges"
+  enableSpellAttackSurges: "SpellAttackSurges",
+  enableOverwhelmingResonance: "OverwhelmingResonance"
 });
 
 export function registerArcaneBacklashSettings(onPackSettingChanged) {

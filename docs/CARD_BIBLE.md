@@ -205,3 +205,35 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 | Manual tactical consequence | 21 |
 
 All thirty cards use `spellCriticalHit` and remain tradition-neutral. The reviewed pack mixes nine direct effects with target-specific tactical consequences, shared spell weakness, concrete magical insight, dynamic resistance, carefully bounded alternate origins, range and geometry changes, reaction windows, Sustain opportunities, and trait-based resonance. The full mechanical review passed in version 0.3.3 after nine redesigns and nine targeted adjustments.
+
+## Overwhelming Resonance - Block 1
+
+**Status:** 10/30 cards
+
+| ID | Card | Save Filter | Impact | Automation | Core Idea |
+|---|---|---|---|---|---|
+| OR-001 | Resonance Leak | Any | Strong | Effect on saving creature | -1 status penalty to saving throws against spells for 1 round |
+| OR-002 | Spellglass Fracture | Any | Moderate | Effect on saving creature | -1 circumstance penalty to AC against spell attacks for 1 round |
+| OR-003 | Dragged Through the Weave | Any | Moderate | Effect on saving creature | -5-foot status penalty to all Speeds for 1 round |
+| OR-004 | Somatic Desynchronization | Fortitude | Moderate | Effect on saving creature | -1 circumstance penalty to Athletics and Fortitude DC for 1 round |
+| OR-005 | Geometry Out of Step | Reflex | Moderate | Effect on saving creature | -1 circumstance penalty to Acrobatics and Reflex DC for 1 round |
+| OR-006 | Thoughts Leak Sideways | Will | Moderate | Effect on saving creature | -1 circumstance penalty to Deception and Will DC for 1 round |
+| OR-007 | Static Between Moments | Any | Moderate | Manual | DC 5 flat check before the first reaction; failure loses the trigger but not the reaction |
+| OR-008 | Unmoored from Place | Any | Strong | Manual | The first spell-based forced movement or precise relocation becomes more extreme |
+| OR-009 | Ground It or Glow | Any | Moderate | Manual | Use the first action to ground the resonance or become unable to Hide with a Stealth penalty |
+| OR-010 | Wardline Fracture | Any | Moderate | Manual | Reduce the next status or circumstance defense bonus against a spell by 1 |
+
+### Current Overwhelming Resonance Distribution
+
+| Impact | Cards |
+|---|---:|
+| Moderate | 8 |
+| Strong | 2 |
+
+| Resolution | Cards |
+|---|---:|
+| Direct Effect Engine effect | 6 |
+| Manual tactical consequence | 4 |
+
+All ten cards require `attackTraits: ["spell"]`, so critical failures against nonmagical hazards do not enter the pack. Direct effects target the saving creature (`source`). The opening block deliberately avoids the generic Core save-failure conditions and instead focuses on spell-specific defenses, movement, defensive DCs, reaction timing, and unstable magical residue.
+

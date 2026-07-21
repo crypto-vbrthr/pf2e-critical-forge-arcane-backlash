@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.4.3
+
+- Applied the full mechanical review of **Overwhelming Resonance**.
+- Redesigned OR-003, OR-011, OR-012, OR-013, OR-015, OR-016, OR-018, OR-020, OR-023, OR-024, and OR-025 to remove repeated Speed, Perception, social, attack, concealment, teleport-destination, line-of-effect, and Step-or-Cover procedures.
+- Added path recoil, selective false senses, fractured communication range, one-use defensive instability, counteract stamps, concentrate actions that gain `manipulate` for reaction triggers, target-locking attack static, adjacent aura cover, legal area shifts, exposed teleport traces, and a magic-item chorus that temporarily locks another activation.
+- Tightened OR-008, OR-009, OR-010, OR-014, OR-019, OR-021, OR-027, OR-028, and OR-030 for original-caster ownership, conditional consumption, defense-bonus selection, damage-type choice, resistance selection, impact, movement declarations, large-creature footprints, perception, and legal reaction requirements.
+- Reclassified OR-008, OR-019, and OR-024 as Moderate; OR-021 as Light; and OR-025 as Moderate. Removed all elevated weights from Overwhelming Resonance.
+- Overwhelming Resonance now contains 7 Effect Engine cards and 23 manual cards.
+- Added `docs/MECHANICAL_REVIEW_OVERWHELMING_RESONANCE.md` and marked the pack as mechanically reviewed and passed.
+- Updated English and German localization, README, pack documentation, Card Bible, changelog, and validation tests.
+
 ## 0.4.2
 
 - Added OR-021 through OR-030 to **Overwhelming Resonance**.

@@ -98,7 +98,7 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Overwhelming Resonance
 
-**Status:** 30/30 cards - ready for mechanical review
+**Status:** 30/30 cards - mechanical review passed in 0.4.3
 
 **Trigger:** Critical failure on a saving throw against a spell
 
@@ -108,22 +108,21 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 **Effect direction:** Consequences apply to the creature that made the saving throw. In Critical Forge saving-throw contexts, that creature is the `source`; the original caster is the opposing `target`.
 
-**Current consequences:**
+**Reviewed consequences:**
 
-- penalties to saving throws against spells and AC against spell attacks
-- short penalties to Speeds, attack rolls, Perception, social skills, spell attacks, spell DC, and class DC
-- Fortitude-, Reflex-, and Will-specific effects on skills and defensive DCs
-- magical static that can delay a reaction
-- increased forced movement or shifted magical relocation
-- visible resonance, spell-stamps, and concentration echoes
+- brief penalties to spell defenses, magical healing, damage, Athletics, Acrobatics, Deception, and defensive DCs
+- reaction static and movement pulled backward along its own path
+- original-caster control over spell-based forced movement and precise relocation
+- visible magical overflow that can be grounded deliberately
+- one-use fractures in status or circumstance defenses against spells
+- false sensory layers, limited auditory or linguistic range, and unstable projected attacks or effects
 - dynamic weakness tied to the triggering spell and temporary resistance delamination
-- a one-use fracture in a later status or circumstance defense against a spell
-- a target-only aftershock corridor and a choice between settling or dragging a pooled aura
-- reduced magical healing and weakened damage output
-- line-of-effect gaps, transparent creature cover, distorted teleportation, and elastic distance
-- magic-item warnings, misquoted social actions, remembered footprints, and predeclared magical actions
+- counteract stamps on borrowed spell effects and concentrate actions that temporarily gain `manipulate` for reactions
+- a target-only aftershock corridor, target-locking attack static, and adjacent lesser cover from a pooled aura
+- area shifts around the saturated target, exposed teleport traces, and a chorus that temporarily silences another magic item
+- transparent creature cover, elastic distance, remembered footprints, social misfortune, and predeclared magical actions
 
-**Automation:** Twelve of the thirty cards create direct Effect Engine effects. Eighteen remain manual because they depend on reaction timing, the original caster, dynamic damage types, legal relocation, battlefield geometry, first-action choices, resistance values, line of effect, creature cover, item activation, misfortune, declarations, or conditional consumption.
+**Automation:** Seven of the thirty cards create direct Effect Engine effects. Twenty-three remain manual because they depend on reaction timing, the original caster, dynamic damage types, legal relocation, battlefield geometry, communication traits, counteract targets, resistance values, area placement, creature cover, item activation, misfortune, declarations, or conditional consumption.
 
 **Not included:**
 

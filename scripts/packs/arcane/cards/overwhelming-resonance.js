@@ -55,20 +55,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Dragged Through the Weave",
-    fallbackDescription: "The spell leaves invisible threads trailing from every movement. For 1 round, the target takes a -5-foot status penalty to all its Speeds.",
-    weight: 2,
-    tags: ["movement", "speed", "status-penalty", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        {
-          type: "movement",
-          movementType: "all",
-          value: -5,
-          modifierType: "status"
-        }
-      ]
-    }
+    fallbackDescription: "Invisible threads catch on the target's path. Before the end of its next turn, the first time the target completes a move action that uses one of its Speeds, the original caster may pull it 5 feet back along the path it just traveled to the nearest legal space. This is forced movement and does not trigger reactions. If no legal space exists along that path, the movement is unchanged and the resonance remains available. The resonance ends after it moves the target or when the duration expires.",
+    tags: ["movement", "forced-movement", "path", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-004-somatic-desynchronization",
@@ -149,10 +137,10 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     id: "or-008-unmoored-from-place",
     localizationKey: "UnmooredFromPlace",
     tone: "serious",
-    impact: "strong",
+    impact: "moderate",
     fallbackTitle: "Unmoored from Place",
-    fallbackDescription: "The target's position becomes a suggestion rather than a fact. Until the start of its next turn, the first time a spell forcibly moves it, increase that movement by 5 feet along the same legal path. If a spell instead teleports or precisely relocates it, the spell's caster may shift the legal destination by 5 feet to another space the spell could have selected. The resonance then ends.",
-    tags: ["forced-movement", "teleportation", "relocation", "spell", "one-use", "manual"]
+    fallbackDescription: "The target's position becomes a suggestion rather than a fact. Before the end of its next turn, the first time a spell cast by the original caster forcibly moves it, that caster may increase the movement by 5 feet along the same legal path. If no additional legal 5 feet exists, the resonance is not consumed. If such a spell instead teleports or precisely relocates the target, the original caster may shift the legal destination by 5 feet to another space that spell could have selected. The resonance ends only after it changes one of these movements or relocations.",
+    tags: ["forced-movement", "teleportation", "relocation", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-009-ground-it-or-glow",
@@ -160,9 +148,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "humorous",
     impact: "moderate",
     fallbackTitle: "Ground It or Glow",
-    fallbackDescription: "The spell has left the target carrying far too much visible magic. At the start of its next turn, the target may use its first action to Ground the Resonance, an action with the concentrate trait. If it does not, until the end of that turn it sheds obvious light, sound, symbols, or similar signs: it cannot Hide, and it takes a -1 circumstance penalty to Stealth checks. The resonance then ends.",
-    weight: 2,
-    tags: ["concentrate", "hide", "stealth", "choice", "manual"]
+    fallbackDescription: "The spell has left the target carrying far too much visible magic. At the start of its next turn, the target may use its first action to Ground the Resonance, an action with the concentrate trait. If it does not, until the end of that turn it sheds obvious light, sound, symbols, or similar signs: it cannot Hide, cannot become hidden or undetected from the original caster through Stealth alone, and takes a -1 circumstance penalty to Stealth checks. The resonance then ends.",
+    tags: ["concentrate", "hide", "stealth", "original-caster", "choice", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-010-wardline-fracture",
@@ -170,8 +157,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Wardline Fracture",
-    fallbackDescription: "The critical failure leaves a visible seam in the target's next magical defense. Before the end of the target's next turn, the next time it would gain a status or circumstance bonus to AC or a saving throw against a spell, reduce that single bonus by 1, to a minimum of 0. The resonance is consumed only when it reduces a bonus.",
-    tags: ["spell-defense", "ac", "saving-throw", "bonus-reduction", "conditional-consumption", "manual"]
+    fallbackDescription: "The critical failure leaves a visible seam in the target's next magical defense. Before the end of the target's next turn, when its AC or saving throw against a spell is calculated, the original caster may choose one applicable status or circumstance bonus and reduce that bonus by 1, to a minimum of 0. The resonance is consumed only if the reduction changes the final defense.",
+    tags: ["spell-defense", "ac", "saving-throw", "bonus-reduction", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-011-sensory-palimpsest",
@@ -179,20 +166,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Sensory Palimpsest",
-    fallbackDescription: "The spell writes itself over the target's senses. For 1 round, the target takes a -1 status penalty to Perception checks and Perception DC.",
-    tags: ["perception", "perception-dc", "status-penalty", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        {
-          type: "modifier",
-          selector: ["perception", "perception-dc"],
-          value: -1,
-          modifierType: "status",
-          predicate: []
-        }
-      ]
-    }
+    fallbackDescription: "The spell writes a false layer over the target's senses. Before the end of its next turn, the first time the target Seeks, the original caster chooses one creature or object in the searched area that the target could detect. The target's degree of success against that subject alone is one degree worse. All other subjects are resolved normally, and the resonance then ends.",
+    tags: ["perception", "seek", "false-senses", "original-caster", "one-use", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-012-voice-through-glass",
@@ -200,21 +175,9 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Voice Through Glass",
-    fallbackDescription: "Every word reaches the world through a layer of ringing magical glass. For 1 round, the target takes a -1 circumstance penalty to Deception, Diplomacy, Intimidation, and Performance checks.",
+    fallbackDescription: "Every word reaches the world through a layer of ringing magical glass. Before the end of the target's next turn, the first auditory or linguistic action it uses with a range greater than 15 feet can affect only creatures within 15 feet. A shorter normal range remains unchanged. The resonance is consumed only if this limit excludes an intended creature. It does not hinder spellcasting unless the spell itself has the auditory or linguistic trait.",
     filters: { saveTypes: ["will"], excludedSourceTraits: ["mindless"] },
-    tags: ["will", "social", "communication", "circumstance-penalty", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        {
-          type: "modifier",
-          selector: ["deception", "diplomacy", "intimidation", "performance"],
-          value: -1,
-          modifierType: "circumstance",
-          predicate: []
-        }
-      ]
-    }
+    tags: ["will", "auditory", "linguistic", "range", "communication", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-013-projected-instability",
@@ -222,20 +185,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Projected Instability",
-    fallbackDescription: "The target's projected magic and practiced techniques wobble around an invisible fault line. For 1 round, it takes a -1 circumstance penalty to spell attack rolls, spell DC, and class DC.",
-    tags: ["spell-attack", "spell-dc", "class-dc", "circumstance-penalty", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        {
-          type: "modifier",
-          selector: ["spell-attack-roll", "spell-dc", "class"],
-          value: -1,
-          modifierType: "circumstance",
-          predicate: []
-        }
-      ]
-    }
+    fallbackDescription: "The target's next projected attack or effect wobbles around an invisible fault line. Before the end of its next turn, the first time it uses an action or activity that makes an attack roll or forces one or more creatures to attempt a saving throw, the original caster chooses one affected creature it can perceive. That creature gains a +1 circumstance bonus to its AC or saving throw against that action. The resonance is consumed only if the bonus changes that defense.",
+    tags: ["attack", "saving-throw", "defense", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-014-resonant-weakpoint",
@@ -243,8 +194,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "strong",
     fallbackTitle: "Resonant Weakpoint",
-    fallbackDescription: "The spell leaves one part of the target ringing at exactly the wrong frequency. Choose one damage type dealt by the triggering spell. Until the start of the target's next turn, it gains weakness 2 to that damage type. If the spell dealt no damage, choose a damage type directly represented by one of its traits. If neither option applies, the target instead takes a -1 status penalty to its next saving throw against a spell from the original caster before the end of its next turn.",
-    tags: ["weakness", "damage-type", "spell-trait", "dynamic-choice", "fallback", "manual"]
+    fallbackDescription: "The spell leaves one part of the target ringing at exactly the wrong frequency. The original caster chooses one damage type dealt by the triggering spell. Until the start of the target's next turn, it gains weakness 2 to that damage type. If the spell dealt no damage, the caster may instead choose a damage type directly named by one of the spell's damage or energy traits. If neither option applies, the target cannot apply one circumstance bonus to its next saving throw against a spell from the original caster before the end of its next turn; the caster chooses the bonus when the save is calculated. Apply the result manually.",
+    tags: ["weakness", "damage-type", "spell-trait", "original-caster", "dynamic-choice", "fallback", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-015-spell-stamped",
@@ -252,8 +203,8 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Spell-Stamped",
-    fallbackDescription: "The target carries a private mark that points back to the original caster. Until the end of the target's next turn, that caster always knows which space the target occupies while both remain on the same plane. The caster's next spell attack against the target ignores concealed; if the target is hidden but not undetected, use a DC 5 flat check instead of DC 11. The resonance ends after it reduces or removes a flat check, or when the duration expires.",
-    tags: ["tracking", "concealed", "hidden", "flat-check", "original-caster", "conditional-consumption", "manual"]
+    fallbackDescription: "The target carries a private stamp that exposes borrowed magic. The original caster chooses one spell effect currently affecting the target that was created by another creature. If no such effect exists, the stamp attaches to the first such spell effect the target gains before the end of its next turn. The first counteract check against the marked effect before then gains a +2 circumstance bonus, and the creature attempting it learns the effect's rank and tradition before rolling. The resonance ends after that check or when the duration expires.",
+    tags: ["spell-effect", "counteract", "rank", "tradition", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-016-concentration-echo",
@@ -261,9 +212,9 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Concentration Echo",
-    fallbackDescription: "The spell leaves an echo waiting for the target's thoughts to become deliberate. Before the end of the target's next turn, when it begins its first action with the concentrate trait, the original caster may use a reaction to Step or Seek. If the caster Seeks, the searched area must include the target's space or last known space. The triggering action then resolves normally, and the resonance ends whether or not the reaction is used.",
+    fallbackDescription: "The spell leaves an echo waiting for deliberate thought. Before the end of the target's next turn, the first action it begins with the concentrate trait also gains the manipulate trait solely for determining whether it triggers reactions. Its other traits and resolution are unchanged. The resonance is consumed only if adding manipulate creates at least one reaction trigger that the action did not already have.",
     filters: { saveTypes: ["will"], excludedSourceTraits: ["mindless"] },
-    tags: ["will", "concentrate", "reaction", "step", "seek", "original-caster", "manual"]
+    tags: ["will", "concentrate", "manipulate", "reaction-trigger", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-017-aftershock-line",
@@ -281,30 +232,18 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Static in the Aim",
-    fallbackDescription: "The target's timing is full of magical interference. For 1 round, it takes a -1 status penalty to attack rolls.",
-    tags: ["attack-rolls", "timing", "status-penalty", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        {
-          type: "modifier",
-          selector: "attack",
-          value: -1,
-          modifierType: "status",
-          predicate: []
-        }
-      ]
-    }
+    fallbackDescription: "Magical static keeps dragging the target's aim back toward the spell's source. Before the end of the target's next turn, the first time it makes an attack against a creature other than the original caster while that caster is a legal target for the attack, it must attempt a DC 5 flat check. On a failure, the attack is lost as though the chosen creature were concealed. If the original caster is not a legal target, the resonance waits. It ends after the flat check.",
+    tags: ["attack", "target-switching", "flat-check", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-019-resistance-delamination",
     localizationKey: "ResistanceDelamination",
     tone: "serious",
-    impact: "strong",
+    impact: "moderate",
     fallbackTitle: "Resistance Delamination",
-    fallbackDescription: "The spell peels one layer away from the target's ability to absorb magic. Before the end of the target's next turn, the next time it would apply resistance to damage from a spell, reduce that resistance by 3 for that damage instance, to a minimum of 0. If the target has no resistance that could apply when this card is drawn, it instead gains weakness 1 to damage from spells until the start of its next turn. Apply either result manually.",
+    fallbackDescription: "The spell peels one layer away from the target's ability to absorb magic. Before the end of the target's next turn, the first time it would apply one or more resistances to damage from a spell, the original caster chooses one applicable resistance and reduces it by 3 for that damage instance, to a minimum of 0. If no resistance could apply when this card is drawn, the first resistance the target gains before the end of its next turn is reduced by 3, to a minimum of 0, until the end of the target's next turn. The resonance is consumed only when a resistance value is actually reduced.",
     filters: { saveTypes: ["fortitude"] },
-    tags: ["fortitude", "resistance", "reduction", "damage-from-spells", "fallback", "manual"]
+    tags: ["fortitude", "resistance", "reduction", "damage-from-spells", "original-caster", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-020-aura-underfoot",
@@ -312,16 +251,15 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "humorous",
     impact: "light",
     fallbackTitle: "Aura Underfoot",
-    fallbackDescription: "The target's aura has pooled around its feet and is pretending this was always the plan. At the start of its next turn, the target may use its first action to Settle the Aura, an action with the concentrate trait. If it does not, the first 10 feet of its movement during that turn costs 10 additional feet of movement. The resonance then ends.",
+    fallbackDescription: "The target's aura has pooled around its feet and is pretending this was always the plan. Until the end of its next turn, creatures adjacent to the target have lesser cover from the target, even if no physical obstacle lies between them. This does not stack with other cover, and the pooled aura moves with the target.",
     filters: { saveTypes: ["fortitude"] },
-    weight: 2,
-    tags: ["fortitude", "movement", "concentrate", "choice", "humorous", "manual"]
-   }),
+    tags: ["fortitude", "adjacent", "lesser-cover", "aura", "humorous", "manual"]
+  }),
   defineOverwhelmingResonance({
     id: "or-021-healing-pattern-rejected",
     localizationKey: "HealingPatternRejected",
     tone: "serious",
-    impact: "moderate",
+    impact: "light",
     fallbackTitle: "Healing Pattern Rejected",
     fallbackDescription: "The spell leaves the target's life force refusing magical repair. For 1 round, reduce Hit Points restored to the target by spells by 2, to a minimum of 0.",
     filters: { saveTypes: ["fortitude"] },
@@ -366,27 +304,27 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Spell-Torn Shadow",
-    fallbackDescription: "The target's magical outline tears away from its body and leaves a brief gap in the weave. Before the end of the target's next turn, the original caster may once treat the target's occupied spaces as empty solely when determining line of effect for a spell aimed at a different creature or point beyond the target. The target still blocks movement, still provides cover, and is affected normally by any area it occupies. The resonance then ends.",
-    tags: ["line-of-effect", "occupied-space", "original-caster", "one-use", "manual"]
+    fallbackDescription: "The target's magical outline tears away and makes the next area around it unstable. Before the end of the target's next turn, when the original caster casts a spell with an area that includes the target, the caster may shift the entire area 5 feet to another legal placement after placing it but before resolving it. The shifted area must still include the target and obey the spell's normal origin, range, and line of effect. This cannot alter an emanation or an area fixed to a creature, object, or point by the spell's text. The resonance ends only if the area is shifted.",
+    tags: ["area", "area-shift", "original-caster", "range", "line-of-effect", "conditional-consumption", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-024-reality-rejects-the-shortcut",
     localizationKey: "RealityRejectsTheShortcut",
     tone: "serious",
-    impact: "strong",
+    impact: "moderate",
     fallbackTitle: "Reality Rejects the Shortcut",
-    fallbackDescription: "The target's place in the world resists being rewritten again. Before the end of its next turn, the first time the target willingly teleports itself, the original caster may shift the destination by 5 feet to another legal destination that the teleportation effect could have selected. If no such destination exists, the teleportation resolves normally. This does not alter unwilling teleportation or an effect with a fixed destination. The resonance then ends.",
+    fallbackDescription: "Reality leaves a bright correction between where the target vanished and where it arrived. Before the end of its next turn, the first time the target teleports, the original caster immediately learns the exact destination if it is within 60 feet on the same plane; if it is farther away on the same plane, the caster learns only its direction; if it leaves the plane, the caster learns that fact. This knowledge does not bypass cover, concealment, or line of sight. The caster gains a +2 circumstance bonus to its next Seek or Track check against the target before the end of the target's next turn, after which the trace ends.",
     filters: { saveTypes: ["reflex"] },
-    tags: ["reflex", "teleportation", "destination", "original-caster", "one-use", "manual"]
+    tags: ["reflex", "teleportation", "trace", "seek", "track", "original-caster", "one-use", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-025-item-chorus",
     localizationKey: "ItemChorus",
     tone: "humorous",
-    impact: "light",
+    impact: "moderate",
     fallbackTitle: "Item Chorus",
-    fallbackDescription: "The target's magic items have formed a committee and apparently elected a bell. Before the end of the target's next turn, the first time it Activates a magic item, the activation produces an unmistakable chime, rune-flare, or whispered announcement. The original caster may use a reaction to Step or Take Cover. The activation then resolves normally, and the resonance ends whether or not the reaction is used.",
-    tags: ["magic-item", "activate-item", "reaction", "step", "take-cover", "humorous", "manual"]
+    fallbackDescription: "The target's magic items have formed a committee and apparently elected a bell. Before the end of the target's next turn, the first time it Activates a magic item, it chooses another magic item it carries. That second item joins the chorus and cannot be Activated until the end of the target's next turn. If the target carries no other magic item, the activated item announces itself with unmistakable sound and light, and the target cannot Hide until the end of its next turn. The triggering activation resolves normally, and the resonance then ends.",
+    tags: ["magic-item", "activate-item", "item-lock", "hide", "humorous", "one-use", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-026-transparent-resonance",
@@ -403,9 +341,9 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Elastic Distance",
-    fallbackDescription: "Distance stretches behind the target like a reluctant tether. Until the start of its next turn, the first time the target would end a move action farther from the original caster than it began, that movement costs 5 additional feet. If the target cannot pay that cost, it stops in the nearest legal space along its path where the movement can end. The resonance then ends.",
+    fallbackDescription: "Distance stretches behind the target like a reluctant tether. Before the end of its next turn, when the target declares the first move action that uses one of its Speeds and would end farther from the original caster than it began, reveal that the movement costs 5 additional feet before the path is resolved. Step, teleportation, and movement that does not use a Speed are excluded. If the target cannot pay the added cost, it stops in the nearest legal space along its path where the movement can end. The resonance then ends.",
     filters: { saveTypes: ["reflex"] },
-    tags: ["reflex", "movement", "distance", "original-caster", "one-use", "manual"]
+    tags: ["reflex", "movement", "speed", "distance", "original-caster", "one-use", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-028-echo-claims-the-footprint",
@@ -413,9 +351,9 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Echo Claims the Footprint",
-    fallbackDescription: "The first place the target abandons remembers it too vividly. The first time the target leaves a space before the start of its next turn, mark one space it occupied immediately before moving. Until the start of that turn, the target cannot willingly enter the marked space. Forced movement may still place it there, and other creatures are unaffected.",
+    fallbackDescription: "The first place the target abandons remembers it too vividly. The first time the target moves before the end of its next turn, the original caster chooses one space vacated by that movement. Until the end of the target's next turn, the target cannot willingly enter the marked space. Forced movement may still place it there, and other creatures are unaffected.",
     filters: { saveTypes: ["fortitude"] },
-    tags: ["fortitude", "movement", "marked-space", "one-use", "manual"]
+    tags: ["fortitude", "movement", "marked-space", "original-caster", "one-use", "manual"]
   }),
   defineOverwhelmingResonance({
     id: "or-029-the-weave-misquotes-you",
@@ -433,7 +371,7 @@ export const OVERWHELMING_RESONANCE_CARDS = Object.freeze([
     tone: "humorous",
     impact: "moderate",
     fallbackTitle: "Reality Keeps the Receipt",
-    fallbackDescription: "Reality has retained a full record of the transaction and would like everyone to review it. Before the end of the target's next turn, the first time it Casts a Spell or Activates a magic item, it must declare the spell or item, targets, area, and chosen options before the original caster decides whether to use a reaction to Step or Take Cover. The magical action then resolves normally, and the resonance ends whether or not the reaction is used.",
-    tags: ["cast-a-spell", "magic-item", "declaration", "reaction", "step", "take-cover", "humorous", "manual"]
+    fallbackDescription: "Reality has retained a full record of the transaction and would like everyone to review it. Before the end of the target's next turn, the first time it Casts a Spell or Activates a magic item that the original caster can perceive, it must declare the spell or item, targets, area, and chosen options. The original caster then decides whether to use a reaction to Step or Take Cover, satisfying that action's normal requirements. After the reaction is resolved or declined, the magical action resolves normally, and the resonance ends.",
+    tags: ["cast-a-spell", "magic-item", "perception", "declaration", "reaction", "step", "take-cover", "humorous", "manual"]
   })
 ]);

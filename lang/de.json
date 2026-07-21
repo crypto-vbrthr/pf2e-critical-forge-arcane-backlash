@@ -407,7 +407,7 @@
       },
       "DraggedThroughTheWeave": {
         "Title": "Durch das Gewebe gezerrt",
-        "Description": "Der Zauber hinterlässt unsichtbare Fäden, die jeder Bewegung folgen. Für 1 Runde erhält das Ziel einen Statusmalus von 1,5 Metern auf alle Bewegungsraten."
+        "Description": "Unsichtbare Fäden verfangen sich im Weg des Ziels. Bevor sein nächster Zug endet, darf der ursprüngliche Zaubernde das Ziel beim ersten Abschluss einer Bewegungsaktion, die eine seiner Bewegungsraten nutzt, 1,5 Meter entlang des gerade zurückgelegten Weges zum nächsten legalen Feld zurückziehen. Dies ist erzwungene Bewegung und löst keine Reaktionen aus. Existiert entlang des Weges kein legales Feld, bleibt die Bewegung unverändert und die Resonanz verfügbar. Die Resonanz endet, nachdem sie das Ziel bewegt hat oder ihre Dauer abläuft."
       },
       "SomaticDesynchronization": {
         "Title": "Somatische Desynchronisation",
@@ -427,39 +427,39 @@
       },
       "UnmooredFromPlace": {
         "Title": "Vom Ort gelöst",
-        "Description": "Die Position des Ziels wird eher zu einem Vorschlag als zu einer Tatsache. Bis zum Beginn seines nächsten Zuges wird es beim ersten Mal, wenn ein Zauber es zwangsweise bewegt, entlang desselben legalen Weges 1,5 Meter weiter bewegt. Teleportiert oder versetzt ein Zauber es stattdessen an einen genauen Ort, darf der Zaubernde das legale Ziel um 1,5 Meter auf ein anderes Feld verschieben, das der Zauber hätte wählen können. Danach endet die Resonanz."
+        "Description": "Die Position des Ziels wird eher zu einem Vorschlag als zu einer Tatsache. Bevor sein nächster Zug endet, darf der ursprüngliche Zaubernde beim ersten Mal, wenn ein von ihm gewirkter Zauber das Ziel erzwungen bewegt, die Bewegung um 1,5 Meter entlang desselben legalen Weges erhöhen. Gibt es keine zusätzlichen legalen 1,5 Meter, wird die Resonanz nicht verbraucht. Teleportiert oder versetzt ein solcher Zauber das Ziel stattdessen präzise, darf der ursprüngliche Zaubernde den legalen Zielort um 1,5 Meter auf ein anderes Feld verschieben, das der Zauber hätte wählen können. Die Resonanz endet erst, nachdem sie eine dieser Bewegungen oder Versetzungen verändert hat."
       },
       "GroundItOrGlow": {
         "Title": "Erden oder leuchten",
-        "Description": "Der Zauber hat dem Ziel deutlich zu viel sichtbare Magie hinterlassen. Zu Beginn seines nächsten Zuges darf das Ziel als erste Aktion die Resonanz erden, eine Aktion mit dem Merkmal Konzentration. Tut es dies nicht, strahlt es bis zum Ende dieses Zuges offensichtliches Licht, Geräusche, Symbole oder ähnliche Zeichen aus: Es kann sich nicht Verstecken und erhält einen Umstandsmalus von -1 auf Heimlichkeitswürfe. Danach endet die Resonanz."
+        "Description": "Der Zauber hat dem Ziel viel zu viel sichtbare Magie mitgegeben. Zu Beginn seines nächsten Zuges darf es als erste Aktion die Resonanz erden, eine Aktion mit dem Merkmal Konzentration. Tut es dies nicht, verströmt es bis zum Ende dieses Zuges auffälliges Licht, Geräusche, Symbole oder ähnliche Zeichen: Es kann sich nicht Verstecken, kann allein durch Heimlichkeit gegenüber dem ursprünglichen Zaubernden nicht Versteckt oder Unentdeckt werden und erhält einen Umstandsmalus von -1 auf Heimlichkeitswürfe. Danach endet die Resonanz."
       },
       "WardlineFracture": {
         "Title": "Riss in der Schutzlinie",
-        "Description": "Der kritische Fehlschlag hinterlässt eine sichtbare Naht in der nächsten magischen Verteidigung des Ziels. Bevor der nächste Zug des Ziels endet, wird das nächste Mal, wenn es gegen einen Zauber einen Status- oder Umstandsbonus auf RK oder einen Rettungswurf erhalten würde, dieser einzelne Bonus um 1 reduziert, mindestens jedoch auf 0. Die Resonanz wird nur verbraucht, wenn sie einen Bonus reduziert."
+        "Description": "Der kritische Fehlschlag hinterlässt eine sichtbare Naht in der nächsten magischen Verteidigung des Ziels. Bevor der nächste Zug des Ziels endet, darf der ursprüngliche Zaubernde bei der Berechnung seiner RK oder seines Rettungswurfs gegen einen Zauber einen anwendbaren Status- oder Umstandsbonus wählen und diesen Bonus um 1 bis auf mindestens 0 reduzieren. Die Resonanz wird nur verbraucht, wenn die Verringerung die endgültige Verteidigung verändert."
       },
       "SensoryPalimpsest": {
         "Title": "Palimpsest der Sinne",
-        "Description": "Der Zauber überschreibt die Sinne des Ziels mit sich selbst. Für 1 Runde erhält das Ziel einen Statusmalus von -1 auf Wahrnehmungswürfe und seinen Wahrnehmungs-SG."
+        "Description": "Der Zauber schreibt eine falsche Schicht über die Sinne des Ziels. Bevor sein nächster Zug endet, wählt der ursprüngliche Zaubernde beim ersten Suchen des Ziels eine Kreatur oder einen Gegenstand im untersuchten Bereich, den das Ziel entdecken könnte. Der Erfolgsgrad des Ziels wird nur gegen dieses Subjekt um einen Grad verschlechtert. Alle anderen Subjekte werden normal abgehandelt; danach endet die Resonanz."
       },
       "VoiceThroughGlass": {
         "Title": "Stimme durch Glas",
-        "Description": "Jedes Wort erreicht die Welt durch eine Schicht klingenden magischen Glases. Für 1 Runde erhält das Ziel einen Umstandsmalus von -1 auf Diplomatie-, Darbietungs-, Einschüchterungs- und Täuschungswürfe."
+        "Description": "Jedes Wort erreicht die Welt durch eine Schicht klingenden magischen Glases. Bevor der nächste Zug des Ziels endet, kann die erste von ihm eingesetzte Aktion mit dem Merkmal Hörbar oder Sprachabhängig und einer Reichweite von mehr als 4,5 Metern nur Kreaturen innerhalb von 4,5 Metern betreffen. Eine kürzere normale Reichweite bleibt unverändert. Die Resonanz wird nur verbraucht, wenn diese Begrenzung eine beabsichtigte Kreatur ausschließt. Zauberwirken wird nur behindert, wenn der Zauber selbst eines dieser Merkmale besitzt."
       },
       "ProjectedInstability": {
         "Title": "Projizierte Instabilität",
-        "Description": "Die ausgesandte Magie und eingeübten Techniken des Ziels schwanken um eine unsichtbare Bruchlinie. Für 1 Runde erhält es einen Umstandsmalus von -1 auf Zauberangriffswürfe, seinen Zauber-SG und seinen Klassen-SG."
+        "Description": "Der nächste ausgesandte Angriff oder Effekt des Ziels schwankt um eine unsichtbare Bruchlinie. Bevor sein nächster Zug endet, wählt der ursprüngliche Zaubernde beim ersten Einsatz einer Aktion oder Aktivität, die einen Angriffswurf verlangt oder eine oder mehrere Kreaturen zu einem Rettungswurf zwingt, eine betroffene Kreatur, die er wahrnehmen kann. Diese Kreatur erhält einen Umstandsbonus von +1 auf ihre RK oder ihren Rettungswurf gegen diese Aktion. Die Resonanz wird nur verbraucht, wenn der Bonus die Verteidigung verändert."
       },
       "ResonantWeakpoint": {
         "Title": "Resonante Schwachstelle",
-        "Description": "Der Zauber lässt einen Teil des Ziels genau in der falschen Frequenz nachklingen. Wähle eine Schadensart, die der auslösende Zauber verursacht hat. Bis zum Beginn des nächsten Zuges des Ziels erhält es Schwäche 2 gegen diese Schadensart. Hat der Zauber keinen Schaden verursacht, wähle eine Schadensart, die unmittelbar durch eines seiner Merkmale dargestellt wird. Trifft auch das nicht zu, erhält das Ziel stattdessen einen Statusmalus von -1 auf seinen nächsten Rettungswurf gegen einen Zauber des ursprünglichen Zaubernden vor dem Ende seines nächsten Zuges."
+        "Description": "Der Zauber lässt einen Teil des Ziels genau in der falschen Frequenz schwingen. Der ursprüngliche Zaubernde wählt eine Schadensart, die der auslösende Zauber verursacht hat. Bis zum Beginn des nächsten Zuges des Ziels erhält es Schwäche 2 gegen diese Schadensart. Hat der Zauber keinen Schaden verursacht, darf der Zaubernde stattdessen eine Schadensart wählen, die unmittelbar durch eines der Schadens- oder Energiemerkmale des Zaubers benannt wird. Trifft keine Möglichkeit zu, darf das Ziel bei seinem nächsten Rettungswurf gegen einen Zauber des ursprünglichen Zaubernden vor dem Ende seines nächsten Zuges einen Umstandsbonus nicht anwenden; der Zaubernde wählt den Bonus bei der Berechnung des Rettungswurfs. Das Ergebnis wird manuell angewendet."
       },
       "SpellStamped": {
         "Title": "Vom Zauber gestempelt",
-        "Description": "Das Ziel trägt eine private Markierung, die auf den ursprünglichen Zaubernden zurückweist. Bis zum Ende des nächsten Zuges des Ziels kennt dieser Zaubernde stets das Feld des Ziels, solange beide sich auf derselben Ebene befinden. Der nächste Zauberangriff des Zaubernden gegen das Ziel ignoriert den Zustand Verborgen; ist das Ziel Versteckt, aber nicht Unentdeckt, wird statt SG 11 ein einfacher Wurf gegen SG 5 verwendet. Die Resonanz endet, nachdem sie einen einfachen Wurf reduziert oder entfernt hat, spätestens jedoch mit Ablauf der Dauer."
+        "Description": "Das Ziel trägt einen privaten Stempel, der geliehene Magie offenlegt. Der ursprüngliche Zaubernde wählt einen Zaubereffekt auf dem Ziel, der von einer anderen Kreatur erzeugt wurde. Existiert kein solcher Effekt, heftet sich der Stempel an den ersten entsprechenden Zaubereffekt, den das Ziel vor dem Ende seines nächsten Zuges erhält. Der erste Bannwurf gegen den markierten Effekt erhält einen Umstandsbonus von +2; die ausführende Kreatur erfährt vor dem Wurf Rang und Tradition des Effekts. Die Resonanz endet nach diesem Wurf oder mit Ablauf der Dauer."
       },
       "ConcentrationEcho": {
         "Title": "Konzentrationsecho",
-        "Description": "Der Zauber hinterlässt ein Echo, das darauf wartet, dass die Gedanken des Ziels absichtlich werden. Bevor der nächste Zug des Ziels endet, darf der ursprüngliche Zaubernde seine Reaktion einsetzen, sobald das Ziel seine erste Aktion mit dem Merkmal Konzentration beginnt, um einen Schritt auszuführen oder zu Suchen. Beim Suchen muss der untersuchte Bereich das Feld oder das zuletzt bekannte Feld des Ziels enthalten. Danach wird die auslösende Aktion normal abgehandelt, und die Resonanz endet unabhängig davon, ob die Reaktion eingesetzt wurde."
+        "Description": "Der Zauber hinterlässt ein Echo, das auf absichtliche Gedanken wartet. Bevor der nächste Zug des Ziels endet, erhält die erste von ihm begonnene Aktion mit dem Merkmal Konzentration zusätzlich das Merkmal Handhaben, jedoch ausschließlich zur Bestimmung ausgelöster Reaktionen. Ihre übrigen Merkmale und ihre Abwicklung bleiben unverändert. Die Resonanz wird nur verbraucht, wenn Handhaben mindestens einen Reaktionsauslöser erzeugt, den die Aktion zuvor nicht besaß."
       },
       "AftershockLine": {
         "Title": "Nachbebenlinie",
@@ -467,15 +467,15 @@
       },
       "StaticInTheAim": {
         "Title": "Störrauschen im Ziel",
-        "Description": "Das Timing des Ziels ist voller magischer Störungen. Für 1 Runde erhält es einen Statusmalus von -1 auf Angriffswürfe."
+        "Description": "Magisches Störrauschen zieht die Zielerfassung immer wieder zur Quelle des Zaubers zurück. Bevor der nächste Zug des Ziels endet, muss es beim ersten Angriff gegen eine andere Kreatur als den ursprünglichen Zaubernden einen einfachen Wurf gegen SG 5 ablegen, sofern der ursprüngliche Zaubernde ein legales Ziel dieses Angriffs wäre. Bei einem Fehlschlag geht der Angriff verloren, als wäre die gewählte Kreatur Verborgen. Ist der ursprüngliche Zaubernde kein legales Ziel, wartet die Resonanz. Sie endet nach dem einfachen Wurf."
       },
       "ResistanceDelamination": {
         "Title": "Delaminierter Widerstand",
-        "Description": "Der Zauber löst eine Schicht aus der Fähigkeit des Ziels, Magie abzufangen. Bevor der nächste Zug des Ziels endet, wird das nächste Mal, wenn es Resistenz gegen Schaden durch einen Zauber anwenden würde, diese Resistenz für diesen Schadensfall um 3 reduziert, mindestens jedoch auf 0. Besitzt das Ziel beim Ziehen der Karte keine anwendbare Resistenz, erhält es stattdessen bis zum Beginn seines nächsten Zuges Schwäche 1 gegen Schaden durch Zauber. Beide Ergebnisse werden manuell angewendet."
+        "Description": "Der Zauber löst eine Schicht der Fähigkeit des Ziels ab, Magie zu absorbieren. Bevor der nächste Zug des Ziels endet, wählt der ursprüngliche Zaubernde beim ersten Mal, wenn das Ziel eine oder mehrere Resistenzen gegen Schaden eines Zaubers anwenden würde, eine anwendbare Resistenz und verringert sie für diese Schadensinstanz um 3 bis auf mindestens 0. Konnte beim Ziehen der Karte keine Resistenz greifen, wird die erste Resistenz, die das Ziel vor dem Ende seines nächsten Zuges erhält, bis zum Ende des nächsten Zuges des Ziels um 3 bis auf mindestens 0 verringert. Die Resonanz wird nur verbraucht, wenn tatsächlich ein Resistenzwert verringert wird."
       },
       "AuraUnderfoot": {
         "Title": "Aura unter den Füßen",
-        "Description": "Die Aura des Ziels hat sich um seine Füße gesammelt und tut so, als wäre das schon immer der Plan gewesen. Zu Beginn seines nächsten Zuges darf das Ziel als erste Aktion die Aura beruhigen, eine Aktion mit dem Merkmal Konzentration. Tut es dies nicht, kosten die ersten 3 Meter seiner Bewegung in diesem Zug 3 zusätzliche Meter Bewegungsrate. Danach endet die Resonanz."
+        "Description": "Die Aura des Ziels hat sich um seine Füße gesammelt und tut so, als wäre das schon immer der Plan gewesen. Bis zum Ende seines nächsten Zuges besitzen angrenzende Kreaturen gegenüber dem Ziel schwache Deckung, selbst wenn kein körperliches Hindernis zwischen ihnen liegt. Dies ist nicht mit anderer Deckung kumulativ, und die angesammelte Aura bewegt sich mit dem Ziel."
       },
       "HealingPatternRejected": {
         "Title": "Heilungsmuster abgestoßen",
@@ -487,15 +487,15 @@
       },
       "SpellTornShadow": {
         "Title": "Zauberzerrissener Schatten",
-        "Description": "Der magische Umriss des Ziels reißt sich von seinem Körper los und hinterlässt eine kurze Lücke im Gewebe. Vor dem Ende des nächsten Zuges des Ziels darf der ursprüngliche Zaubernde die vom Ziel besetzten Felder einmal ausschließlich zur Bestimmung der Wirkungslinie eines Zaubers auf eine andere Kreatur oder einen Punkt hinter dem Ziel als leer behandeln. Das Ziel blockiert weiterhin Bewegung, gewährt weiterhin Deckung und wird von Bereichen, in denen es steht, normal betroffen. Danach endet die Resonanz."
+        "Description": "Der magische Umriss des Ziels reißt sich los und macht den nächsten Bereich um es herum instabil. Bevor der nächste Zug des Ziels endet, darf der ursprüngliche Zaubernde beim Wirken eines Zaubers mit einem Bereich, der das Ziel einschließt, den gesamten Bereich nach seiner Platzierung, aber vor seiner Abwicklung um 1,5 Meter auf eine andere legale Position verschieben. Der verschobene Bereich muss das Ziel weiterhin einschließen und Ursprung, Reichweite sowie Wirkungslinie des Zaubers einhalten. Eine Emanation oder ein laut Zaubertext an eine Kreatur, einen Gegenstand oder einen Punkt gebundener Bereich kann nicht verändert werden. Die Resonanz endet nur, wenn der Bereich verschoben wird."
       },
       "RealityRejectsTheShortcut": {
         "Title": "Die Wirklichkeit weist die Abkürzung zurück",
-        "Description": "Der Platz des Ziels in der Welt wehrt sich gegen eine weitere Umschreibung. Vor dem Ende seines nächsten Zuges darf der ursprüngliche Zaubernde beim ersten Mal, wenn sich das Ziel freiwillig teleportiert, den Zielort um 1,5 Meter auf einen anderen legalen Zielort verschieben, den der Teleportationseffekt hätte wählen können. Gibt es keinen solchen Zielort, wird die Teleportation normal abgewickelt. Unfreiwillige Teleportation und Effekte mit festem Zielort werden nicht verändert. Danach endet die Resonanz."
+        "Description": "Die Wirklichkeit hinterlässt eine leuchtende Korrektur zwischen dem Ort, an dem das Ziel verschwand, und seinem Ankunftsort. Bevor sein nächster Zug endet, erfährt der ursprüngliche Zaubernde beim ersten Teleportieren des Ziels sofort den genauen Zielort, wenn dieser sich auf derselben Ebene und höchstens 18 Meter entfernt befindet; liegt er auf derselben Ebene weiter entfernt, erfährt der Zaubernde nur die Richtung; verlässt das Ziel die Ebene, erfährt der Zaubernde dies. Dieses Wissen umgeht weder Deckung noch Verbergung oder Sichtlinie. Der Zaubernde erhält vor dem Ende des nächsten Zuges des Ziels einen Umstandsbonus von +2 auf seinen nächsten Suchen- oder Spuren-lesen-Wurf gegen das Ziel; danach endet die Spur."
       },
       "ItemChorus": {
         "Title": "Gegenstandschor",
-        "Description": "Die magischen Gegenstände des Ziels haben einen Ausschuss gebildet und offenbar eine Glocke gewählt. Vor dem Ende des nächsten Zuges des Ziels erzeugt das erste Aktivieren eines magischen Gegenstands ein unverkennbares Läuten, Runenleuchten oder eine geflüsterte Ansage. Der ursprüngliche Zaubernde darf als Reaktion einen Schritt ausführen oder in Deckung gehen. Die Aktivierung wird anschließend normal abgewickelt; die Resonanz endet unabhängig davon, ob die Reaktion genutzt wurde."
+        "Description": "Die magischen Gegenstände des Ziels haben einen Ausschuss gebildet und offenbar eine Glocke gewählt. Bevor der nächste Zug des Ziels endet, wählt es beim ersten Aktivieren eines magischen Gegenstands einen weiteren magischen Gegenstand, den es trägt. Dieser zweite Gegenstand stimmt in den Chor ein und kann bis zum Ende des nächsten Zuges des Ziels nicht aktiviert werden. Trägt das Ziel keinen weiteren magischen Gegenstand, kündigt sich der aktivierte Gegenstand mit unverkennbarem Licht und Geräusch an, und das Ziel kann sich bis zum Ende seines nächsten Zuges nicht Verstecken. Die auslösende Aktivierung wird normal abgewickelt; danach endet die Resonanz."
       },
       "TransparentResonance": {
         "Title": "Durchsichtige Resonanz",
@@ -503,11 +503,11 @@
       },
       "ElasticDistance": {
         "Title": "Elastische Entfernung",
-        "Description": "Die Entfernung dehnt sich hinter dem Ziel wie ein widerwilliges Halteseil. Bis zum Beginn seines nächsten Zuges kostet es das erste Mal, wenn das Ziel eine Bewegungsaktion weiter vom ursprünglichen Zaubernden entfernt beendet als begonnen, 1,5 Meter zusätzliche Bewegungsrate. Kann das Ziel diese Kosten nicht bezahlen, hält es auf dem nächsten legalen Feld entlang seines Weges an, auf dem die Bewegung enden kann. Danach endet die Resonanz."
+        "Description": "Entfernung dehnt sich hinter dem Ziel wie ein widerwilliges Halteseil. Bevor sein nächster Zug endet, wird bei der ersten angekündigten Bewegungsaktion, die eine seiner Bewegungsraten verwendet und weiter vom ursprünglichen Zaubernden entfernt enden würde als sie begann, vor der Festlegung des Weges offengelegt, dass die Bewegung 1,5 Meter zusätzliche Bewegungsrate kostet. Schritt, Teleportation und Bewegung ohne Verwendung einer Bewegungsrate sind ausgeschlossen. Kann das Ziel die zusätzlichen Kosten nicht bezahlen, hält es im nächsten legalen Feld entlang seines Weges an, in dem die Bewegung enden kann. Danach endet die Resonanz."
       },
       "EchoClaimsTheFootprint": {
         "Title": "Das Echo beansprucht den Fußabdruck",
-        "Description": "Der erste Ort, den das Ziel verlässt, erinnert sich etwas zu lebhaft an es. Wenn das Ziel vor Beginn seines nächsten Zuges erstmals ein Feld verlässt, wird ein Feld markiert, das es unmittelbar vor der Bewegung besetzt hatte. Bis zum Beginn dieses Zuges kann das Ziel das markierte Feld nicht freiwillig betreten. Erzwungene Bewegung kann es weiterhin dort platzieren, und andere Kreaturen sind nicht betroffen."
+        "Description": "Der erste Ort, den das Ziel verlässt, erinnert sich zu deutlich an es. Beim ersten Bewegen des Ziels vor dem Ende seines nächsten Zuges wählt der ursprüngliche Zaubernde ein durch diese Bewegung verlassenes Feld. Bis zum Ende des nächsten Zuges des Ziels kann es das markierte Feld nicht freiwillig betreten. Erzwungene Bewegung darf es weiterhin dort platzieren; andere Kreaturen sind nicht betroffen."
       },
       "TheWeaveMisquotesYou": {
         "Title": "Das Gewebe zitiert dich falsch",
@@ -515,7 +515,7 @@
       },
       "RealityKeepsTheReceipt": {
         "Title": "Die Wirklichkeit behält die Quittung",
-        "Description": "Die Wirklichkeit hat den Vorgang vollständig protokolliert und möchte offenbar, dass alle ihn prüfen. Vor dem Ende des nächsten Zuges des Ziels muss es beim ersten Wirken eines Zaubers oder Aktivieren eines magischen Gegenstands den Zauber oder Gegenstand, Ziele, Bereich und gewählte Optionen ansagen, bevor der ursprüngliche Zaubernde entscheidet, ob er als Reaktion einen Schritt ausführt oder in Deckung geht. Die magische Aktion wird anschließend normal abgewickelt; die Resonanz endet unabhängig davon, ob die Reaktion genutzt wurde."
+        "Description": "Die Wirklichkeit hat eine vollständige Aufzeichnung der Transaktion aufbewahrt und möchte, dass alle sie prüfen. Bevor der nächste Zug des Ziels endet, muss es beim ersten Wirken eines Zaubers oder Aktivieren eines magischen Gegenstands, das der ursprüngliche Zaubernde wahrnehmen kann, den Zauber oder Gegenstand, Ziele, Bereich und gewählte Optionen ansagen. Danach entscheidet der ursprüngliche Zaubernde, ob er seine Reaktion für einen Schritt oder In Deckung gehen einsetzt, wobei die normalen Voraussetzungen dieser Aktion gelten. Nachdem die Reaktion abgewickelt oder abgelehnt wurde, wird die magische Aktion normal abgehandelt; danach endet die Resonanz."
       }
     },
     "Effects": {

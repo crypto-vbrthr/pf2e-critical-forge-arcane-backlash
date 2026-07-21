@@ -1,6 +1,7 @@
 export const ARCANE_CARD_ID_PREFIX = "pf2e-critical-forge-arcane-backlash";
 export const ARCANE_PACK_IDS = Object.freeze({
-  miscastRepercussions: `${ARCANE_CARD_ID_PREFIX}.miscast-repercussions`
+  miscastRepercussions: `${ARCANE_CARD_ID_PREFIX}.miscast-repercussions`,
+  defiantReversals: `${ARCANE_CARD_ID_PREFIX}.defiant-reversals`
 });
 
 const FILTER_KEYS = Object.freeze([
@@ -33,6 +34,42 @@ function freezeEffect(effect, localizationKey, fallbackTitle, defaultTarget) {
   });
 }
 
+function defineArcaneCard({
+  id,
+  packId,
+  category,
+  collection,
+  localizationKey,
+  tone,
+  impact,
+  fallbackTitle,
+  fallbackDescription,
+  weight = 1,
+  baseTags = [],
+  tags = [],
+  filters = {},
+  effect = null,
+  defaultEffectTarget = "source"
+}) {
+  return Object.freeze({
+    schemaVersion: 1,
+    id: `${ARCANE_CARD_ID_PREFIX}.${id}`,
+    packId,
+    category,
+    tone,
+    impact,
+    titleKey: `PF2ECFAB.Cards.${localizationKey}.Title`,
+    descriptionKey: `PF2ECFAB.Cards.${localizationKey}.Description`,
+    fallbackTitle,
+    fallbackDescription,
+    weight,
+    tags: Object.freeze([...baseTags, ...tags]),
+    filters: freezeFilters(filters),
+    effect: freezeEffect(effect, localizationKey, fallbackTitle, defaultEffectTarget),
+    metadata: Object.freeze({ collection })
+  });
+}
+
 export function defineMiscastRepercussion({
   id,
   localizationKey,
@@ -45,21 +82,55 @@ export function defineMiscastRepercussion({
   filters = {},
   effect = null
 }) {
-  return Object.freeze({
-    schemaVersion: 1,
-    id: `${ARCANE_CARD_ID_PREFIX}.${id}`,
+  return defineArcaneCard({
+    id,
     packId: ARCANE_PACK_IDS.miscastRepercussions,
     category: "spellCriticalFumble",
+    collection: "miscast-repercussions",
+    localizationKey,
     tone,
     impact,
-    titleKey: `PF2ECFAB.Cards.${localizationKey}.Title`,
-    descriptionKey: `PF2ECFAB.Cards.${localizationKey}.Description`,
     fallbackTitle,
     fallbackDescription,
     weight,
-    tags: Object.freeze(["spell", "critical-fumble", "backlash", ...tags]),
-    filters: freezeFilters(filters),
-    effect: freezeEffect(effect, localizationKey, fallbackTitle, "source"),
-    metadata: Object.freeze({ collection: "miscast-repercussions" })
+    baseTags: ["spell", "critical-fumble", "backlash"],
+    tags,
+    filters,
+    effect,
+    defaultEffectTarget: "source"
+  });
+}
+
+export function defineDefiantReversal({
+  id,
+  localizationKey,
+  tone,
+  impact,
+  fallbackTitle,
+  fallbackDescription,
+  weight = 1,
+  tags = [],
+  filters = {},
+  effect = null
+}) {
+  return defineArcaneCard({
+    id,
+    packId: ARCANE_PACK_IDS.defiantReversals,
+    category: "savingThrowCriticalSuccess",
+    collection: "defiant-reversals",
+    localizationKey,
+    tone,
+    impact,
+    fallbackTitle,
+    fallbackDescription,
+    weight,
+    baseTags: ["spell", "saving-throw", "critical-success", "defiance"],
+    tags,
+    filters: {
+      ...filters,
+      attackTraits: unique(["spell", ...(filters.attackTraits ?? [])])
+    },
+    effect,
+    defaultEffectTarget: "source"
   });
 }

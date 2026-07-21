@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.2.0
+
+- Added the optional **Defiant Reversals** pack.
+- Added DR-001 through DR-010 for critical successes on saving throws against spells.
+- Added explicit `attackTraits: ["spell"]` filtering so nonmagical saving throws cannot enter the pack.
+- Added Reflex-, Fortitude-, and Will-specific cards alongside tradition-neutral general cards.
+- Added resistance rewards involving immediate movement, fear recovery, repeated-spell adaptation, forced-movement defense, duration reduction, magical insight, signature recognition, and ally support.
+- Kept all new cards manual because they depend on the original caster, immediate actions, repeated spell identity, ongoing effects, or conditional consumption.
+- Documented that beneficial saving-throw consequences apply to the saving creature (`source`), not the caster.
+- Raised the required PF2E Critical Forge version to `0.9.3-dev`, which includes corrected positive-effect targeting for critically successful saving throws.
+- Updated English and German localization, README, pack documentation, Card Bible, and tests.
+
 ## 0.1.3
 
 - Applied the full mechanical review of Miscast Repercussions.

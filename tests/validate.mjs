@@ -15,6 +15,7 @@ function getLocalization(dictionary, dottedKey) {
 }
 
 const manifest = await readJson("module.json");
+const packageJson = await readJson("package.json");
 const de = await readJson("lang/de.json");
 const en = await readJson("lang/en.json");
 const { buildArcaneBacklashPacks, ARCANE_PACK_CONFIGS } = await import(
@@ -25,131 +26,115 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.1.3");
+assert.equal(manifest.version, "0.2.0");
+assert.equal(packageJson.version, "0.2.0");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
-assert.ok(manifest.relationships?.requires?.some((entry) => entry.id === "pf2e-critical-forge"));
+assert.ok(manifest.relationships?.requires?.some((entry) =>
+  entry.id === "pf2e-critical-forge" && entry.compatibility?.minimum === "0.9.3-dev"
+));
 assert.ok(manifest.relationships?.systems?.some((entry) => entry.id === "pf2e"));
 
-assert.equal(ARCANE_PACK_CONFIGS.length, 1);
+assert.equal(ARCANE_PACK_CONFIGS.length, 2);
 const disabled = buildArcaneBacklashPacks(() => false);
 const enabled = buildArcaneBacklashPacks(() => true);
-assert.equal(disabled.length, 1);
-assert.equal(disabled[0].id, ARCANE_PACK_IDS.miscastRepercussions);
-assert.equal(disabled[0].enabled, false);
-assert.equal(enabled[0].enabled, true);
+assert.equal(disabled.length, 2);
+assert.equal(enabled.length, 2);
+assert.deepEqual(disabled.map((pack) => pack.id), [
+  ARCANE_PACK_IDS.miscastRepercussions,
+  ARCANE_PACK_IDS.defiantReversals
+]);
+assert.ok(disabled.every((pack) => pack.enabled === false));
+assert.ok(enabled.every((pack) => pack.enabled === true));
+assert.ok(disabled.every((pack) => pack.version === "0.2.0"));
 assert.equal(disabled[0].cards.length, 30);
-assert.equal(disabled[0].version, "0.1.3");
+assert.equal(disabled[1].cards.length, 10);
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
+assert.equal(disabled[1].metadata.scope, "spell-saves-all-traditions");
 
-for (const dictionary of [de, en]) {
-  assert.ok(getLocalization(dictionary, disabled[0].titleKey), disabled[0].titleKey);
-  assert.ok(getLocalization(dictionary, disabled[0].descriptionKey), disabled[0].descriptionKey);
-}
-
-const ids = new Set();
-const slugs = [];
-for (const card of disabled[0].cards) {
-  assert.equal(card.schemaVersion, 1);
-  assert.equal(card.packId, ARCANE_PACK_IDS.miscastRepercussions);
-  assert.equal(card.category, "spellCriticalFumble");
-  assert.equal(card.metadata.collection, "miscast-repercussions");
-  assert.equal(card.effect, null);
-  assert.ok(card.tags.includes("spell"));
-  assert.ok(card.tags.includes("critical-fumble"));
-  assert.ok(card.tags.includes("backlash"));
-  assert.ok(card.tags.includes("manual"));
-  assert.deepEqual(card.filters.spellTraditions, []);
-  assert.deepEqual(card.filters.spellTraits, []);
-  assert.ok(!ids.has(card.id), `Duplicate card id: ${card.id}`);
-  ids.add(card.id);
-  slugs.push(card.id.split(".").at(-1));
+for (const pack of disabled) {
   for (const dictionary of [de, en]) {
-    assert.ok(getLocalization(dictionary, card.titleKey), card.titleKey);
-    assert.ok(getLocalization(dictionary, card.descriptionKey), card.descriptionKey);
+    assert.ok(getLocalization(dictionary, pack.titleKey), pack.titleKey);
+    assert.ok(getLocalization(dictionary, pack.descriptionKey), pack.descriptionKey);
   }
 }
 
-assert.equal(ids.size, 30);
-assert.deepEqual(slugs, [
-  "mr-001-arcane-recoil",
-  "mr-002-resonant-hands",
-  "mr-003-feedback-pulse",
-  "mr-004-spellshock",
-  "mr-005-energy-grounding",
-  "mr-006-broken-cadence",
-  "mr-007-lingering-syllable",
-  "mr-008-crossed-intent",
-  "mr-009-forced-recalculation",
-  "mr-010-empty-follow-through",
-  "mr-011-reality-pushes-back",
-  "mr-012-unstable-casting-ground",
-  "mr-013-collapsed-angle",
-  "mr-014-targeted-by-the-echo",
-  "mr-015-folded-distance",
-  "mr-016-afterimage",
-  "mr-017-luminous-outline",
-  "mr-018-echoing-presence",
-  "mr-019-colors-out-of-order",
-  "mr-020-magical-tell",
-  "mr-021-frayed-pattern",
-  "mr-022-wrong-shape",
-  "mr-023-delayed-spark",
-  "mr-024-spell-snag",
-  "mr-025-unfinished-ending",
-  "mr-026-shadow-arrives-late",
-  "mr-027-voice-of-the-wrong-element",
-  "mr-028-familiar-geometry",
-  "mr-029-applause-from-nowhere",
-  "mr-030-reality-takes-notes"
+const allIds = new Set();
+for (const pack of disabled) {
+  for (const card of pack.cards) {
+    assert.equal(card.schemaVersion, 1);
+    assert.ok(!allIds.has(card.id), `Duplicate card id: ${card.id}`);
+    allIds.add(card.id);
+    assert.equal(card.effect, null);
+    assert.ok(card.tags.includes("manual"));
+    for (const dictionary of [de, en]) {
+      assert.ok(getLocalization(dictionary, card.titleKey), card.titleKey);
+      assert.ok(getLocalization(dictionary, card.descriptionKey), card.descriptionKey);
+    }
+  }
+}
+assert.equal(allIds.size, 40);
+
+const miscast = disabled[0].cards;
+assert.ok(miscast.every((card) => card.packId === ARCANE_PACK_IDS.miscastRepercussions));
+assert.ok(miscast.every((card) => card.category === "spellCriticalFumble"));
+assert.ok(miscast.every((card) => card.metadata.collection === "miscast-repercussions"));
+assert.ok(miscast.every((card) => card.tags.includes("critical-fumble")));
+assert.ok(miscast.every((card) => card.tags.includes("backlash")));
+assert.equal(miscast.filter((card) => card.impact === "light").length, 10);
+assert.equal(miscast.filter((card) => card.impact === "moderate").length, 18);
+assert.equal(miscast.filter((card) => card.impact === "strong").length, 2);
+
+const reversals = disabled[1].cards;
+assert.ok(reversals.every((card) => card.packId === ARCANE_PACK_IDS.defiantReversals));
+assert.ok(reversals.every((card) => card.category === "savingThrowCriticalSuccess"));
+assert.ok(reversals.every((card) => card.metadata.collection === "defiant-reversals"));
+assert.ok(reversals.every((card) => card.tags.includes("saving-throw")));
+assert.ok(reversals.every((card) => card.tags.includes("critical-success")));
+assert.ok(reversals.every((card) => card.tags.includes("defiance")));
+assert.ok(reversals.every((card) => card.filters.attackTraits.includes("spell")));
+assert.ok(reversals.every((card) => card.filters.spellTraditions.length === 0));
+assert.ok(reversals.every((card) => card.filters.spellTraits.length === 0));
+
+const reversalSlugs = reversals.map((card) => card.id.split(".").at(-1));
+assert.deepEqual(reversalSlugs, [
+  "dr-001-stand-through-it",
+  "dr-002-not-today",
+  "dr-003-body-remembers",
+  "dr-004-rooted-in-reality",
+  "dr-005-shake-the-pattern",
+  "dr-006-read-the-weave",
+  "dr-007-seen-it-now",
+  "dr-008-name-the-weakness",
+  "dr-009-familiar-signature",
+  "dr-010-counterexample"
 ]);
 
-const bySlug = new Map(disabled[0].cards.map((card) => [card.id.split(".").at(-1), card]));
-assert.equal(bySlug.get("mr-010-empty-follow-through").weight, 2);
-assert.equal(bySlug.get("mr-010-empty-follow-through").tone, "humorous");
-assert.ok(bySlug.get("mr-001-arcane-recoil").tags.includes("forced-movement"));
-assert.ok(bySlug.get("mr-002-resonant-hands").tags.includes("manipulate"));
-assert.ok(bySlug.get("mr-004-spellshock").tags.includes("reaction-restriction"));
-assert.ok(bySlug.get("mr-005-energy-grounding").tags.includes("difficult-terrain"));
-assert.ok(bySlug.get("mr-006-broken-cadence").tags.includes("action-sequencing"));
-assert.ok(bySlug.get("mr-009-forced-recalculation").tags.includes("action-tax"));
+const bySlug = new Map(reversals.map((card) => [card.id.split(".").at(-1), card]));
+assert.deepEqual(bySlug.get("dr-001-stand-through-it").filters.saveTypes, ["reflex"]);
+assert.deepEqual(bySlug.get("dr-002-not-today").filters.saveTypes, ["will"]);
+assert.deepEqual(bySlug.get("dr-004-rooted-in-reality").filters.saveTypes, ["fortitude"]);
+assert.deepEqual(bySlug.get("dr-009-familiar-signature").filters.saveTypes, ["will"]);
+assert.equal(bySlug.get("dr-002-not-today").tone, "humorous");
+assert.equal(bySlug.get("dr-002-not-today").weight, 2);
+assert.equal(bySlug.get("dr-006-read-the-weave").weight, 2);
+assert.equal(bySlug.get("dr-005-shake-the-pattern").impact, "strong");
+assert.ok(bySlug.get("dr-004-rooted-in-reality").tags.includes("forced-movement"));
+assert.ok(bySlug.get("dr-006-read-the-weave").tags.includes("recall-knowledge"));
+assert.ok(bySlug.get("dr-008-name-the-weakness").tags.includes("counteract"));
+assert.ok(bySlug.get("dr-009-familiar-signature").tags.includes("duplicates"));
+assert.ok(bySlug.get("dr-010-counterexample").tags.includes("ally"));
 
-assert.equal(bySlug.get("mr-013-collapsed-angle").weight, 2);
-assert.equal(bySlug.get("mr-017-luminous-outline").weight, 2);
-assert.equal(bySlug.get("mr-020-magical-tell").weight, 2);
-assert.equal(bySlug.get("mr-019-colors-out-of-order").impact, "strong");
-assert.ok(bySlug.get("mr-011-reality-pushes-back").tags.includes("lateral-movement"));
-assert.ok(bySlug.get("mr-012-unstable-casting-ground").tags.includes("cast-a-spell"));
-assert.ok(bySlug.get("mr-014-targeted-by-the-echo").tags.includes("seek"));
-assert.ok(bySlug.get("mr-015-folded-distance").tags.includes("range"));
-assert.ok(bySlug.get("mr-016-afterimage").tags.includes("flat-check"));
-assert.ok(bySlug.get("mr-018-echoing-presence").tags.includes("false-origin"));
-assert.ok(bySlug.get("mr-019-colors-out-of-order").tags.includes("concealment"));
-assert.ok(bySlug.get("mr-020-magical-tell").tags.includes("saving-throw"));
+assert.equal(reversals.filter((card) => card.impact === "light").length, 4);
+assert.equal(reversals.filter((card) => card.impact === "moderate").length, 5);
+assert.equal(reversals.filter((card) => card.impact === "strong").length, 1);
+assert.equal(reversals.filter((card) => card.filters.saveTypes.length === 0).length, 6);
 
-assert.equal(bySlug.get("mr-022-wrong-shape").weight, 2);
-assert.equal(bySlug.get("mr-027-voice-of-the-wrong-element").weight, 2);
-assert.equal(bySlug.get("mr-028-familiar-geometry").impact, "strong");
-assert.equal(bySlug.get("mr-027-voice-of-the-wrong-element").tone, "humorous");
-assert.equal(bySlug.get("mr-029-applause-from-nowhere").tone, "humorous");
-assert.ok(bySlug.get("mr-021-frayed-pattern").tags.includes("step-restriction"));
-assert.ok(bySlug.get("mr-023-delayed-spark").tags.includes("delayed"));
-assert.ok(bySlug.get("mr-024-spell-snag").tags.includes("magical-link"));
-assert.ok(bySlug.get("mr-025-unfinished-ending").tags.includes("occupied-hand"));
-assert.ok(bySlug.get("mr-026-shadow-arrives-late").tags.includes("retarget"));
-assert.ok(bySlug.get("mr-028-familiar-geometry").tags.includes("firing-line"));
-assert.ok(bySlug.get("mr-030-reality-takes-notes").tags.includes("repeat-spell"));
-assert.ok(bySlug.get("mr-003-feedback-pulse").tags.includes("feedback-zone"));
-assert.ok(bySlug.get("mr-007-lingering-syllable").tags.includes("reaction-trigger"));
-assert.ok(bySlug.get("mr-008-crossed-intent").tags.includes("spell-choice"));
-assert.ok(bySlug.get("mr-029-applause-from-nowhere").tags.includes("annotations"));
-assert.ok(bySlug.get("mr-030-reality-takes-notes").tags.includes("drop-prone"));
+function eligibleForSave(saveType) {
+  return reversals.filter((card) => card.filters.saveTypes.length === 0 || card.filters.saveTypes.includes(saveType));
+}
+assert.equal(eligibleForSave("reflex").length, 7);
+assert.equal(eligibleForSave("fortitude").length, 7);
+assert.equal(eligibleForSave("will").length, 8);
 
-const impactCounts = disabled[0].cards.reduce((counts, card) => {
-  counts[card.impact] = (counts[card.impact] ?? 0) + 1;
-  return counts;
-}, {});
-assert.deepEqual(impactCounts, { moderate: 18, light: 10, strong: 2 });
-assert.equal(disabled[0].cards.filter((card) => card.weight === 2).length, 6);
-
-console.log("PF2E Critical Forge: Arcane Backlash 0.1.3 validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.2.0 validation passed.");

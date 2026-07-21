@@ -4,12 +4,20 @@
       "MiscastRepercussions": {
         "Name": "Enable Miscast Repercussions",
         "Hint": "Adds critical-fumble cards for spell attacks across the arcane, divine, occult, and primal traditions."
+      },
+      "DefiantReversals": {
+        "Name": "Enable Defiant Reversals",
+        "Hint": "Adds cards for critical successes on saving throws against spells. Benefits are applied to the creature that made the saving throw."
       }
     },
     "Packs": {
       "MiscastRepercussions": {
         "Title": "Arcane Backlash: Miscast Repercussions",
         "Description": "Critical failures on spell attacks that leave unstable magical recoil, disrupted casting rhythm, and strange tactical aftermaths."
+      },
+      "DefiantReversals": {
+        "Title": "Arcane Backlash: Defiant Reversals",
+        "Description": "Critical successes on saving throws against spells that turn perfect resistance into insight, movement, and brief magical reversals."
       }
     },
     "Cards": {
@@ -132,6 +140,46 @@
       "RealityTakesNotes": {
         "Title": "Reality Takes Notes",
         "Description": "Runes, sparks, or whispering marks record the failed spell's target, angle, and cadence. Before the end of your next turn, if you repeat the same spell attack against the original target, it may use its reaction after you select it but before the attack roll to Raise a Shield, Take Cover, or Drop Prone. If none of those options is available, the record grants it lesser cover against that attack. The record then vanishes whether or not the reaction was used."
+      },
+      "StandThroughIt": {
+        "Title": "Stand Through It",
+        "Description": "The spell breaks around you instead of breaking your stride. You may immediately Step as a free action. If you cannot or choose not to Step, the first square of difficult terrain created by the original caster that you enter before the end of your next turn costs no additional movement."
+      },
+      "NotToday": {
+        "Title": "Not Today",
+        "Description": "The magic presents its most intimidating argument. You decline to be persuaded. Reduce your frightened value by 1. If you are not frightened, you instead gain a +1 circumstance bonus to your next saving throw against a fear effect created by the original caster before the end of your next turn. The benefit is consumed only when it applies."
+      },
+      "BodyRemembers": {
+        "Title": "Body Remembers",
+        "Description": "Your body learns the shape of the assault before the last trace of it fades. Before the end of your next turn, your next saving throw against a spell from the original caster that uses the same save type gains a +1 circumstance bonus. The benefit is consumed only when it modifies the roll."
+      },
+      "RootedInReality": {
+        "Title": "Rooted in Reality",
+        "Description": "For a moment, reality agrees that you belong exactly where you are. Before the end of your next turn, when the original caster would move you against your will, you may use your reaction to reduce that movement by 10 feet, to a minimum of 0 feet. If the effect teleports or places you instead of moving you a measured distance, you may Step immediately after it resolves. The reversal then ends."
+      },
+      "ShakeThePattern": {
+        "Title": "Shake the Pattern",
+        "Description": "Your resistance tears loose more magic than this spell alone. Choose one other ongoing spell effect created by the original caster that is affecting you and has a remaining duration measured in rounds. Reduce its remaining duration by 1 round, to a minimum of ending at the start of your next turn. If no effect qualifies, you instead gain a +1 circumstance bonus to your next saving throw against a spell from the original caster before the end of your next turn."
+      },
+      "ReadTheWeave": {
+        "Title": "Read the Weave",
+        "Description": "The spell's structure becomes clear at the exact moment it fails. You may immediately attempt to Recall Knowledge as a free action using an appropriate skill to identify the spell, its tradition, or the original caster's magical methods. Use the normal DC. On a success, the GM provides one useful fact relevant to the spell or its caster."
+      },
+      "SeenItNow": {
+        "Title": "Seen It Now",
+        "Description": "The spell has shown you the trick once, and once was enough. Before the end of your next turn, the next time you attempt a saving throw against the same spell cast by the original caster, reduce any circumstance penalty to that save by 1, to a minimum of 0. If no circumstance penalty applies, you may instead Step after the saving throw resolves. The reversal then ends."
+      },
+      "NameTheWeakness": {
+        "Title": "Name the Weakness",
+        "Description": "You expose the flaw in the magic while it is still visible. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, that ally gains a +1 circumstance bonus to their next counteract check against the original caster or their next Recall Knowledge check about that caster's magic. The benefit is consumed only when it modifies a check."
+      },
+      "FamiliarSignature": {
+        "Title": "Familiar Signature",
+        "Description": "You recognize the caster's magical signature beneath every disguise. Until the end of your next turn, you can identify the original caster among magical duplicates, disguises, projected images, or decoys created by that caster's own magic. Such effects can still conceal the caster or impose their normal flat checks, but they cannot make you select the wrong duplicate or mistake another creature for the caster."
+      },
+      "Counterexample": {
+        "Title": "Counterexample",
+        "Description": "Your resistance proves the spell is neither inevitable nor particularly impressive. Choose one ally within 30 feet who can see or hear you. Before the end of your next turn, that ally gains a +1 circumstance bonus to their next saving throw against a spell from the original caster. The benefit is consumed only when it modifies the roll."
       }
     },
     "Effects": {},

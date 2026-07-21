@@ -4,12 +4,20 @@
       "MiscastRepercussions": {
         "Name": "Fehlzauber-Nachwirkungen aktivieren",
         "Hint": "Fügt Karten für kritische Fehlschläge bei Zauberangriffen aller arkanen, göttlichen, okkulten und naturmagischen Traditionen hinzu."
+      },
+      "DefiantReversals": {
+        "Name": "Defiant Reversals aktivieren",
+        "Hint": "Fügt Karten für kritische Erfolge bei Rettungswürfen gegen Zauber hinzu. Vorteile werden auf die Kreatur angewendet, die den Rettungswurf ausgeführt hat."
       }
     },
     "Packs": {
       "MiscastRepercussions": {
         "Title": "Arcane Backlash: Fehlzauber-Nachwirkungen",
         "Description": "Kritische Fehlschläge bei Zauberangriffen, die instabile magische Rückstöße, gestörten Zauberrhythmus und seltsame taktische Nachwirkungen hinterlassen."
+      },
+      "DefiantReversals": {
+        "Title": "Arcane Backlash: Defiant Reversals",
+        "Description": "Kritische Erfolge bei Rettungswürfen gegen Zauber, die vollkommenen Widerstand in Erkenntnis, Bewegung und kurze magische Umkehrungen verwandeln."
       }
     },
     "Cards": {
@@ -132,6 +140,46 @@
       "RealityTakesNotes": {
         "Title": "Die Wirklichkeit macht sich Notizen",
         "Description": "Runen, Funken oder flüsternde Zeichen protokollieren Ziel, Winkel und Rhythmus des fehlgeschlagenen Zaubers. Wiederholst du vor Ende deines nächsten Zuges denselben Zauberangriff gegen das ursprüngliche Ziel, darf es seine Reaktion verwenden, nachdem du es ausgewählt hast, aber bevor du den Angriffswurf ausführst, um einen Schild zu heben, In Deckung gehen zu verwenden oder sich auf den Boden zu werfen. Steht keine dieser Möglichkeiten zur Verfügung, gewährt ihm die Aufzeichnung gegen diesen Angriff schwache Deckung. Danach verschwindet die Aufzeichnung unabhängig davon, ob die Reaktion verwendet wurde."
+      },
+      "StandThroughIt": {
+        "Title": "Ungebrochener Schritt",
+        "Description": "Der Zauber bricht um dich herum, statt deinen Bewegungsfluss zu brechen. Du darfst sofort als freie Aktion einen Schritt ausführen. Kannst oder möchtest du das nicht, verursacht das erste Feld schwierigen Geländes, das die ursprünglich zaubernde Kreatur erschaffen hat und das du vor Ende deines nächsten Zuges betrittst, keine zusätzlichen Bewegungskosten."
+      },
+      "NotToday": {
+        "Title": "Nicht heute",
+        "Description": "Die Magie trägt ihr einschüchterndstes Argument vor. Du lässt dich nicht überzeugen. Reduziere deinen Wert für Verängstigt um 1. Bist du nicht verängstigt, erhältst du stattdessen einen +1-Umstandsbonus auf deinen nächsten Rettungswurf gegen einen Furchteffekt der ursprünglich zaubernden Kreatur vor Ende deines nächsten Zuges. Der Vorteil wird nur verbraucht, wenn er zur Anwendung kommt."
+      },
+      "BodyRemembers": {
+        "Title": "Der Körper erinnert sich",
+        "Description": "Dein Körper lernt die Form des Angriffs, bevor dessen letzte Spur vergeht. Vor Ende deines nächsten Zuges erhält dein nächster Rettungswurf gegen einen Zauber der ursprünglich zaubernden Kreatur, der dieselbe Rettungswurfart verwendet, einen +1-Umstandsbonus. Der Vorteil wird nur verbraucht, wenn er den Wurf tatsächlich verändert."
+      },
+      "RootedInReality": {
+        "Title": "In der Wirklichkeit verwurzelt",
+        "Description": "Für einen Augenblick stimmt die Wirklichkeit zu, dass du genau dort hingehörst, wo du stehst. Wenn die ursprünglich zaubernde Kreatur dich vor Ende deines nächsten Zuges gegen deinen Willen bewegen würde, darfst du deine Reaktion verwenden, um diese Bewegung um 3 Meter zu reduzieren, mindestens auf 0 Meter. Teleportiert oder platziert dich der Effekt, statt dich über eine messbare Entfernung zu bewegen, darfst du unmittelbar nach seiner Abwicklung einen Schritt ausführen. Danach endet die Umkehrung."
+      },
+      "ShakeThePattern": {
+        "Title": "Das Muster abschütteln",
+        "Description": "Dein Widerstand reißt mehr Magie los als nur diesen Zauber. Wähle einen anderen anhaltenden Zaubereffekt der ursprünglich zaubernden Kreatur, der dich betrifft und dessen verbleibende Dauer in Runden gemessen wird. Reduziere seine verbleibende Dauer um 1 Runde, mindestens bis zum Beginn deines nächsten Zuges. Gibt es keinen geeigneten Effekt, erhältst du stattdessen einen +1-Umstandsbonus auf deinen nächsten Rettungswurf gegen einen Zauber dieser Kreatur vor Ende deines nächsten Zuges."
+      },
+      "ReadTheWeave": {
+        "Title": "Das Geflecht lesen",
+        "Description": "Die Struktur des Zaubers wird genau in dem Moment deutlich, in dem er scheitert. Du darfst sofort als freie Aktion mit einer passenden Fertigkeit Wissen abrufen, um den Zauber, seine Tradition oder die magische Vorgehensweise der ursprünglich zaubernden Kreatur zu bestimmen. Verwende den normalen SG. Bei einem Erfolg nennt die Spielleitung eine nützliche Tatsache über den Zauber oder die zaubernde Kreatur."
+      },
+      "SeenItNow": {
+        "Title": "Jetzt kenne ich den Trick",
+        "Description": "Der Zauber hat dir seinen Trick einmal gezeigt, und einmal genügt. Wenn du vor Ende deines nächsten Zuges das nächste Mal einen Rettungswurf gegen denselben Zauber der ursprünglich zaubernden Kreatur ausführst, reduziere einen Umstandsmalus auf diesen Rettungswurf um 1, mindestens auf 0. Gilt kein Umstandsmalus, darfst du stattdessen nach Abwicklung des Rettungswurfs einen Schritt ausführen. Danach endet die Umkehrung."
+      },
+      "NameTheWeakness": {
+        "Title": "Die Schwäche benennen",
+        "Description": "Du offenbarst den Fehler in der Magie, solange er noch sichtbar ist. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Vor Ende deines nächsten Zuges erhält dieser Verbündete einen +1-Umstandsbonus auf seinen nächsten Gegenwirken-Wurf gegen die ursprünglich zaubernde Kreatur oder auf seinen nächsten Wurf zum Wissen abrufen über deren Magie. Der Vorteil wird nur verbraucht, wenn er einen Wurf tatsächlich verändert."
+      },
+      "FamiliarSignature": {
+        "Title": "Vertraute Signatur",
+        "Description": "Du erkennst die magische Signatur der zaubernden Kreatur unter jeder Verkleidung. Bis zum Ende deines nächsten Zuges kannst du die ursprünglich zaubernde Kreatur unter magischen Doppelgängern, Verkleidungen, projizierten Bildern oder Ködern erkennen, die durch ihre eigene Magie erschaffen wurden. Solche Effekte können sie weiterhin verbergen oder ihre normalen Flachwürfe verlangen, sie können dich jedoch nicht den falschen Doppelgänger auswählen oder eine andere Kreatur für sie halten lassen."
+      },
+      "Counterexample": {
+        "Title": "Gegenbeweis",
+        "Description": "Dein Widerstand beweist, dass der Zauber weder unvermeidlich noch besonders beeindruckend ist. Wähle einen Verbündeten innerhalb von 9 Metern, der dich sehen oder hören kann. Vor Ende deines nächsten Zuges erhält dieser Verbündete einen +1-Umstandsbonus auf seinen nächsten Rettungswurf gegen einen Zauber der ursprünglich zaubernden Kreatur. Der Vorteil wird nur verbraucht, wenn er den Wurf tatsächlich verändert."
       }
     },
     "Effects": {},

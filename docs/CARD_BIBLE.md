@@ -80,3 +80,35 @@ All 30 cards remain manual because their consequences depend on immediate choice
 ## Review Outcome
 
 The revised pack no longer duplicates the later-spell-defense, relocate-for-a-modifier, audible-location, consecutive-concentrate, applause, or reactive-Step mechanics identified in the 0.1.2 review. The pack retains a deliberate mixture of magical recoil, battlefield residue, false origins, predictive defenses, warped perception, and dry magical humor.
+
+## Defiant Reversals - Block 1
+
+| ID | Card | Save Filter | Impact | Automation | Core Idea |
+|---|---|---|---|---|---|
+| DR-001 | Stand Through It | Reflex | Moderate | Manual | The defender Steps immediately or ignores the first spell-created difficult-terrain cost |
+| DR-002 | Not Today | Will | Light | Manual | Reduce frightened, with a one-use fear-save fallback |
+| DR-003 | Body Remembers | Any | Light | Manual | Gain a one-use bonus against the same save type from the same caster |
+| DR-004 | Rooted in Reality | Fortitude | Moderate | Manual | Reactively reduce forced movement or recover position after exact relocation |
+| DR-005 | Shake the Pattern | Any | Strong | Manual | Shorten another ongoing spell from the same caster, with a save-bonus fallback |
+| DR-006 | Read the Weave | Any | Light | Manual | Immediately Recall Knowledge about the failed spell or its caster |
+| DR-007 | Seen It Now | Any | Light | Manual | Reduce a circumstance penalty against the repeated spell, with a Step fallback |
+| DR-008 | Name the Weakness | Any | Moderate | Manual | Grant an ally a counteract or magical Recall Knowledge bonus |
+| DR-009 | Familiar Signature | Will | Moderate | Manual | Recognize the caster among magical disguises, duplicates, and decoys |
+| DR-010 | Counterexample | Any | Moderate | Manual | Grant an ally a one-use saving-throw bonus against the same caster |
+
+### Current Defiant Reversals Distribution
+
+| Impact | Cards |
+|---|---:|
+| Light | 4 |
+| Moderate | 5 |
+| Strong | 1 |
+
+| Save Eligibility | Eligible Cards |
+|---|---:|
+| Reflex | 7 |
+| Fortitude | 7 |
+| Will | 8 |
+
+All first-block cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, or conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack.
+

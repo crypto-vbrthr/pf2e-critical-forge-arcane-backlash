@@ -2,51 +2,61 @@
 
 ## Module Identity
 
-Arcane Backlash explores what happens when magic succeeds or fails so decisively that the spell leaves a second event behind.
-
-Its cards focus on magical resonance, unstable patterns, warped perception, disrupted casting rhythm, reversals, and strange but quickly resolved tactical consequences.
-
-"Arcane" in the title is thematic shorthand for magic in general. All four PF2e spell traditions are supported.
+Arcane Backlash explores moments when magic behaves exceptionally well or exceptionally badly. It supports arcane, divine, occult, and primal spellcasting. The module title uses *Arcane* as a broad label for magical strangeness rather than as a tradition filter.
 
 ## Miscast Repercussions
 
-**Status:** 30 of 30 cards - mechanical review passed
+**Status:** 30/30 cards, mechanical review passed
 
 **Trigger:** Critical failure on a spell attack
 
-**Critical Forge category:** `spellCriticalFumble`
+**Purpose:** The spell misses so badly that magical energy recoils, lingers, distorts space, reveals the caster, or interferes with later casting.
 
-**Purpose:** The spell misses, but its structure, energy, voice, or intent does not disappear cleanly. The consequence normally affects the caster, changes the immediate battlefield, or gives the original target a narrow tactical advantage.
+**Typical consequences:**
 
-**Typical effects:**
-
-- magical recoil and forced repositioning
-- action-sequence restrictions
-- target-chosen feedback zones and predictive defenses
-- audible reaction windows, visible annotations, and magical signatures
-- temporary difficult terrain or disturbed surroundings
-- optional stabilization or recalculation actions
-- warped range, false images, and selective perception
-- Seek opportunities and temporary magical tells
-- frayed spell patterns, delayed residue, and unfinished magical structures
-- impossible geometry, false spell origins, unfinished gestures, and predictive magical records
+- forced movement or unstable casting positions
+- disrupted action sequences
+- warped range, cover, or line of effect
+- visible and audible magical signatures
+- environmental residue
+- strange but brief magical side effects
 
 **Not included:**
 
+- physical injury by damage type
+- destroyed equipment or spellcasting tools
 - permanently lost spell slots or focus points
-- destroyed casting equipment
-- broad random-damage tables
-- physical injuries unrelated to magic
 - saving-throw outcomes
 - critical spell successes
 
 ## Defiant Reversals
 
-**Status:** Planned
+**Status:** 10/30 cards
 
 **Trigger:** Critical success on a saving throw against a spell
 
-**Purpose:** The defender resists so decisively that the spell collapses, rebounds, exposes a weakness, or creates a brief opportunity.
+**Technical filter:** `category: "savingThrowCriticalSuccess"` with `attackTraits: ["spell"]`
+
+**Purpose:** The defender resists so decisively that the spell reveals its weakness, loses control of space, strengthens the defender, or creates a brief opportunity for an ally.
+
+**Effect direction:** Any beneficial effect belongs to the creature that made the saving throw. In Critical Forge terms, that creature is the `source` of a saving-throw context. The original caster is the opposing `target`.
+
+**Typical consequences:**
+
+- immediate Steps or reclaimed movement
+- resistance to fear and repeated spells
+- recognition of magical signatures and decoys
+- limited defense against later forced movement
+- information about the spell or caster
+- a one-use benefit granted to an ally
+
+**Not included:**
+
+- full reflection of the original spell
+- permanent immunity
+- resource recovery or healing
+- ordinary successful saving throws
+- critical saves against nonmagical hazards
 
 ## Spell Attack Surges
 

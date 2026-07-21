@@ -3,7 +3,8 @@ import { ARCANE_PACK_CONFIGS } from "./packs/arcane-backlash.js";
 export const MODULE_ID = "pf2e-critical-forge-arcane-backlash";
 
 const SETTING_LOCALIZATION = Object.freeze({
-  enableMiscastRepercussions: "MiscastRepercussions"
+  enableMiscastRepercussions: "MiscastRepercussions",
+  enableDefiantReversals: "DefiantReversals"
 });
 
 export function registerArcaneBacklashSettings(onPackSettingChanged) {

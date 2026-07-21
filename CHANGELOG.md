@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.0
+
+- Added the optional **Spell Attack Surges** pack.
+- Added SAS-001 through SAS-010 for critical successes on spell attacks across all four spell traditions.
+- Added direct Effect Engine application to five cards: spell-attack resonance, saving-throw protection, mental defense, magical-skill insight, and a target-side Stealth and Deception penalty.
+- Added five manual surge cards for disruption-proof casting, immediate casting-tool interaction, concealment and cover reduction, and reactive tracking of a vanishing target.
+- Added the world setting and localization required to enable Spell Attack Surges independently.
+- Expanded Arcane Backlash to 70 cards across three optional packs.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+
 ## 0.2.3
 
 - Applied the full mechanical review of **Defiant Reversals**.

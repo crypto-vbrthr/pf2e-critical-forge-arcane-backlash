@@ -1,6 +1,7 @@
 import { ARCANE_PACK_IDS } from "./arcane/card-factory.js";
 import { DEFIANT_REVERSAL_CARDS } from "./arcane/cards/defiant-reversals.js";
 import { MISCAST_REPERCUSSION_CARDS } from "./arcane/cards/miscast-repercussions.js";
+import { SPELL_ATTACK_SURGE_CARDS } from "./arcane/cards/spell-attack-surges.js";
 
 export const ARCANE_PACK_CONFIGS = Object.freeze([
   Object.freeze({
@@ -32,6 +33,21 @@ export const ARCANE_PACK_CONFIGS = Object.freeze([
       category: "saving-throw-critical-success",
       scope: "spell-saves-all-traditions"
     })
+  }),
+  Object.freeze({
+    settingKey: "enableSpellAttackSurges",
+    id: ARCANE_PACK_IDS.spellAttackSurges,
+    titleKey: "PF2ECFAB.Packs.SpellAttackSurges.Title",
+    descriptionKey: "PF2ECFAB.Packs.SpellAttackSurges.Description",
+    fallbackTitle: "Arcane Backlash: Spell Attack Surges",
+    fallbackDescription: "Critical successes on spell attacks that leave beneficial resonance, exposed magical patterns, and controllable surges of power.",
+    cards: SPELL_ATTACK_SURGE_CARDS,
+    metadata: Object.freeze({
+      theme: "arcane-backlash",
+      family: "arcane-backlash",
+      category: "spell-critical-hit",
+      scope: "spell-attacks-all-traditions"
+    })
   })
 ]);
 
@@ -43,7 +59,7 @@ export function buildArcaneBacklashPacks(isEnabled = () => false) {
     descriptionKey: config.descriptionKey,
     fallbackTitle: config.fallbackTitle,
     fallbackDescription: config.fallbackDescription,
-    version: "0.2.3",
+    version: "0.3.0",
     priority: 10,
     enabled: Boolean(isEnabled(config.settingKey)),
     metadata: config.metadata,

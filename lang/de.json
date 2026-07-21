@@ -8,6 +8,10 @@
       "DefiantReversals": {
         "Name": "Defiant Reversals aktivieren",
         "Hint": "Fügt Karten für kritische Erfolge bei Rettungswürfen gegen Zauber hinzu. Vorteile werden auf die Kreatur angewendet, die den Rettungswurf ausgeführt hat."
+      },
+      "SpellAttackSurges": {
+        "Name": "Zauberangriffsresonanzen aktivieren",
+        "Hint": "Fügt positive Resonanzkarten für kritische Erfolge bei Zauberangriffen aller arkanen, göttlichen, okkulten und naturmagischen Traditionen hinzu."
       }
     },
     "Packs": {
@@ -18,6 +22,10 @@
       "DefiantReversals": {
         "Title": "Arcane Backlash: Defiant Reversals",
         "Description": "Kritische Erfolge bei Rettungswürfen gegen Zauber, die vollkommenen Widerstand in Erkenntnis, Bewegung und kurze magische Umkehrungen verwandeln."
+      },
+      "SpellAttackSurges": {
+        "Title": "Arcane Backlash: Zauberangriffsresonanzen",
+        "Description": "Kritische Erfolge bei Zauberangriffen, die nützliche Resonanz, offengelegte magische Muster und kontrollierbare Kraftüberschüsse hinterlassen."
       }
     },
     "Cards": {
@@ -260,9 +268,65 @@
       "ReturnToSenderMostly": {
         "Title": "Fast zurück an den Absender",
         "Description": "Der Zauber kehrt nicht zurück, wohl aber ein peinlicher Teil seiner Inszenierung. Wenn du vor dem Ende deines nächsten Zuges erstmals wahrnimmst, wie der ursprüngliche Zauberwirker sich zu Verstecken, Schleichen, Ablenkung erzeugen oder Täuschen anschickt, darfst du vor dem Wurf deine Reaktion einsetzen und ihn zwingen, den auslösenden Wurf zweimal auszuführen und das schlechtere Ergebnis zu verwenden. Dies ist ein Pecheffekt und kann bei diesem Wurf nicht mit einem weiteren Pecheffekt kombiniert werden. Das sichtbare oder hörbare Zeichen ist harmlos und verblasst nach der Reaktion oder wenn die Umkehrung ausläuft."
+      },
+      "PowerStillSinging": {
+        "Title": "Die Kraft singt weiter",
+        "Description": "Die Kraft des Zaubers singt in deiner Aura weiter. Für 1 Runde erhältst du einen Statusbonus von +1 auf Zauberangriffswürfe."
+      },
+      "SteadyCastingHand": {
+        "Title": "Sichere Zauberhand",
+        "Description": "Die makellose Freisetzung stabilisiert jede folgende Geste. Vor dem Ende deines nächsten Zuges kann die nächste Aktion Zauber wirken mit dem Merkmal Handhaben, die du einsetzt, nicht durch Reaktionen unterbrochen werden, die von dieser Aktion ausgelöst werden. Diese Reaktionen können dir weiterhin Schaden zufügen, dich bewegen oder anderweitig betreffen; Unterbrechungen aus anderen Quellen funktionieren normal. Danach endet die Resonanz."
+      },
+      "ResonantGuard": {
+        "Title": "Resonanzschutz",
+        "Description": "Nachklingende Harmonien weben einen dünnen Schutz um dich. Für 1 Runde erhältst du einen Statusbonus von +1 auf Rettungswürfe."
+      },
+      "SpellborneConfidence": {
+        "Title": "Zaubergetragenes Selbstvertrauen",
+        "Description": "Der perfekte Treffer beweist, dass dein Wille das Unmögliche formen kann. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf Willenswürfe gegen mentale Effekte."
+      },
+      "PerfectRelease": {
+        "Title": "Perfekte Freisetzung",
+        "Description": "Die Magie hinterlässt Hände, Fokus und Zauberhaltung in vollkommener Ordnung. Du darfst sofort als freie Aktion Interagieren, um einen Zauberfokus, Zauberstab, Stab, Komponentenbeutel oder ein ähnliches Zauberwerkzeug zu ziehen oder wegzustecken oder um den Griff an einem gehaltenen Gegenstand zu verändern. Diese freie Aktion löst keine Reaktionen des ursprünglichen Ziels aus."
+      },
+      "ResonanceMark": {
+        "Title": "Resonanzmarke",
+        "Description": "Der Treffer hinterlässt eine leuchtende Resonanzmarke, die offenbar nur deine Magie lesen kann. Vor dem Ende deines nächsten Zuges ignoriert dein nächster Zauberangriff gegen das ursprüngliche Ziel den Zustand Verborgen. Ist das Ziel vor dir Versteckt, aber nicht Unentdeckt, verwendest du einen Flachwurf mit SG 5 statt SG 11. Die Resonanz wird nur verbraucht, wenn sie einen Flachwurf entfernt oder verringert."
+      },
+      "PatternExposed": {
+        "Title": "Offengelegtes Muster",
+        "Description": "Der kritische Treffer legt offen, wie sich die Verteidigung des Ziels um eintreffende Magie biegt. Vor dem Ende deines nächsten Zuges behandelt dein nächster Zauberangriff gegen das ursprüngliche Ziel dessen Umstandsbonus auf RK durch Deckung als um eine Stufe niedriger: Schwache Deckung gewährt keinen Bonus, Standarddeckung gewährt den Bonus schwacher Deckung und starke Deckung gewährt den Bonus von Standarddeckung. Die Resonanz wird nur verbraucht, wenn sie Deckung verringert."
+      },
+      "EchoInTheAura": {
+        "Title": "Echo in der Aura",
+        "Description": "Die Aura des Ziels antwortet dem Zauber gleichzeitig in mehreren magischen Sprachen. Für 1 Runde erhältst du einen Statusbonus von +1 auf Würfe für Arkane Künste, Naturkunde, Okkultismus und Religion."
+      },
+      "NoPlaceToFade": {
+        "Title": "Kein Ort zum Verblassen",
+        "Description": "Die Resonanz zieht weiter zum Ziel, selbst wenn es zu verschwinden versucht. Versteckt sich das ursprüngliche Ziel, schleicht es oder teleportiert es sich vor dem Ende deines nächsten Zuges, darfst du unmittelbar nach dieser Aktion deine Reaktion einsetzen, um Suchen zu verwenden. Der abgesuchte Bereich muss das zuletzt bekannte Feld des Ziels einschließen; kannst du sein Ziel wahrnehmen, darf er stattdessen dieses Feld einschließen. Die normalen Regeln für Wahrnehmung und Sinne gelten weiterhin. Danach endet die Resonanz."
+      },
+      "Spellshadow": {
+        "Title": "Zauberschatten",
+        "Description": "Ein verspäteter Schatten des gelungenen Zaubers haftet am Ziel und verrät jede Finte und jeden Versuch zu verschwinden. Für 1 Runde erhält das Ziel einen Umstandsmalus von -1 auf Heimlichkeit und Täuschung."
       }
     },
-    "Effects": {},
+    "Effects": {
+      "PowerStillSinging": {
+        "Name": "Die Kraft singt weiter"
+      },
+      "ResonantGuard": {
+        "Name": "Resonanzschutz"
+      },
+      "SpellborneConfidence": {
+        "Name": "Zaubergetragenes Selbstvertrauen"
+      },
+      "EchoInTheAura": {
+        "Name": "Echo in der Aura"
+      },
+      "Spellshadow": {
+        "Name": "Zauberschatten"
+      }
+    },
     "Notifications": {
       "RegistrationFailed": "Arcane Backlash konnte seine Kartenpakete nicht bei Critical Forge registrieren. Weitere Informationen stehen in der Konsole.",
       "PackSelectionUpdated": "Die Auswahl der Arcane-Backlash-Kartenpakete wurde aktualisiert."

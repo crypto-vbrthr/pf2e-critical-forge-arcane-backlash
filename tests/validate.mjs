@@ -26,8 +26,8 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.2.3");
-assert.equal(packageJson.version, "0.2.3");
+assert.equal(manifest.version, "0.3.0");
+assert.equal(packageJson.version, "0.3.0");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) =>
@@ -35,22 +35,25 @@ assert.ok(manifest.relationships?.requires?.some((entry) =>
 ));
 assert.ok(manifest.relationships?.systems?.some((entry) => entry.id === "pf2e"));
 
-assert.equal(ARCANE_PACK_CONFIGS.length, 2);
+assert.equal(ARCANE_PACK_CONFIGS.length, 3);
 const disabled = buildArcaneBacklashPacks(() => false);
 const enabled = buildArcaneBacklashPacks(() => true);
-assert.equal(disabled.length, 2);
-assert.equal(enabled.length, 2);
+assert.equal(disabled.length, 3);
+assert.equal(enabled.length, 3);
 assert.deepEqual(disabled.map((pack) => pack.id), [
   ARCANE_PACK_IDS.miscastRepercussions,
-  ARCANE_PACK_IDS.defiantReversals
+  ARCANE_PACK_IDS.defiantReversals,
+  ARCANE_PACK_IDS.spellAttackSurges
 ]);
 assert.ok(disabled.every((pack) => pack.enabled === false));
 assert.ok(enabled.every((pack) => pack.enabled === true));
-assert.ok(disabled.every((pack) => pack.version === "0.2.3"));
+assert.ok(disabled.every((pack) => pack.version === "0.3.0"));
 assert.equal(disabled[0].cards.length, 30);
 assert.equal(disabled[1].cards.length, 30);
+assert.equal(disabled[2].cards.length, 10);
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
 assert.equal(disabled[1].metadata.scope, "spell-saves-all-traditions");
+assert.equal(disabled[2].metadata.scope, "spell-attacks-all-traditions");
 
 for (const pack of disabled) {
   for (const dictionary of [de, en]) {
@@ -65,17 +68,18 @@ for (const pack of disabled) {
     assert.equal(card.schemaVersion, 1);
     assert.ok(!allIds.has(card.id), `Duplicate card id: ${card.id}`);
     allIds.add(card.id);
-    assert.equal(card.effect, null);
-    assert.ok(card.tags.includes("manual"));
     for (const dictionary of [de, en]) {
       assert.ok(getLocalization(dictionary, card.titleKey), card.titleKey);
       assert.ok(getLocalization(dictionary, card.descriptionKey), card.descriptionKey);
+      if (card.effect) assert.ok(getLocalization(dictionary, card.effect.nameKey), card.effect.nameKey);
     }
   }
 }
-assert.equal(allIds.size, 60);
+assert.equal(allIds.size, 70);
 
 const miscast = disabled[0].cards;
+assert.ok(miscast.every((card) => card.effect === null));
+assert.ok(miscast.every((card) => card.tags.includes("manual")));
 assert.ok(miscast.every((card) => card.packId === ARCANE_PACK_IDS.miscastRepercussions));
 assert.ok(miscast.every((card) => card.category === "spellCriticalFumble"));
 assert.ok(miscast.every((card) => card.metadata.collection === "miscast-repercussions"));
@@ -86,6 +90,8 @@ assert.equal(miscast.filter((card) => card.impact === "moderate").length, 18);
 assert.equal(miscast.filter((card) => card.impact === "strong").length, 2);
 
 const reversals = disabled[1].cards;
+assert.ok(reversals.every((card) => card.effect === null));
+assert.ok(reversals.every((card) => card.tags.includes("manual")));
 assert.ok(reversals.every((card) => card.packId === ARCANE_PACK_IDS.defiantReversals));
 assert.ok(reversals.every((card) => card.category === "savingThrowCriticalSuccess"));
 assert.ok(reversals.every((card) => card.metadata.collection === "defiant-reversals"));
@@ -192,4 +198,76 @@ assert.equal(eligibleForSave("reflex").length, 20);
 assert.equal(eligibleForSave("fortitude").length, 19);
 assert.equal(eligibleForSave("will").length, 21);
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.2.3 validation passed.");
+
+const surges = disabled[2].cards;
+assert.ok(surges.every((card) => card.packId === ARCANE_PACK_IDS.spellAttackSurges));
+assert.ok(surges.every((card) => card.category === "spellCriticalHit"));
+assert.ok(surges.every((card) => card.metadata.collection === "spell-attack-surges"));
+assert.ok(surges.every((card) => card.tags.includes("critical-hit")));
+assert.ok(surges.every((card) => card.tags.includes("surge")));
+assert.ok(surges.every((card) => card.filters.spellTraditions.length === 0));
+assert.ok(surges.every((card) => card.filters.spellTraits.length === 0));
+
+const surgeSlugs = surges.map((card) => card.id.split(".").at(-1));
+assert.deepEqual(surgeSlugs, [
+  "sas-001-power-still-singing",
+  "sas-002-steady-casting-hand",
+  "sas-003-resonant-guard",
+  "sas-004-spellborne-confidence",
+  "sas-005-perfect-release",
+  "sas-006-resonance-mark",
+  "sas-007-pattern-exposed",
+  "sas-008-echo-in-the-aura",
+  "sas-009-no-place-to-fade",
+  "sas-010-spellshadow"
+]);
+
+const surgeBySlug = new Map(surges.map((card) => [card.id.split(".").at(-1), card]));
+const automatedSurges = surges.filter((card) => card.effect !== null);
+const manualSurges = surges.filter((card) => card.effect === null);
+assert.equal(automatedSurges.length, 5);
+assert.equal(manualSurges.length, 5);
+assert.ok(automatedSurges.every((card) => card.tags.includes("effect")));
+assert.ok(manualSurges.every((card) => card.tags.includes("manual")));
+assert.equal(surges.filter((card) => card.impact === "light").length, 2);
+assert.equal(surges.filter((card) => card.impact === "moderate").length, 8);
+assert.equal(surges.filter((card) => card.impact === "strong").length, 0);
+
+for (const card of automatedSurges) {
+  assert.equal(card.effect.definition.schemaVersion, 2);
+  assert.equal(card.effect.definition.duration.value, 1);
+  assert.equal(card.effect.definition.duration.unit, "rounds");
+  assert.equal(card.effect.definition.duration.expiry, "turn-start");
+  assert.ok(card.effect.definition.components.length > 0);
+}
+
+assert.equal(surgeBySlug.get("sas-001-power-still-singing").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-003-resonant-guard").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-004-spellborne-confidence").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-008-echo-in-the-aura").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-010-spellshadow").effect.target, "target");
+assert.deepEqual(
+  surgeBySlug.get("sas-001-power-still-singing").effect.definition.components[0],
+  { type: "modifier", selector: "spell-attack-roll", value: 1, modifierType: "status", predicate: [] }
+);
+assert.deepEqual(
+  surgeBySlug.get("sas-003-resonant-guard").effect.definition.components[0],
+  { type: "modifier", selector: "saving-throw", value: 1, modifierType: "status", predicate: [] }
+);
+assert.deepEqual(
+  surgeBySlug.get("sas-004-spellborne-confidence").effect.definition.components[0].predicate,
+  ["item:trait:mental"]
+);
+assert.deepEqual(
+  surgeBySlug.get("sas-008-echo-in-the-aura").effect.definition.components[0].selector,
+  ["arcana", "nature", "occultism", "religion"]
+);
+assert.deepEqual(
+  surgeBySlug.get("sas-010-spellshadow").effect.definition.components[0].selector,
+  ["stealth", "deception"]
+);
+assert.ok(surgeBySlug.get("sas-006-resonance-mark").tags.includes("conditional-consumption"));
+assert.ok(surgeBySlug.get("sas-007-pattern-exposed").tags.includes("cover"));
+assert.ok(surgeBySlug.get("sas-009-no-place-to-fade").tags.includes("teleportation"));
+
+console.log("PF2E Critical Forge: Arcane Backlash 0.3.0 validation passed.");

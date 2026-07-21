@@ -8,6 +8,10 @@
       "DefiantReversals": {
         "Name": "Enable Defiant Reversals",
         "Hint": "Adds cards for critical successes on saving throws against spells. Benefits are applied to the creature that made the saving throw."
+      },
+      "SpellAttackSurges": {
+        "Name": "Enable Spell Attack Surges",
+        "Hint": "Adds beneficial resonance cards for critical successes on spell attacks across the arcane, divine, occult, and primal traditions."
       }
     },
     "Packs": {
@@ -18,6 +22,10 @@
       "DefiantReversals": {
         "Title": "Arcane Backlash: Defiant Reversals",
         "Description": "Critical successes on saving throws against spells that turn perfect resistance into insight, movement, and brief magical reversals."
+      },
+      "SpellAttackSurges": {
+        "Title": "Arcane Backlash: Spell Attack Surges",
+        "Description": "Critical successes on spell attacks that leave beneficial resonance, exposed magical patterns, and controllable surges of power."
       }
     },
     "Cards": {
@@ -260,9 +268,65 @@
       "ReturnToSenderMostly": {
         "Title": "Return to Sender, Mostly",
         "Description": "The spell does not return, but one embarrassing piece of its presentation does. Until the end of your next turn, the first time you can perceive the original caster beginning to Hide, Sneak, Create a Diversion, or Feint, you may use your reaction before the check is rolled to force the caster to roll the triggering check twice and use the worse result. This is a misfortune effect and cannot combine with another misfortune effect on that check. The visible or audible mark is harmless and fades after the reaction or when the reversal expires."
+      },
+      "PowerStillSinging": {
+        "Title": "Power Still Singing",
+        "Description": "The spell's power keeps singing in your aura. For 1 round, you gain a +1 status bonus to spell attack rolls."
+      },
+      "SteadyCastingHand": {
+        "Title": "Steady Casting Hand",
+        "Description": "The flawless release steadies every following gesture. Before the end of your next turn, the next Cast a Spell action you use with the manipulate trait cannot be disrupted by reactions triggered by that action. Those reactions can still damage, move, or otherwise affect you, and disruption from other sources works normally. The surge then ends."
+      },
+      "ResonantGuard": {
+        "Title": "Resonant Guard",
+        "Description": "Residual harmonics weave a thin guard around you. For 1 round, you gain a +1 status bonus to saving throws."
+      },
+      "SpellborneConfidence": {
+        "Title": "Spellborne Confidence",
+        "Description": "The perfect hit proves that your will can shape the impossible. For 1 round, you gain a +1 circumstance bonus to Will saves against mental effects."
+      },
+      "PerfectRelease": {
+        "Title": "Perfect Release",
+        "Description": "The magic leaves your hands, focus, or casting posture in perfect order. You may immediately Interact as a free action to draw or stow a spellcasting focus, wand, staff, component pouch, or similar casting tool, or to change your grip on one held item. This free action does not trigger reactions from the original target."
+      },
+      "ResonanceMark": {
+        "Title": "Resonance Mark",
+        "Description": "The hit leaves a luminous resonance mark that only your magic seems able to read. Before the end of your next turn, your next spell attack against the original target ignores the concealed condition. If the target is hidden from you but not undetected, use a DC 5 flat check instead of DC 11. The surge is consumed only when it removes or reduces a flat check."
+      },
+      "PatternExposed": {
+        "Title": "Pattern Exposed",
+        "Description": "The critical hit exposes how the target's defenses bend around incoming magic. Before the end of your next turn, your next spell attack against the original target treats its circumstance bonus to AC from cover as one degree lower: lesser cover grants no bonus, standard cover grants the bonus from lesser cover, and greater cover grants the bonus from standard cover. The surge is consumed only when it reduces cover."
+      },
+      "EchoInTheAura": {
+        "Title": "Echo in the Aura",
+        "Description": "The target's aura answers the spell in several magical languages at once. For 1 round, you gain a +1 status bonus to Arcana, Nature, Occultism, and Religion checks."
+      },
+      "NoPlaceToFade": {
+        "Title": "No Place to Fade",
+        "Description": "The resonance keeps tugging toward the target even when it tries to vanish. Before the end of your next turn, if the original target Hides, Sneaks, or teleports, you may use your reaction immediately after that action to Seek. The area you Seek must include the target's last known space; if you can perceive its destination, it may include that space instead. Normal detection and sense limitations still apply. The surge then ends."
+      },
+      "Spellshadow": {
+        "Title": "Spellshadow",
+        "Description": "A delayed shadow of the successful spell clings to the target and betrays every feint and attempt to disappear. For 1 round, the target takes a -1 circumstance penalty to Stealth and Deception checks."
       }
     },
-    "Effects": {},
+    "Effects": {
+      "PowerStillSinging": {
+        "Name": "Power Still Singing"
+      },
+      "ResonantGuard": {
+        "Name": "Resonant Guard"
+      },
+      "SpellborneConfidence": {
+        "Name": "Spellborne Confidence"
+      },
+      "EchoInTheAura": {
+        "Name": "Echo in the Aura"
+      },
+      "Spellshadow": {
+        "Name": "Spellshadow"
+      }
+    },
     "Notifications": {
       "RegistrationFailed": "Arcane Backlash could not register its Critical Forge card packs. Check the console for details.",
       "PackSelectionUpdated": "Arcane Backlash card-pack selection updated."

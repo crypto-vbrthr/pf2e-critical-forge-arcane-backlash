@@ -1,7 +1,8 @@
 export const ARCANE_CARD_ID_PREFIX = "pf2e-critical-forge-arcane-backlash";
 export const ARCANE_PACK_IDS = Object.freeze({
   miscastRepercussions: `${ARCANE_CARD_ID_PREFIX}.miscast-repercussions`,
-  defiantReversals: `${ARCANE_CARD_ID_PREFIX}.defiant-reversals`
+  defiantReversals: `${ARCANE_CARD_ID_PREFIX}.defiant-reversals`,
+  spellAttackSurges: `${ARCANE_CARD_ID_PREFIX}.spell-attack-surges`
 });
 
 const FILTER_KEYS = Object.freeze([
@@ -130,6 +131,37 @@ export function defineDefiantReversal({
       ...filters,
       attackTraits: unique(["spell", ...(filters.attackTraits ?? [])])
     },
+    effect,
+    defaultEffectTarget: "source"
+  });
+}
+
+export function defineSpellAttackSurge({
+  id,
+  localizationKey,
+  tone,
+  impact,
+  fallbackTitle,
+  fallbackDescription,
+  weight = 1,
+  tags = [],
+  filters = {},
+  effect = null
+}) {
+  return defineArcaneCard({
+    id,
+    packId: ARCANE_PACK_IDS.spellAttackSurges,
+    category: "spellCriticalHit",
+    collection: "spell-attack-surges",
+    localizationKey,
+    tone,
+    impact,
+    fallbackTitle,
+    fallbackDescription,
+    weight,
+    baseTags: ["spell", "critical-hit", "surge"],
+    tags,
+    filters,
     effect,
     defaultEffectTarget: "source"
   });

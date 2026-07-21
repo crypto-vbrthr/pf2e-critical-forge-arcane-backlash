@@ -63,11 +63,34 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Spell Attack Surges
 
-**Status:** Planned
+**Status:** 10/30 cards
 
 **Trigger:** Critical success on a spell attack
 
-**Purpose:** The caster gains magical momentum, resonance, or control after an exceptionally accurate spell attack.
+**Technical category:** `spellCriticalHit`
+
+**Purpose:** The spell hits so perfectly that beneficial resonance remains with the caster, exposes a readable magical pattern on the target, or makes the next magical decision easier.
+
+**Effect direction:** Most benefits apply to the caster (`source`). Cards that leave a trace on the struck creature explicitly apply to the original target.
+
+**Typical consequences:**
+
+- short-lived bonuses to spell attacks, saving throws, mental defense, or magical skills
+- protection against disruption from reactions
+- immediate handling of casting tools or held items
+- concealment and cover bypass against the original target
+- reactive Seek opportunities when the target tries to vanish
+- visible spellshadows that penalize the target's Stealth and Deception
+
+**Automation:** Five of the first ten cards create direct Effect Engine effects. The remaining cards are manual because they depend on a specific original target, immediate free actions, one-use timing, reactions, cover degrees, concealment flat checks, or conditional consumption.
+
+**Not included:**
+
+- automatic extra damage
+- restored spell slots or focus points
+- guaranteed later critical successes
+- permanent defenses or weaknesses
+- critical failures on saving throws
 
 ## Overwhelming Resonance
 

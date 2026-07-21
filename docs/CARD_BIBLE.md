@@ -142,3 +142,35 @@ The revised pack no longer duplicates the later-spell-defense, relocate-for-a-mo
 
 All 30 cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, battlefield geometry, fortune or misfortune effects, and conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack. The pack passed its full mechanical review in version 0.2.3. The revision removed repeated Step fallbacks, duplicate fear recovery, duplicated cover and reaction-suppression mechanics, and overloaded terrain exceptions while preserving its active-resistance identity.
 
+
+## Spell Attack Surges - Block 1
+
+**Status:** 10/30 cards, review pending at 30 cards
+
+| ID | Card | Impact | Automation | Core Idea |
+|---|---|---|---|---|
+| SAS-001 | Power Still Singing | Light | Effect on caster | +1 status bonus to spell attack rolls for 1 round |
+| SAS-002 | Steady Casting Hand | Moderate | Manual | Protect one manipulate spell action from reaction-based disruption |
+| SAS-003 | Resonant Guard | Moderate | Effect on caster | +1 status bonus to saving throws for 1 round |
+| SAS-004 | Spellborne Confidence | Light | Effect on caster | +1 circumstance bonus to Will saves against mental effects for 1 round |
+| SAS-005 | Perfect Release | Moderate | Manual | Immediately handle a casting tool or change grip without provoking the target |
+| SAS-006 | Resonance Mark | Moderate | Manual | Ignore concealed or reduce hidden flat-check difficulty against the original target |
+| SAS-007 | Pattern Exposed | Moderate | Manual | Reduce the original target's cover bonus against the next spell attack |
+| SAS-008 | Echo in the Aura | Moderate | Effect on caster | +1 status bonus to the four magical tradition skills for 1 round |
+| SAS-009 | No Place to Fade | Moderate | Manual | Reactively Seek when the original target Hides, Sneaks, or teleports |
+| SAS-010 | Spellshadow | Moderate | Effect on target | -1 circumstance penalty to Stealth and Deception for 1 round |
+
+### Current Spell Attack Surges Distribution
+
+| Impact | Cards |
+|---|---:|
+| Light | 2 |
+| Moderate | 8 |
+| Strong | 0 |
+
+| Resolution | Cards |
+|---|---:|
+| Direct Effect Engine effect | 5 |
+| Manual tactical consequence | 5 |
+
+All ten cards use `spellCriticalHit` and remain tradition-neutral. The first block deliberately mixes direct effects with target-specific tactical consequences. Similarities to Core spell-hit cards and the breadth of the one-round bonuses will be examined during the full 30-card mechanical review.

@@ -26,8 +26,8 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.2.0");
-assert.equal(packageJson.version, "0.2.0");
+assert.equal(manifest.version, "0.2.1");
+assert.equal(packageJson.version, "0.2.1");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) =>
@@ -46,9 +46,9 @@ assert.deepEqual(disabled.map((pack) => pack.id), [
 ]);
 assert.ok(disabled.every((pack) => pack.enabled === false));
 assert.ok(enabled.every((pack) => pack.enabled === true));
-assert.ok(disabled.every((pack) => pack.version === "0.2.0"));
+assert.ok(disabled.every((pack) => pack.version === "0.2.1"));
 assert.equal(disabled[0].cards.length, 30);
-assert.equal(disabled[1].cards.length, 10);
+assert.equal(disabled[1].cards.length, 20);
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
 assert.equal(disabled[1].metadata.scope, "spell-saves-all-traditions");
 
@@ -73,7 +73,7 @@ for (const pack of disabled) {
     }
   }
 }
-assert.equal(allIds.size, 40);
+assert.equal(allIds.size, 50);
 
 const miscast = disabled[0].cards;
 assert.ok(miscast.every((card) => card.packId === ARCANE_PACK_IDS.miscastRepercussions));
@@ -107,7 +107,17 @@ assert.deepEqual(reversalSlugs, [
   "dr-007-seen-it-now",
   "dr-008-name-the-weakness",
   "dr-009-familiar-signature",
-  "dr-010-counterexample"
+  "dr-010-counterexample",
+  "dr-011-feedback-glare",
+  "dr-012-broken-concentration",
+  "dr-013-spell-flinches",
+  "dr-014-resonance-returned",
+  "dr-015-the-source-shows",
+  "dr-016-step-between-sparks",
+  "dr-017-follow-the-collapse",
+  "dr-018-exit-through-the-spell",
+  "dr-019-reclaim-the-ground",
+  "dr-020-wrong-side-of-the-ward"
 ]);
 
 const bySlug = new Map(reversals.map((card) => [card.id.split(".").at(-1), card]));
@@ -115,6 +125,13 @@ assert.deepEqual(bySlug.get("dr-001-stand-through-it").filters.saveTypes, ["refl
 assert.deepEqual(bySlug.get("dr-002-not-today").filters.saveTypes, ["will"]);
 assert.deepEqual(bySlug.get("dr-004-rooted-in-reality").filters.saveTypes, ["fortitude"]);
 assert.deepEqual(bySlug.get("dr-009-familiar-signature").filters.saveTypes, ["will"]);
+assert.deepEqual(bySlug.get("dr-012-broken-concentration").filters.saveTypes, ["will"]);
+assert.deepEqual(bySlug.get("dr-014-resonance-returned").filters.saveTypes, ["will"]);
+assert.deepEqual(bySlug.get("dr-016-step-between-sparks").filters.saveTypes, ["reflex"]);
+assert.deepEqual(bySlug.get("dr-017-follow-the-collapse").filters.saveTypes, ["fortitude"]);
+assert.deepEqual(bySlug.get("dr-018-exit-through-the-spell").filters.saveTypes, ["reflex"]);
+assert.deepEqual(bySlug.get("dr-019-reclaim-the-ground").filters.saveTypes, ["fortitude"]);
+assert.deepEqual(bySlug.get("dr-020-wrong-side-of-the-ward").filters.saveTypes, ["reflex"]);
 assert.equal(bySlug.get("dr-002-not-today").tone, "humorous");
 assert.equal(bySlug.get("dr-002-not-today").weight, 2);
 assert.equal(bySlug.get("dr-006-read-the-weave").weight, 2);
@@ -124,17 +141,23 @@ assert.ok(bySlug.get("dr-006-read-the-weave").tags.includes("recall-knowledge"))
 assert.ok(bySlug.get("dr-008-name-the-weakness").tags.includes("counteract"));
 assert.ok(bySlug.get("dr-009-familiar-signature").tags.includes("duplicates"));
 assert.ok(bySlug.get("dr-010-counterexample").tags.includes("ally"));
+assert.ok(bySlug.get("dr-011-feedback-glare").tags.includes("cover"));
+assert.ok(bySlug.get("dr-012-broken-concentration").tags.includes("concentrate"));
+assert.ok(bySlug.get("dr-015-the-source-shows").tags.includes("teamwork"));
+assert.ok(bySlug.get("dr-016-step-between-sparks").tags.includes("reaction-protection"));
+assert.ok(bySlug.get("dr-017-follow-the-collapse").tags.includes("strong"));
+assert.ok(bySlug.get("dr-020-wrong-side-of-the-ward").tags.includes("ward"));
 
-assert.equal(reversals.filter((card) => card.impact === "light").length, 4);
-assert.equal(reversals.filter((card) => card.impact === "moderate").length, 5);
-assert.equal(reversals.filter((card) => card.impact === "strong").length, 1);
-assert.equal(reversals.filter((card) => card.filters.saveTypes.length === 0).length, 6);
+assert.equal(reversals.filter((card) => card.impact === "light").length, 7);
+assert.equal(reversals.filter((card) => card.impact === "moderate").length, 11);
+assert.equal(reversals.filter((card) => card.impact === "strong").length, 2);
+assert.equal(reversals.filter((card) => card.filters.saveTypes.length === 0).length, 9);
 
 function eligibleForSave(saveType) {
   return reversals.filter((card) => card.filters.saveTypes.length === 0 || card.filters.saveTypes.includes(saveType));
 }
-assert.equal(eligibleForSave("reflex").length, 7);
-assert.equal(eligibleForSave("fortitude").length, 7);
-assert.equal(eligibleForSave("will").length, 8);
+assert.equal(eligibleForSave("reflex").length, 13);
+assert.equal(eligibleForSave("fortitude").length, 12);
+assert.equal(eligibleForSave("will").length, 13);
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.2.0 validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.2.1 validation passed.");

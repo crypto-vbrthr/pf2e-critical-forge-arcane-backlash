@@ -96,5 +96,104 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     fallbackTitle: "Counterexample",
     fallbackDescription: "Your resistance proves the spell is neither inevitable nor particularly impressive. Choose one ally within 30 feet who can see or hear you. Before the end of your next turn, that ally gains a +1 circumstance bonus to their next saving throw against a spell from the original caster. The benefit is consumed only when it modifies the roll.",
     tags: ["ally", "saving-throw", "spell-defense", "teamwork", "manual"]
+  }),
+  defineDefiantReversal({
+    id: "dr-011-feedback-glare",
+    localizationKey: "FeedbackGlare",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Feedback Glare",
+    fallbackDescription: "The spell's failure flashes back along its path and exposes the caster's angle. Before the end of your next turn, your next attack against the original caster treats lesser cover as no cover and standard cover as lesser cover. Greater cover is unchanged. The reversal is consumed only when it changes the caster's cover.",
+    tags: ["cover", "attack", "original-caster", "conditional-consumption", "manual"]
+  }),
+  defineDefiantReversal({
+    id: "dr-012-broken-concentration",
+    localizationKey: "BrokenConcentration",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Broken Concentration",
+    fallbackDescription: "Your resistance leaves a crack in the caster's focus. Before the end of your next turn, the first time the original caster uses an action with the concentrate trait, you may use your reaction after that action resolves to Step or Seek. If you Seek, the area must include the caster's space or last known space. The reversal then ends.",
+    tags: ["will", "concentrate", "reaction", "step", "seek", "manual"],
+    filters: { saveTypes: ["will"] }
+  }),
+  defineDefiantReversal({
+    id: "dr-013-spell-flinches",
+    localizationKey: "SpellFlinches",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Spell Flinches",
+    fallbackDescription: "The magic remembers being refused. Before the end of your next turn, if the original caster casts the same spell from the same space and includes you again, you gain a +1 circumstance bonus to AC or to your saving throw against that spell. Changing either the spell or the casting space avoids the reversal. The benefit is consumed only when it modifies your defense.",
+    weight: 2,
+    tags: ["repeat-spell", "casting-space", "spell-defense", "conditional-consumption", "manual"]
+  }),
+  defineDefiantReversal({
+    id: "dr-014-resonance-returned",
+    localizationKey: "ResonanceReturned",
+    tone: "dramatic",
+    impact: "light",
+    fallbackTitle: "Resonance Returned",
+    fallbackDescription: "A visible or audible thread of rejected magic leads back to its source. Until the start of your next turn, you and allies within 30 feet who can perceive you always know which space the original caster occupies, and the caster cannot become undetected from those creatures. Concealment, invisibility, and similar effects can still make the caster concealed or hidden and impose their normal flat checks.",
+    tags: ["will", "location", "allies", "hidden", "undetected", "manual"],
+    filters: { saveTypes: ["will"] }
+  }),
+  defineDefiantReversal({
+    id: "dr-015-the-source-shows",
+    localizationKey: "TheSourceShows",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "The Source Shows",
+    fallbackDescription: "The collapsing spell draws a clean line back to its origin. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, that ally's next attack against the original caster treats the caster's cover as one degree lower and ignores concealment created by a spell from that caster. Concealment from other sources remains. The benefit is consumed only when it applies.",
+    tags: ["ally", "cover", "concealment", "attack", "teamwork", "manual"]
+  }),
+  defineDefiantReversal({
+    id: "dr-016-step-between-sparks",
+    localizationKey: "StepBetweenSparks",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Step Between Sparks",
+    fallbackDescription: "You find the still point between fragments of the failed spell. You may immediately Step as a free action. After that Step, and until the end of your next turn, the original caster cannot use reactions triggered by your movement. This protection ends after your next action with the move trait.",
+    tags: ["reflex", "step", "movement", "reaction-protection", "manual"],
+    filters: { saveTypes: ["reflex"] }
+  }),
+  defineDefiantReversal({
+    id: "dr-017-follow-the-collapse",
+    localizationKey: "FollowTheCollapse",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Follow the Collapse",
+    fallbackDescription: "You advance through the spell at the exact moment its structure gives way. You may immediately Stride up to half your Speed as a free action. You must end this movement closer to the original caster than you began, and the movement triggers reactions normally.",
+    tags: ["fortitude", "stride", "approach", "free-action", "strong", "manual"],
+    filters: { saveTypes: ["fortitude"] }
+  }),
+  defineDefiantReversal({
+    id: "dr-018-exit-through-the-spell",
+    localizationKey: "ExitThroughTheSpell",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Exit Through the Spell",
+    fallbackDescription: "The failed magic leaves a brief path through its own hazards. Before the end of your next turn, during one Step or Stride, you may ignore the additional movement cost of up to 10 feet of difficult terrain created by the triggering spell or the original caster. You may also enter one such square without triggering an effect that occurs only when the square is entered. Ongoing, start-of-turn, and end-of-turn effects still apply.",
+    weight: 2,
+    tags: ["reflex", "difficult-terrain", "hazardous-terrain", "movement", "manual"],
+    filters: { saveTypes: ["reflex"] }
+  }),
+  defineDefiantReversal({
+    id: "dr-019-reclaim-the-ground",
+    localizationKey: "ReclaimTheGround",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Reclaim the Ground",
+    fallbackDescription: "Your resistance forces one patch of the spell to acknowledge ordinary reality. Choose your space or one adjacent 5-foot space within an area created by the triggering spell or the original caster. Until the start of your next turn, that space is not difficult terrain for you, does not trigger effects solely because you enter it, and does not grant the original caster cover or concealment against you. Damage or effects that apply to the whole area, or at the start or end of a turn, still function normally. If no qualifying space exists, you may immediately Step instead.",
+    tags: ["fortitude", "area", "terrain", "cover", "concealment", "fallback", "manual"],
+    filters: { saveTypes: ["fortitude"] }
+  }),
+  defineDefiantReversal({
+    id: "dr-020-wrong-side-of-the-ward",
+    localizationKey: "WrongSideOfTheWard",
+    tone: "humorous",
+    impact: "moderate",
+    fallbackTitle: "Wrong Side of the Ward",
+    fallbackDescription: "The ward has made a small but consequential error about which side you are on. Choose one non-solid spell effect, ward, or magical barrier created by the original caster that you can perceive. Until the end of your next turn, it does not provide cover to the caster against your attacks. The first time you move during that time, you may treat one square occupied by that effect as normal terrain for movement if the effect does not explicitly block movement. Other effects of the spell still apply. If no qualifying effect exists, you may immediately Step instead.",
+    tags: ["reflex", "ward", "barrier", "cover", "movement", "fallback", "manual"],
+    filters: { saveTypes: ["reflex"] }
   })
 ]);

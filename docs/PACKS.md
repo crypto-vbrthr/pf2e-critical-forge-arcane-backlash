@@ -31,7 +31,7 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Defiant Reversals
 
-**Status:** 10/30 cards
+**Status:** 20/30 cards
 
 **Trigger:** Critical success on a saving throw against a spell
 
@@ -49,6 +49,8 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 - limited defense against later forced movement
 - information about the spell or caster
 - a one-use benefit granted to an ally
+- returned resonance that exposes the caster or weakens magical cover
+- safe movement through spell-created terrain, wards, and collapsing effects
 
 **Not included:**
 

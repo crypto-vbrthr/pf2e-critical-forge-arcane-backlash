@@ -180,6 +180,46 @@
       "Counterexample": {
         "Title": "Gegenbeweis",
         "Description": "Dein Widerstand beweist, dass der Zauber weder unvermeidlich noch besonders beeindruckend ist. Wähle einen Verbündeten innerhalb von 9 Metern, der dich sehen oder hören kann. Vor Ende deines nächsten Zuges erhält dieser Verbündete einen +1-Umstandsbonus auf seinen nächsten Rettungswurf gegen einen Zauber der ursprünglich zaubernden Kreatur. Der Vorteil wird nur verbraucht, wenn er den Wurf tatsächlich verändert."
+      },
+      "FeedbackGlare": {
+        "Title": "Rückkopplungsblitz",
+        "Description": "Das Scheitern des Zaubers blitzt auf seinem eigenen Weg zurück und legt den Winkel des Zaubernden offen. Vor dem Ende deines nächsten Zuges behandelst du beim nächsten Angriff gegen den ursprünglichen Zaubernden schwache Deckung als keine Deckung und normale Deckung als schwache Deckung. Starke Deckung bleibt unverändert. Die Umkehrung wird nur verbraucht, wenn sie die Deckung des Zaubernden tatsächlich verändert."
+      },
+      "BrokenConcentration": {
+        "Title": "Gebrochene Konzentration",
+        "Description": "Dein Widerstand hinterlässt einen Riss in der Konzentration des Zaubernden. Wenn der ursprüngliche Zaubernde vor dem Ende deines nächsten Zuges erstmals eine Aktion mit dem Merkmal Konzentration einsetzt, darfst du nach Abschluss dieser Aktion deine Reaktion verwenden, um einen Schritt auszuführen oder zu Suchen. Beim Suchen muss der Bereich das Feld des Zaubernden oder dessen zuletzt bekannten Aufenthaltsort umfassen. Danach endet die Umkehrung."
+      },
+      "SpellFlinches": {
+        "Title": "Der Zauber zuckt zurück",
+        "Description": "Die Magie erinnert sich daran, zurückgewiesen worden zu sein. Wirkt der ursprüngliche Zaubernde vor dem Ende deines nächsten Zuges denselben Zauber vom selben Feld aus und schließt dich erneut ein, erhältst du einen Umstandsbonus von +1 auf deine RK oder deinen Rettungswurf gegen diesen Zauber. Wird entweder der Zauber oder das Ausgangsfeld geändert, greift die Umkehrung nicht. Der Vorteil wird nur verbraucht, wenn er deine Verteidigung tatsächlich verändert."
+      },
+      "ResonanceReturned": {
+        "Title": "Zurückgekehrte Resonanz",
+        "Description": "Ein sichtbarer oder hörbarer Faden zurückgewiesener Magie führt zu seinem Ursprung zurück. Bis zum Beginn deines nächsten Zuges wissen du und Verbündete innerhalb von 9 Metern, die dich wahrnehmen können, stets, welches Feld der ursprüngliche Zaubernde besetzt. Gegenüber diesen Kreaturen kann der Zaubernde nicht unentdeckt werden. Verbergung, Unsichtbarkeit und ähnliche Effekte können ihn weiterhin verborgen oder versteckt machen und ihre normalen Flachwürfe verursachen."
+      },
+      "TheSourceShows": {
+        "Title": "Der Ursprung zeigt sich",
+        "Description": "Der zusammenbrechende Zauber zeichnet eine klare Linie zu seinem Ursprung. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Vor dem Ende deines nächsten Zuges behandelt dessen nächster Angriff gegen den ursprünglichen Zaubernden dessen Deckung als um eine Stufe niedriger und ignoriert Verbergung, die durch einen Zauber dieses Zaubernden erzeugt wurde. Verbergung aus anderen Quellen bleibt bestehen. Der Vorteil wird nur verbraucht, wenn er tatsächlich greift."
+      },
+      "StepBetweenSparks": {
+        "Title": "Schritt zwischen den Funken",
+        "Description": "Du findest den stillen Punkt zwischen den Splittern des gescheiterten Zaubers. Du darfst sofort als freie Aktion einen Schritt ausführen. Nach diesem Schritt und bis zum Ende deines nächsten Zuges kann der ursprüngliche Zaubernde keine Reaktionen verwenden, die durch deine Bewegung ausgelöst werden. Dieser Schutz endet nach deiner nächsten Aktion mit dem Merkmal Bewegung."
+      },
+      "FollowTheCollapse": {
+        "Title": "Dem Zusammenbruch folgen",
+        "Description": "Du dringst genau in dem Moment durch den Zauber vor, in dem seine Struktur nachgibt. Du darfst sofort als freie Aktion bis zur Hälfte deiner Bewegungsrate Laufen. Am Ende dieser Bewegung musst du dem ursprünglichen Zaubernden näher sein als zu Beginn. Die Bewegung löst Reaktionen normal aus."
+      },
+      "ExitThroughTheSpell": {
+        "Title": "Ausgang durch den Zauber",
+        "Description": "Die gescheiterte Magie hinterlässt kurz einen Weg durch ihre eigenen Gefahren. Vor dem Ende deines nächsten Zuges darfst du während eines Schritts oder Laufens die zusätzlichen Bewegungskosten von bis zu 3 Metern schwierigem Gelände ignorieren, das durch den auslösenden Zauber oder den ursprünglichen Zaubernden erschaffen wurde. Du darfst außerdem ein solches Feld betreten, ohne einen Effekt auszulösen, der ausschließlich beim Betreten des Feldes eintritt. Andauernde Effekte sowie Effekte zu Beginn oder am Ende eines Zuges gelten weiterhin."
+      },
+      "ReclaimTheGround": {
+        "Title": "Den Boden zurückfordern",
+        "Description": "Dein Widerstand zwingt einen Teil des Zaubers, die gewöhnliche Wirklichkeit anzuerkennen. Wähle dein Feld oder ein angrenzendes Feld innerhalb eines Bereichs, der durch den auslösenden Zauber oder den ursprünglichen Zaubernden erschaffen wurde. Bis zum Beginn deines nächsten Zuges ist dieses Feld für dich kein schwieriges Gelände, löst keine Effekte allein dadurch aus, dass du es betrittst, und gewährt dem ursprünglichen Zaubernden gegen dich weder Deckung noch Verbergung. Schaden oder Effekte, die den gesamten Bereich betreffen oder zu Beginn beziehungsweise am Ende eines Zuges eintreten, funktionieren weiterhin normal. Existiert kein passendes Feld, darfst du stattdessen sofort einen Schritt ausführen."
+      },
+      "WrongSideOfTheWard": {
+        "Title": "Auf der falschen Seite des Schutzes",
+        "Description": "Der Schutz hat einen kleinen, aber folgenreichen Fehler dabei gemacht, auf welcher Seite du dich befindest. Wähle einen nicht festen Zaubereffekt, Schutz oder eine magische Barriere des ursprünglichen Zaubernden, den du wahrnehmen kannst. Bis zum Ende deines nächsten Zuges gewährt dieser Effekt dem Zaubernden gegen deine Angriffe keine Deckung. Wenn du dich während dieser Zeit erstmals bewegst, darfst du ein von diesem Effekt belegtes Feld für die Bewegung als normales Gelände behandeln, sofern der Effekt Bewegung nicht ausdrücklich blockiert. Andere Auswirkungen des Zaubers gelten weiterhin. Existiert kein passender Effekt, darfst du stattdessen sofort einen Schritt ausführen."
       }
     },
     "Effects": {},

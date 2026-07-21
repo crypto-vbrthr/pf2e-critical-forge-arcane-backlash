@@ -6,14 +6,14 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.2.0
+## Version 0.2.1
 
 The current release contains two optional packs:
 
 - **Miscast Repercussions** - 30 mechanically reviewed cards for critical failures on spell attacks.
-- **Defiant Reversals** - 10 cards for critical successes on saving throws against spells.
+- **Defiant Reversals** - 20 cards for critical successes on saving throws against spells.
 
-Defiant Reversals turns exceptional resistance into movement, insight, protection against repeated magic, and opportunities shared with allies. Positive consequences belong to the creature that made the saving throw, not to the caster.
+Defiant Reversals turns exceptional resistance into movement, insight, returned resonance, reclaimed magical terrain, protection against repeated magic, and opportunities shared with allies. Positive consequences belong to the creature that made the saving throw, not to the caster.
 
 ## Installation
 
@@ -41,6 +41,7 @@ The pack includes:
 - insight into spells and magical signatures
 - limited protection against forced movement
 - brief tactical benefits shared with allies
+- exposed casting lines, weakened cover, and safe paths through spell-created terrain
 
 The pack does not include:
 
@@ -59,7 +60,7 @@ Manual resolution is intentional. Each card is written to be applied in one or t
 ## Planned Packs
 
 - Miscast Repercussions - 30/30 (mechanical review passed)
-- Defiant Reversals - 10/30
+- Defiant Reversals - 20/30
 - Spell Attack Surges - planned
 - Overwhelming Resonance - planned
 

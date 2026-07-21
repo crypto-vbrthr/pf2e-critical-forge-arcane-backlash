@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.1
+
+- Added DR-011 through DR-020 to **Defiant Reversals**.
+- Expanded the pack to 20 cards.
+- Added returned magical feedback, concentrate-triggered reactions, repeat-spell defenses, shared caster tracking, exposed casting lines, movement-reaction protection, pursuit through collapsing magic, reclaimed spell terrain, and ward-crossing consequences.
+- Added Reflex-, Fortitude-, and Will-specific cards while retaining general cards for every spell saving throw.
+- Added the second strong-impact reversal, **Follow the Collapse**, which permits an immediate half-Speed advance toward the original caster.
+- Kept all new cards manual because they depend on the original caster, cover degrees, action triggers, immediate movement, spell-created terrain, magical barriers, or conditional consumption.
+- Updated English and German localization, README, pack documentation, Card Bible, and tests.
+
 ## 0.2.0
 
 - Added the optional **Defiant Reversals** pack.

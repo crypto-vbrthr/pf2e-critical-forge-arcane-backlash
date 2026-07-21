@@ -96,19 +96,34 @@ The revised pack no longer duplicates the later-spell-defense, relocate-for-a-mo
 | DR-009 | Familiar Signature | Will | Moderate | Manual | Recognize the caster among magical disguises, duplicates, and decoys |
 | DR-010 | Counterexample | Any | Moderate | Manual | Grant an ally a one-use saving-throw bonus against the same caster |
 
+## Defiant Reversals - Block 2
+
+| ID | Card | Save Filter | Impact | Automation | Core Idea |
+|---|---|---|---|---|---|
+| DR-011 | Feedback Glare | Any | Moderate | Manual | The defender's next attack reduces the original caster's cover by one degree |
+| DR-012 | Broken Concentration | Will | Moderate | Manual | The caster's next concentrate action can trigger a Step or Seek reaction |
+| DR-013 | Spell Flinches | Any | Light | Manual | Repeating the same spell from the same space grants the defender a one-use defense bonus |
+| DR-014 | Resonance Returned | Will | Light | Manual | The defender and nearby allies retain the caster's exact space without removing concealment |
+| DR-015 | The Source Shows | Any | Moderate | Manual | One ally reduces magical cover and ignores caster-created concealment for one attack |
+| DR-016 | Step Between Sparks | Reflex | Moderate | Manual | The defender Steps immediately and gains brief protection from the caster's movement reactions |
+| DR-017 | Follow the Collapse | Fortitude | Strong | Manual | The defender Strides up to half Speed toward the caster |
+| DR-018 | Exit Through the Spell | Reflex | Light | Manual | One movement ignores spell-created difficult terrain and an entry-only trigger |
+| DR-019 | Reclaim the Ground | Fortitude | Moderate | Manual | One spell-created square loses terrain, entry-trigger, cover, and concealment effects for the defender, with a Step fallback |
+| DR-020 | Wrong Side of the Ward | Reflex | Moderate | Manual | A non-solid ward stops granting the caster cover and can be crossed as normal terrain for movement |
+
 ### Current Defiant Reversals Distribution
 
 | Impact | Cards |
 |---|---:|
-| Light | 4 |
-| Moderate | 5 |
-| Strong | 1 |
+| Light | 7 |
+| Moderate | 11 |
+| Strong | 2 |
 
 | Save Eligibility | Eligible Cards |
 |---|---:|
-| Reflex | 7 |
-| Fortitude | 7 |
-| Will | 8 |
+| Reflex | 13 |
+| Fortitude | 12 |
+| Will | 13 |
 
-All first-block cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, or conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack.
+All 20 cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, battlefield geometry, or conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack.
 

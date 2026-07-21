@@ -85,54 +85,54 @@ The revised pack no longer duplicates the later-spell-defense, relocate-for-a-mo
 
 | ID | Card | Save Filter | Impact | Automation | Core Idea |
 |---|---|---|---|---|---|
-| DR-001 | Stand Through It | Reflex | Moderate | Manual | The defender Steps immediately or ignores the first spell-created difficult-terrain cost |
-| DR-002 | Not Today | Will | Light | Manual | Reduce frightened, with a one-use fear-save fallback |
+| DR-001 | Stand Through It | Reflex | Moderate | Manual | Remain in place inside a defensive magical wake that improves cover against the caster |
+| DR-002 | Not Today | Will | Light | Manual | Create a brief adjacent ally aura against the caster's fear and emotion effects |
 | DR-003 | Body Remembers | Any | Light | Manual | Gain a one-use bonus against the same save type from the same caster |
 | DR-004 | Rooted in Reality | Fortitude | Moderate | Manual | Reactively reduce forced movement or recover position after exact relocation |
-| DR-005 | Shake the Pattern | Any | Strong | Manual | Shorten another ongoing spell from the same caster, with a save-bonus fallback |
+| DR-005 | Shake the Pattern | Any | Strong | Manual | Precisely shorten another ongoing spell from the same caster without ever extending it |
 | DR-006 | Read the Weave | Any | Light | Manual | Immediately Recall Knowledge about the failed spell or its caster |
-| DR-007 | Seen It Now | Any | Light | Manual | Reduce a circumstance penalty against the repeated spell, with a Step fallback |
-| DR-008 | Name the Weakness | Any | Moderate | Manual | Grant an ally a counteract or magical Recall Knowledge bonus |
-| DR-009 | Familiar Signature | Will | Moderate | Manual | Recognize the caster among magical disguises, duplicates, and decoys |
+| DR-007 | Seen It Now | Any | Light | Manual | Reactively Raise a Shield or Take Cover when the same spell is cast again |
+| DR-008 | Name the Weakness | Any | Moderate | Manual | Grant an ally a counteract bonus against the caster's effect or magical Recall Knowledge bonus |
+| DR-009 | Familiar Signature | Will | Moderate | Manual | Recognize the caster's true space without overriding explicit illusion or decoy procedures |
 | DR-010 | Counterexample | Any | Moderate | Manual | Grant an ally a one-use saving-throw bonus against the same caster |
 
 ## Defiant Reversals - Block 2
 
 | ID | Card | Save Filter | Impact | Automation | Core Idea |
 |---|---|---|---|---|---|
-| DR-011 | Feedback Glare | Any | Moderate | Manual | The defender's next attack reduces the original caster's cover by one degree |
+| DR-011 | Feedback Glare | Any | Moderate | Manual | Trace the caster's direction and distance band and gain a one-use Seek bonus |
 | DR-012 | Broken Concentration | Will | Moderate | Manual | The caster's next concentrate action can trigger a Step or Seek reaction |
-| DR-013 | Spell Flinches | Any | Light | Manual | Repeating the same spell from the same space grants the defender a one-use defense bonus |
-| DR-014 | Resonance Returned | Will | Light | Manual | The defender and nearby allies retain the caster's exact space without removing concealment |
+| DR-013 | Spell Flinches | Any | Light | Manual | Gain a timed defense bonus when the same spell is repeated from the same space |
+| DR-014 | Resonance Returned | Will | Light | Manual | Make the caster and sustained effect flare during the next Sustain action |
 | DR-015 | The Source Shows | Any | Moderate | Manual | One ally reduces magical cover and ignores caster-created concealment for one attack |
 | DR-016 | Step Between Sparks | Reflex | Moderate | Manual | The defender Steps immediately and gains brief protection from the caster's movement reactions |
 | DR-017 | Follow the Collapse | Fortitude | Strong | Manual | The defender Strides up to half Speed toward the caster |
-| DR-018 | Exit Through the Spell | Reflex | Light | Manual | One movement ignores spell-created difficult terrain and an entry-only trigger |
-| DR-019 | Reclaim the Ground | Fortitude | Moderate | Manual | One spell-created square loses terrain, entry-trigger, cover, and concealment effects for the defender, with a Step fallback |
-| DR-020 | Wrong Side of the Ward | Reflex | Moderate | Manual | A non-solid ward stops granting the caster cover and can be crossed as normal terrain for movement |
+| DR-018 | Exit Through the Spell | Reflex | Light | Manual | One movement ignores spell-created difficult terrain and one dangerous-terrain or entry-only effect |
+| DR-019 | Reclaim the Ground | Fortitude | Moderate | Manual | Create a one-use allied anchor against forced movement, teleportation, or placement |
+| DR-020 | Wrong Side of the Ward | Reflex | Moderate | Manual | Ignore cover and a small difficult-terrain cost from a mechanically defined spell effect |
 
 ## Defiant Reversals - Block 3
 
 | ID | Card | Save Filter | Impact | Automation | Core Idea |
 |---|---|---|---|---|---|
-| DR-021 | Proof of Safety | Any | Moderate | Manual | One ally gains a fortune effect against the same spell from the original caster |
-| DR-022 | Hold the Line | Fortitude | Moderate | Manual | Reactively protect an adjacent ally from a spell and let one defender Step afterward |
+| DR-021 | Proof of Safety | Any | Strong | Manual | One ally gains a fortune effect against the same spell from the original caster |
+| DR-022 | Hold the Line | Fortitude | Moderate | Manual | Reactively grant one adjacent ally a defense bonus against a spell |
 | DR-023 | Shared Defiance | Will | Strong | Manual | An ally retries an ongoing mental or emotion spell save, with frightened reduction as fallback |
-| DR-024 | Opening in the Pattern | Any | Moderate | Manual | One allied action against the caster or a spell effect cannot trigger the caster's reactions |
-| DR-025 | Your Turn | Any | Light | Manual | An ally spends a reaction to Seek, Recall Knowledge, or draw or stow an item |
+| DR-024 | Opening in the Pattern | Any | Moderate | Manual | Let one ally ignore a spell-created AC or save bonus on the caster |
+| DR-025 | Your Turn | Any | Strong | Manual | Let one ally borrow the defender's higher modifier for the same save type |
 | DR-026 | The Spell Blinks First | Reflex | Strong | Manual | Reactively Step out of a repeated spell cast from the same space |
 | DR-027 | Refused Narrative | Will | Light | Manual | The caster's returned dramatic flourish blocks Feint and Create a Diversion against the defender |
 | DR-028 | Borrowed Echo | Any | Moderate | Manual | Convert a harmless spell fragment into movement, cover, or relief from one concealment flat check |
-| DR-029 | Unimpressed by the Cosmos | Any | Light | Manual | Immediately Demoralize the caster with a small bonus, or reduce frightened |
-| DR-030 | Return to Sender, Mostly | Any | Moderate | Manual | Reactively impose misfortune on the caster's first stealth or deception maneuver |
+| DR-029 | Unimpressed by the Cosmos | Any | Moderate | Manual | Force the caster to recompose or publicly telegraph the next spell |
+| DR-030 | Return to Sender, Mostly | Any | Moderate | Manual | Perceptibly react to impose misfortune on the caster's first stealth or deception maneuver |
 
 ### Current Defiant Reversals Distribution
 
 | Impact | Cards |
 |---|---:|
-| Light | 10 |
+| Light | 8 |
 | Moderate | 16 |
-| Strong | 4 |
+| Strong | 6 |
 
 | Save Eligibility | Eligible Cards |
 |---|---:|
@@ -140,5 +140,5 @@ The revised pack no longer duplicates the later-spell-defense, relocate-for-a-mo
 | Fortitude | 19 |
 | Will | 21 |
 
-All 30 cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, battlefield geometry, fortune or misfortune effects, and conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack. The complete draft is ready for its full mechanical review.
+All 30 cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, battlefield geometry, fortune or misfortune effects, and conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack. The pack passed its full mechanical review in version 0.2.3. The revision removed repeated Step fallbacks, duplicate fear recovery, duplicated cover and reaction-suppression mechanics, and overloaded terrain exceptions while preserving its active-resistance identity.
 

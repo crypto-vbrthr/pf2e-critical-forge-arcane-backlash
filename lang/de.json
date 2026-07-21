@@ -143,11 +143,11 @@
       },
       "StandThroughIt": {
         "Title": "Ungebrochener Schritt",
-        "Description": "Der Zauber bricht um dich herum, statt deinen Bewegungsfluss zu brechen. Du darfst sofort als freie Aktion einen Schritt ausführen. Kannst oder möchtest du das nicht, verursacht das erste Feld schwierigen Geländes, das die ursprünglich zaubernde Kreatur erschaffen hat und das du vor Ende deines nächsten Zuges betrittst, keine zusätzlichen Bewegungskosten."
+        "Description": "Der Zauber bricht um dich herum und hinterlässt eine scharf umrissene Nachströmung in der Luft. Bis zum Beginn deines nächsten Zuges oder bis du dein aktuelles Feld verlässt, besitzt du geringe Deckung gegen Angriffe und Zauberangriffe des ursprünglichen Zauberwirkers. Besitzt du bereits geringe Deckung aus einer anderen Quelle, behandle sie gegen diesen Zauberwirker stattdessen als normale Deckung. Deine Deckung kann dadurch nicht über normale Deckung hinaus steigen."
       },
       "NotToday": {
         "Title": "Nicht heute",
-        "Description": "Die Magie trägt ihr einschüchterndstes Argument vor. Du lässt dich nicht überzeugen. Reduziere deinen Wert für Verängstigt um 1. Bist du nicht verängstigt, erhältst du stattdessen einen +1-Umstandsbonus auf deinen nächsten Rettungswurf gegen einen Furchteffekt der ursprünglich zaubernden Kreatur vor Ende deines nächsten Zuges. Der Vorteil wird nur verbraucht, wenn er zur Anwendung kommt."
+        "Description": "Deine Weigerung hinterlässt um dich herum eine kleine Blase ganz gewöhnlichen Mutes. Bis zum Beginn deines nächsten Zuges erhalten du und an dich angrenzende Verbündete einen Umstandsbonus von +1 auf Rettungswürfe gegen Furcht- oder Gefühlseffekte des ursprünglichen Zauberwirkers. Eine Kreatur erhält diesen Vorteil nur, solange sie an dich angrenzt. Ein bereits vorhandener Zustand Verängstigt wird dadurch nicht reduziert."
       },
       "BodyRemembers": {
         "Title": "Der Körper erinnert sich",
@@ -159,7 +159,7 @@
       },
       "ShakeThePattern": {
         "Title": "Das Muster abschütteln",
-        "Description": "Dein Widerstand reißt mehr Magie los als nur diesen Zauber. Wähle einen anderen anhaltenden Zaubereffekt der ursprünglich zaubernden Kreatur, der dich betrifft und dessen verbleibende Dauer in Runden gemessen wird. Reduziere seine verbleibende Dauer um 1 Runde, mindestens bis zum Beginn deines nächsten Zuges. Gibt es keinen geeigneten Effekt, erhältst du stattdessen einen +1-Umstandsbonus auf deinen nächsten Rettungswurf gegen einen Zauber dieser Kreatur vor Ende deines nächsten Zuges."
+        "Description": "Dein Widerstand reißt mehr Magie los als nur diesen Zauber. Wähle einen anderen anhaltenden Zaubereffekt des ursprünglichen Zauberwirkers, der auf dir liegt und dessen verbleibende Dauer in Runden gemessen wird. Reduziere seine verbleibende Dauer um 1 Runde. Hat er höchstens 1 Runde Restdauer, endet er stattdessen zu Beginn deines nächsten Zuges. Diese Karte kann niemals bewirken, dass ein Effekt später endet als ohne sie. Gibt es keinen passenden Effekt, erhältst du stattdessen bis zum Ende deines nächsten Zuges einen Umstandsbonus von +1 auf deinen nächsten Rettungswurf gegen einen Zauber des ursprünglichen Zauberwirkers."
       },
       "ReadTheWeave": {
         "Title": "Das Geflecht lesen",
@@ -167,15 +167,15 @@
       },
       "SeenItNow": {
         "Title": "Jetzt kenne ich den Trick",
-        "Description": "Der Zauber hat dir seinen Trick einmal gezeigt, und einmal genügt. Wenn du vor Ende deines nächsten Zuges das nächste Mal einen Rettungswurf gegen denselben Zauber der ursprünglich zaubernden Kreatur ausführst, reduziere einen Umstandsmalus auf diesen Rettungswurf um 1, mindestens auf 0. Gilt kein Umstandsmalus, darfst du stattdessen nach Abwicklung des Rettungswurfs einen Schritt ausführen. Danach endet die Umkehrung."
+        "Description": "Der Zauber hat dir seinen Trick einmal gezeigt, und du bist auf die Wiederholung vorbereitet. Wenn der ursprüngliche Zauberwirker vor dem Ende deines nächsten Zuges denselben Zauber zu wirken beginnt und du den Zaubervorgang wahrnehmen kannst, darfst du vor der Auflösung des Zaubers deine Reaktion einsetzen, um einen Schild zu heben oder Deckung zu suchen. Dabei gelten die normalen Voraussetzungen der gewählten Aktion. Die Umkehrung wird nur verbraucht, wenn du die Reaktion einsetzt."
       },
       "NameTheWeakness": {
         "Title": "Die Schwäche benennen",
-        "Description": "Du offenbarst den Fehler in der Magie, solange er noch sichtbar ist. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Vor Ende deines nächsten Zuges erhält dieser Verbündete einen +1-Umstandsbonus auf seinen nächsten Gegenwirken-Wurf gegen die ursprünglich zaubernde Kreatur oder auf seinen nächsten Wurf zum Wissen abrufen über deren Magie. Der Vorteil wird nur verbraucht, wenn er einen Wurf tatsächlich verändert."
+        "Description": "Du legst den Fehler in der Magie offen, solange er noch sichtbar ist. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Vor dem Ende deines nächsten Zuges erhält dieser Verbündete einen Umstandsbonus von +1 auf seinen nächsten Wurf zum Gegenwirken gegen einen Zauber oder magischen Effekt des ursprünglichen Zauberwirkers oder auf seinen nächsten Wissenswurf über dessen Magie. Der Vorteil wird nur verbraucht, wenn er einen Wurf verändert."
       },
       "FamiliarSignature": {
         "Title": "Vertraute Signatur",
-        "Description": "Du erkennst die magische Signatur der zaubernden Kreatur unter jeder Verkleidung. Bis zum Ende deines nächsten Zuges kannst du die ursprünglich zaubernde Kreatur unter magischen Doppelgängern, Verkleidungen, projizierten Bildern oder Ködern erkennen, die durch ihre eigene Magie erschaffen wurden. Solche Effekte können sie weiterhin verbergen oder ihre normalen Flachwürfe verlangen, sie können dich jedoch nicht den falschen Doppelgänger auswählen oder eine andere Kreatur für sie halten lassen."
+        "Description": "Du erkennst die magische Signatur des Zauberwirkers unter jeder Verkleidung. Bis zum Ende deines nächsten Zuges erkennst du stets, welches Feld den ursprünglichen Zauberwirker enthält, wenn er und von seiner eigenen Magie erschaffene Duplikate, Verkleidungen, projizierte Bilder oder Trugbilder unterschiedliche Felder besetzen. Solche Effekte verursachen weiterhin ihre normalen Verbergungen, Flachwürfe, Zufallsauswahlen oder Auflösungsverfahren für Trugbilder. Diese Karte überschreibt kein ausdrücklich festgelegtes Verfahren eines Effekts, mit dem ermittelt wird, welches Bild oder Ziel betroffen ist."
       },
       "Counterexample": {
         "Title": "Gegenbeweis",
@@ -183,7 +183,7 @@
       },
       "FeedbackGlare": {
         "Title": "Rückkopplungsblitz",
-        "Description": "Das Scheitern des Zaubers blitzt auf seinem eigenen Weg zurück und legt den Winkel des Zaubernden offen. Vor dem Ende deines nächsten Zuges behandelst du beim nächsten Angriff gegen den ursprünglichen Zaubernden schwache Deckung als keine Deckung und normale Deckung als schwache Deckung. Starke Deckung bleibt unverändert. Die Umkehrung wird nur verbraucht, wenn sie die Deckung des Zaubernden tatsächlich verändert."
+        "Description": "Der gescheiterte Zauber hinterlässt entlang seiner Verbindung zur Quelle ein helles Nachbrennen. Bis zum Ende deines nächsten Zuges kennst du die Richtung zum ursprünglichen Zauberwirker und weißt, ob er sich innerhalb von 9 Metern, innerhalb von 18 Metern oder weiter entfernt befindet. Dies enthüllt nicht sein genaues Feld und verändert weder den Zustand Versteckt noch Unentdeckt. Dein nächster Suchen-Wurf vor diesem Zeitpunkt, mit dem du den ursprünglichen Zauberwirker aufspüren willst, erhält einen Umstandsbonus von +2; danach endet die Umkehrung."
       },
       "BrokenConcentration": {
         "Title": "Gebrochene Konzentration",
@@ -191,11 +191,11 @@
       },
       "SpellFlinches": {
         "Title": "Der Zauber zuckt zurück",
-        "Description": "Die Magie erinnert sich daran, zurückgewiesen worden zu sein. Wirkt der ursprüngliche Zaubernde vor dem Ende deines nächsten Zuges denselben Zauber vom selben Feld aus und schließt dich erneut ein, erhältst du einen Umstandsbonus von +1 auf deine RK oder deinen Rettungswurf gegen diesen Zauber. Wird entweder der Zauber oder das Ausgangsfeld geändert, greift die Umkehrung nicht. Der Vorteil wird nur verbraucht, wenn er deine Verteidigung tatsächlich verändert."
+        "Description": "Die Magie erinnert sich daran, zurückgewiesen worden zu sein. Wählt der ursprüngliche Zauberwirker vor dem Ende deines nächsten Zuges denselben Zauber, wirkt ihn vom selben Feld und bezieht dich erneut ein, erhältst du einen Umstandsbonus von +1 auf deine RK oder deinen Rettungswurf gegen diesen Zauber. Prüfe diese Bedingungen, nachdem Zauber, Wirkfeld, Ziele und Wirkungsbereich festgelegt wurden, aber bevor ein Angriffswurf oder Rettungswurf erfolgt. Ein anderer Zauber oder ein anderes Wirkfeld verhindert die Umkehrung. Der Vorteil wird nur verbraucht, wenn er deine Verteidigung verändert."
       },
       "ResonanceReturned": {
         "Title": "Zurückgekehrte Resonanz",
-        "Description": "Ein sichtbarer oder hörbarer Faden zurückgewiesener Magie führt zu seinem Ursprung zurück. Bis zum Beginn deines nächsten Zuges wissen du und Verbündete innerhalb von 9 Metern, die dich wahrnehmen können, stets, welches Feld der ursprüngliche Zaubernde besetzt. Gegenüber diesen Kreaturen kann der Zaubernde nicht unentdeckt werden. Verbergung, Unsichtbarkeit und ähnliche Effekte können ihn weiterhin verborgen oder versteckt machen und ihre normalen Flachwürfe verursachen."
+        "Description": "Die zurückgewiesene Resonanz haftet am nächsten Versuch des Zauberwirkers, seine Magie aufrechtzuerhalten. Wenn der ursprüngliche Zauberwirker vor dem Ende deines nächsten Zuges erstmals einen Zauber aufrechterhält, flammen sowohl der Zauberwirker als auch der aufrechterhaltene Zaubereffekt sichtbar oder hörbar auf, bis die Aktion abgehandelt ist. Du und Verbündete innerhalb von 9 Metern, die einen der beiden Endpunkte wahrnehmen können, wissen, welcher Effekt aufrechterhalten wurde, und behandeln den Zauberwirker für Reaktionen, die durch das Aufrechterhalten ausgelöst werden, als Beobachtet. Nach der Aktion gelten wieder die normalen Wahrnehmungsgrade."
       },
       "TheSourceShows": {
         "Title": "Der Ursprung zeigt sich",
@@ -211,23 +211,23 @@
       },
       "ExitThroughTheSpell": {
         "Title": "Ausgang durch den Zauber",
-        "Description": "Die gescheiterte Magie hinterlässt kurz einen Weg durch ihre eigenen Gefahren. Vor dem Ende deines nächsten Zuges darfst du während eines Schritts oder Laufens die zusätzlichen Bewegungskosten von bis zu 3 Metern schwierigem Gelände ignorieren, das durch den auslösenden Zauber oder den ursprünglichen Zaubernden erschaffen wurde. Du darfst außerdem ein solches Feld betreten, ohne einen Effekt auszulösen, der ausschließlich beim Betreten des Feldes eintritt. Andauernde Effekte sowie Effekte zu Beginn oder am Ende eines Zuges gelten weiterhin."
+        "Description": "Die gescheiterte Magie hinterlässt einen kurzen Weg durch ihre eigenen Gefahren. Während eines Schritts oder Laufens vor dem Ende deines nächsten Zuges darfst du die zusätzlichen Bewegungskosten von bis zu 3 Metern schwierigem Gelände ignorieren, das der auslösende Zauber erschaffen hat. Du darfst außerdem ein Feld gefährlichen Geländes, das der auslösende Zauber erschaffen hat, oder ein Feld mit einem ausschließlich beim Betreten ausgelösten Effekt dieses Zaubers betreten, ohne diesen Betretenseffekt auszulösen. Anhaltende Effekte, Effekte des gesamten Bereichs sowie Effekte zu Beginn oder Ende eines Zuges funktionieren weiterhin normal."
       },
       "ReclaimTheGround": {
         "Title": "Den Boden zurückfordern",
-        "Description": "Dein Widerstand zwingt einen Teil des Zaubers, die gewöhnliche Wirklichkeit anzuerkennen. Wähle dein Feld oder ein angrenzendes Feld innerhalb eines Bereichs, der durch den auslösenden Zauber oder den ursprünglichen Zaubernden erschaffen wurde. Bis zum Beginn deines nächsten Zuges ist dieses Feld für dich kein schwieriges Gelände, löst keine Effekte allein dadurch aus, dass du es betrittst, und gewährt dem ursprünglichen Zaubernden gegen dich weder Deckung noch Verbergung. Schaden oder Effekte, die den gesamten Bereich betreffen oder zu Beginn beziehungsweise am Ende eines Zuges eintreten, funktionieren weiterhin normal. Existiert kein passendes Feld, darfst du stattdessen sofort einen Schritt ausführen."
+        "Description": "Dein Widerstand verankert einen Punkt des Schlachtfelds in gewöhnlicher Wirklichkeit. Wähle dein Feld oder ein angrenzendes Feld, das vom auslösenden Zauber betroffen war. Bis zum Beginn deines nächsten Zuges darf der erste Verbündete, der dieses Feld betritt oder seinen Zug darin beginnt, seine Reaktion einsetzen, wenn der ursprüngliche Zauberwirker ihn gegen seinen Willen bewegen, teleportieren oder versetzen würde. Reduziere gemessene erzwungene Bewegung um 1,5 Meter. Bei Teleportation oder Versetzung darf der Verbündete stattdessen im verankerten Feld bleiben, sofern dies zulässig ist. Danach endet der Anker. War kein angrenzendes Feld vom Zauber betroffen, wähle dein eigenes Feld."
       },
       "WrongSideOfTheWard": {
         "Title": "Auf der falschen Seite des Schutzes",
-        "Description": "Der Schutz hat einen kleinen, aber folgenreichen Fehler dabei gemacht, auf welcher Seite du dich befindest. Wähle einen nicht festen Zaubereffekt, Schutz oder eine magische Barriere des ursprünglichen Zaubernden, den du wahrnehmen kannst. Bis zum Ende deines nächsten Zuges gewährt dieser Effekt dem Zaubernden gegen deine Angriffe keine Deckung. Wenn du dich während dieser Zeit erstmals bewegst, darfst du ein von diesem Effekt belegtes Feld für die Bewegung als normales Gelände behandeln, sofern der Effekt Bewegung nicht ausdrücklich blockiert. Andere Auswirkungen des Zaubers gelten weiterhin. Existiert kein passender Effekt, darfst du stattdessen sofort einen Schritt ausführen."
+        "Description": "Der Schutzzauber hat einen kleinen, aber folgenreichen Fehler dabei gemacht, auf welcher Seite du stehst. Wähle einen wahrnehmbaren Zaubereffekt des ursprünglichen Zauberwirkers, der entweder Deckung gewährt oder ein oder mehrere Felder zu schwierigem Gelände macht, ohne Bewegung oder Wirkungslinie zu blockieren. Bis zum Ende deines nächsten Zuges gewährt er dem Zauberwirker gegen deine Angriffe keine Deckung, und die ersten 1,5 Meter schwierigen Geländes, die er erzeugt, kosten dich keine zusätzliche Bewegung. Alle anderen Effekte bleiben unverändert. Gibt es beim Ziehen der Karte keinen passenden Effekt, wartet die Umkehrung und gilt für den ersten passenden Effekt, den der Zauberwirker vor Ablauf der Dauer erschafft."
       },
       "ProofOfSafety": {
         "Title": "Beweis der Sicherheit",
-        "Description": "Dein Widerstand offenbart einen wiederholbaren Weg durch den Zauber. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn dieser Verbündete vor Ende deines nächsten Zuges einen Rettungswurf gegen denselben Zauber des ursprünglichen Zaubernden ausführt, darf er zweimal würfeln und das bessere Ergebnis verwenden. Dies ist ein Glückseffekt und kann bei diesem Wurf nicht mit einem anderen Glückseffekt kombiniert werden. Die Umkehrung wird nur verbraucht, wenn der Verbündete sie verwendet."
+        "Description": "Dein Widerstand offenbart einen wiederholbaren Weg durch den Zauber. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn dieser Verbündete vor dem Ende deines nächsten Zuges einen Rettungswurf gegen denselben Zauber desselben Zauberwirkers ablegt, darf er zweimal würfeln und das bessere Ergebnis verwenden. Dies ist ein Glückseffekt und kann bei diesem Wurf nicht mit einem weiteren Glückseffekt kombiniert werden. Die Umkehrung wird nur verbraucht, wenn der Verbündete sie nutzt."
       },
       "HoldTheLine": {
         "Title": "Die Linie halten",
-        "Description": "Deine Weigerung hinterlässt genug Gewissheit, um jemanden neben dir zu schützen. Wirkt der ursprüngliche Zaubernde vor Ende deines nächsten Zuges einen Zauber, der einen an dich angrenzenden Verbündeten als Ziel hat oder einschließt, darfst du deine Reaktion verwenden, bevor ein Angriffswurf oder Rettungswurf ausgeführt wird. Dieser Verbündete erhält einen +1-Umstandsbonus auf seine RK oder auf einen Rettungswurf gegen den Zauber. Nach Abwicklung des Zaubers darf entweder der Verbündete oder du als freie Aktion einen Schritt ausführen, aber nicht beide. Danach endet die Umkehrung."
+        "Description": "Deine Weigerung hinterlässt genug Gewissheit, um jemanden neben dir zu schützen. Wenn der ursprüngliche Zauberwirker vor dem Ende deines nächsten Zuges einen Zauber wirkt, der einen an dich angrenzenden Verbündeten als Ziel hat oder in seinen Bereich einschließt, darfst du vor einem Angriffswurf oder Rettungswurf deine Reaktion einsetzen. Dieser Verbündete erhält einen Umstandsbonus von +1 auf seine RK oder auf einen Rettungswurf gegen den auslösenden Zauber. Die Umkehrung endet, nachdem der Zauber abgehandelt wurde."
       },
       "SharedDefiance": {
         "Title": "Geteilter Widerstand",
@@ -235,11 +235,11 @@
       },
       "OpeningInThePattern": {
         "Title": "Lücke im Muster",
-        "Description": "Der gescheiterte Zauber hinterlässt eine saubere Lücke in der Verteidigung des Zaubernden. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Beginnt dieser Verbündete vor Ende deines nächsten Zuges eine Aktion, die den ursprünglichen Zaubernden oder einen seiner Zaubereffekte zum Ziel hat, darf er die Lücke nutzen. Der ursprüngliche Zaubernde kann bis zum Abschluss dieser Aktion keine Reaktionen verwenden, die durch diese Aktion ausgelöst werden. Danach ist die Umkehrung verbraucht."
+        "Description": "Der gescheiterte Zauber legt eine Naht in den magischen Verteidigungen des Zauberwirkers offen. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn dieser Verbündete vor dem Ende deines nächsten Zuges den ursprünglichen Zauberwirker mit einem Angriff oder einem Effekt angreift, der einen Rettungswurf verlangt, darf er einen Umstands- oder Statusbonus auf RK oder Rettungswurf des Zauberwirkers ignorieren, der von einem Zaubereffekt stammt. Die Umkehrung wird nur verbraucht, wenn ein solcher Bonus ignoriert wird."
       },
       "YourTurn": {
         "Title": "Du bist dran",
-        "Description": "Der Zusammenbruch des Zaubers gibt jemand anderem genau genug Zeit zum Handeln. Wähle einen Verbündeten innerhalb von 9 Metern, der dich sehen oder hören kann. Dieser Verbündete darf seine Reaktion verwenden, um sofort zu Suchen, Wissen über den auslösenden Zauber oder den ursprünglichen Zaubernden abzurufen oder mit Interagieren einen Gegenstand zu ziehen oder wegzustecken. Für jeden Wurf gilt der normale SG."
+        "Description": "Du gibst das erfolgreiche Muster an jemand anderen weiter, bevor es verblasst. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn dieser Verbündete vor dem Ende deines nächsten Zuges denselben Rettungswurftyp gegen einen Zauber des ursprünglichen Zauberwirkers ablegt, darf er deinen aktuellen Modifikator für diesen Rettungswurftyp statt seines eigenen verwenden, sofern deiner höher ist. Boni, die nur für den auslösenden Zauber oder ausschließlich für dich galten, werden nicht berücksichtigt. Dies wird vor dem Würfeln entschieden. Es handelt sich nicht um einen Glückseffekt; die Umkehrung wird bei der Verwendung verbraucht."
       },
       "TheSpellBlinksFirst": {
         "Title": "Der Zauber blinzelt zuerst",
@@ -255,11 +255,11 @@
       },
       "UnimpressedByTheCosmos": {
         "Title": "Vom Kosmos unbeeindruckt",
-        "Description": "Du betrachtest die gescheiterte Magie mit einem Ausdruck, der gewöhnlich enttäuschenden Straßenaufführungen vorbehalten ist. Du darfst sofort als freie Aktion mit einem +1-Umstandsbonus Demoralisieren gegen den ursprünglichen Zaubernden versuchen. Es gelten die normalen Regeln für Reichweite, Wahrnehmung, Sprache und vorübergehende Immunität. Kannst du den Wurf nicht versuchen, reduziere stattdessen deinen Wert für Verängstigt um 1."
+        "Description": "Du benennst den Fehler des Zaubers im Tonfall einer Person, die ein schlecht beschriftetes Ausstellungsstück korrigiert. Bevor der ursprüngliche Zauberwirker vor dem Ende deines nächsten Zuges das nächste Mal einen Zauber wirkt, muss er wählen: Er verwendet zuvor eine einzelne Aktion mit dem Merkmal Konzentration, um seine Technik neu zu ordnen, oder er lässt den Zauber sich selbst ankündigen. Ordnet er sich nicht neu, erfahren Kreaturen, die den Zaubervorgang wahrnehmen, vor dessen Auflösung Tradition und Merkmale des Zaubers; außerdem ist ihnen das Feld des Zauberwirkers bis zum Ende der Aktivität Zauber wirken bekannt. Danach endet die Umkehrung."
       },
       "ReturnToSenderMostly": {
         "Title": "Fast zurück an den Absender",
-        "Description": "Der Zauber kehrt nicht zurück, wohl aber ein peinlicher Teil seiner Inszenierung. Wenn der ursprüngliche Zaubernde vor Ende deines nächsten Zuges erstmals Verstecken, Schleichen, Ablenkung erzeugen oder Täuschen versucht, darfst du deine Reaktion verwenden, um ihn den auslösenden Wurf zweimal ausführen und das schlechtere Ergebnis verwenden zu lassen. Dies ist ein Pecheffekt und kann bei diesem Wurf nicht mit einem anderen Pecheffekt kombiniert werden. Das sichtbare oder hörbare Zeichen ist harmlos und vergeht nach der Reaktion oder wenn die Umkehrung abläuft."
+        "Description": "Der Zauber kehrt nicht zurück, wohl aber ein peinlicher Teil seiner Inszenierung. Wenn du vor dem Ende deines nächsten Zuges erstmals wahrnimmst, wie der ursprüngliche Zauberwirker sich zu Verstecken, Schleichen, Ablenkung erzeugen oder Täuschen anschickt, darfst du vor dem Wurf deine Reaktion einsetzen und ihn zwingen, den auslösenden Wurf zweimal auszuführen und das schlechtere Ergebnis zu verwenden. Dies ist ein Pecheffekt und kann bei diesem Wurf nicht mit einem weiteren Pecheffekt kombiniert werden. Das sichtbare oder hörbare Zeichen ist harmlos und verblasst nach der Reaktion oder wenn die Umkehrung ausläuft."
       }
     },
     "Effects": {},

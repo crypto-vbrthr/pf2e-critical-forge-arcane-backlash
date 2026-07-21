@@ -48,4 +48,4 @@ assert.deepEqual(registeredPackBatches[0].packs.map((pack) => pack.cards.length)
 assert.ok(registeredPackBatches[0].packs.every((pack) => pack.enabled === false));
 assert.equal(registeredPackBatches[0].options.replace, false);
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.2.2 startup-order validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.2.3 startup-order validation passed.");

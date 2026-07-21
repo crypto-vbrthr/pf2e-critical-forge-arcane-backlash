@@ -31,7 +31,7 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Defiant Reversals
 
-**Status:** 30/30 cards, ready for mechanical review
+**Status:** 30/30 cards, mechanical review passed
 
 **Trigger:** Critical success on a saving throw against a spell
 
@@ -43,15 +43,15 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 **Typical consequences:**
 
-- immediate Steps or reclaimed movement
-- resistance to fear and repeated spells
+- anchored defense, reclaimed movement, and reality anchors
+- shared resistance to fear and repeated spells
 - recognition of magical signatures and decoys
 - limited defense against later forced movement
 - information about the spell or caster
 - a one-use benefit granted to an ally
-- returned resonance that exposes the caster or weakens magical cover
+- returned resonance that traces connections or exposes maintained magic
 - safe movement through spell-created terrain, wards, and collapsing effects
-- shared resistance, reaction suppression, borrowed spell echoes, and tactical reversals against stealth or deception
+- borrowed saving defenses, spell-defense seams, and tactical reversals against stealth or deception
 
 **Not included:**
 

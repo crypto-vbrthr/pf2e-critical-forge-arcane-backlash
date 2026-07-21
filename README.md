@@ -6,12 +6,12 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.2.2
+## Version 0.2.3
 
 The current release contains two optional packs:
 
 - **Miscast Repercussions** - 30 mechanically reviewed cards for critical failures on spell attacks.
-- **Defiant Reversals** - 30 cards for critical successes on saving throws against spells.
+- **Defiant Reversals** - 30 mechanically reviewed cards for critical successes on saving throws against spells.
 
 Defiant Reversals turns exceptional resistance into movement, insight, returned resonance, reclaimed magical terrain, protection against repeated magic, shared resistance, stolen echoes, and opportunities for allies. Positive consequences belong to the creature that made the saving throw, not to the caster.
 
@@ -60,10 +60,10 @@ Manual resolution is intentional. Each card is written to be applied in one or t
 ## Planned Packs
 
 - Miscast Repercussions - 30/30 (mechanical review passed)
-- Defiant Reversals - 30/30 (ready for mechanical review)
+- Defiant Reversals - 30/30 (mechanical review passed)
 - Spell Attack Surges - planned
 - Overwhelming Resonance - planned
 
 Each pack grows in blocks of ten cards. At 30 cards, it receives a full mechanical review for redundancy, rules clarity, balance, and pack identity.
 
-See [docs/PACKS.md](docs/PACKS.md), [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md), and [docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md](docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md).
+See [docs/PACKS.md](docs/PACKS.md), [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md), [docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md](docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md), and [docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md](docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md).

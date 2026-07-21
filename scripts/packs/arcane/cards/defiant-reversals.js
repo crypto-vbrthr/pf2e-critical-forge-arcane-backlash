@@ -7,8 +7,8 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Stand Through It",
-    fallbackDescription: "The spell breaks around you instead of breaking your stride. You may immediately Step as a free action. If you cannot or choose not to Step, the first square of difficult terrain created by the original caster that you enter before the end of your next turn costs no additional movement.",
-    tags: ["reflex", "step", "difficult-terrain", "movement", "manual"],
+    fallbackDescription: "The spell breaks around you and leaves a hard-edged wake in the air. Until the start of your next turn or until you leave your current space, you gain lesser cover against attacks and spell attacks from the original caster. If you already have lesser cover from another source, treat it as standard cover against that caster instead. This cannot increase your cover beyond standard cover.",
+    tags: ["reflex", "cover", "anchored-defense", "original-caster", "manual"],
     filters: { saveTypes: ["reflex"] }
   }),
   defineDefiantReversal({
@@ -17,9 +17,9 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "humorous",
     impact: "light",
     fallbackTitle: "Not Today",
-    fallbackDescription: "The magic presents its most intimidating argument. You decline to be persuaded. Reduce your frightened value by 1. If you are not frightened, you instead gain a +1 circumstance bonus to your next saving throw against a fear effect created by the original caster before the end of your next turn. The benefit is consumed only when it applies.",
+    fallbackDescription: "Your refusal leaves a pocket of ordinary courage around you. Until the start of your next turn, you and allies adjacent to you gain a +1 circumstance bonus to saving throws against fear or emotion effects created by the original caster. A creature gains this benefit only while adjacent to you. This does not reduce an existing frightened value.",
     weight: 2,
-    tags: ["will", "fear", "frightened", "saving-throw", "manual"],
+    tags: ["will", "fear", "emotion", "allies", "defiant-aura", "manual"],
     filters: { saveTypes: ["will"] }
   }),
   defineDefiantReversal({
@@ -47,7 +47,7 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "serious",
     impact: "strong",
     fallbackTitle: "Shake the Pattern",
-    fallbackDescription: "Your resistance tears loose more magic than this spell alone. Choose one other ongoing spell effect created by the original caster that is affecting you and has a remaining duration measured in rounds. Reduce its remaining duration by 1 round, to a minimum of ending at the start of your next turn. If no effect qualifies, you instead gain a +1 circumstance bonus to your next saving throw against a spell from the original caster before the end of your next turn.",
+    fallbackDescription: "Your resistance tears loose more magic than this spell alone. Choose one other ongoing spell effect created by the original caster that is affecting you and has a remaining duration measured in rounds. Reduce its remaining duration by 1 round. If it has 1 round or less remaining, it instead ends at the start of your next turn. This card can never make an effect end later than it otherwise would. If no effect qualifies, you instead gain a +1 circumstance bonus to your next saving throw against a spell from the original caster before the end of your next turn.",
     tags: ["ongoing-effect", "duration-reduction", "spell-defense", "strong", "manual"]
   }),
   defineDefiantReversal({
@@ -66,8 +66,8 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Seen It Now",
-    fallbackDescription: "The spell has shown you the trick once, and once was enough. Before the end of your next turn, the next time you attempt a saving throw against the same spell cast by the original caster, reduce any circumstance penalty to that save by 1, to a minimum of 0. If no circumstance penalty applies, you may instead Step after the saving throw resolves. The reversal then ends.",
-    tags: ["repeat-spell", "circumstance-penalty", "step", "fallback", "manual"]
+    fallbackDescription: "The spell has shown you the trick once, and you are ready for the repeat performance. Before the end of your next turn, when the original caster begins casting the same spell and you can perceive the casting, you may use your reaction before the spell resolves to Raise a Shield or Take Cover, following the normal requirements for the chosen action. The reversal is consumed only if you use the reaction.",
+    tags: ["repeat-spell", "reaction", "raise-a-shield", "take-cover", "manual"]
   }),
   defineDefiantReversal({
     id: "dr-008-name-the-weakness",
@@ -75,7 +75,7 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Name the Weakness",
-    fallbackDescription: "You expose the flaw in the magic while it is still visible. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, that ally gains a +1 circumstance bonus to their next counteract check against the original caster or their next Recall Knowledge check about that caster's magic. The benefit is consumed only when it modifies a check.",
+    fallbackDescription: "You expose the flaw in the magic while it is still visible. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, that ally gains a +1 circumstance bonus to their next counteract check against a spell or magical effect created by the original caster, or to their next Recall Knowledge check about that caster's magic. The benefit is consumed only when it modifies a check.",
     tags: ["ally", "counteract", "recall-knowledge", "teamwork", "manual"]
   }),
   defineDefiantReversal({
@@ -84,7 +84,7 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Familiar Signature",
-    fallbackDescription: "You recognize the caster's magical signature beneath every disguise. Until the end of your next turn, you can identify the original caster among magical duplicates, disguises, projected images, or decoys created by that caster's own magic. Such effects can still conceal the caster or impose their normal flat checks, but they cannot make you select the wrong duplicate or mistake another creature for the caster.",
+    fallbackDescription: "You recognize the caster's magical signature beneath every disguise. Until the end of your next turn, when the original caster and magical duplicates, disguises, projected images, or decoys created by that caster occupy different spaces, you always recognize which space contains the original caster. Such effects still impose their normal concealment, flat checks, random-target, or decoy-resolution procedures. This card does not override an effect's explicit method for determining which image or target is affected.",
     tags: ["will", "magical-signature", "illusion", "duplicates", "recognition", "manual"],
     filters: { saveTypes: ["will"] }
   }),
@@ -103,8 +103,8 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Feedback Glare",
-    fallbackDescription: "The spell's failure flashes back along its path and exposes the caster's angle. Before the end of your next turn, your next attack against the original caster treats lesser cover as no cover and standard cover as lesser cover. Greater cover is unchanged. The reversal is consumed only when it changes the caster's cover.",
-    tags: ["cover", "attack", "original-caster", "conditional-consumption", "manual"]
+    fallbackDescription: "The failed spell leaves a bright ache along its connection to the source. Until the end of your next turn, you know the direction to the original caster and whether they are within 30 feet, within 60 feet, or farther away. This does not reveal the caster's exact space or change the hidden or undetected condition. Your next Seek check to locate the original caster before then gains a +2 circumstance bonus, and the reversal ends after that check.",
+    tags: ["magical-connection", "direction", "distance", "seek", "original-caster", "manual"]
   }),
   defineDefiantReversal({
     id: "dr-012-broken-concentration",
@@ -122,7 +122,7 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Spell Flinches",
-    fallbackDescription: "The magic remembers being refused. Before the end of your next turn, if the original caster casts the same spell from the same space and includes you again, you gain a +1 circumstance bonus to AC or to your saving throw against that spell. Changing either the spell or the casting space avoids the reversal. The benefit is consumed only when it modifies your defense.",
+    fallbackDescription: "The magic remembers being refused. Before the end of your next turn, if the original caster chooses the same spell, casts it from the same space, and includes you again, you gain a +1 circumstance bonus to AC or to your saving throw against that spell. Check these conditions after the caster has chosen the spell, casting space, targets, and area, but before any attack roll or saving throw is made. Changing either the spell or the casting space avoids the reversal. The benefit is consumed only when it modifies your defense.",
     weight: 2,
     tags: ["repeat-spell", "casting-space", "spell-defense", "conditional-consumption", "manual"]
   }),
@@ -132,8 +132,8 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "light",
     fallbackTitle: "Resonance Returned",
-    fallbackDescription: "A visible or audible thread of rejected magic leads back to its source. Until the start of your next turn, you and allies within 30 feet who can perceive you always know which space the original caster occupies, and the caster cannot become undetected from those creatures. Concealment, invisibility, and similar effects can still make the caster concealed or hidden and impose their normal flat checks.",
-    tags: ["will", "location", "allies", "hidden", "undetected", "manual"],
+    fallbackDescription: "The rejected resonance clings to the caster's next attempt to maintain their magic. Until the end of your next turn, the first time the original caster Sustains a Spell, both the caster and the sustained spell effect flare visibly or audibly until that action resolves. You and allies within 30 feet who can perceive either endpoint know which effect was sustained and treat the caster as observed for reactions triggered by the Sustain action. Normal detection resumes after the action.",
+    tags: ["will", "sustain-a-spell", "spell-effect", "allies", "reaction-visibility", "manual"],
     filters: { saveTypes: ["will"] }
   }),
   defineDefiantReversal({
@@ -171,9 +171,9 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Exit Through the Spell",
-    fallbackDescription: "The failed magic leaves a brief path through its own hazards. Before the end of your next turn, during one Step or Stride, you may ignore the additional movement cost of up to 10 feet of difficult terrain created by the triggering spell or the original caster. You may also enter one such square without triggering an effect that occurs only when the square is entered. Ongoing, start-of-turn, and end-of-turn effects still apply.",
+    fallbackDescription: "The failed magic leaves a brief path through its own hazards. Before the end of your next turn, during one Step or Stride, you may ignore the additional movement cost of up to 10 feet of difficult terrain created by the triggering spell. You may also enter one square of dangerous terrain created by the triggering spell, or one square with an effect created by that spell that occurs only when the square is entered, without triggering that entry effect. Ongoing, whole-area, start-of-turn, and end-of-turn effects still apply.",
     weight: 2,
-    tags: ["reflex", "difficult-terrain", "hazardous-terrain", "movement", "manual"],
+    tags: ["reflex", "difficult-terrain", "dangerous-terrain", "movement", "manual"],
     filters: { saveTypes: ["reflex"] }
   }),
   defineDefiantReversal({
@@ -182,8 +182,8 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Reclaim the Ground",
-    fallbackDescription: "Your resistance forces one patch of the spell to acknowledge ordinary reality. Choose your space or one adjacent 5-foot space within an area created by the triggering spell or the original caster. Until the start of your next turn, that space is not difficult terrain for you, does not trigger effects solely because you enter it, and does not grant the original caster cover or concealment against you. Damage or effects that apply to the whole area, or at the start or end of a turn, still function normally. If no qualifying space exists, you may immediately Step instead.",
-    tags: ["fortitude", "area", "terrain", "cover", "concealment", "fallback", "manual"],
+    fallbackDescription: "Your resistance fixes one point of the battlefield in ordinary reality. Choose your space or one adjacent space affected by the triggering spell. Until the start of your next turn, the first ally to enter or begin their turn in that space may use their reaction when the original caster would forcibly move, teleport, or place them. Reduce measured forced movement by 5 feet. Against teleportation or placement, the ally may remain in the anchored space instead if it is legal. The anchor then ends. If no adjacent space was affected by the spell, choose your own space.",
+    tags: ["fortitude", "ally", "anchor", "forced-movement", "teleportation", "reaction", "manual"],
     filters: { saveTypes: ["fortitude"] }
   }),
   defineDefiantReversal({
@@ -192,18 +192,18 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "humorous",
     impact: "moderate",
     fallbackTitle: "Wrong Side of the Ward",
-    fallbackDescription: "The ward has made a small but consequential error about which side you are on. Choose one non-solid spell effect, ward, or magical barrier created by the original caster that you can perceive. Until the end of your next turn, it does not provide cover to the caster against your attacks. The first time you move during that time, you may treat one square occupied by that effect as normal terrain for movement if the effect does not explicitly block movement. Other effects of the spell still apply. If no qualifying effect exists, you may immediately Step instead.",
-    tags: ["reflex", "ward", "barrier", "cover", "movement", "fallback", "manual"],
+    fallbackDescription: "The ward has made a small but consequential error about which side you are on. Choose one spell effect created by the original caster that you can perceive and that either grants cover or makes one or more spaces difficult terrain without blocking movement or line of effect. Until the end of your next turn, it does not grant cover to the caster against your attacks, and the first 5 feet of difficult terrain it creates costs you no additional movement. Other effects remain unchanged. If no effect qualifies when the card is drawn, the reversal waits and applies to the first qualifying effect the caster creates before the duration ends.",
+    tags: ["reflex", "ward", "cover", "difficult-terrain", "conditional-consumption", "manual"],
     filters: { saveTypes: ["reflex"] }
   }),
   defineDefiantReversal({
     id: "dr-021-proof-of-safety",
     localizationKey: "ProofOfSafety",
     tone: "serious",
-    impact: "moderate",
+    impact: "strong",
     fallbackTitle: "Proof of Safety",
     fallbackDescription: "Your resistance reveals a repeatable path through the spell. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when that ally attempts a saving throw against the same spell cast by the original caster, they may roll twice and use the better result. This is a fortune effect and cannot be combined with another fortune effect on the roll. The reversal is consumed only when the ally uses it.",
-    tags: ["ally", "same-spell", "fortune", "saving-throw", "teamwork", "manual"]
+    tags: ["ally", "same-spell", "fortune", "saving-throw", "teamwork", "strong", "manual"]
   }),
   defineDefiantReversal({
     id: "dr-022-hold-the-line",
@@ -211,8 +211,8 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Hold the Line",
-    fallbackDescription: "Your refusal leaves enough certainty to shelter someone beside you. Before the end of your next turn, when the original caster casts a spell that targets or includes one ally adjacent to you, you may use your reaction before any attack roll or saving throw is made. That ally gains a +1 circumstance bonus to AC or to one saving throw against the spell. After the spell resolves, either you or that ally may Step as a free action, but not both. The reversal then ends.",
-    tags: ["fortitude", "ally", "reaction", "spell-defense", "step", "teamwork", "manual"],
+    fallbackDescription: "Your refusal leaves enough certainty to shelter someone beside you. Before the end of your next turn, when the original caster casts a spell that targets or includes one ally adjacent to you, you may use your reaction before any attack roll or saving throw is made. That ally gains a +1 circumstance bonus to AC or to one saving throw against the triggering spell. The reversal ends after the spell resolves.",
+    tags: ["fortitude", "ally", "reaction", "spell-defense", "teamwork", "manual"],
     filters: { saveTypes: ["fortitude"] }
   }),
   defineDefiantReversal({
@@ -231,18 +231,17 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Opening in the Pattern",
-    fallbackDescription: "The failed spell leaves one clean gap in the caster's defenses. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when that ally begins an action that targets the original caster or one of the caster's spell effects, the ally may declare the opening. The original caster cannot use reactions triggered by that action until the action has resolved. The reversal is then consumed.",
-    tags: ["ally", "reaction-suppression", "spell-effect", "teamwork", "conditional-consumption", "manual"]
+    fallbackDescription: "The failed spell exposes a seam in the caster's magical defenses. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when that ally targets the original caster with an attack or an effect that requires a saving throw, they may ignore one circumstance or status bonus to the caster's AC or saving throw that is granted by a spell effect. The reversal is consumed only when such a bonus is ignored.",
+    tags: ["ally", "spell-defense", "ac", "saving-throw", "teamwork", "conditional-consumption", "manual"]
   }),
   defineDefiantReversal({
     id: "dr-025-your-turn",
     localizationKey: "YourTurn",
     tone: "neutral",
-    impact: "light",
+    impact: "strong",
     fallbackTitle: "Your Turn",
-    fallbackDescription: "The spell's collapse gives someone else exactly enough time to act. Choose one ally within 30 feet who can see or hear you. That ally may use their reaction to immediately Seek, Recall Knowledge about the triggering spell or original caster, or Interact to draw or stow one item. Any check uses its normal DC.",
-    weight: 2,
-    tags: ["ally", "reaction", "seek", "recall-knowledge", "interact", "teamwork", "manual"]
+    fallbackDescription: "You pass the successful pattern to someone else before it fades. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when that ally attempts the same type of saving throw against a spell from the original caster, they may use your current modifier for that save type instead of their own if yours is higher. Exclude bonuses that applied only to the triggering spell or only to you. Decide before rolling. This is not a fortune effect, and the reversal is consumed when used.",
+    tags: ["ally", "borrowed-save", "saving-throw", "same-save", "teamwork", "strong", "manual"]
   }),
   defineDefiantReversal({
     id: "dr-026-the-spell-blinks-first",
@@ -277,11 +276,10 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     id: "dr-029-unimpressed-by-the-cosmos",
     localizationKey: "UnimpressedByTheCosmos",
     tone: "humorous",
-    impact: "light",
+    impact: "moderate",
     fallbackTitle: "Unimpressed by the Cosmos",
-    fallbackDescription: "You regard the failed magic with an expression usually reserved for disappointing street performances. You may immediately attempt to Demoralize the original caster as a free action with a +1 circumstance bonus. Apply the normal range, perception, language, and temporary-immunity rules. If you cannot attempt the check, reduce your frightened value by 1 instead.",
-    weight: 2,
-    tags: ["demoralize", "free-action", "frightened", "fallback", "humorous", "manual"]
+    fallbackDescription: "You identify the spell's flaw with the tone of someone correcting a badly labeled exhibit. Until the end of your next turn, before the original caster next Casts a Spell, they must choose: spend a single action with the concentrate trait to recompose their technique, or let the spell announce itself. If they do not recompose, creatures that perceive the casting learn the spell's tradition and traits before it resolves, and the caster's space is known to those creatures until the Cast a Spell activity ends. The reversal then ends.",
+    tags: ["humorous", "concentrate", "spell-identification", "reveal", "choice", "manual"]
   }),
   defineDefiantReversal({
     id: "dr-030-return-to-sender-mostly",
@@ -289,7 +287,7 @@ export const DEFIANT_REVERSAL_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Return to Sender, Mostly",
-    fallbackDescription: "The spell does not return, but one embarrassing piece of its presentation does. Until the end of your next turn, the first time the original caster attempts to Hide, Sneak, Create a Diversion, or Feint, you may use your reaction to force the caster to roll the triggering check twice and use the worse result. This is a misfortune effect and cannot combine with another misfortune effect on that check. The visible or audible mark is harmless and fades after the reaction or when the reversal expires.",
-    tags: ["reaction", "misfortune", "stealth", "deception", "hide", "sneak", "manual"]
-  })
+    fallbackDescription: "The spell does not return, but one embarrassing piece of its presentation does. Until the end of your next turn, the first time you can perceive the original caster beginning to Hide, Sneak, Create a Diversion, or Feint, you may use your reaction before the check is rolled to force the caster to roll the triggering check twice and use the worse result. This is a misfortune effect and cannot combine with another misfortune effect on that check. The visible or audible mark is harmless and fades after the reaction or when the reversal expires.",
+    tags: ["reaction", "misfortune", "perception", "stealth", "deception", "hide", "sneak", "manual"]
+  }),
 ]);

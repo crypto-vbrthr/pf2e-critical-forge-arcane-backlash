@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.3
+
+- Applied the full mechanical review of **Defiant Reversals**.
+- Redesigned DR-001, DR-002, DR-007, DR-011, DR-014, DR-019, DR-024, DR-025, and DR-029 to remove repeated Step rewards, duplicate fear recovery, cover-ladder overlap, location tracing already used elsewhere, terrain-rule overload, and mechanics duplicated from Martial Consequences.
+- Added anchored defensive cover, a short anti-fear ally aura, reactive Raise a Shield or Take Cover against a repeated spell, magical direction tracing, visible Sustain feedback, a shared reality anchor, spell-defense seams, a borrowed saving-throw modifier, and a choice between recomposing or publicly telegraphing the next spell.
+- Clarified DR-005, DR-008, DR-009, DR-013, DR-018, DR-020, DR-021, DR-022, and DR-030 for duration reduction, counteract targets, illusion procedures, trigger timing, dangerous terrain, qualifying wards, fortune strength, ally defense, and perceptible secret-action triggers.
+- Reclassified **Proof of Safety** and the redesigned **Your Turn** as Strong. Removed the post-spell Step from **Hold the Line**.
+- Added `docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md`.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+- Marked Defiant Reversals as mechanically reviewed and passed.
+
 ## 0.2.2
 
 - Added DR-021 through DR-030 to **Defiant Reversals**.

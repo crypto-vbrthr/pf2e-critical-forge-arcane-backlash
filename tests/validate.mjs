@@ -26,8 +26,8 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.2.2");
-assert.equal(packageJson.version, "0.2.2");
+assert.equal(manifest.version, "0.2.3");
+assert.equal(packageJson.version, "0.2.3");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) =>
@@ -46,7 +46,7 @@ assert.deepEqual(disabled.map((pack) => pack.id), [
 ]);
 assert.ok(disabled.every((pack) => pack.enabled === false));
 assert.ok(enabled.every((pack) => pack.enabled === true));
-assert.ok(disabled.every((pack) => pack.version === "0.2.2"));
+assert.ok(disabled.every((pack) => pack.version === "0.2.3"));
 assert.equal(disabled[0].cards.length, 30);
 assert.equal(disabled[1].cards.length, 30);
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
@@ -155,21 +155,34 @@ assert.ok(bySlug.get("dr-006-read-the-weave").tags.includes("recall-knowledge"))
 assert.ok(bySlug.get("dr-008-name-the-weakness").tags.includes("counteract"));
 assert.ok(bySlug.get("dr-009-familiar-signature").tags.includes("duplicates"));
 assert.ok(bySlug.get("dr-010-counterexample").tags.includes("ally"));
-assert.ok(bySlug.get("dr-011-feedback-glare").tags.includes("cover"));
+assert.ok(bySlug.get("dr-011-feedback-glare").tags.includes("magical-connection"));
 assert.ok(bySlug.get("dr-012-broken-concentration").tags.includes("concentrate"));
 assert.ok(bySlug.get("dr-015-the-source-shows").tags.includes("teamwork"));
 assert.ok(bySlug.get("dr-016-step-between-sparks").tags.includes("reaction-protection"));
 assert.ok(bySlug.get("dr-017-follow-the-collapse").tags.includes("strong"));
 assert.ok(bySlug.get("dr-020-wrong-side-of-the-ward").tags.includes("ward"));
+assert.ok(bySlug.get("dr-020-wrong-side-of-the-ward").tags.includes("conditional-consumption"));
 assert.ok(bySlug.get("dr-021-proof-of-safety").tags.includes("fortune"));
 assert.ok(bySlug.get("dr-023-shared-defiance").tags.includes("new-save"));
-assert.ok(bySlug.get("dr-024-opening-in-the-pattern").tags.includes("reaction-suppression"));
+assert.ok(bySlug.get("dr-024-opening-in-the-pattern").tags.includes("spell-defense"));
 assert.ok(bySlug.get("dr-026-the-spell-blinks-first").tags.includes("spell-avoidance"));
 assert.ok(bySlug.get("dr-030-return-to-sender-mostly").tags.includes("misfortune"));
 
-assert.equal(reversals.filter((card) => card.impact === "light").length, 10);
+assert.ok(bySlug.get("dr-001-stand-through-it").tags.includes("anchored-defense"));
+assert.ok(bySlug.get("dr-002-not-today").tags.includes("defiant-aura"));
+assert.ok(bySlug.get("dr-007-seen-it-now").tags.includes("raise-a-shield"));
+assert.ok(bySlug.get("dr-014-resonance-returned").tags.includes("sustain-a-spell"));
+assert.ok(bySlug.get("dr-019-reclaim-the-ground").tags.includes("anchor"));
+assert.equal(bySlug.get("dr-021-proof-of-safety").impact, "strong");
+assert.equal(bySlug.get("dr-025-your-turn").impact, "strong");
+assert.ok(bySlug.get("dr-029-unimpressed-by-the-cosmos").tags.includes("spell-identification"));
+assert.ok(bySlug.get("dr-030-return-to-sender-mostly").tags.includes("perception"));
+assert.ok(!bySlug.get("dr-018-exit-through-the-spell").tags.includes("hazardous-terrain"));
+assert.ok(bySlug.get("dr-018-exit-through-the-spell").tags.includes("dangerous-terrain"));
+
+assert.equal(reversals.filter((card) => card.impact === "light").length, 8);
 assert.equal(reversals.filter((card) => card.impact === "moderate").length, 16);
-assert.equal(reversals.filter((card) => card.impact === "strong").length, 4);
+assert.equal(reversals.filter((card) => card.impact === "strong").length, 6);
 assert.equal(reversals.filter((card) => card.filters.saveTypes.length === 0).length, 15);
 
 function eligibleForSave(saveType) {
@@ -179,4 +192,4 @@ assert.equal(eligibleForSave("reflex").length, 20);
 assert.equal(eligibleForSave("fortitude").length, 19);
 assert.equal(eligibleForSave("will").length, 21);
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.2.2 validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.2.3 validation passed.");

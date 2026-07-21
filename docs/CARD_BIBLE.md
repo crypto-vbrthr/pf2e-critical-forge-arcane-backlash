@@ -145,7 +145,7 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 
 ## Spell Attack Surges - Block 1
 
-**Status:** 20/30 cards, review pending at 30 cards
+**Status:** 30/30 cards, mechanical review pending
 
 | ID | Card | Impact | Automation | Core Idea |
 |---|---|---|---|---|
@@ -175,17 +175,33 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 | SAS-019 | Harmonic Resistance | Moderate | Effect on caster | Resistance 3 to energy damage for 1 round |
 | SAS-020 | Magic Knows Its Way Back | Moderate | Manual | +2 circumstance bonus to one save against magic created by the original target |
 
+
+## Spell Attack Surges - Block 3
+
+| ID | Card | Impact | Automation | Core Idea |
+|---|---|---|---|---|
+| SAS-021 | Shared Frequency | Moderate | Manual | Grant one ally +1 circumstance to its next attack against the original target |
+| SAS-022 | Follow the Glow | Moderate | Manual | Let one ally ignore concealment or reduce cover against the original target |
+| SAS-023 | Borrowed Insight | Moderate | Manual | Let an ally immediately Recall Knowledge with a +1 circumstance bonus |
+| SAS-024 | Arc Between Allies | Moderate | Manual | Protect one ally's saves against magic from the original target |
+| SAS-025 | Conduit Open | Strong | Manual | Use a willing ally as the range, area-origin, cover, and line-of-effect waypoint for one spell |
+| SAS-026 | Reality Nods Once | Light | Effect on caster | +1 status bonus to Deception and Intimidation for 1 round |
+| SAS-027 | Colors Remember | Moderate | Effect on caster | +1 status bonus to Perception checks and Perception DC for 1 round |
+| SAS-028 | The Spell Wants Another Word | Strong | Manual | Sustain immediately or turn the next Sustain into a free action |
+| SAS-029 | Helpful Afterimage | Strong | Manual | Use a prior-space afterimage as the origin for one spell attack against a different target |
+| SAS-030 | The Weave Takes Interest | Moderate | Manual | Choose forced-movement protection, directional tracing, or magical analysis |
+
 ### Current Spell Attack Surges Distribution
 
 | Impact | Cards |
 |---|---:|
-| Light | 3 |
-| Moderate | 16 |
-| Strong | 1 |
+| Light | 4 |
+| Moderate | 22 |
+| Strong | 4 |
 
 | Resolution | Cards |
 |---|---:|
-| Direct Effect Engine effect | 8 |
-| Manual tactical consequence | 12 |
+| Direct Effect Engine effect | 10 |
+| Manual tactical consequence | 20 |
 
-All twenty cards use `spellCriticalHit` and remain tradition-neutral. The pack now mixes direct effects with target-specific tactical consequences, range and geometry changes, reaction windows, and trait-based resonance. Similarities to Core spell-hit cards and the breadth of the one-round bonuses will be examined during the full 30-card mechanical review.
+All thirty cards use `spellCriticalHit` and remain tradition-neutral. The complete draft now mixes direct effects with target-specific tactical consequences, allied resonance, alternate spell origins, range and geometry changes, reaction windows, Sustain opportunities, and trait-based resonance. The pack is ready for its full mechanical review, including comparison against Core spell-hit cards and the other Arcane Backlash packs.

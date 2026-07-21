@@ -255,5 +255,120 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     fallbackTitle: "Magic Knows Its Way Back",
     fallbackDescription: "The resonance teaches your defenses the route back to the original target. Before the end of your next turn, you gain a +2 circumstance bonus to the next saving throw you attempt against a spell or magical effect created by that target. The surge is consumed only when that saving throw occurs.",
     tags: ["saving-throw", "magic", "target-specific", "circumstance-bonus", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-021-shared-frequency",
+    localizationKey: "SharedFrequency",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Shared Frequency",
+    fallbackDescription: "The spell's rhythm leaps to a nearby ally. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, that ally gains a +1 circumstance bonus to its next attack roll against the original target. The surge is consumed only when the ally makes that attack.",
+    tags: ["ally", "attack-roll", "circumstance-bonus", "target-specific", "one-use", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-022-follow-the-glow",
+    localizationKey: "FollowTheGlow",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Follow the Glow",
+    fallbackDescription: "The residual glow sketches a clean route to the target. Choose one ally within 30 feet who can perceive the original target. Before the end of your next turn, that ally's next attack against the target either ignores the concealed condition or treats the target's cover as one degree lower. The ally chooses when making the attack. The surge is consumed only if it removes a flat check or reduces cover.",
+    tags: ["ally", "cover", "concealed", "flat-check", "target-specific", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-023-borrowed-insight",
+    localizationKey: "BorrowedInsight",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Borrowed Insight",
+    fallbackDescription: "The impact writes a brief annotation around the target. Choose one ally within 30 feet who can perceive it. That ally may immediately Recall Knowledge about the original target as a free action and gains a +1 circumstance bonus to the check. Use the ally's own skill modifier and apply the normal adjustment for repeated Recall Knowledge attempts.",
+    tags: ["ally", "recall-knowledge", "free-action", "circumstance-bonus", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-024-arc-between-allies",
+    localizationKey: "ArcBetweenAllies",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Arc Between Allies",
+    fallbackDescription: "A harmless arc of resonance links you to one ally within 30 feet who can perceive you. Until the start of your next turn, that ally gains a +1 circumstance bonus to saving throws against spells and magical effects created by the original target. If the original target cannot create such an effect during that time, the ally instead gains the bonus to the next saving throw it attempts against any spell before the end of your next turn. The arc then fades.",
+    tags: ["ally", "saving-throw", "magic", "circumstance-bonus", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-025-conduit-open",
+    localizationKey: "ConduitOpen",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Conduit Open",
+    fallbackDescription: "The resonance turns a willing ally into a temporary magical waypoint. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when you Cast a Spell with a listed range other than touch or self, you may determine that spell's range, area origin, cover, and line of effect from the ally's space. You must have line of effect to the ally, and the ally must have line of effect to every target or space affected. You remain the caster, and reactions triggered by your Cast a Spell action originate from your actual space. The surge is consumed only when it creates a legal spell placement you use.",
+    tags: ["ally", "conduit", "range", "area-origin", "line-of-effect", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-026-reality-nods-once",
+    localizationKey: "RealityNodsOnce",
+    tone: "humorous",
+    impact: "light",
+    fallbackTitle: "Reality Nods Once",
+    fallbackDescription: "The surrounding world gives one tiny, unmistakably approving gesture. For 1 round, you gain a +1 status bonus to Deception and Intimidation checks.",
+    weight: 2,
+    tags: ["deception", "intimidation", "status-bonus", "effect"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          type: "modifier",
+          selector: ["deception", "intimidation"],
+          value: 1,
+          modifierType: "status",
+          predicate: []
+        }
+      ]
+    }
+  }),
+  defineSpellAttackSurge({
+    id: "sas-027-colors-remember",
+    localizationKey: "ColorsRemember",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Colors Remember",
+    fallbackDescription: "The spell's colors remain in the air and quietly redraw every movement around you. For 1 round, you gain a +1 status bonus to Perception checks and Perception DC.",
+    tags: ["perception", "tracking", "status-bonus", "effect"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          type: "modifier",
+          selector: ["perception", "perception-dc"],
+          value: 1,
+          modifierType: "status",
+          predicate: []
+        }
+      ]
+    }
+  }),
+  defineSpellAttackSurge({
+    id: "sas-028-the-spell-wants-another-word",
+    localizationKey: "TheSpellWantsAnotherWord",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "The Spell Wants Another Word",
+    fallbackDescription: "The completed spell refuses to end the conversation. You may immediately Sustain one spell or other effect you control as a free action. If you currently control nothing you can Sustain, the next Sustain action you use before the end of your next turn is instead a free action. This does not let you Sustain an effect more often than its rules allow and does not bypass any frequency, trigger, or other requirement.",
+    tags: ["sustain", "free-action", "action-economy", "frequency-protection", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-029-helpful-afterimage",
+    localizationKey: "HelpfulAfterimage",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Helpful Afterimage",
+    fallbackDescription: "A cooperative afterimage remains in the space from which you made the critical spell attack. Before the end of your next turn, your next spell attack against a creature other than the original target may determine range, cover, and line of effect from the afterimage's space. You must have line of effect to the afterimage, and the afterimage must have line of effect to the new target. You remain the caster, and reactions to Cast a Spell are triggered from your actual space. The surge is consumed only when you use the afterimage to make a legal attack.",
+    tags: ["afterimage", "spell-attack", "range", "cover", "line-of-effect", "different-target", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-030-the-weave-takes-interest",
+    localizationKey: "TheWeaveTakesInterest",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "The Weave Takes Interest",
+    fallbackDescription: "The surrounding magic offers three quiet corrections. Choose one when this card is drawn. Anchor: before the end of your next turn, reduce the first forced movement caused by a spell or magical effect by 10 feet. Trace: until the end of your next turn, you always know the direction to the original target while it is within 120 feet and on the same plane, though not its distance or exact space. Clarify: before the end of your next turn, gain a +2 circumstance bonus to one counteract check or one Recall Knowledge check about a spell or magical effect. The chosen correction is consumed only when used and cannot be changed later.",
+    tags: ["choice", "forced-movement", "direction", "counteract", "recall-knowledge", "conditional-consumption", "manual"]
   })
 ]);

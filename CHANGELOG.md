@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.3.2
+
+- Added SAS-021 through SAS-030 to **Spell Attack Surges**.
+- Completed the first 30-card draft of the pack and expanded Arcane Backlash to 90 cards across three optional packs.
+- Added allied attack resonance, shared concealment and cover bypass, immediate allied Recall Knowledge, defensive magical arcs, and a willing ally as a temporary spell conduit.
+- Added two new directly applicable Effect Engine cards: **Reality Nods Once** and **Colors Remember**.
+- Added short-lived bonuses to Deception, Intimidation, Perception checks, and Perception DC.
+- Added an immediate or delayed free Sustain, a helpful afterimage that can carry a spell attack from a prior space, and a three-way magical correction offered by the weave.
+- Kept eight cards manual where they depend on ally selection, original-target identity, one-use timing, Sustain, alternate area origins, line of effect, reactions, or conditional consumption.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+- Marked Spell Attack Surges as ready for its full mechanical review.
+
 ## 0.3.1
 
 - Added SAS-011 through SAS-020 to **Spell Attack Surges**.

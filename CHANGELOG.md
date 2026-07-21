@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.3
+
+- Applied the full mechanical review of **Spell Attack Surges**.
+- Redesigned SAS-001, SAS-013, SAS-014, SAS-016, SAS-021, SAS-022, SAS-023, SAS-024, and SAS-029 to remove Core and Martial Consequences duplicates, repeated ally attack bonuses, repeated knowledge actions, and duplicate alternate-origin procedures.
+- Added a reduced multiple attack penalty against a different target, a two-segment magical aperture, remote object interaction, a target-specific cover barrier, spell-damage weakness, lowest-save revelation, concrete shared knowledge, voluntary condition transfer, and an automated concealed afterimage.
+- Adjusted SAS-004, SAS-008, SAS-012, SAS-015, SAS-018, SAS-019, SAS-020, SAS-025, and SAS-030 for weight, scope, grid geometry, trait eligibility, dynamic resistance, reliable fallbacks, conduit targeting, and non-overlapping weave choices.
+- Replaced broad energy resistance with resistance tied to a damage type of the triggering spell and tightened Conduit Open around perception, emanations, self-centered areas, and fixed origins.
+- Diversified direct effects with target weakness and the concealed condition. Spell Attack Surges now contains 9 Effect Engine cards and 21 manual cards.
+- Added `docs/MECHANICAL_REVIEW_SPELL_ATTACK_SURGES.md` and marked the pack as mechanically reviewed and passed.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+
 ## 0.3.2
 
 - Added SAS-021 through SAS-030 to **Spell Attack Surges**.

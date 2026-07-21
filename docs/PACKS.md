@@ -63,7 +63,7 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Spell Attack Surges
 
-**Status:** 30/30 cards, mechanical review pending
+**Status:** 30/30 cards, mechanical review passed
 
 **Trigger:** Critical success on a spell attack
 
@@ -75,20 +75,18 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 **Typical consequences:**
 
-- short-lived bonuses to spell attacks, saving throws, mental defense, magical skills, AC, Fortitude DC, or Reflex DC
-- protection against disruption from reactions
-- immediate handling of casting tools or held items
-- concealment and cover bypass against the original target
-- reactive Seek opportunities when the target tries to vanish
-- visible spellshadows that penalize the target's Stealth and Deception
-- extended range, cleaner casting geometry, and reaction-safe transitions
-- temporary resistance to energy damage
-- shared attack openings, defensive arcs, and immediate allied insight
-- ally-based magical conduits and alternate spell origins
-- immediate or delayed Sustain opportunities
-- helpful afterimages, magical tracking, and choice-based weave corrections
+- protected casting and immediate handling of casting tools
+- target-specific concealment, cover, and tracking interactions
+- cleaner geometry, extended range, and two-segment magical apertures
+- shared spell frequency expressed as target weakness to damage from spells
+- revealed saving-throw defenses and concrete knowledge shared with allies
+- voluntary transfer of frightened or stupefied through a magical circuit
+- dynamic resistance tied to a damage type of the triggering spell
+- tightly bounded ally conduits for range, area origin, cover, and line of effect
+- immediate Sustain opportunities and concealed magical afterimages
+- short-lived mental defense, saving-throw defense, magical analysis, perception, and social resonance
 
-**Automation:** Ten of the thirty cards create direct Effect Engine effects. The remaining cards are manual because they depend on a specific original target, ally selection, immediate free actions, one-use timing, reactions, Sustain, range changes, area origins, line of effect, spell traits, cover degrees, concealment flat checks, or conditional consumption.
+**Automation:** Nine of the thirty cards create direct Effect Engine effects. The remaining twenty-one cards are manual because they depend on a specific original target, ally selection, immediate free actions, one-use timing, reactions, Sustain, range changes, area origins, line of effect, spell traits, cover degrees, concealment flat checks, or conditional consumption.
 
 **Not included:**
 

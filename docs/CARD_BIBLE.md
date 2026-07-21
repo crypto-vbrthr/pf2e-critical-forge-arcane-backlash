@@ -145,18 +145,18 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 
 ## Spell Attack Surges - Block 1
 
-**Status:** 30/30 cards, mechanical review pending
+**Status:** 30/30 cards, mechanical review passed
 
 | ID | Card | Impact | Automation | Core Idea |
 |---|---|---|---|---|
-| SAS-001 | Power Still Singing | Light | Effect on caster | +1 status bonus to spell attack rolls for 1 round |
+| SAS-001 | Power Still Singing | Moderate | Manual | Lower the MAP one step for a qualifying spell attack against a different target |
 | SAS-002 | Steady Casting Hand | Moderate | Manual | Protect one manipulate spell action from reaction-based disruption |
 | SAS-003 | Resonant Guard | Moderate | Effect on caster | +1 status bonus to saving throws for 1 round |
-| SAS-004 | Spellborne Confidence | Light | Effect on caster | +1 circumstance bonus to Will saves against mental effects for 1 round |
+| SAS-004 | Spellborne Confidence | Light | Effect on caster | +2 circumstance bonus to Will saves against mental effects for 1 round |
 | SAS-005 | Perfect Release | Moderate | Manual | Immediately handle a casting tool or change grip without provoking the target |
 | SAS-006 | Resonance Mark | Moderate | Manual | Ignore concealed or reduce hidden flat-check difficulty against the original target |
 | SAS-007 | Pattern Exposed | Moderate | Manual | Reduce the original target's cover bonus against the next spell attack |
-| SAS-008 | Echo in the Aura | Moderate | Effect on caster | +1 status bonus to the four magical tradition skills for 1 round |
+| SAS-008 | Echo in the Aura | Moderate | Effect on caster | +2 circumstance to qualifying magical Recall Knowledge or Identify Magic checks for 1 round |
 | SAS-009 | No Place to Fade | Moderate | Manual | Reactively Seek when the original target Hides, Sneaks, or teleports |
 | SAS-010 | Spellshadow | Moderate | Effect on target | -1 circumstance penalty to Stealth and Deception for 1 round |
 
@@ -165,43 +165,43 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 | ID | Card | Impact | Automation | Core Idea |
 |---|---|---|---|---|
 | SAS-011 | Extended Thread | Moderate | Manual | Increase the maximum range of one qualifying spell attack by 30 feet |
-| SAS-012 | Clean Geometry | Moderate | Manual | Choose the best corner of the caster's space and ignore cover from one ally |
-| SAS-013 | Widened Aperture | Moderate | Manual | Step immediately before the next spell attack without provoking the original target |
-| SAS-014 | Effortless Transition | Moderate | Manual | Protect one non-spell action from reactions by the original target |
-| SAS-015 | Trait in Harmony | Moderate | Manual | Carry one meaningful spell trait into a later spell attack or counteract check |
-| SAS-016 | Backwash Barrier | Moderate | Effect on caster | +1 circumstance bonus to AC for 1 round |
+| SAS-012 | Clean Geometry | Moderate | Manual | Replace the normal origin with one chosen corner for cover and line of effect |
+| SAS-013 | Widened Aperture | Moderate | Manual | Route one spell attack through a two-segment aperture beside the original target |
+| SAS-014 | Effortless Transition | Moderate | Manual | Remotely Interact with a small unattended object near the original target |
+| SAS-015 | Trait in Harmony | Moderate | Manual | Carry one explicitly descriptive spell trait into a later attack or counteract check |
+| SAS-016 | Backwash Barrier | Moderate | Manual | Improve cover by one degree against one attack from the original target |
 | SAS-017 | Reactions Drowned Out | Strong | Manual | Prevent the original target from reacting to the next Cast a Spell action |
 | SAS-018 | Stable Center | Light | Effect on caster | +1 circumstance bonus to Fortitude DC and Reflex DC for 1 round |
-| SAS-019 | Harmonic Resistance | Moderate | Effect on caster | Resistance 3 to energy damage for 1 round |
-| SAS-020 | Magic Knows Its Way Back | Moderate | Manual | +2 circumstance bonus to one save against magic created by the original target |
+| SAS-019 | Harmonic Resistance | Moderate | Manual | Gain resistance tied to a damage type of the triggering spell |
+| SAS-020 | Magic Knows Its Way Back | Moderate | Manual | +2 against magic from the target, with a +1 fallback against its first nonmagical save |
 
 
 ## Spell Attack Surges - Block 3
 
 | ID | Card | Impact | Automation | Core Idea |
 |---|---|---|---|---|
-| SAS-021 | Shared Frequency | Moderate | Manual | Grant one ally +1 circumstance to its next attack against the original target |
-| SAS-022 | Follow the Glow | Moderate | Manual | Let one ally ignore concealment or reduce cover against the original target |
-| SAS-023 | Borrowed Insight | Moderate | Manual | Let an ally immediately Recall Knowledge with a +1 circumstance bonus |
-| SAS-024 | Arc Between Allies | Moderate | Manual | Protect one ally's saves against magic from the original target |
-| SAS-025 | Conduit Open | Strong | Manual | Use a willing ally as the range, area-origin, cover, and line-of-effect waypoint for one spell |
+| SAS-021 | Shared Frequency | Strong | Effect on target | Weakness 2 to damage from spells for 1 round |
+| SAS-022 | Follow the Glow | Moderate | Manual | Reveal the target's lowest current saving-throw defense to one ally |
+| SAS-023 | Borrowed Insight | Moderate | Manual | Share one concrete Recall Knowledge fact with an ally without a check |
+| SAS-024 | Arc Between Allies | Moderate | Manual | Transfer 1 point of frightened or stupefied from an ally to the caster |
+| SAS-025 | Conduit Open | Strong | Manual | Use a willing ally as a tightly bounded spell waypoint with normal perception requirements |
 | SAS-026 | Reality Nods Once | Light | Effect on caster | +1 status bonus to Deception and Intimidation for 1 round |
 | SAS-027 | Colors Remember | Moderate | Effect on caster | +1 status bonus to Perception checks and Perception DC for 1 round |
 | SAS-028 | The Spell Wants Another Word | Strong | Manual | Sustain immediately or turn the next Sustain into a free action |
-| SAS-029 | Helpful Afterimage | Strong | Manual | Use a prior-space afterimage as the origin for one spell attack against a different target |
-| SAS-030 | The Weave Takes Interest | Moderate | Manual | Choose forced-movement protection, directional tracing, or magical analysis |
+| SAS-029 | Helpful Afterimage | Strong | Effect on caster | Become concealed for 1 round through a cooperative afterimage |
+| SAS-030 | The Weave Takes Interest | Moderate | Manual | Choose Hush, Sheathe, or Knot for sound, object protection, or counteract defense |
 
 ### Current Spell Attack Surges Distribution
 
 | Impact | Cards |
 |---|---:|
-| Light | 4 |
+| Light | 3 |
 | Moderate | 22 |
-| Strong | 4 |
+| Strong | 5 |
 
 | Resolution | Cards |
 |---|---:|
-| Direct Effect Engine effect | 10 |
-| Manual tactical consequence | 20 |
+| Direct Effect Engine effect | 9 |
+| Manual tactical consequence | 21 |
 
-All thirty cards use `spellCriticalHit` and remain tradition-neutral. The complete draft now mixes direct effects with target-specific tactical consequences, allied resonance, alternate spell origins, range and geometry changes, reaction windows, Sustain opportunities, and trait-based resonance. The pack is ready for its full mechanical review, including comparison against Core spell-hit cards and the other Arcane Backlash packs.
+All thirty cards use `spellCriticalHit` and remain tradition-neutral. The reviewed pack mixes nine direct effects with target-specific tactical consequences, shared spell weakness, concrete magical insight, dynamic resistance, carefully bounded alternate origins, range and geometry changes, reaction windows, Sustain opportunities, and trait-based resonance. The full mechanical review passed in version 0.3.3 after nine redesigns and nine targeted adjustments.

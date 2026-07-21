@@ -6,13 +6,13 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.3.2
+## Version 0.3.3
 
 The current release contains three optional packs:
 
 - **Miscast Repercussions** - 30 mechanically reviewed cards for critical failures on spell attacks.
 - **Defiant Reversals** - 30 mechanically reviewed cards for critical successes on saving throws against spells.
-- **Spell Attack Surges** - 30 cards for critical successes on spell attacks, ready for mechanical review.
+- **Spell Attack Surges** - 30 mechanically reviewed cards for critical successes on spell attacks.
 
 Spell Attack Surges turns an exceptionally accurate spell into beneficial resonance. Its complete 30-card draft includes protected casting, warped range and line geometry, brief magical defenses, reaction suppression, harmonic resistance, allied resonance, conduit casting, immediate Sustain opportunities, helpful afterimages, improved magical analysis, reactive tracking, and spellshadows that cling to the target.
 
@@ -41,15 +41,15 @@ Applies to `spellCriticalHit` and supports all four spell traditions. It rewards
 
 The pack includes:
 
-- directly applicable bonuses to spell attacks, saving throws, mental defense, magical skills, AC, Fortitude DC, and Reflex DC
+- directly applicable saving-throw, mental-defense, magical-analysis, target-weakness, perception, social, and concealment effects
 - target effects that hinder Stealth and Deception
 - protection against reaction-based disruption
 - temporary relief from concealment and cover
 - immediate spellcasting-tool interaction
 - reactive tracking when the original target tries to vanish
-- temporary energy resistance, extended spell range, and cleaner line geometry
-- bonuses and tactical openings shared with nearby allies
-- temporary conduits, helpful afterimages, and immediate Sustain opportunities
+- dynamic resistance tied to the triggering spell, extended spell range, magical apertures, and cleaner line geometry
+- shared magical frequency, revealed saving-throw defenses, concrete shared insight, and condition-transfer circuits
+- tightly bounded ally conduits, concealed afterimages, and immediate Sustain opportunities
 - short-lived Perception, Deception, and Intimidation resonance
 
 The pack does not include:
@@ -64,15 +64,15 @@ The pack does not include:
 
 Miscast Repercussions and Defiant Reversals remain intentionally manual because they depend on the original caster, immediate actions, battlefield geometry, ongoing spell identity, or conditional consumption.
 
-Spell Attack Surges uses the Effect Engine directly. Ten of its thirty cards create applicable effects, while twenty remain manual where ally selection, target identity, one-use timing, range, area origins, line of effect, spell traits, cover, concealment, reactions, immediate actions, Sustain, or conditional consumption matter.
+Spell Attack Surges uses the Effect Engine directly. Nine of its thirty cards create applicable effects, while twenty-one remain manual where ally selection, target identity, one-use timing, range, area origins, line of effect, spell traits, cover, concealment, reactions, immediate actions, Sustain, or conditional consumption matter.
 
 ## Planned Packs
 
 - Miscast Repercussions - 30/30 (mechanical review passed)
 - Defiant Reversals - 30/30 (mechanical review passed)
-- Spell Attack Surges - 30/30 (mechanical review pending)
+- Spell Attack Surges - 30/30 (mechanical review passed)
 - Overwhelming Resonance - planned
 
 Each pack grows in blocks of ten cards. At 30 cards, it receives a full mechanical review for redundancy, rules clarity, balance, and pack identity.
 
-See [docs/PACKS.md](docs/PACKS.md), [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md), [docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md](docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md), and [docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md](docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md).
+See [docs/PACKS.md](docs/PACKS.md), [docs/CARD_BIBLE.md](docs/CARD_BIBLE.md), [docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md](docs/MECHANICAL_REVIEW_MISCAST_REPERCUSSIONS.md), [docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md](docs/MECHANICAL_REVIEW_DEFIANT_REVERSALS.md), and [docs/MECHANICAL_REVIEW_SPELL_ATTACK_SURGES.md](docs/MECHANICAL_REVIEW_SPELL_ATTACK_SURGES.md).

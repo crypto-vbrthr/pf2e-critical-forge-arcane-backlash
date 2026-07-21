@@ -26,8 +26,8 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.3.2");
-assert.equal(packageJson.version, "0.3.2");
+assert.equal(manifest.version, "0.3.3");
+assert.equal(packageJson.version, "0.3.3");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) =>
@@ -47,7 +47,7 @@ assert.deepEqual(disabled.map((pack) => pack.id), [
 ]);
 assert.ok(disabled.every((pack) => pack.enabled === false));
 assert.ok(enabled.every((pack) => pack.enabled === true));
-assert.ok(disabled.every((pack) => pack.version === "0.3.2"));
+assert.ok(disabled.every((pack) => pack.version === "0.3.3"));
 assert.equal(disabled[0].cards.length, 30);
 assert.equal(disabled[1].cards.length, 30);
 assert.equal(disabled[2].cards.length, 30);
@@ -245,13 +245,13 @@ assert.deepEqual(surgeSlugs, [
 const surgeBySlug = new Map(surges.map((card) => [card.id.split(".").at(-1), card]));
 const automatedSurges = surges.filter((card) => card.effect !== null);
 const manualSurges = surges.filter((card) => card.effect === null);
-assert.equal(automatedSurges.length, 10);
-assert.equal(manualSurges.length, 20);
+assert.equal(automatedSurges.length, 9);
+assert.equal(manualSurges.length, 21);
 assert.ok(automatedSurges.every((card) => card.tags.includes("effect")));
 assert.ok(manualSurges.every((card) => card.tags.includes("manual")));
-assert.equal(surges.filter((card) => card.impact === "light").length, 4);
+assert.equal(surges.filter((card) => card.impact === "light").length, 3);
 assert.equal(surges.filter((card) => card.impact === "moderate").length, 22);
-assert.equal(surges.filter((card) => card.impact === "strong").length, 4);
+assert.equal(surges.filter((card) => card.impact === "strong").length, 5);
 
 for (const card of automatedSurges) {
   assert.equal(card.effect.definition.schemaVersion, 2);
@@ -261,42 +261,41 @@ for (const card of automatedSurges) {
   assert.ok(card.effect.definition.components.length > 0);
 }
 
-assert.equal(surgeBySlug.get("sas-001-power-still-singing").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-001-power-still-singing").effect, null);
 assert.equal(surgeBySlug.get("sas-003-resonant-guard").effect.target, "source");
 assert.equal(surgeBySlug.get("sas-004-spellborne-confidence").effect.target, "source");
 assert.equal(surgeBySlug.get("sas-008-echo-in-the-aura").effect.target, "source");
 assert.equal(surgeBySlug.get("sas-010-spellshadow").effect.target, "target");
 assert.deepEqual(
-  surgeBySlug.get("sas-001-power-still-singing").effect.definition.components[0],
-  { type: "modifier", selector: "spell-attack-roll", value: 1, modifierType: "status", predicate: [] }
-);
-assert.deepEqual(
   surgeBySlug.get("sas-003-resonant-guard").effect.definition.components[0],
   { type: "modifier", selector: "saving-throw", value: 1, modifierType: "status", predicate: [] }
 );
 assert.deepEqual(
-  surgeBySlug.get("sas-004-spellborne-confidence").effect.definition.components[0].predicate,
-  ["item:trait:mental"]
+  surgeBySlug.get("sas-004-spellborne-confidence").effect.definition.components[0],
+  { type: "modifier", selector: "will", value: 2, modifierType: "circumstance", predicate: ["item:trait:mental"] }
 );
 assert.deepEqual(
-  surgeBySlug.get("sas-008-echo-in-the-aura").effect.definition.components[0].selector,
-  ["arcana", "nature", "occultism", "religion"]
+  surgeBySlug.get("sas-008-echo-in-the-aura").effect.definition.components[0],
+  {
+    type: "modifier",
+    selector: ["arcana", "nature", "occultism", "religion"],
+    value: 2,
+    modifierType: "circumstance",
+    predicate: [{ or: ["action:recall-knowledge", "action:identify-magic"] }]
+  }
 );
 assert.deepEqual(
   surgeBySlug.get("sas-010-spellshadow").effect.definition.components[0].selector,
   ["stealth", "deception"]
 );
+assert.ok(surgeBySlug.get("sas-001-power-still-singing").tags.includes("multiple-attack-penalty"));
 assert.ok(surgeBySlug.get("sas-006-resonance-mark").tags.includes("conditional-consumption"));
 assert.ok(surgeBySlug.get("sas-007-pattern-exposed").tags.includes("cover"));
 assert.ok(surgeBySlug.get("sas-009-no-place-to-fade").tags.includes("teleportation"));
 
-assert.equal(surgeBySlug.get("sas-016-backwash-barrier").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-016-backwash-barrier").effect, null);
 assert.equal(surgeBySlug.get("sas-018-stable-center").effect.target, "source");
-assert.equal(surgeBySlug.get("sas-019-harmonic-resistance").effect.target, "source");
-assert.deepEqual(
-  surgeBySlug.get("sas-016-backwash-barrier").effect.definition.components[0],
-  { type: "modifier", selector: "ac", value: 1, modifierType: "circumstance", predicate: [] }
-);
+assert.equal(surgeBySlug.get("sas-019-harmonic-resistance").effect, null);
 assert.deepEqual(
   surgeBySlug.get("sas-018-stable-center").effect.definition.components[0],
   {
@@ -307,19 +306,29 @@ assert.deepEqual(
     predicate: []
   }
 );
-assert.deepEqual(
-  surgeBySlug.get("sas-019-harmonic-resistance").effect.definition.components[0],
-  { type: "resistance", resistanceType: "energy", value: 3 }
-);
+assert.equal(surgeBySlug.get("sas-004-spellborne-confidence").weight, 1);
+assert.equal(surgeBySlug.get("sas-018-stable-center").weight, 1);
 assert.ok(surgeBySlug.get("sas-011-extended-thread").tags.includes("range"));
 assert.ok(surgeBySlug.get("sas-012-clean-geometry").tags.includes("line-of-effect"));
-assert.ok(surgeBySlug.get("sas-013-widened-aperture").tags.includes("free-action"));
-assert.ok(surgeBySlug.get("sas-014-effortless-transition").tags.includes("conditional-consumption"));
+assert.ok(surgeBySlug.get("sas-013-widened-aperture").tags.includes("aperture"));
+assert.ok(surgeBySlug.get("sas-014-effortless-transition").tags.includes("remote-manipulation"));
 assert.ok(surgeBySlug.get("sas-015-trait-in-harmony").tags.includes("counteract"));
+assert.ok(surgeBySlug.get("sas-016-backwash-barrier").tags.includes("one-attack"));
 assert.equal(surgeBySlug.get("sas-017-reactions-drowned-out").impact, "strong");
-assert.equal(surgeBySlug.get("sas-018-stable-center").weight, 2);
-assert.ok(surgeBySlug.get("sas-020-magic-knows-its-way-back").tags.includes("saving-throw"));
+assert.ok(surgeBySlug.get("sas-019-harmonic-resistance").tags.includes("dynamic-choice"));
+assert.ok(surgeBySlug.get("sas-020-magic-knows-its-way-back").tags.includes("fallback"));
 
+assert.equal(surgeBySlug.get("sas-021-shared-frequency").effect.target, "target");
+assert.deepEqual(
+  surgeBySlug.get("sas-021-shared-frequency").effect.definition.components[0],
+  { type: "weakness", weaknessType: "damage-from-spells", value: 2 }
+);
+assert.equal(surgeBySlug.get("sas-021-shared-frequency").impact, "strong");
+assert.ok(surgeBySlug.get("sas-022-follow-the-glow").tags.includes("defense-reading"));
+assert.ok(surgeBySlug.get("sas-023-borrowed-insight").tags.includes("revealed-fact"));
+assert.ok(surgeBySlug.get("sas-024-arc-between-allies").tags.includes("condition-transfer"));
+assert.equal(surgeBySlug.get("sas-025-conduit-open").impact, "strong");
+assert.ok(surgeBySlug.get("sas-025-conduit-open").tags.includes("perception"));
 assert.equal(surgeBySlug.get("sas-026-reality-nods-once").effect.target, "source");
 assert.equal(surgeBySlug.get("sas-027-colors-remember").effect.target, "source");
 assert.deepEqual(
@@ -342,19 +351,12 @@ assert.deepEqual(
     predicate: []
   }
 );
-assert.ok(surgeBySlug.get("sas-021-shared-frequency").tags.includes("ally"));
-assert.ok(surgeBySlug.get("sas-022-follow-the-glow").tags.includes("conditional-consumption"));
-assert.ok(surgeBySlug.get("sas-023-borrowed-insight").tags.includes("recall-knowledge"));
-assert.ok(surgeBySlug.get("sas-024-arc-between-allies").tags.includes("saving-throw"));
-assert.equal(surgeBySlug.get("sas-025-conduit-open").impact, "strong");
-assert.ok(surgeBySlug.get("sas-025-conduit-open").tags.includes("area-origin"));
-assert.equal(surgeBySlug.get("sas-026-reality-nods-once").tone, "humorous");
-assert.equal(surgeBySlug.get("sas-026-reality-nods-once").weight, 2);
-assert.ok(surgeBySlug.get("sas-027-colors-remember").tags.includes("perception"));
-assert.equal(surgeBySlug.get("sas-028-the-spell-wants-another-word").impact, "strong");
+assert.equal(surgeBySlug.get("sas-029-helpful-afterimage").effect.target, "source");
+assert.deepEqual(
+  surgeBySlug.get("sas-029-helpful-afterimage").effect.definition.components[0],
+  { type: "condition", slug: "concealed" }
+);
 assert.ok(surgeBySlug.get("sas-028-the-spell-wants-another-word").tags.includes("sustain"));
-assert.equal(surgeBySlug.get("sas-029-helpful-afterimage").impact, "strong");
-assert.ok(surgeBySlug.get("sas-029-helpful-afterimage").tags.includes("different-target"));
-assert.ok(surgeBySlug.get("sas-030-the-weave-takes-interest").tags.includes("choice"));
+assert.ok(surgeBySlug.get("sas-030-the-weave-takes-interest").tags.includes("object-protection"));
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.3.2 validation passed.");
+console.log("PF2E Critical Forge: Arcane Backlash 0.3.3 validation passed.");

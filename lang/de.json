@@ -271,7 +271,7 @@
       },
       "PowerStillSinging": {
         "Title": "Die Kraft singt weiter",
-        "Description": "Die Kraft des Zaubers singt in deiner Aura weiter. Für 1 Runde erhältst du einen Statusbonus von +1 auf Zauberangriffswürfe."
+        "Description": "Der Rhythmus des Zaubers sucht weiter nach einem Ort, an dem er landen kann. Wenn du vor dem Ende deines nächsten Zuges einen Zauberangriff gegen eine andere Kreatur als das ursprüngliche Ziel ausführst, kannst du deinen Mehrfachangriffsmalus für diesen Wurf als eine Stufe niedriger behandeln: -5 wird zu 0, -4 wird zu 0, -10 wird zu -5 und -8 wird zu -4. Dies verändert deinen Mehrfachangriffsmalus für spätere Angriffe nicht. Die Resonanz wird nur verbraucht, wenn sie einen Malus verringert."
       },
       "SteadyCastingHand": {
         "Title": "Sichere Zauberhand",
@@ -283,7 +283,7 @@
       },
       "SpellborneConfidence": {
         "Title": "Zaubergetragenes Selbstvertrauen",
-        "Description": "Der perfekte Treffer beweist, dass dein Wille das Unmögliche formen kann. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf Willenswürfe gegen mentale Effekte."
+        "Description": "Der perfekte Treffer beweist, dass dein Wille das Unmögliche formen kann. Für 1 Runde erhältst du einen Umstandsbonus von +2 auf Willenswürfe gegen mentale Effekte."
       },
       "PerfectRelease": {
         "Title": "Perfekte Freisetzung",
@@ -299,7 +299,7 @@
       },
       "EchoInTheAura": {
         "Title": "Echo in der Aura",
-        "Description": "Die Aura des Ziels antwortet dem Zauber gleichzeitig in mehreren magischen Sprachen. Für 1 Runde erhältst du einen Statusbonus von +1 auf Würfe für Arkane Künste, Naturkunde, Okkultismus und Religion."
+        "Description": "Die Aura des Ziels antwortet dem Zauber gleichzeitig in mehreren magischen Sprachen. Für 1 Runde erhältst du einen Umstandsbonus von +2 auf Würfe für Arkane Künste, Naturkunde, Okkultismus und Religion, mit denen du Wissen über das ursprüngliche Ziel abrufst oder Magie identifizierst, die den auslösenden Zauber oder einen aktiven magischen Effekt auf diesem Ziel betrifft. Die Spielleitung entscheidet, ob ein Wurf geeignet ist."
       },
       "NoPlaceToFade": {
         "Title": "Kein Ort zum Verblassen",
@@ -315,23 +315,23 @@
       },
       "CleanGeometry": {
         "Title": "Reine Geometrie",
-        "Description": "Für einen Moment erscheint jeder brauchbare Winkel vollkommen offensichtlich. Wenn du vor dem Ende deines nächsten Zuges deinen nächsten Zauberangriff ausführst, darfst du für die Bestimmung von Deckung und Wirkungslinie eine beliebige Ecke deines Feldes wählen. Eine verbündete Kreatur, durch deren Feld die Linie verläuft, gewährt für diesen Angriff keine Deckung. Feste Barrieren und andere Kreaturen funktionieren normal. Danach endet die Resonanz."
+        "Description": "Für einen Moment erscheinen alle brauchbaren Winkel vollkommen offensichtlich. Wenn du vor dem Ende deines nächsten Zuges deinen nächsten Zauberangriff ausführst, wählst du eine beliebige Ecke deines Feldes. Nur für diesen Angriff ersetzt die gewählte Ecke deinen normalen Ursprung bei der Bestimmung von Deckung und Wirkungslinie. Eine verbündete Kreatur, durch deren Feld die Linie verläuft, gewährt keine Deckung. Feste Hindernisse und andere Kreaturen funktionieren weiterhin normal. Danach endet die Resonanz."
       },
       "WidenedAperture": {
         "Title": "Geweitete Öffnung",
-        "Description": "Die vom Zauber hinterlassene Öffnung bleibt weit genug, um dich mitzutragen. Unmittelbar bevor du vor dem Ende deines nächsten Zuges deinen nächsten Zauberangriff ausführst, darfst du als freie Aktion einen Schritt machen. Dieser Schritt löst keine Reaktionen des ursprünglichen Ziels aus. Nach dem Zauberangriff endet die Resonanz, unabhängig davon, ob du den Schritt ausgeführt hast."
+        "Description": "Der Einschlag lässt neben dem Ziel eine kleine Öffnung hängen. Wenn du vor dem Ende deines nächsten Zuges deinen nächsten Zauberangriff gegen das ursprüngliche Ziel ausführst, wählst du ein unbesetztes Feld angrenzend an das Ziel, das innerhalb der Reichweite des Zaubers liegt und eine Wirkungslinie zum Ziel besitzt. Nur für diesen Angriff bestimmst du Reichweite, Deckung und Wirkungslinie entlang zweier Abschnitte: von dir zum gewählten Feld und von dort zum Ziel. Feste Hindernisse blockieren jeden Abschnitt, und das Ziel wird nicht bewegt. Die Resonanz wird nur verbraucht, wenn die Öffnung den Angriff ermöglicht oder seine Deckung verbessert."
       },
       "EffortlessTransition": {
         "Title": "Müheloser Übergang",
-        "Description": "Das vollendete Muster entlässt dich ohne Widerstand in die nächste Bewegung. Vor dem Ende deines nächsten Zuges löst deine erste Aktion, die nicht Zauber wirken ist, keine Reaktionen des ursprünglichen Ziels aus. Eine Aktivität, die Zauber wirken enthält, zählt nicht. Die Resonanz wird nur verbraucht, wenn sie mindestens eine Reaktion dieses Ziels verhindert."
+        "Description": "Der vollendete Zauber lässt eine einzige präzise Bewegung zurück. Vor dem Ende deines nächsten Zuges kannst du mit einem unbeaufsichtigten Gegenstand von leichter Last oder weniger im Feld des ursprünglichen Ziels oder in einem angrenzenden Feld interagieren, als wärst du an diesen Gegenstand angrenzend. Du musst den Gegenstand wahrnehmen und eine Wirkungslinie zu ihm besitzen. Du kannst damit keinen gehaltenen, getragenen, verschlossenen oder anderweitig gesicherten Gegenstand manipulieren. Die Interagieren-Aktion besitzt das Merkmal Handhaben und löst Reaktionen von Kreaturen nahe deinem tatsächlichen Feld normal aus; das ursprüngliche Ziel kann nicht allein deshalb reagieren, weil es sich nahe dem Gegenstand befindet. Danach endet die Resonanz."
       },
       "TraitInHarmony": {
         "Title": "Merkmal im Einklang",
-        "Description": "Ein bedeutendes Merkmal des gelungenen Zaubers schwingt weiter. Wähle eines seiner Merkmale außer Angriff, Konzentration, Handhaben oder einem Traditionsmerkmal. Vor dem Ende deines nächsten Zuges erhält der nächste von dir gewirkte Zauber mit diesem Merkmal einen Umstandsbonus von +1 auf seinen Zauberangriffswurf oder Gegenwirken-Wurf. Ein Zauber ohne einen dieser Würfe verbraucht die Resonanz nicht."
+        "Description": "Ein beschreibendes Merkmal des erfolgreichen Zaubers schwingt weiter. Wähle ein Schadens-, Energie-, Elementar-, Mental-, Emotions-, Sinnes-, Fluch-, Illusions-, Licht-, Dunkelheits-, Teleportations-, Vitalitäts-, Leere- oder vergleichbares beschreibendes Merkmal, das die Spielleitung billigt. Du kannst weder Angriff, Zaubertrick, Komposition, Konzentration, Fokus, Kampfunfähigkeit, Handhaben, Ritual, Zauberform, Herbeirufung, ein Seltenheitsmerkmal noch ein Traditionsmerkmal wählen. Der nächste Zauber, den du vor dem Ende deines nächsten Zuges mit dem gewählten Merkmal wirkst, erhält einen Umstandsbonus von +1 auf seinen Zauberangriffswurf oder Gegenwirken-Wurf. Ein Zauber ohne einen solchen Wurf verbraucht die Resonanz nicht."
       },
       "BackwashBarrier": {
         "Title": "Rückstrombarriere",
-        "Description": "Zurückströmender magischer Druck verhärtet sich zu einer kurzen Barriere um dich. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf RK."
+        "Description": "Zurückströmender magischer Druck verhärtet sich zwischen dir und dem ursprünglichen Ziel. Bis zum Beginn deines nächsten Zuges behandelt der erste Angriff dieses Ziels gegen dich deine Deckung als eine Stufe besser: keine Deckung wird zu schwacher Deckung, schwache zu normaler und normale zu großer Deckung. Große Deckung kann nicht weiter verbessert werden. Die Barriere bricht nach diesem Angriffswurf zusammen und wird nicht verbraucht, wenn der Angriff Deckung ignoriert oder deine Deckung nicht verbessert würde."
       },
       "ReactionsDrownedOut": {
         "Title": "Übertönte Reaktionen",
@@ -339,35 +339,35 @@
       },
       "StableCenter": {
         "Title": "Stabiles Zentrum",
-        "Description": "Deine Magie legt sich wie ein vollkommen ausgewuchtetes Gyroskop um dich. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf deinen Zähigkeits-SG und Reflex-SG."
+        "Description": "Deine Magie legt sich wie ein vollkommen ausgewogener Kreisel um dich. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf deinen Zähigkeits-SG und Reflex-SG."
       },
       "HarmonicResistance": {
         "Title": "Harmonischer Widerstand",
-        "Description": "Der gelungene Zauber stimmt deine Aura auf rohe magische Energie ein. Für 1 Runde erhältst du Resistenz 3 gegen Energieschaden."
+        "Description": "Der erfolgreiche Zauber stimmt deine Aura auf seinen eigenen Schaden ein. Wähle eine Schadensart, die der auslösende Zauber verursacht hat; für 1 Runde erhältst du Resistenz 3 gegen diese Schadensart. Hat der Zauber keinen Schaden verursacht, kannst du stattdessen eine Schadensart wählen, die unmittelbar durch eines seiner Merkmale dargestellt wird. Trifft beides nicht zu, erhältst du für 1 Runde Resistenz 2 gegen Schaden durch Zauber. Wende die gewählte Resistenz manuell an."
       },
       "MagicKnowsItsWayBack": {
         "Title": "Magie kennt den Rückweg",
-        "Description": "Die Resonanz lehrt deine Verteidigung den Weg zurück zum ursprünglichen Ziel. Vor dem Ende deines nächsten Zuges erhältst du einen Umstandsbonus von +2 auf den nächsten Rettungswurf gegen einen Zauber oder magischen Effekt, den dieses Ziel erschaffen hat. Die Resonanz wird nur verbraucht, wenn dieser Rettungswurf stattfindet."
+        "Description": "Die Resonanz lehrt deine Verteidigung den Rückweg zum ursprünglichen Ziel. Vor dem Ende deines nächsten Zuges erhältst du einen Umstandsbonus von +2 auf den nächsten Rettungswurf gegen einen Zauber oder magischen Effekt, den dieses Ziel erzeugt. Veranlasst das Ziel dich stattdessen zuerst zu einem Rettungswurf gegen einen nichtmagischen Effekt, kannst du auf diesen Wurf einen Umstandsbonus von +1 anwenden und die Resonanz beenden. Die Resonanz wird nur verbraucht, wenn einer dieser Boni genutzt wird."
       },
       "SharedFrequency": {
         "Title": "Geteilte Frequenz",
-        "Description": "Der Rhythmus des Zaubers springt auf einen nahen Verbündeten über. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Vor dem Ende deines nächsten Zuges erhält dieser Verbündete einen +1-Umstandsbonus auf seinen nächsten Angriffswurf gegen das ursprüngliche Ziel. Die Resonanz wird nur verbraucht, wenn der Verbündete diesen Angriff ausführt."
+        "Description": "Die Aura des Ziels bleibt auf die Frequenz feindlicher Zaubermagie eingestimmt. Für 1 Runde erhält das Ziel Schwäche 2 gegen Schaden durch Zauber."
       },
       "FollowTheGlow": {
         "Title": "Folge dem Leuchten",
-        "Description": "Das Nachleuchten zeichnet einen klaren Weg zum Ziel. Wähle einen Verbündeten innerhalb von 9 Metern, der das ursprüngliche Ziel wahrnehmen kann. Vor dem Ende deines nächsten Zuges ignoriert der nächste Angriff dieses Verbündeten gegen das Ziel entweder den Zustand Verborgen oder behandelt die Deckung des Ziels als um eine Stufe niedriger. Der Verbündete entscheidet beim Angriff. Die Resonanz wird nur verbraucht, wenn sie einen Flachwurf entfernt oder Deckung verringert."
+        "Description": "Das verbleibende Leuchten sammelt sich um die instabilste Verteidigung des Ziels. Wähle einen Verbündeten innerhalb von 9 Metern, der das ursprüngliche Ziel wahrnehmen kann. Die Spielleitung nennt diesem Verbündeten, welcher der aktuellen Modifikatoren des Ziels für Zähigkeit, Reflex oder Wille am niedrigsten ist; bei Gleichstand werden alle betroffenen Rettungswürfe genannt, aber keine Zahlenwerte. Dies ist eine Momentaufnahme der aktuellen Verteidigung und wird nicht aktualisiert, wenn sie sich später verändert."
       },
       "BorrowedInsight": {
         "Title": "Geborgte Erkenntnis",
-        "Description": "Der Einschlag schreibt eine kurze Anmerkung um das Ziel. Wähle einen Verbündeten innerhalb von 9 Metern, der es wahrnehmen kann. Dieser Verbündete darf sofort als freie Aktion Wissen abrufen über das ursprüngliche Ziel einsetzen und erhält einen +1-Umstandsbonus auf den Wurf. Verwende den eigenen Fertigkeitsmodifikator des Verbündeten und die normale Anpassung für wiederholte Versuche, Wissen abzurufen."
+        "Description": "Der Einschlag schreibt eine nützliche Anmerkung um das Ziel. Wähle einen Verbündeten innerhalb von 9 Metern, der das Ziel wahrnehmen und dich hören oder anderweitig verstehen kann. Die Spielleitung enthüllt eine nützliche Tatsache über das ursprüngliche Ziel, die ein erfolgreicher Wurf für Wissen abrufen offenbaren könnte und die keiner von euch bereits kennt; ihr beide erfahrt sie ohne Wurf. Die Spielleitung wählt die Tatsache. Gibt es keine nützliche unbekannte Tatsache mehr, erhält der Verbündete stattdessen vor dem Ende deines nächsten Zuges einen Umstandsbonus von +2 auf seinen nächsten Wurf für Wissen abrufen über dieses Ziel."
       },
       "ArcBetweenAllies": {
         "Title": "Bogen zwischen Verbündeten",
-        "Description": "Ein harmloser Resonanzbogen verbindet dich mit einem Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Bis zum Beginn deines nächsten Zuges erhält dieser Verbündete einen +1-Umstandsbonus auf Rettungswürfe gegen Zauber und magische Effekte, die vom ursprünglichen Ziel erzeugt wurden. Kann das ursprüngliche Ziel in dieser Zeit keinen solchen Effekt erzeugen, erhält der Verbündete den Bonus stattdessen auf den nächsten Rettungswurf gegen einen beliebigen Zauber vor dem Ende deines nächsten Zuges. Danach verblasst der Bogen."
+        "Description": "Ein harmloser Bogen verbindet deine Fassung mit einem Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn dieser Verbündete bis zum Beginn deines nächsten Zuges durch einen Zauber oder magischen Effekt Verängstigt oder Benommen erhalten würde, kannst du deine Reaktion verwenden, um den erhaltenen Zustandswert um 1 zu verringern und denselben Zustand mit Wert 1 selbst zu erhalten. Du kannst diese Reaktion nicht verwenden, wenn du gegen den Zustand immun bist oder ihn bereits mit Wert 1 oder höher besitzt. Nach der Übertragung endet der Bogen."
       },
       "ConduitOpen": {
         "Title": "Offener Konduktor",
-        "Description": "Die Resonanz macht einen willigen Verbündeten zu einem vorübergehenden magischen Knotenpunkt. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn du vor dem Ende deines nächsten Zuges einen Zauber mit angegebener Reichweite wirkst, die weder Berührung noch Selbst ist, darfst du Reichweite, Ursprung des Bereichs, Deckung und Wirkungslinie vom Feld des Verbündeten aus bestimmen. Du musst eine Wirkungslinie zum Verbündeten besitzen, und der Verbündete muss eine Wirkungslinie zu jedem betroffenen Ziel oder Feld besitzen. Du bleibst der Zauberwirker, und Reaktionen, die durch deine Aktion Zauber wirken ausgelöst werden, gehen von deinem tatsächlichen Feld aus. Die Resonanz wird nur verbraucht, wenn sie eine legale Zauberplatzierung ermöglicht, die du verwendest."
+        "Description": "Die Resonanz verwandelt einen bereitwilligen Verbündeten in einen vorübergehenden magischen Knotenpunkt. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn du vor dem Ende deines nächsten Zuges einen Zauber mit angegebener Reichweite wirkst, die weder Berührung noch selbst ist, kannst du Reichweite, Deckung, Wirkungslinie und einen geeigneten Ursprung des Wirkungsbereichs vom Feld des Verbündeten aus bestimmen. Du musst eine Wirkungslinie zum Verbündeten besitzen und jedes erforderliche Ziel oder jeden gewählten Punkt weiterhin so wahrnehmen, wie der Zauber es normalerweise verlangt. Der Verbündete muss eine Wirkungslinie zu jedem betroffenen Ziel oder Feld besitzen. Ausstrahlungen, auf dich zentrierte Bereiche und Zauber, deren Text ihren Ursprung fest auf dich legt, sind nicht geeignet. Ein Kegel oder eine Linie beginnt im Feld des Verbündeten und wird in eine von dir gewählte Richtung ausgerichtet. Du bleibst der Zaubernde, und Reaktionen auf deine Zauber-wirken-Aktion gehen von deinem tatsächlichen Feld aus. Die Resonanz wird nur verbraucht, wenn sie eine regelkonforme Zauberplatzierung ermöglicht, die du nutzt."
       },
       "RealityNodsOnce": {
         "Title": "Die Wirklichkeit nickt einmal",
@@ -383,17 +383,14 @@
       },
       "HelpfulAfterimage": {
         "Title": "Hilfreiches Nachbild",
-        "Description": "Ein kooperatives Nachbild bleibt auf dem Feld zurück, von dem aus du den kritischen Zauberangriff ausgeführt hast. Vor dem Ende deines nächsten Zuges darf dein nächster Zauberangriff gegen eine andere Kreatur als das ursprüngliche Ziel Reichweite, Deckung und Wirkungslinie vom Feld des Nachbildes aus bestimmen. Du musst eine Wirkungslinie zum Nachbild besitzen, und das Nachbild muss eine Wirkungslinie zum neuen Ziel besitzen. Du bleibst der Zauberwirker, und Reaktionen auf Zauber wirken werden von deinem tatsächlichen Feld ausgelöst. Die Resonanz wird nur verbraucht, wenn du das Nachbild für einen legalen Angriff verwendest."
+        "Description": "Ein kooperatives Nachbild legt sich über deine Kontur und bewegt sich einen Sekundenbruchteil verspätet. Für 1 Runde bist du Verborgen. Dadurch wirst du weder Versteckt noch Unentdeckt; Kreaturen mit präzisen Sinnen, die vom Nachbild nicht getäuscht werden, und Effekte, die Verborgenheit ignorieren, funktionieren normal."
       },
       "TheWeaveTakesInterest": {
         "Title": "Das Gewebe wird aufmerksam",
-        "Description": "Die umgebende Magie bietet drei leise Korrekturen an. Wähle eine, wenn diese Karte gezogen wird. Verankern: Verringere vor dem Ende deines nächsten Zuges die erste erzwungene Bewegung durch einen Zauber oder magischen Effekt um 3 Meter. Spur: Bis zum Ende deines nächsten Zuges kennst du stets die Richtung zum ursprünglichen Ziel, solange es sich innerhalb von 36 Metern und auf derselben Ebene befindet, nicht jedoch seine Entfernung oder sein genaues Feld. Klären: Erhalte vor dem Ende deines nächsten Zuges einen +2-Umstandsbonus auf einen Gegenwirken-Wurf oder einen Wurf für Wissen abrufen über einen Zauber oder magischen Effekt. Die gewählte Korrektur wird nur bei Verwendung verbraucht und kann später nicht geändert werden."
+        "Description": "Die umgebende Magie bietet drei leise Korrekturen an. Wähle eine, wenn diese Karte gezogen wird. Dämpfen: Vor dem Ende deines nächsten Zuges können die hörbaren Manifestationen beim Wirken deines nächsten Zaubers aus mehr als 9 Metern Entfernung nicht gehört werden; dies entfernt weder das Merkmal Hörbar noch unterdrückt es Geräusche, die der Zauber selbst erzeugt. Umhüllen: Dein nächster Zauber vor dem Ende deines nächsten Zuges kann einen unbeaufsichtigten Gegenstand von leichter Last oder weniger in seinem Wirkungsbereich von seinem Schaden und seinen nichtschädigenden Effekten ausnehmen; dies kann keine Kreatur und keinen gehaltenen oder getragenen Gegenstand schützen. Verknoten: Vor dem Ende deines nächsten Zuges erhöhst du den Gegenwirken-SG gegen den ersten Versuch des ursprünglichen Ziels, einen von dir erzeugten Zauber oder magischen Effekt gegenzuwirken, um 2. Die gewählte Korrektur wird nur verbraucht, wenn sie genutzt wird, und kann später nicht geändert werden."
       }
     },
     "Effects": {
-      "PowerStillSinging": {
-        "Name": "Die Kraft singt weiter"
-      },
       "ResonantGuard": {
         "Name": "Resonanzschutz"
       },
@@ -406,20 +403,20 @@
       "Spellshadow": {
         "Name": "Zauberschatten"
       },
-      "BackwashBarrier": {
-        "Name": "Rückstrombarriere"
-      },
       "StableCenter": {
         "Name": "Stabiles Zentrum"
-      },
-      "HarmonicResistance": {
-        "Name": "Harmonischer Widerstand"
       },
       "RealityNodsOnce": {
         "Name": "Die Wirklichkeit nickt einmal"
       },
       "ColorsRemember": {
         "Name": "Farben erinnern sich"
+      },
+      "SharedFrequency": {
+        "Name": "Geteilte Frequenz"
+      },
+      "HelpfulAfterimage": {
+        "Name": "Hilfreiches Nachbild"
       }
     },
     "Notifications": {

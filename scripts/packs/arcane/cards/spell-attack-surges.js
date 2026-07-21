@@ -11,16 +11,10 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     id: "sas-001-power-still-singing",
     localizationKey: "PowerStillSinging",
     tone: "dramatic",
-    impact: "light",
+    impact: "moderate",
     fallbackTitle: "Power Still Singing",
-    fallbackDescription: "The spell's power keeps singing in your aura. For 1 round, you gain a +1 status bonus to spell attack rolls.",
-    tags: ["spell-attack", "status-bonus", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        { type: "modifier", selector: "spell-attack-roll", value: 1, modifierType: "status", predicate: [] }
-      ]
-    }
+    fallbackDescription: "The spell's rhythm continues looking for somewhere to land. Before the end of your next turn, when you make a spell attack against a creature other than the original target, you may treat your multiple attack penalty as one step lower for that roll: -5 becomes 0, -4 becomes 0, -10 becomes -5, and -8 becomes -4. This does not change your multiple attack penalty for later attacks. The surge is consumed only when it reduces a penalty.",
+    tags: ["spell-attack", "multiple-attack-penalty", "different-target", "conditional-consumption", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-002-steady-casting-hand",
@@ -52,13 +46,12 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "light",
     fallbackTitle: "Spellborne Confidence",
-    fallbackDescription: "The perfect hit proves that your will can shape the impossible. For 1 round, you gain a +1 circumstance bonus to Will saves against mental effects.",
-    weight: 2,
+    fallbackDescription: "The perfect hit proves that your will can shape the impossible. For 1 round, you gain a +2 circumstance bonus to Will saves against mental effects.",
     tags: ["will", "mental", "circumstance-bonus", "effect"],
     effect: {
       duration: ONE_ROUND,
       components: [
-        { type: "modifier", selector: "will", value: 1, modifierType: "circumstance", predicate: ["item:trait:mental"] }
+        { type: "modifier", selector: "will", value: 2, modifierType: "circumstance", predicate: ["item:trait:mental"] }
       ]
     }
   }),
@@ -95,17 +88,17 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Echo in the Aura",
-    fallbackDescription: "The target's aura answers the spell in several magical languages at once. For 1 round, you gain a +1 status bonus to Arcana, Nature, Occultism, and Religion checks.",
-    tags: ["aura", "knowledge", "skills", "status-bonus", "effect"],
+    fallbackDescription: "The target's aura answers the spell in several magical languages at once. For 1 round, you gain a +2 circumstance bonus to Arcana, Nature, Occultism, and Religion checks made to Recall Knowledge about the original target or to Identify Magic concerning the triggering spell or an active magical effect on that target. The GM determines whether a check qualifies.",
+    tags: ["aura", "recall-knowledge", "identify-magic", "circumstance-bonus", "effect"],
     effect: {
       duration: ONE_ROUND,
       components: [
         {
           type: "modifier",
           selector: ["arcana", "nature", "occultism", "religion"],
-          value: 1,
-          modifierType: "status",
-          predicate: []
+          value: 2,
+          modifierType: "circumstance",
+          predicate: [{ or: ["action:recall-knowledge", "action:identify-magic"] }]
         }
       ]
     }
@@ -156,7 +149,7 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Clean Geometry",
-    fallbackDescription: "For a moment, every useful angle appears perfectly obvious. Before the end of your next turn, when you make your next spell attack, you may choose any corner of your space when determining cover and line of effect. One allied creature whose space the line passes through does not grant cover for that attack. Solid barriers and other creatures still function normally. The surge then ends.",
+    fallbackDescription: "For a moment, every useful angle appears perfectly obvious. Before the end of your next turn, when you make your next spell attack, choose any corner of your space. For that attack only, the chosen corner replaces your normal origin when determining cover and line of effect. One allied creature whose space the line passes through does not grant cover. Solid barriers and other creatures still function normally. The surge then ends.",
     tags: ["geometry", "cover", "line-of-effect", "ally", "one-use", "manual"]
   }),
   defineSpellAttackSurge({
@@ -165,8 +158,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Widened Aperture",
-    fallbackDescription: "The opening left by the spell remains wide enough to carry you with it. Before the end of your next turn, immediately before making your next spell attack, you may Step as a free action. This Step does not trigger reactions from the original target. The surge ends after the spell attack, whether or not you Step.",
-    tags: ["step", "positioning", "spell-attack", "free-action", "reaction-protection", "manual"]
+    fallbackDescription: "The impact leaves a small aperture hanging beside the target. Before the end of your next turn, when you make your next spell attack against the original target, choose one unoccupied space adjacent to it that is within the spell's range and has line of effect to it. For this attack only, determine range, cover, and line of effect along two segments: from you to the chosen space, then from that space to the target. Solid barriers block either segment, and the target does not move. The surge is consumed only if the aperture makes the attack legal or improves its cover.",
+    tags: ["aperture", "spell-placement", "cover", "line-of-effect", "target-specific", "conditional-consumption", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-014-effortless-transition",
@@ -174,8 +167,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Effortless Transition",
-    fallbackDescription: "The completed pattern releases you into the next motion without resistance. Before the end of your next turn, the first action you use that is not Cast a Spell does not trigger reactions from the original target. An activity containing Cast a Spell does not qualify. The surge is consumed only when it prevents at least one reaction from that target.",
-    tags: ["action-transition", "reaction-protection", "target-specific", "conditional-consumption", "manual"]
+    fallbackDescription: "The completed spell leaves one precise motion behind. Before the end of your next turn, you may Interact with one unattended object of light Bulk or less in the original target's space or an adjacent space as though you were adjacent to that object. You must perceive the object and have line of effect to it. You cannot use this to manipulate a held, worn, locked, or otherwise secured object. The Interact action has the manipulate trait and triggers reactions from creatures near your actual space normally; the original target cannot react merely because it is near the object. The surge then ends.",
+    tags: ["interact", "remote-manipulation", "original-target", "line-of-effect", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-015-trait-in-harmony",
@@ -183,7 +176,7 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Trait in Harmony",
-    fallbackDescription: "One meaningful trait of the successful spell keeps resonating. Choose one of its traits other than attack, concentrate, manipulate, or a tradition trait. Before the end of your next turn, the next spell you cast with that trait gains a +1 circumstance bonus to its spell attack roll or counteract check. A spell without either roll does not consume the surge.",
+    fallbackDescription: "One descriptive trait of the successful spell keeps resonating. Choose one damage, energy, elemental, mental, emotion, sensory, curse, illusion, light, darkness, teleportation, vitality, void, or similarly descriptive trait approved by the GM. You cannot choose attack, cantrip, composition, concentrate, focus, incapacitation, manipulate, ritual, spellshape, summon, a rarity trait, or a tradition trait. Before the end of your next turn, the next spell you cast with the chosen trait gains a +1 circumstance bonus to its spell attack roll or counteract check. A spell without either roll does not consume the surge.",
     tags: ["spell-trait", "counteract", "spell-attack", "circumstance-bonus", "conditional-consumption", "manual"]
   }),
   defineSpellAttackSurge({
@@ -192,14 +185,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Backwash Barrier",
-    fallbackDescription: "Returning magical pressure hardens into a brief barrier around you. For 1 round, you gain a +1 circumstance bonus to AC.",
-    tags: ["defense", "armor-class", "circumstance-bonus", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        { type: "modifier", selector: "ac", value: 1, modifierType: "circumstance", predicate: [] }
-      ]
-    }
+    fallbackDescription: "Returning magical pressure hardens between you and the original target. Until the start of your next turn, the first attack that target makes against you treats your cover as one degree better: none becomes lesser cover, lesser becomes standard, and standard becomes greater. Greater cover cannot improve further. The barrier collapses after that attack roll and is not consumed if the attack ignores cover or your cover would not improve.",
+    tags: ["barrier", "cover", "target-specific", "one-attack", "conditional-consumption", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-017-reactions-drowned-out",
@@ -217,7 +204,6 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     impact: "light",
     fallbackTitle: "Stable Center",
     fallbackDescription: "Your magic settles around you like a perfectly balanced gyroscope. For 1 round, you gain a +1 circumstance bonus to your Fortitude DC and Reflex DC.",
-    weight: 2,
     tags: ["fortitude-dc", "reflex-dc", "forced-movement", "circumstance-bonus", "effect"],
     effect: {
       duration: ONE_ROUND,
@@ -238,14 +224,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Harmonic Resistance",
-    fallbackDescription: "The successful spell tunes your aura against raw magical energy. For 1 round, you gain resistance 3 to energy damage.",
-    tags: ["resistance", "energy", "effect"],
-    effect: {
-      duration: ONE_ROUND,
-      components: [
-        { type: "resistance", resistanceType: "energy", value: 3 }
-      ]
-    }
+    fallbackDescription: "The successful spell tunes your aura to its own damage. Choose one damage type dealt by the triggering spell; for 1 round, you gain resistance 3 to that type. If the spell dealt no damage, you may instead choose a damage type directly represented by one of its traits. If neither option applies, you gain resistance 2 to damage from spells for 1 round. Apply the chosen resistance manually.",
+    tags: ["resistance", "damage-type", "spell-trait", "dynamic-choice", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-020-magic-knows-its-way-back",
@@ -253,17 +233,24 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "serious",
     impact: "moderate",
     fallbackTitle: "Magic Knows Its Way Back",
-    fallbackDescription: "The resonance teaches your defenses the route back to the original target. Before the end of your next turn, you gain a +2 circumstance bonus to the next saving throw you attempt against a spell or magical effect created by that target. The surge is consumed only when that saving throw occurs.",
-    tags: ["saving-throw", "magic", "target-specific", "circumstance-bonus", "conditional-consumption", "manual"]
+    fallbackDescription: "The resonance teaches your defenses the route back to the original target. Before the end of your next turn, you gain a +2 circumstance bonus to the next saving throw you attempt against a spell or magical effect created by that target. If the target instead causes you to attempt a saving throw against a nonmagical effect first, you may apply a +1 circumstance bonus to that save and end the surge. The surge is consumed only when one of these bonuses is used.",
+    tags: ["saving-throw", "magic", "target-specific", "fallback", "circumstance-bonus", "conditional-consumption", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-021-shared-frequency",
     localizationKey: "SharedFrequency",
     tone: "dramatic",
-    impact: "moderate",
+    impact: "strong",
     fallbackTitle: "Shared Frequency",
-    fallbackDescription: "The spell's rhythm leaps to a nearby ally. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, that ally gains a +1 circumstance bonus to its next attack roll against the original target. The surge is consumed only when the ally makes that attack.",
-    tags: ["ally", "attack-roll", "circumstance-bonus", "target-specific", "one-use", "manual"]
+    fallbackDescription: "The target's aura remains tuned to the frequency of hostile spellwork. For 1 round, the target gains weakness 2 to damage from spells.",
+    tags: ["target", "weakness", "damage-from-spells", "shared-resonance", "effect"],
+    effect: {
+      target: "target",
+      duration: ONE_ROUND,
+      components: [
+        { type: "weakness", weaknessType: "damage-from-spells", value: 2 }
+      ]
+    }
   }),
   defineSpellAttackSurge({
     id: "sas-022-follow-the-glow",
@@ -271,8 +258,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Follow the Glow",
-    fallbackDescription: "The residual glow sketches a clean route to the target. Choose one ally within 30 feet who can perceive the original target. Before the end of your next turn, that ally's next attack against the target either ignores the concealed condition or treats the target's cover as one degree lower. The ally chooses when making the attack. The surge is consumed only if it removes a flat check or reduces cover.",
-    tags: ["ally", "cover", "concealed", "flat-check", "target-specific", "conditional-consumption", "manual"]
+    fallbackDescription: "The residual glow pools around the target's least stable defense. Choose one ally within 30 feet who can perceive the original target. The GM tells that ally which of the target's Fortitude, Reflex, or Will modifiers is currently lowest, naming every tied save but not revealing numerical values. This is a snapshot of the target's current defenses and does not update if they later change.",
+    tags: ["ally", "saving-throw", "defense-reading", "magical-glow", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-023-borrowed-insight",
@@ -280,8 +267,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "neutral",
     impact: "moderate",
     fallbackTitle: "Borrowed Insight",
-    fallbackDescription: "The impact writes a brief annotation around the target. Choose one ally within 30 feet who can perceive it. That ally may immediately Recall Knowledge about the original target as a free action and gains a +1 circumstance bonus to the check. Use the ally's own skill modifier and apply the normal adjustment for repeated Recall Knowledge attempts.",
-    tags: ["ally", "recall-knowledge", "free-action", "circumstance-bonus", "manual"]
+    fallbackDescription: "The impact writes one useful annotation around the target. Choose one ally within 30 feet who can perceive the target and hear or otherwise understand you. The GM reveals one useful fact about the original target that a successful Recall Knowledge check could reveal and that neither of you already knows; both of you learn it without a check. The GM chooses the fact. If no useful unrevealed fact remains, the ally instead gains a +2 circumstance bonus to its next Recall Knowledge check about that target before the end of your next turn.",
+    tags: ["ally", "shared-knowledge", "recall-knowledge", "revealed-fact", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-024-arc-between-allies",
@@ -289,8 +276,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "Arc Between Allies",
-    fallbackDescription: "A harmless arc of resonance links you to one ally within 30 feet who can perceive you. Until the start of your next turn, that ally gains a +1 circumstance bonus to saving throws against spells and magical effects created by the original target. If the original target cannot create such an effect during that time, the ally instead gains the bonus to the next saving throw it attempts against any spell before the end of your next turn. The arc then fades.",
-    tags: ["ally", "saving-throw", "magic", "circumstance-bonus", "manual"]
+    fallbackDescription: "A harmless arc links your composure to one ally within 30 feet who can perceive you. Until the start of your next turn, when that ally would gain frightened or stupefied from a spell or magical effect, you may use your reaction to reduce the gained condition value by 1 and gain the same condition at value 1 yourself. You cannot use this reaction if you are immune to that condition or already have it at value 1 or higher. The arc ends after the transfer.",
+    tags: ["ally", "condition-transfer", "frightened", "stupefied", "reaction", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-025-conduit-open",
@@ -298,8 +285,8 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "strong",
     fallbackTitle: "Conduit Open",
-    fallbackDescription: "The resonance turns a willing ally into a temporary magical waypoint. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when you Cast a Spell with a listed range other than touch or self, you may determine that spell's range, area origin, cover, and line of effect from the ally's space. You must have line of effect to the ally, and the ally must have line of effect to every target or space affected. You remain the caster, and reactions triggered by your Cast a Spell action originate from your actual space. The surge is consumed only when it creates a legal spell placement you use.",
-    tags: ["ally", "conduit", "range", "area-origin", "line-of-effect", "conditional-consumption", "manual"]
+    fallbackDescription: "The resonance turns a willing ally into a temporary magical waypoint. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when you Cast a Spell with a listed range other than touch or self, you may determine that spell's range, cover, line of effect, and eligible area origin from the ally's space. You must have line of effect to the ally, and you must perceive every required target or chosen point as the spell normally requires. The ally must have line of effect to every target or space affected. Emanations, self-centered areas, and spells whose text fixes their origin to you are not eligible. A cone or line begins in the ally's space and is oriented in a direction you choose. You remain the caster, and reactions triggered by your Cast a Spell action originate from your actual space. The surge is consumed only when it creates a legal spell placement you use.",
+    tags: ["ally", "conduit", "range", "area-origin", "line-of-effect", "perception", "conditional-consumption", "manual"]
   }),
   defineSpellAttackSurge({
     id: "sas-026-reality-nods-once",
@@ -359,8 +346,14 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "strong",
     fallbackTitle: "Helpful Afterimage",
-    fallbackDescription: "A cooperative afterimage remains in the space from which you made the critical spell attack. Before the end of your next turn, your next spell attack against a creature other than the original target may determine range, cover, and line of effect from the afterimage's space. You must have line of effect to the afterimage, and the afterimage must have line of effect to the new target. You remain the caster, and reactions to Cast a Spell are triggered from your actual space. The surge is consumed only when you use the afterimage to make a legal attack.",
-    tags: ["afterimage", "spell-attack", "range", "cover", "line-of-effect", "different-target", "conditional-consumption", "manual"]
+    fallbackDescription: "A cooperative afterimage folds over your outline and keeps moving a fraction of a second late. For 1 round, you are concealed. This does not make you hidden or undetected, and creatures using precise senses that are not fooled by the afterimage, or effects that ignore concealment, function normally.",
+    tags: ["afterimage", "concealed", "defense", "condition", "effect"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        { type: "condition", slug: "concealed" }
+      ]
+    }
   }),
   defineSpellAttackSurge({
     id: "sas-030-the-weave-takes-interest",
@@ -368,7 +361,7 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
     tone: "dramatic",
     impact: "moderate",
     fallbackTitle: "The Weave Takes Interest",
-    fallbackDescription: "The surrounding magic offers three quiet corrections. Choose one when this card is drawn. Anchor: before the end of your next turn, reduce the first forced movement caused by a spell or magical effect by 10 feet. Trace: until the end of your next turn, you always know the direction to the original target while it is within 120 feet and on the same plane, though not its distance or exact space. Clarify: before the end of your next turn, gain a +2 circumstance bonus to one counteract check or one Recall Knowledge check about a spell or magical effect. The chosen correction is consumed only when used and cannot be changed later.",
-    tags: ["choice", "forced-movement", "direction", "counteract", "recall-knowledge", "conditional-consumption", "manual"]
+    fallbackDescription: "The surrounding magic offers three quiet corrections. Choose one when this card is drawn. Hush: before the end of your next turn, the audible casting manifestations of your next spell cannot be heard more than 30 feet away; this does not remove the auditory trait or suppress sound created by the spell itself. Sheathe: your next spell before the end of your next turn may leave one unattended object of light Bulk or less in its area unaffected; it cannot protect a creature or a held or worn object. Knot: before the end of your next turn, increase the counteract DC by 2 against the original target's first attempt to counteract one spell or magical effect you created. The chosen correction is consumed only when used and cannot be changed later.",
+    tags: ["choice", "audible", "object-protection", "counteract-dc", "conditional-consumption", "manual"]
   })
 ]);

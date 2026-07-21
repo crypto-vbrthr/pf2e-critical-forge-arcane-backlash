@@ -220,6 +220,46 @@
       "WrongSideOfTheWard": {
         "Title": "Auf der falschen Seite des Schutzes",
         "Description": "Der Schutz hat einen kleinen, aber folgenreichen Fehler dabei gemacht, auf welcher Seite du dich befindest. Wähle einen nicht festen Zaubereffekt, Schutz oder eine magische Barriere des ursprünglichen Zaubernden, den du wahrnehmen kannst. Bis zum Ende deines nächsten Zuges gewährt dieser Effekt dem Zaubernden gegen deine Angriffe keine Deckung. Wenn du dich während dieser Zeit erstmals bewegst, darfst du ein von diesem Effekt belegtes Feld für die Bewegung als normales Gelände behandeln, sofern der Effekt Bewegung nicht ausdrücklich blockiert. Andere Auswirkungen des Zaubers gelten weiterhin. Existiert kein passender Effekt, darfst du stattdessen sofort einen Schritt ausführen."
+      },
+      "ProofOfSafety": {
+        "Title": "Beweis der Sicherheit",
+        "Description": "Dein Widerstand offenbart einen wiederholbaren Weg durch den Zauber. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Wenn dieser Verbündete vor Ende deines nächsten Zuges einen Rettungswurf gegen denselben Zauber des ursprünglichen Zaubernden ausführt, darf er zweimal würfeln und das bessere Ergebnis verwenden. Dies ist ein Glückseffekt und kann bei diesem Wurf nicht mit einem anderen Glückseffekt kombiniert werden. Die Umkehrung wird nur verbraucht, wenn der Verbündete sie verwendet."
+      },
+      "HoldTheLine": {
+        "Title": "Die Linie halten",
+        "Description": "Deine Weigerung hinterlässt genug Gewissheit, um jemanden neben dir zu schützen. Wirkt der ursprüngliche Zaubernde vor Ende deines nächsten Zuges einen Zauber, der einen an dich angrenzenden Verbündeten als Ziel hat oder einschließt, darfst du deine Reaktion verwenden, bevor ein Angriffswurf oder Rettungswurf ausgeführt wird. Dieser Verbündete erhält einen +1-Umstandsbonus auf seine RK oder auf einen Rettungswurf gegen den Zauber. Nach Abwicklung des Zaubers darf entweder der Verbündete oder du als freie Aktion einen Schritt ausführen, aber nicht beide. Danach endet die Umkehrung."
+      },
+      "SharedDefiance": {
+        "Title": "Geteilter Widerstand",
+        "Description": "Der Bruch im Zauber springt von deinem Geist auf einen anderen über. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann und von einem anhaltenden mentalen Zauber oder Gefühlseffekt des ursprünglichen Zaubernden betroffen ist, der einen Rettungswurf erlaubt hat. Dieser Verbündete darf sofort einen neuen Rettungswurf gegen den Effekt mit dessen ursprünglichem SG ausführen. Bei einem Erfolg wird der Effekt bis zum Beginn des nächsten Zuges des Verbündeten unterdrückt. Bei einem kritischen Erfolg gilt das normale Ergebnis des Zaubers für einen kritischen Erfolg, sofern es günstiger ist. Gibt es keinen passenden Effekt, darf der Verbündete stattdessen Verängstigt um 1 reduzieren."
+      },
+      "OpeningInThePattern": {
+        "Title": "Lücke im Muster",
+        "Description": "Der gescheiterte Zauber hinterlässt eine saubere Lücke in der Verteidigung des Zaubernden. Wähle einen Verbündeten innerhalb von 9 Metern, der dich wahrnehmen kann. Beginnt dieser Verbündete vor Ende deines nächsten Zuges eine Aktion, die den ursprünglichen Zaubernden oder einen seiner Zaubereffekte zum Ziel hat, darf er die Lücke nutzen. Der ursprüngliche Zaubernde kann bis zum Abschluss dieser Aktion keine Reaktionen verwenden, die durch diese Aktion ausgelöst werden. Danach ist die Umkehrung verbraucht."
+      },
+      "YourTurn": {
+        "Title": "Du bist dran",
+        "Description": "Der Zusammenbruch des Zaubers gibt jemand anderem genau genug Zeit zum Handeln. Wähle einen Verbündeten innerhalb von 9 Metern, der dich sehen oder hören kann. Dieser Verbündete darf seine Reaktion verwenden, um sofort zu Suchen, Wissen über den auslösenden Zauber oder den ursprünglichen Zaubernden abzurufen oder mit Interagieren einen Gegenstand zu ziehen oder wegzustecken. Für jeden Wurf gilt der normale SG."
+      },
+      "TheSpellBlinksFirst": {
+        "Title": "Der Zauber blinzelt zuerst",
+        "Description": "Die Magie zögert, als sie sich dir erneut stellen soll. Wirkt der ursprüngliche Zaubernde vor Ende deines nächsten Zuges vom selben Feld aus einen Zauber und wirst du als Ziel gewählt oder in seinen Bereich eingeschlossen, darfst du deine Reaktion verwenden, nachdem Ziele oder Bereich festgelegt wurden, aber bevor ein Angriffs- oder Rettungswurf erfolgt. Führe einen Schritt aus. Befindest du dich danach außerhalb von Reichweite, Wirkungslinie oder Bereich des Zaubers, betrifft der Zauber dich nicht und der Zaubernde kann diesen Teil des Zaubers nicht auf ein anderes Ziel oder einen anderen Bereich umlenken. Danach endet die Umkehrung."
+      },
+      "RefusedNarrative": {
+        "Title": "Abgelehnte Erzählung",
+        "Description": "Die Wirklichkeit lehnt das beabsichtigte Drama des Zaubernden ab und schickt es als auffällige Karikatur zurück. Bis zum Beginn deines nächsten Zuges kann der ursprüngliche Zaubernde dich weder Täuschen noch gegen dich eine Ablenkung erzeugen. Außerdem erhältst du einen +2-Umstandsbonus auf Wahrnehmungswürfe und deinen Wahrnehmungs-SG gegen Täuschungsaktionen dieses Zaubernden. Kann beim Ziehen der Karte keiner dieser Vorteile greifen, darfst du stattdessen sofort Motiv erkennen gegen den Zaubernden einsetzen."
+      },
+      "BorrowedEcho": {
+        "Title": "Geborgtes Echo",
+        "Description": "Ein harmloser Rest des Zaubers bleibt in deinem Griff. Wähle einen Vorteil, der zur sichtbaren, hörbaren oder räumlichen Erscheinung des Zaubers passt: Führe sofort einen Schritt aus; erhalte bis zum Beginn deines nächsten Zuges schwache Deckung gegen den ursprünglichen Zaubernden; oder ignoriere einen Flachwurf durch Verbergung oder den Zustand Versteckt, wenn du den ursprünglichen Zaubernden vor Ende deines nächsten Zuges das nächste Mal zum Ziel nimmst. Passen mehrere Möglichkeiten, entscheidest du. Das Echo vergeht, nachdem es seinen Vorteil gewährt hat."
+      },
+      "UnimpressedByTheCosmos": {
+        "Title": "Vom Kosmos unbeeindruckt",
+        "Description": "Du betrachtest die gescheiterte Magie mit einem Ausdruck, der gewöhnlich enttäuschenden Straßenaufführungen vorbehalten ist. Du darfst sofort als freie Aktion mit einem +1-Umstandsbonus Demoralisieren gegen den ursprünglichen Zaubernden versuchen. Es gelten die normalen Regeln für Reichweite, Wahrnehmung, Sprache und vorübergehende Immunität. Kannst du den Wurf nicht versuchen, reduziere stattdessen deinen Wert für Verängstigt um 1."
+      },
+      "ReturnToSenderMostly": {
+        "Title": "Fast zurück an den Absender",
+        "Description": "Der Zauber kehrt nicht zurück, wohl aber ein peinlicher Teil seiner Inszenierung. Wenn der ursprüngliche Zaubernde vor Ende deines nächsten Zuges erstmals Verstecken, Schleichen, Ablenkung erzeugen oder Täuschen versucht, darfst du deine Reaktion verwenden, um ihn den auslösenden Wurf zweimal ausführen und das schlechtere Ergebnis verwenden zu lassen. Dies ist ein Pecheffekt und kann bei diesem Wurf nicht mit einem anderen Pecheffekt kombiniert werden. Das sichtbare oder hörbare Zeichen ist harmlos und vergeht nach der Reaktion oder wenn die Umkehrung abläuft."
       }
     },
     "Effects": {},

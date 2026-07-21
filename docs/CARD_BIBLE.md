@@ -111,19 +111,34 @@ The revised pack no longer duplicates the later-spell-defense, relocate-for-a-mo
 | DR-019 | Reclaim the Ground | Fortitude | Moderate | Manual | One spell-created square loses terrain, entry-trigger, cover, and concealment effects for the defender, with a Step fallback |
 | DR-020 | Wrong Side of the Ward | Reflex | Moderate | Manual | A non-solid ward stops granting the caster cover and can be crossed as normal terrain for movement |
 
+## Defiant Reversals - Block 3
+
+| ID | Card | Save Filter | Impact | Automation | Core Idea |
+|---|---|---|---|---|---|
+| DR-021 | Proof of Safety | Any | Moderate | Manual | One ally gains a fortune effect against the same spell from the original caster |
+| DR-022 | Hold the Line | Fortitude | Moderate | Manual | Reactively protect an adjacent ally from a spell and let one defender Step afterward |
+| DR-023 | Shared Defiance | Will | Strong | Manual | An ally retries an ongoing mental or emotion spell save, with frightened reduction as fallback |
+| DR-024 | Opening in the Pattern | Any | Moderate | Manual | One allied action against the caster or a spell effect cannot trigger the caster's reactions |
+| DR-025 | Your Turn | Any | Light | Manual | An ally spends a reaction to Seek, Recall Knowledge, or draw or stow an item |
+| DR-026 | The Spell Blinks First | Reflex | Strong | Manual | Reactively Step out of a repeated spell cast from the same space |
+| DR-027 | Refused Narrative | Will | Light | Manual | The caster's returned dramatic flourish blocks Feint and Create a Diversion against the defender |
+| DR-028 | Borrowed Echo | Any | Moderate | Manual | Convert a harmless spell fragment into movement, cover, or relief from one concealment flat check |
+| DR-029 | Unimpressed by the Cosmos | Any | Light | Manual | Immediately Demoralize the caster with a small bonus, or reduce frightened |
+| DR-030 | Return to Sender, Mostly | Any | Moderate | Manual | Reactively impose misfortune on the caster's first stealth or deception maneuver |
+
 ### Current Defiant Reversals Distribution
 
 | Impact | Cards |
 |---|---:|
-| Light | 7 |
-| Moderate | 11 |
-| Strong | 2 |
+| Light | 10 |
+| Moderate | 16 |
+| Strong | 4 |
 
 | Save Eligibility | Eligible Cards |
 |---|---:|
-| Reflex | 13 |
-| Fortitude | 12 |
-| Will | 13 |
+| Reflex | 20 |
+| Fortitude | 19 |
+| Will | 21 |
 
-All 20 cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, battlefield geometry, or conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack.
+All 30 cards are manual because they depend on the original caster, immediate movement, repeated spell identity, ongoing durations, allied choices, battlefield geometry, fortune or misfortune effects, and conditional consumption. Every card requires `attackTraits: ["spell"]`, preventing critical saves against nonmagical effects from entering this pack. The complete draft is ready for its full mechanical review.
 

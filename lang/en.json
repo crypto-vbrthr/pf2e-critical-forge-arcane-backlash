@@ -220,6 +220,46 @@
       "WrongSideOfTheWard": {
         "Title": "Wrong Side of the Ward",
         "Description": "The ward has made a small but consequential error about which side you are on. Choose one non-solid spell effect, ward, or magical barrier created by the original caster that you can perceive. Until the end of your next turn, it does not provide cover to the caster against your attacks. The first time you move during that time, you may treat one square occupied by that effect as normal terrain for movement if the effect does not explicitly block movement. Other effects of the spell still apply. If no qualifying effect exists, you may immediately Step instead."
+      },
+      "ProofOfSafety": {
+        "Title": "Proof of Safety",
+        "Description": "Your resistance reveals a repeatable path through the spell. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when that ally attempts a saving throw against the same spell cast by the original caster, they may roll twice and use the better result. This is a fortune effect and cannot be combined with another fortune effect on the roll. The reversal is consumed only when the ally uses it."
+      },
+      "HoldTheLine": {
+        "Title": "Hold the Line",
+        "Description": "Your refusal leaves enough certainty to shelter someone beside you. Before the end of your next turn, when the original caster casts a spell that targets or includes one ally adjacent to you, you may use your reaction before any attack roll or saving throw is made. That ally gains a +1 circumstance bonus to AC or to one saving throw against the spell. After the spell resolves, either you or that ally may Step as a free action, but not both. The reversal then ends."
+      },
+      "SharedDefiance": {
+        "Title": "Shared Defiance",
+        "Description": "The break in the spell spreads from your mind to another. Choose one ally within 30 feet who can perceive you and is affected by an ongoing mental or emotion spell from the original caster that allowed a saving throw. That ally may immediately attempt a new saving throw against the effect at its original DC. On a success, the effect is suppressed until the start of the ally's next turn. On a critical success, apply the spell's normal critical-success result if it is more favorable. If no effect qualifies, the ally may instead reduce frightened by 1."
+      },
+      "OpeningInThePattern": {
+        "Title": "Opening in the Pattern",
+        "Description": "The failed spell leaves one clean gap in the caster's defenses. Choose one ally within 30 feet who can perceive you. Before the end of your next turn, when that ally begins an action that targets the original caster or one of the caster's spell effects, the ally may declare the opening. The original caster cannot use reactions triggered by that action until the action has resolved. The reversal is then consumed."
+      },
+      "YourTurn": {
+        "Title": "Your Turn",
+        "Description": "The spell's collapse gives someone else exactly enough time to act. Choose one ally within 30 feet who can see or hear you. That ally may use their reaction to immediately Seek, Recall Knowledge about the triggering spell or original caster, or Interact to draw or stow one item. Any check uses its normal DC."
+      },
+      "TheSpellBlinksFirst": {
+        "Title": "The Spell Blinks First",
+        "Description": "The magic hesitates when it tries to face you again. Before the end of your next turn, if the original caster casts a spell from the same space and you are chosen as a target or included in its area, you may use your reaction after its targets or area are chosen but before any attack roll or saving throw. Step. If that Step places you outside the spell's range, line of effect, or area, the spell does not affect you and the caster cannot redirect that part of the spell. The reversal then ends."
+      },
+      "RefusedNarrative": {
+        "Title": "Refused Narrative",
+        "Description": "Reality rejects the caster's intended drama and returns it as a conspicuous caricature. Until the start of your next turn, the original caster cannot Feint or Create a Diversion against you, and you gain a +2 circumstance bonus to Perception checks and Perception DC against that caster's Deception actions. If none of those benefits could apply when the card is drawn, you may immediately Sense Motive against the caster instead."
+      },
+      "BorrowedEcho": {
+        "Title": "Borrowed Echo",
+        "Description": "A harmless fragment of the spell remains in your grasp. Choose one benefit that fits the spell's visible, audible, or spatial manifestation: immediately Step; gain lesser cover against the original caster until the start of your next turn; or ignore one flat check caused by concealment or the hidden condition when you next target the original caster before the end of your next turn. If more than one choice fits, you choose. The echo fades after granting its benefit."
+      },
+      "UnimpressedByTheCosmos": {
+        "Title": "Unimpressed by the Cosmos",
+        "Description": "You regard the failed magic with an expression usually reserved for disappointing street performances. You may immediately attempt to Demoralize the original caster as a free action with a +1 circumstance bonus. Apply the normal range, perception, language, and temporary-immunity rules. If you cannot attempt the check, reduce your frightened value by 1 instead."
+      },
+      "ReturnToSenderMostly": {
+        "Title": "Return to Sender, Mostly",
+        "Description": "The spell does not return, but one embarrassing piece of its presentation does. Until the end of your next turn, the first time the original caster attempts to Hide, Sneak, Create a Diversion, or Feint, you may use your reaction to force the caster to roll the triggering check twice and use the worse result. This is a misfortune effect and cannot combine with another misfortune effect on that check. The visible or audible mark is harmless and fades after the reaction or when the reversal expires."
       }
     },
     "Effects": {},

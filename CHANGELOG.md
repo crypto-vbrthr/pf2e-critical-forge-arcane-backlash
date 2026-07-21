@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.2
+
+- Added DR-021 through DR-030 to **Defiant Reversals**.
+- Completed the first 30-card draft of the pack.
+- Added shared fortune against repeated spells, adjacent-ally protection, renewed resistance to ongoing mental magic, reaction suppression, immediate allied utility actions, reactive escape from repeated casting positions, returned dramatic flourishes, borrowed spell echoes, defiant Demoralize attempts, and misfortune against the caster's stealth or deception.
+- Added two new strong-impact reversals, **Shared Defiance** and **The Spell Blinks First**.
+- Kept all new cards manual because they depend on the original caster, allied choices, reactions, repeated spell identity, fortune and misfortune effects, or conditional consumption.
+- Updated English and German localization, README, pack documentation, Card Bible, and tests.
+- Marked Defiant Reversals as ready for its full mechanical review.
+
 ## 0.2.1
 
 - Added DR-011 through DR-020 to **Defiant Reversals**.

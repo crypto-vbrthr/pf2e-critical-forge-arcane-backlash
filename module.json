@@ -45,5 +45,8 @@
     }
   ],
   "readme": "README.md",
-  "license": "LICENSE"
+  "license": "LICENSE",
+  "url": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash",
+  "manifest": "https://raw.githubusercontent.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash/main/module.json",
+  "download": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash/releases/download/0.4.3/pf2e-critical-forge-arcane-backlash.zip"
 }

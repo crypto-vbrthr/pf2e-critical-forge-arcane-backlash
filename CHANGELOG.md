@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.4.2
+
+- Added OR-021 through OR-030 to **Overwhelming Resonance**.
+- Completed the first 30-card draft and expanded Arcane Backlash to 120 cards across four optional packs.
+- Added two direct Effect Engine cards for reduced healing received from spells and reduced damage rolls.
+- Added spell-torn line of effect, distorted willing teleportation, warning choruses from magic items, transparent creature cover, elastic distance, remembered footprints, social misfortune, and advance declaration of magical actions.
+- Overwhelming Resonance now contains 12 Effect Engine cards and 18 manual cards.
+- Updated English and German localization, README, pack documentation, Card Bible, changelog, and validation tests.
+- Marked Overwhelming Resonance as ready for its full mechanical review.
+
+## 0.4.1
+
+- Added OR-011 through OR-020 to **Overwhelming Resonance**.
+- Expanded the pack to 20 cards and Arcane Backlash to 110 cards across four optional packs.
+- Added four directly applicable Effect Engine cards for Perception, social skills, projected spell and class defenses, and attack rolls.
+- Added dynamic weakness tied to the triggering spell, caster-specific spell-stamps, concentrate-triggered echoes, a target-only aftershock corridor, temporary resistance delamination, and an aura that can be settled before it impedes movement.
+- Kept six new cards manual where they depend on the original caster, dynamic damage types, flat-check reduction, reactions, battlefield geometry, resistance values, or first-action choices.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+
 ## 0.4.0
 
 - Added the optional **Overwhelming Resonance** pack.

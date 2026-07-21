@@ -223,17 +223,52 @@ All thirty cards use `spellCriticalHit` and remain tradition-neutral. The review
 | OR-009 | Ground It or Glow | Any | Moderate | Manual | Use the first action to ground the resonance or become unable to Hide with a Stealth penalty |
 | OR-010 | Wardline Fracture | Any | Moderate | Manual | Reduce the next status or circumstance defense bonus against a spell by 1 |
 
+## Overwhelming Resonance - Block 2
+
+**Status:** 20/30 cards
+
+| ID | Card | Save Filter | Impact | Automation | Core Idea |
+|---|---|---|---|---|---|
+| OR-011 | Sensory Palimpsest | Any | Moderate | Effect on saving creature | -1 status penalty to Perception and Perception DC for 1 round |
+| OR-012 | Voice Through Glass | Will | Light | Effect on saving creature | -1 circumstance penalty to Deception, Diplomacy, Intimidation, and Performance for 1 round |
+| OR-013 | Projected Instability | Any | Moderate | Effect on saving creature | -1 circumstance penalty to spell attacks, spell DC, and class DC for 1 round |
+| OR-014 | Resonant Weakpoint | Any | Strong | Manual | Dynamic weakness 2 tied to the triggering spell, with a spell-save fallback |
+| OR-015 | Spell-Stamped | Any | Moderate | Manual | The original caster tracks the target and reduces one concealment or hidden flat check |
+| OR-016 | Concentration Echo | Will | Moderate | Manual | The first concentrate action grants the original caster a Step-or-Seek reaction |
+| OR-017 | Aftershock Line | Reflex | Moderate | Manual | A target-only corridor of difficult terrain extends from the target |
+| OR-018 | Static in the Aim | Any | Moderate | Effect on saving creature | -1 status penalty to attack rolls for 1 round |
+| OR-019 | Resistance Delamination | Fortitude | Strong | Manual | Reduce the next resistance against spell damage, with a weakness fallback |
+| OR-020 | Aura Underfoot | Fortitude | Light | Manual | Spend the first action to settle the aura or pay extra movement for the first 10 feet |
+
+## Overwhelming Resonance - Block 3
+
+**Status:** 30/30 cards - ready for mechanical review
+
+| ID | Card | Save Filter | Impact | Automation | Core Idea |
+|---|---|---|---|---|---|
+| OR-021 | Healing Pattern Rejected | Fortitude | Moderate | Effect on saving creature | Spell healing restores 2 fewer Hit Points for 1 round |
+| OR-022 | Power Bleeds Sideways | Any | Moderate | Effect on saving creature | -1 status penalty to damage rolls for 1 round |
+| OR-023 | Spell-Torn Shadow | Any | Moderate | Manual | The original caster may trace one spell's line of effect through the target's spaces |
+| OR-024 | Reality Rejects the Shortcut | Reflex | Strong | Manual | Shift the target's first willing teleport destination by 5 feet |
+| OR-025 | Item Chorus | Any | Light | Manual | The first magic-item activation warns the original caster and offers Step or Take Cover |
+| OR-026 | Transparent Resonance | Any | Light | Manual | The target temporarily stops granting lesser cover to other creatures |
+| OR-027 | Elastic Distance | Reflex | Moderate | Manual | The first movement away from the original caster costs 5 additional feet |
+| OR-028 | Echo Claims the Footprint | Fortitude | Moderate | Manual | The first abandoned space temporarily refuses the target's willing return |
+| OR-029 | The Weave Misquotes You | Will | Strong | Manual | The first social check is a misfortune roll |
+| OR-030 | Reality Keeps the Receipt | Any | Moderate | Manual | The next spell or magic-item activation must be declared before a Step-or-Cover reaction |
+
 ### Current Overwhelming Resonance Distribution
 
 | Impact | Cards |
 |---|---:|
-| Moderate | 8 |
-| Strong | 2 |
+| Light | 4 |
+| Moderate | 20 |
+| Strong | 6 |
 
 | Resolution | Cards |
 |---|---:|
-| Direct Effect Engine effect | 6 |
-| Manual tactical consequence | 4 |
+| Direct Effect Engine effect | 12 |
+| Manual tactical consequence | 18 |
 
-All ten cards require `attackTraits: ["spell"]`, so critical failures against nonmagical hazards do not enter the pack. Direct effects target the saving creature (`source`). The opening block deliberately avoids the generic Core save-failure conditions and instead focuses on spell-specific defenses, movement, defensive DCs, reaction timing, and unstable magical residue.
+All thirty cards require `attackTraits: ["spell"]`, so critical failures against nonmagical hazards do not enter the pack. Direct effects target the saving creature (`source`). The complete draft spans spell defenses, movement, perception, damage, magical healing, social resonance, projected magic, reaction timing, teleportation, line of effect, creature cover, item activation, misfortune, and battlefield geometry without relying on generic Core save-failure conditions.
 

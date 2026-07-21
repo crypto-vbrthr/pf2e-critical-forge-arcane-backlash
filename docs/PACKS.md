@@ -98,7 +98,7 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Overwhelming Resonance
 
-**Status:** 10/30 cards
+**Status:** 30/30 cards - ready for mechanical review
 
 **Trigger:** Critical failure on a saving throw against a spell
 
@@ -111,14 +111,19 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 **Current consequences:**
 
 - penalties to saving throws against spells and AC against spell attacks
-- a short penalty to all Speeds
+- short penalties to Speeds, attack rolls, Perception, social skills, spell attacks, spell DC, and class DC
 - Fortitude-, Reflex-, and Will-specific effects on skills and defensive DCs
 - magical static that can delay a reaction
 - increased forced movement or shifted magical relocation
-- a choice between grounding visible resonance and remaining unable to Hide
+- visible resonance, spell-stamps, and concentration echoes
+- dynamic weakness tied to the triggering spell and temporary resistance delamination
 - a one-use fracture in a later status or circumstance defense against a spell
+- a target-only aftershock corridor and a choice between settling or dragging a pooled aura
+- reduced magical healing and weakened damage output
+- line-of-effect gaps, transparent creature cover, distorted teleportation, and elastic distance
+- magic-item warnings, misquoted social actions, remembered footprints, and predeclared magical actions
 
-**Automation:** Six of the first ten cards create direct Effect Engine effects. Four remain manual because they depend on reaction timing, the source of forced movement, legal teleport destinations, a first-action choice, or conditional consumption.
+**Automation:** Twelve of the thirty cards create direct Effect Engine effects. Eighteen remain manual because they depend on reaction timing, the original caster, dynamic damage types, legal relocation, battlefield geometry, first-action choices, resistance values, line of effect, creature cover, item activation, misfortune, declarations, or conditional consumption.
 
 **Not included:**
 

@@ -26,8 +26,8 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.4.0");
-assert.equal(packageJson.version, "0.4.0");
+assert.equal(manifest.version, "0.4.2");
+assert.equal(packageJson.version, "0.4.2");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) =>
@@ -48,11 +48,11 @@ assert.deepEqual(disabled.map((pack) => pack.id), [
 ]);
 assert.ok(disabled.every((pack) => pack.enabled === false));
 assert.ok(enabled.every((pack) => pack.enabled === true));
-assert.ok(disabled.every((pack) => pack.version === "0.4.0"));
+assert.ok(disabled.every((pack) => pack.version === "0.4.2"));
 assert.equal(disabled[0].cards.length, 30);
 assert.equal(disabled[1].cards.length, 30);
 assert.equal(disabled[2].cards.length, 30);
-assert.equal(disabled[3].cards.length, 10);
+assert.equal(disabled[3].cards.length, 30);
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
 assert.equal(disabled[1].metadata.scope, "spell-saves-all-traditions");
 assert.equal(disabled[2].metadata.scope, "spell-attacks-all-traditions");
@@ -78,7 +78,7 @@ for (const pack of disabled) {
     }
   }
 }
-assert.equal(allIds.size, 100);
+assert.equal(allIds.size, 120);
 
 const miscast = disabled[0].cards;
 assert.ok(miscast.every((card) => card.effect === null));
@@ -385,22 +385,49 @@ assert.deepEqual(overwhelmingSlugs, [
   "or-007-static-between-moments",
   "or-008-unmoored-from-place",
   "or-009-ground-it-or-glow",
-  "or-010-wardline-fracture"
+  "or-010-wardline-fracture",
+  "or-011-sensory-palimpsest",
+  "or-012-voice-through-glass",
+  "or-013-projected-instability",
+  "or-014-resonant-weakpoint",
+  "or-015-spell-stamped",
+  "or-016-concentration-echo",
+  "or-017-aftershock-line",
+  "or-018-static-in-the-aim",
+  "or-019-resistance-delamination",
+  "or-020-aura-underfoot",
+  "or-021-healing-pattern-rejected",
+  "or-022-power-bleeds-sideways",
+  "or-023-spell-torn-shadow",
+  "or-024-reality-rejects-the-shortcut",
+  "or-025-item-chorus",
+  "or-026-transparent-resonance",
+  "or-027-elastic-distance",
+  "or-028-echo-claims-the-footprint",
+  "or-029-the-weave-misquotes-you",
+  "or-030-reality-keeps-the-receipt"
 ]);
 
 const overwhelmingBySlug = new Map(overwhelming.map((card) => [card.id.split(".").at(-1), card]));
 const automatedOverwhelming = overwhelming.filter((card) => card.effect !== null);
 const manualOverwhelming = overwhelming.filter((card) => card.effect === null);
-assert.equal(automatedOverwhelming.length, 6);
-assert.equal(manualOverwhelming.length, 4);
+assert.equal(automatedOverwhelming.length, 12);
+assert.equal(manualOverwhelming.length, 18);
 assert.ok(automatedOverwhelming.every((card) => card.tags.includes("effect")));
 assert.ok(manualOverwhelming.every((card) => card.tags.includes("manual")));
-assert.equal(overwhelming.filter((card) => card.impact === "moderate").length, 8);
-assert.equal(overwhelming.filter((card) => card.impact === "strong").length, 2);
+assert.equal(overwhelming.filter((card) => card.impact === "light").length, 4);
+assert.equal(overwhelming.filter((card) => card.impact === "moderate").length, 20);
+assert.equal(overwhelming.filter((card) => card.impact === "strong").length, 6);
 assert.deepEqual(overwhelmingBySlug.get("or-004-somatic-desynchronization").filters.saveTypes, ["fortitude"]);
 assert.deepEqual(overwhelmingBySlug.get("or-005-geometry-out-of-step").filters.saveTypes, ["reflex"]);
 assert.deepEqual(overwhelmingBySlug.get("or-006-thoughts-leak-sideways").filters.saveTypes, ["will"]);
 assert.deepEqual(overwhelmingBySlug.get("or-006-thoughts-leak-sideways").filters.excludedSourceTraits, ["mindless"]);
+assert.deepEqual(overwhelmingBySlug.get("or-012-voice-through-glass").filters.saveTypes, ["will"]);
+assert.deepEqual(overwhelmingBySlug.get("or-012-voice-through-glass").filters.excludedSourceTraits, ["mindless"]);
+assert.deepEqual(overwhelmingBySlug.get("or-016-concentration-echo").filters.saveTypes, ["will"]);
+assert.deepEqual(overwhelmingBySlug.get("or-017-aftershock-line").filters.saveTypes, ["reflex"]);
+assert.deepEqual(overwhelmingBySlug.get("or-019-resistance-delamination").filters.saveTypes, ["fortitude"]);
+assert.deepEqual(overwhelmingBySlug.get("or-020-aura-underfoot").filters.saveTypes, ["fortitude"]);
 
 for (const card of automatedOverwhelming) {
   assert.equal(card.effect.target, "source");
@@ -452,4 +479,63 @@ assert.ok(overwhelmingBySlug.get("or-008-unmoored-from-place").tags.includes("te
 assert.ok(overwhelmingBySlug.get("or-009-ground-it-or-glow").tags.includes("choice"));
 assert.ok(overwhelmingBySlug.get("or-010-wardline-fracture").tags.includes("conditional-consumption"));
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.4.0 validation passed.");
+assert.deepEqual(
+  overwhelmingBySlug.get("or-011-sensory-palimpsest").effect.definition.components[0],
+  {
+    type: "modifier",
+    selector: ["perception", "perception-dc"],
+    value: -1,
+    modifierType: "status",
+    predicate: []
+  }
+);
+assert.deepEqual(
+  overwhelmingBySlug.get("or-012-voice-through-glass").effect.definition.components[0].selector,
+  ["deception", "diplomacy", "intimidation", "performance"]
+);
+assert.deepEqual(
+  overwhelmingBySlug.get("or-013-projected-instability").effect.definition.components[0].selector,
+  ["spell-attack-roll", "spell-dc", "class"]
+);
+assert.deepEqual(
+  overwhelmingBySlug.get("or-018-static-in-the-aim").effect.definition.components[0],
+  {
+    type: "modifier",
+    selector: "attack",
+    value: -1,
+    modifierType: "status",
+    predicate: []
+  }
+);
+assert.ok(overwhelmingBySlug.get("or-014-resonant-weakpoint").tags.includes("dynamic-choice"));
+assert.ok(overwhelmingBySlug.get("or-015-spell-stamped").tags.includes("conditional-consumption"));
+assert.ok(overwhelmingBySlug.get("or-016-concentration-echo").tags.includes("concentrate"));
+assert.ok(overwhelmingBySlug.get("or-017-aftershock-line").tags.includes("corridor"));
+assert.ok(overwhelmingBySlug.get("or-019-resistance-delamination").tags.includes("resistance"));
+assert.equal(overwhelmingBySlug.get("or-020-aura-underfoot").weight, 2);
+assert.deepEqual(overwhelmingBySlug.get("or-021-healing-pattern-rejected").filters.saveTypes, ["fortitude"]);
+assert.deepEqual(
+  overwhelmingBySlug.get("or-021-healing-pattern-rejected").effect.definition.components[0],
+  {
+    type: "modifier",
+    selector: "healing-received",
+    value: -2,
+    modifierType: "status",
+    predicate: ["item:trait:spell"]
+  }
+);
+assert.deepEqual(
+  overwhelmingBySlug.get("or-022-power-bleeds-sideways").effect.definition.components[0],
+  { type: "modifier", selector: "damage", value: -1, modifierType: "status", predicate: [] }
+);
+assert.ok(overwhelmingBySlug.get("or-023-spell-torn-shadow").tags.includes("line-of-effect"));
+assert.deepEqual(overwhelmingBySlug.get("or-024-reality-rejects-the-shortcut").filters.saveTypes, ["reflex"]);
+assert.ok(overwhelmingBySlug.get("or-025-item-chorus").tags.includes("magic-item"));
+assert.ok(overwhelmingBySlug.get("or-026-transparent-resonance").tags.includes("lesser-cover"));
+assert.deepEqual(overwhelmingBySlug.get("or-027-elastic-distance").filters.saveTypes, ["reflex"]);
+assert.deepEqual(overwhelmingBySlug.get("or-028-echo-claims-the-footprint").filters.saveTypes, ["fortitude"]);
+assert.deepEqual(overwhelmingBySlug.get("or-029-the-weave-misquotes-you").filters.saveTypes, ["will"]);
+assert.deepEqual(overwhelmingBySlug.get("or-029-the-weave-misquotes-you").filters.excludedSourceTraits, ["mindless"]);
+assert.ok(overwhelmingBySlug.get("or-030-reality-keeps-the-receipt").tags.includes("declaration"));
+
+console.log("PF2E Critical Forge: Arcane Backlash 0.4.2 validation passed.");

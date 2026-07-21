@@ -436,6 +436,86 @@
       "WardlineFracture": {
         "Title": "Wardline Fracture",
         "Description": "The critical failure leaves a visible seam in the target's next magical defense. Before the end of the target's next turn, the next time it would gain a status or circumstance bonus to AC or a saving throw against a spell, reduce that single bonus by 1, to a minimum of 0. The resonance is consumed only when it reduces a bonus."
+      },
+      "SensoryPalimpsest": {
+        "Title": "Sensory Palimpsest",
+        "Description": "The spell writes itself over the target's senses. For 1 round, the target takes a -1 status penalty to Perception checks and Perception DC."
+      },
+      "VoiceThroughGlass": {
+        "Title": "Voice Through Glass",
+        "Description": "Every word reaches the world through a layer of ringing magical glass. For 1 round, the target takes a -1 circumstance penalty to Deception, Diplomacy, Intimidation, and Performance checks."
+      },
+      "ProjectedInstability": {
+        "Title": "Projected Instability",
+        "Description": "The target's projected magic and practiced techniques wobble around an invisible fault line. For 1 round, it takes a -1 circumstance penalty to spell attack rolls, spell DC, and class DC."
+      },
+      "ResonantWeakpoint": {
+        "Title": "Resonant Weakpoint",
+        "Description": "The spell leaves one part of the target ringing at exactly the wrong frequency. Choose one damage type dealt by the triggering spell. Until the start of the target's next turn, it gains weakness 2 to that damage type. If the spell dealt no damage, choose a damage type directly represented by one of its traits. If neither option applies, the target instead takes a -1 status penalty to its next saving throw against a spell from the original caster before the end of its next turn."
+      },
+      "SpellStamped": {
+        "Title": "Spell-Stamped",
+        "Description": "The target carries a private mark that points back to the original caster. Until the end of the target's next turn, that caster always knows which space the target occupies while both remain on the same plane. The caster's next spell attack against the target ignores concealed; if the target is hidden but not undetected, use a DC 5 flat check instead of DC 11. The resonance ends after it reduces or removes a flat check, or when the duration expires."
+      },
+      "ConcentrationEcho": {
+        "Title": "Concentration Echo",
+        "Description": "The spell leaves an echo waiting for the target's thoughts to become deliberate. Before the end of the target's next turn, when it begins its first action with the concentrate trait, the original caster may use a reaction to Step or Seek. If the caster Seeks, the searched area must include the target's space or last known space. The triggering action then resolves normally, and the resonance ends whether or not the reaction is used."
+      },
+      "AftershockLine": {
+        "Title": "Aftershock Line",
+        "Description": "The spell leaves a narrow fault of unstable magic running away from the target. The original caster chooses a straight, 5-foot-wide corridor beginning in the target's space and extending up to 30 feet in a direction the caster can perceive. Until the start of the target's next turn, only the target treats spaces in that corridor as difficult terrain. Other creatures and all other terrain effects are unchanged."
+      },
+      "StaticInTheAim": {
+        "Title": "Static in the Aim",
+        "Description": "The target's timing is full of magical interference. For 1 round, it takes a -1 status penalty to attack rolls."
+      },
+      "ResistanceDelamination": {
+        "Title": "Resistance Delamination",
+        "Description": "The spell peels one layer away from the target's ability to absorb magic. Before the end of the target's next turn, the next time it would apply resistance to damage from a spell, reduce that resistance by 3 for that damage instance, to a minimum of 0. If the target has no resistance that could apply when this card is drawn, it instead gains weakness 1 to damage from spells until the start of its next turn. Apply either result manually."
+      },
+      "AuraUnderfoot": {
+        "Title": "Aura Underfoot",
+        "Description": "The target's aura has pooled around its feet and is pretending this was always the plan. At the start of its next turn, the target may use its first action to Settle the Aura, an action with the concentrate trait. If it does not, the first 10 feet of its movement during that turn costs 10 additional feet of movement. The resonance then ends."
+      },
+      "HealingPatternRejected": {
+        "Title": "Healing Pattern Rejected",
+        "Description": "The spell leaves the target's life force refusing magical repair. For 1 round, reduce Hit Points restored to the target by spells by 2, to a minimum of 0."
+      },
+      "PowerBleedsSideways": {
+        "Title": "Power Bleeds Sideways",
+        "Description": "Every attempt to exert force sheds part of itself as colored static. For 1 round, the target takes a -1 status penalty to damage rolls."
+      },
+      "SpellTornShadow": {
+        "Title": "Spell-Torn Shadow",
+        "Description": "The target's magical outline tears away from its body and leaves a brief gap in the weave. Before the end of the target's next turn, the original caster may once treat the target's occupied spaces as empty solely when determining line of effect for a spell aimed at a different creature or point beyond the target. The target still blocks movement, still provides cover, and is affected normally by any area it occupies. The resonance then ends."
+      },
+      "RealityRejectsTheShortcut": {
+        "Title": "Reality Rejects the Shortcut",
+        "Description": "The target's place in the world resists being rewritten again. Before the end of its next turn, the first time the target willingly teleports itself, the original caster may shift the destination by 5 feet to another legal destination that the teleportation effect could have selected. If no such destination exists, the teleportation resolves normally. This does not alter unwilling teleportation or an effect with a fixed destination. The resonance then ends."
+      },
+      "ItemChorus": {
+        "Title": "Item Chorus",
+        "Description": "The target's magic items have formed a committee and apparently elected a bell. Before the end of the target's next turn, the first time it Activates a magic item, the activation produces an unmistakable chime, rune-flare, or whispered announcement. The original caster may use a reaction to Step or Take Cover. The activation then resolves normally, and the resonance ends whether or not the reaction is used."
+      },
+      "TransparentResonance": {
+        "Title": "Transparent Resonance",
+        "Description": "The target's outline becomes magically transparent at exactly the wrong tactical moment. Until the start of its next turn, the target's body does not grant lesser cover to other creatures. Other sources and degrees of cover, line of sight, line of effect, and the target's own defenses are unchanged."
+      },
+      "ElasticDistance": {
+        "Title": "Elastic Distance",
+        "Description": "Distance stretches behind the target like a reluctant tether. Until the start of its next turn, the first time the target would end a move action farther from the original caster than it began, that movement costs 5 additional feet. If the target cannot pay that cost, it stops in the nearest legal space along its path where the movement can end. The resonance then ends."
+      },
+      "EchoClaimsTheFootprint": {
+        "Title": "Echo Claims the Footprint",
+        "Description": "The first place the target abandons remembers it too vividly. The first time the target leaves a space before the start of its next turn, mark one space it occupied immediately before moving. Until the start of that turn, the target cannot willingly enter the marked space. Forced movement may still place it there, and other creatures are unaffected."
+      },
+      "TheWeaveMisquotesYou": {
+        "Title": "The Weave Misquotes You",
+        "Description": "The target's meaning reaches reality with several damaging editorial changes. Before the end of its next turn, the first time the target attempts a Deception, Diplomacy, Intimidation, or Performance check, it rolls twice and uses the worse result. This is a misfortune effect. The resonance is consumed only when one of those checks is rolled."
+      },
+      "RealityKeepsTheReceipt": {
+        "Title": "Reality Keeps the Receipt",
+        "Description": "Reality has retained a full record of the transaction and would like everyone to review it. Before the end of the target's next turn, the first time it Casts a Spell or Activates a magic item, it must declare the spell or item, targets, area, and chosen options before the original caster decides whether to use a reaction to Step or Take Cover. The magical action then resolves normally, and the resonance ends whether or not the reaction is used."
       }
     },
     "Effects": {
@@ -483,6 +563,24 @@
       },
       "ThoughtsLeakSideways": {
         "Name": "Thoughts Leak Sideways"
+      },
+      "SensoryPalimpsest": {
+        "Name": "Sensory Palimpsest"
+      },
+      "VoiceThroughGlass": {
+        "Name": "Voice Through Glass"
+      },
+      "ProjectedInstability": {
+        "Name": "Projected Instability"
+      },
+      "StaticInTheAim": {
+        "Name": "Static in the Aim"
+      },
+      "HealingPatternRejected": {
+        "Name": "Healing Pattern Rejected"
+      },
+      "PowerBleedsSideways": {
+        "Name": "Power Bleeds Sideways"
       }
     },
     "Notifications": {

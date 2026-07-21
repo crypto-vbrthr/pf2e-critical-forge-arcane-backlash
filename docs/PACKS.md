@@ -63,7 +63,7 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 ## Spell Attack Surges
 
-**Status:** 10/30 cards
+**Status:** 20/30 cards
 
 **Trigger:** Critical success on a spell attack
 
@@ -75,14 +75,16 @@ Arcane Backlash explores moments when magic behaves exceptionally well or except
 
 **Typical consequences:**
 
-- short-lived bonuses to spell attacks, saving throws, mental defense, or magical skills
+- short-lived bonuses to spell attacks, saving throws, mental defense, magical skills, AC, Fortitude DC, or Reflex DC
 - protection against disruption from reactions
 - immediate handling of casting tools or held items
 - concealment and cover bypass against the original target
 - reactive Seek opportunities when the target tries to vanish
 - visible spellshadows that penalize the target's Stealth and Deception
+- extended range, cleaner casting geometry, and reaction-safe transitions
+- temporary resistance to energy damage
 
-**Automation:** Five of the first ten cards create direct Effect Engine effects. The remaining cards are manual because they depend on a specific original target, immediate free actions, one-use timing, reactions, cover degrees, concealment flat checks, or conditional consumption.
+**Automation:** Eight of the first twenty cards create direct Effect Engine effects. The remaining cards are manual because they depend on a specific original target, immediate free actions, one-use timing, reactions, range changes, line of effect, spell traits, cover degrees, concealment flat checks, or conditional consumption.
 
 **Not included:**
 

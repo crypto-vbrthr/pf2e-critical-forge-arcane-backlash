@@ -145,7 +145,7 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 
 ## Spell Attack Surges - Block 1
 
-**Status:** 10/30 cards, review pending at 30 cards
+**Status:** 20/30 cards, review pending at 30 cards
 
 | ID | Card | Impact | Automation | Core Idea |
 |---|---|---|---|---|
@@ -160,17 +160,32 @@ All 30 cards are manual because they depend on the original caster, immediate mo
 | SAS-009 | No Place to Fade | Moderate | Manual | Reactively Seek when the original target Hides, Sneaks, or teleports |
 | SAS-010 | Spellshadow | Moderate | Effect on target | -1 circumstance penalty to Stealth and Deception for 1 round |
 
+## Spell Attack Surges - Block 2
+
+| ID | Card | Impact | Automation | Core Idea |
+|---|---|---|---|---|
+| SAS-011 | Extended Thread | Moderate | Manual | Increase the maximum range of one qualifying spell attack by 30 feet |
+| SAS-012 | Clean Geometry | Moderate | Manual | Choose the best corner of the caster's space and ignore cover from one ally |
+| SAS-013 | Widened Aperture | Moderate | Manual | Step immediately before the next spell attack without provoking the original target |
+| SAS-014 | Effortless Transition | Moderate | Manual | Protect one non-spell action from reactions by the original target |
+| SAS-015 | Trait in Harmony | Moderate | Manual | Carry one meaningful spell trait into a later spell attack or counteract check |
+| SAS-016 | Backwash Barrier | Moderate | Effect on caster | +1 circumstance bonus to AC for 1 round |
+| SAS-017 | Reactions Drowned Out | Strong | Manual | Prevent the original target from reacting to the next Cast a Spell action |
+| SAS-018 | Stable Center | Light | Effect on caster | +1 circumstance bonus to Fortitude DC and Reflex DC for 1 round |
+| SAS-019 | Harmonic Resistance | Moderate | Effect on caster | Resistance 3 to energy damage for 1 round |
+| SAS-020 | Magic Knows Its Way Back | Moderate | Manual | +2 circumstance bonus to one save against magic created by the original target |
+
 ### Current Spell Attack Surges Distribution
 
 | Impact | Cards |
 |---|---:|
-| Light | 2 |
-| Moderate | 8 |
-| Strong | 0 |
+| Light | 3 |
+| Moderate | 16 |
+| Strong | 1 |
 
 | Resolution | Cards |
 |---|---:|
-| Direct Effect Engine effect | 5 |
-| Manual tactical consequence | 5 |
+| Direct Effect Engine effect | 8 |
+| Manual tactical consequence | 12 |
 
-All ten cards use `spellCriticalHit` and remain tradition-neutral. The first block deliberately mixes direct effects with target-specific tactical consequences. Similarities to Core spell-hit cards and the breadth of the one-round bonuses will be examined during the full 30-card mechanical review.
+All twenty cards use `spellCriticalHit` and remain tradition-neutral. The pack now mixes direct effects with target-specific tactical consequences, range and geometry changes, reaction windows, and trait-based resonance. Similarities to Core spell-hit cards and the breadth of the one-round bonuses will be examined during the full 30-card mechanical review.

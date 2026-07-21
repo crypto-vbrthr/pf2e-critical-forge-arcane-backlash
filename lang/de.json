@@ -308,6 +308,46 @@
       "Spellshadow": {
         "Title": "Zauberschatten",
         "Description": "Ein verspäteter Schatten des gelungenen Zaubers haftet am Ziel und verrät jede Finte und jeden Versuch zu verschwinden. Für 1 Runde erhält das Ziel einen Umstandsmalus von -1 auf Heimlichkeit und Täuschung."
+      },
+      "ExtendedThread": {
+        "Title": "Verlängerter Faden",
+        "Description": "Ein stabiler Kraftfaden bleibt zwischen dir und dem Schlachtfeld gespannt. Vor dem Ende deines nächsten Zuges ist die maximale Reichweite deines nächsten Zauberangriffs um 9 Meter erhöht. Ein Zauber mit Reichweite Berührung, Selbst oder ohne angegebene Reichweite verbraucht die Resonanz nicht. Nach einem passenden Zauberangriff endet die Resonanz."
+      },
+      "CleanGeometry": {
+        "Title": "Reine Geometrie",
+        "Description": "Für einen Moment erscheint jeder brauchbare Winkel vollkommen offensichtlich. Wenn du vor dem Ende deines nächsten Zuges deinen nächsten Zauberangriff ausführst, darfst du für die Bestimmung von Deckung und Wirkungslinie eine beliebige Ecke deines Feldes wählen. Eine verbündete Kreatur, durch deren Feld die Linie verläuft, gewährt für diesen Angriff keine Deckung. Feste Barrieren und andere Kreaturen funktionieren normal. Danach endet die Resonanz."
+      },
+      "WidenedAperture": {
+        "Title": "Geweitete Öffnung",
+        "Description": "Die vom Zauber hinterlassene Öffnung bleibt weit genug, um dich mitzutragen. Unmittelbar bevor du vor dem Ende deines nächsten Zuges deinen nächsten Zauberangriff ausführst, darfst du als freie Aktion einen Schritt machen. Dieser Schritt löst keine Reaktionen des ursprünglichen Ziels aus. Nach dem Zauberangriff endet die Resonanz, unabhängig davon, ob du den Schritt ausgeführt hast."
+      },
+      "EffortlessTransition": {
+        "Title": "Müheloser Übergang",
+        "Description": "Das vollendete Muster entlässt dich ohne Widerstand in die nächste Bewegung. Vor dem Ende deines nächsten Zuges löst deine erste Aktion, die nicht Zauber wirken ist, keine Reaktionen des ursprünglichen Ziels aus. Eine Aktivität, die Zauber wirken enthält, zählt nicht. Die Resonanz wird nur verbraucht, wenn sie mindestens eine Reaktion dieses Ziels verhindert."
+      },
+      "TraitInHarmony": {
+        "Title": "Merkmal im Einklang",
+        "Description": "Ein bedeutendes Merkmal des gelungenen Zaubers schwingt weiter. Wähle eines seiner Merkmale außer Angriff, Konzentration, Handhaben oder einem Traditionsmerkmal. Vor dem Ende deines nächsten Zuges erhält der nächste von dir gewirkte Zauber mit diesem Merkmal einen Umstandsbonus von +1 auf seinen Zauberangriffswurf oder Gegenwirken-Wurf. Ein Zauber ohne einen dieser Würfe verbraucht die Resonanz nicht."
+      },
+      "BackwashBarrier": {
+        "Title": "Rückstrombarriere",
+        "Description": "Zurückströmender magischer Druck verhärtet sich zu einer kurzen Barriere um dich. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf RK."
+      },
+      "ReactionsDrownedOut": {
+        "Title": "Übertönte Reaktionen",
+        "Description": "Die Resonanz überflutet genau den Augenblick, in dem das Ziel auf deine Magie antworten würde. Vor dem Ende deines nächsten Zuges löst deine nächste Aktion Zauber wirken keine Reaktionen des ursprünglichen Ziels aus. Andere Kreaturen können normal reagieren, und Reaktionen, die erst nach der Abwicklung des Zaubers ausgelöst werden, bleiben unberührt. Danach endet die Resonanz."
+      },
+      "StableCenter": {
+        "Title": "Stabiles Zentrum",
+        "Description": "Deine Magie legt sich wie ein vollkommen ausgewuchtetes Gyroskop um dich. Für 1 Runde erhältst du einen Umstandsbonus von +1 auf deinen Zähigkeits-SG und Reflex-SG."
+      },
+      "HarmonicResistance": {
+        "Title": "Harmonischer Widerstand",
+        "Description": "Der gelungene Zauber stimmt deine Aura auf rohe magische Energie ein. Für 1 Runde erhältst du Resistenz 3 gegen Energieschaden."
+      },
+      "MagicKnowsItsWayBack": {
+        "Title": "Magie kennt den Rückweg",
+        "Description": "Die Resonanz lehrt deine Verteidigung den Weg zurück zum ursprünglichen Ziel. Vor dem Ende deines nächsten Zuges erhältst du einen Umstandsbonus von +2 auf den nächsten Rettungswurf gegen einen Zauber oder magischen Effekt, den dieses Ziel erschaffen hat. Die Resonanz wird nur verbraucht, wenn dieser Rettungswurf stattfindet."
       }
     },
     "Effects": {
@@ -325,6 +365,15 @@
       },
       "Spellshadow": {
         "Name": "Zauberschatten"
+      },
+      "BackwashBarrier": {
+        "Name": "Rückstrombarriere"
+      },
+      "StableCenter": {
+        "Name": "Stabiles Zentrum"
+      },
+      "HarmonicResistance": {
+        "Name": "Harmonischer Widerstand"
       }
     },
     "Notifications": {

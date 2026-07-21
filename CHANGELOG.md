@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.3.1
+
+- Added SAS-011 through SAS-020 to **Spell Attack Surges**.
+- Expanded the pack to 20 cards and Arcane Backlash to 80 cards across three optional packs.
+- Added extended spell range, cleaner line geometry, pre-cast repositioning, protected action transitions, shared-trait resonance, reaction suppression, and target-specific magical defense.
+- Added three new directly applicable Effect Engine cards: **Backwash Barrier**, **Stable Center**, and **Harmonic Resistance**.
+- Added short-lived AC protection, bonuses to Fortitude DC and Reflex DC, and resistance 3 to energy damage.
+- Kept seven cards manual where they depend on the original target, one-use timing, spell traits, line of effect, range changes, or conditional consumption.
+- Updated English and German localization, README, pack documentation, Card Bible, and validation tests.
+
 ## 0.3.0
 
 - Added the optional **Spell Attack Surges** pack.

@@ -140,5 +140,120 @@ export const SPELL_ATTACK_SURGE_CARDS = Object.freeze([
         }
       ]
     }
+  }),
+  defineSpellAttackSurge({
+    id: "sas-011-extended-thread",
+    localizationKey: "ExtendedThread",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Extended Thread",
+    fallbackDescription: "A stable thread of power remains stretched between you and the battlefield. Before the end of your next turn, the next spell attack you make has its maximum range increased by 30 feet. A spell with a range of touch, self, or no listed range does not consume the surge. The surge ends after a qualifying spell attack.",
+    tags: ["range", "spell-attack", "one-use", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-012-clean-geometry",
+    localizationKey: "CleanGeometry",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Clean Geometry",
+    fallbackDescription: "For a moment, every useful angle appears perfectly obvious. Before the end of your next turn, when you make your next spell attack, you may choose any corner of your space when determining cover and line of effect. One allied creature whose space the line passes through does not grant cover for that attack. Solid barriers and other creatures still function normally. The surge then ends.",
+    tags: ["geometry", "cover", "line-of-effect", "ally", "one-use", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-013-widened-aperture",
+    localizationKey: "WidenedAperture",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Widened Aperture",
+    fallbackDescription: "The opening left by the spell remains wide enough to carry you with it. Before the end of your next turn, immediately before making your next spell attack, you may Step as a free action. This Step does not trigger reactions from the original target. The surge ends after the spell attack, whether or not you Step.",
+    tags: ["step", "positioning", "spell-attack", "free-action", "reaction-protection", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-014-effortless-transition",
+    localizationKey: "EffortlessTransition",
+    tone: "neutral",
+    impact: "moderate",
+    fallbackTitle: "Effortless Transition",
+    fallbackDescription: "The completed pattern releases you into the next motion without resistance. Before the end of your next turn, the first action you use that is not Cast a Spell does not trigger reactions from the original target. An activity containing Cast a Spell does not qualify. The surge is consumed only when it prevents at least one reaction from that target.",
+    tags: ["action-transition", "reaction-protection", "target-specific", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-015-trait-in-harmony",
+    localizationKey: "TraitInHarmony",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Trait in Harmony",
+    fallbackDescription: "One meaningful trait of the successful spell keeps resonating. Choose one of its traits other than attack, concentrate, manipulate, or a tradition trait. Before the end of your next turn, the next spell you cast with that trait gains a +1 circumstance bonus to its spell attack roll or counteract check. A spell without either roll does not consume the surge.",
+    tags: ["spell-trait", "counteract", "spell-attack", "circumstance-bonus", "conditional-consumption", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-016-backwash-barrier",
+    localizationKey: "BackwashBarrier",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Backwash Barrier",
+    fallbackDescription: "Returning magical pressure hardens into a brief barrier around you. For 1 round, you gain a +1 circumstance bonus to AC.",
+    tags: ["defense", "armor-class", "circumstance-bonus", "effect"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        { type: "modifier", selector: "ac", value: 1, modifierType: "circumstance", predicate: [] }
+      ]
+    }
+  }),
+  defineSpellAttackSurge({
+    id: "sas-017-reactions-drowned-out",
+    localizationKey: "ReactionsDrownedOut",
+    tone: "dramatic",
+    impact: "strong",
+    fallbackTitle: "Reactions Drowned Out",
+    fallbackDescription: "The resonance floods the instant in which the target would answer your magic. Before the end of your next turn, the next Cast a Spell action you use does not trigger reactions from the original target. Other creatures can react normally, and reactions triggered after the spell resolves are unaffected. The surge then ends.",
+    tags: ["cast-a-spell", "reaction-suppression", "target-specific", "one-use", "manual"]
+  }),
+  defineSpellAttackSurge({
+    id: "sas-018-stable-center",
+    localizationKey: "StableCenter",
+    tone: "neutral",
+    impact: "light",
+    fallbackTitle: "Stable Center",
+    fallbackDescription: "Your magic settles around you like a perfectly balanced gyroscope. For 1 round, you gain a +1 circumstance bonus to your Fortitude DC and Reflex DC.",
+    weight: 2,
+    tags: ["fortitude-dc", "reflex-dc", "forced-movement", "circumstance-bonus", "effect"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        {
+          type: "modifier",
+          selector: ["fortitude-dc", "reflex-dc"],
+          value: 1,
+          modifierType: "circumstance",
+          predicate: []
+        }
+      ]
+    }
+  }),
+  defineSpellAttackSurge({
+    id: "sas-019-harmonic-resistance",
+    localizationKey: "HarmonicResistance",
+    tone: "dramatic",
+    impact: "moderate",
+    fallbackTitle: "Harmonic Resistance",
+    fallbackDescription: "The successful spell tunes your aura against raw magical energy. For 1 round, you gain resistance 3 to energy damage.",
+    tags: ["resistance", "energy", "effect"],
+    effect: {
+      duration: ONE_ROUND,
+      components: [
+        { type: "resistance", resistanceType: "energy", value: 3 }
+      ]
+    }
+  }),
+  defineSpellAttackSurge({
+    id: "sas-020-magic-knows-its-way-back",
+    localizationKey: "MagicKnowsItsWayBack",
+    tone: "serious",
+    impact: "moderate",
+    fallbackTitle: "Magic Knows Its Way Back",
+    fallbackDescription: "The resonance teaches your defenses the route back to the original target. Before the end of your next turn, you gain a +2 circumstance bonus to the next saving throw you attempt against a spell or magical effect created by that target. The surge is consumed only when that saving throw occurs.",
+    tags: ["saving-throw", "magic", "target-specific", "circumstance-bonus", "conditional-consumption", "manual"]
   })
 ]);

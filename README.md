@@ -6,15 +6,15 @@ Arcane Backlash is an extension module for **PF2E Critical Forge**. It adds card
 
 The word **Arcane** in the module title describes magical strangeness in general. It does not limit the module to the arcane spell tradition.
 
-## Version 0.3.0
+## Version 0.3.1
 
 The current release contains three optional packs:
 
 - **Miscast Repercussions** - 30 mechanically reviewed cards for critical failures on spell attacks.
 - **Defiant Reversals** - 30 mechanically reviewed cards for critical successes on saving throws against spells.
-- **Spell Attack Surges** - the first 10 cards for critical successes on spell attacks.
+- **Spell Attack Surges** - 20 cards for critical successes on spell attacks.
 
-Spell Attack Surges turns an exceptionally accurate spell into beneficial resonance. Its first block includes protected casting, brief magical defenses, exposed cover and concealment, improved magical analysis, reactive tracking, and spellshadows that cling to the target.
+Spell Attack Surges turns an exceptionally accurate spell into beneficial resonance. Its first two blocks include protected casting, warped range and line geometry, brief magical defenses, reaction suppression, harmonic resistance, improved magical analysis, reactive tracking, and spellshadows that cling to the target.
 
 ## Installation
 
@@ -41,12 +41,13 @@ Applies to `spellCriticalHit` and supports all four spell traditions. It rewards
 
 The pack includes:
 
-- directly applicable bonuses to spell attacks, saving throws, mental defense, and magical skills
+- directly applicable bonuses to spell attacks, saving throws, mental defense, magical skills, AC, Fortitude DC, and Reflex DC
 - target effects that hinder Stealth and Deception
 - protection against reaction-based disruption
 - temporary relief from concealment and cover
 - immediate spellcasting-tool interaction
 - reactive tracking when the original target tries to vanish
+- temporary energy resistance, extended spell range, and cleaner line geometry
 
 The pack does not include:
 
@@ -60,13 +61,13 @@ The pack does not include:
 
 Miscast Repercussions and Defiant Reversals remain intentionally manual because they depend on the original caster, immediate actions, battlefield geometry, ongoing spell identity, or conditional consumption.
 
-Spell Attack Surges begins using the Effect Engine directly. Five of its first ten cards create applicable effects, while five remain manual where target identity, one-use timing, cover, concealment, reactions, or immediate actions matter.
+Spell Attack Surges uses the Effect Engine directly. Eight of its first twenty cards create applicable effects, while twelve remain manual where target identity, one-use timing, range, line of effect, spell traits, cover, concealment, reactions, or immediate actions matter.
 
 ## Planned Packs
 
 - Miscast Repercussions - 30/30 (mechanical review passed)
 - Defiant Reversals - 30/30 (mechanical review passed)
-- Spell Attack Surges - 10/30
+- Spell Attack Surges - 20/30
 - Overwhelming Resonance - planned
 
 Each pack grows in blocks of ten cards. At 30 cards, it receives a full mechanical review for redundancy, rules clarity, balance, and pack identity.

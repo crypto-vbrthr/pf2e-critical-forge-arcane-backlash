@@ -26,8 +26,8 @@ const { ARCANE_PACK_IDS } = await import(
 );
 
 assert.equal(manifest.id, "pf2e-critical-forge-arcane-backlash");
-assert.equal(manifest.version, "0.3.0");
-assert.equal(packageJson.version, "0.3.0");
+assert.equal(manifest.version, "0.3.1");
+assert.equal(packageJson.version, "0.3.1");
 assert.equal(manifest.compatibility.minimum, "14");
 assert.ok(manifest.esmodules.includes("scripts/main.js"));
 assert.ok(manifest.relationships?.requires?.some((entry) =>
@@ -47,10 +47,10 @@ assert.deepEqual(disabled.map((pack) => pack.id), [
 ]);
 assert.ok(disabled.every((pack) => pack.enabled === false));
 assert.ok(enabled.every((pack) => pack.enabled === true));
-assert.ok(disabled.every((pack) => pack.version === "0.3.0"));
+assert.ok(disabled.every((pack) => pack.version === "0.3.1"));
 assert.equal(disabled[0].cards.length, 30);
 assert.equal(disabled[1].cards.length, 30);
-assert.equal(disabled[2].cards.length, 10);
+assert.equal(disabled[2].cards.length, 20);
 assert.equal(disabled[0].metadata.scope, "spell-attacks-all-traditions");
 assert.equal(disabled[1].metadata.scope, "spell-saves-all-traditions");
 assert.equal(disabled[2].metadata.scope, "spell-attacks-all-traditions");
@@ -75,7 +75,7 @@ for (const pack of disabled) {
     }
   }
 }
-assert.equal(allIds.size, 70);
+assert.equal(allIds.size, 80);
 
 const miscast = disabled[0].cards;
 assert.ok(miscast.every((card) => card.effect === null));
@@ -219,19 +219,29 @@ assert.deepEqual(surgeSlugs, [
   "sas-007-pattern-exposed",
   "sas-008-echo-in-the-aura",
   "sas-009-no-place-to-fade",
-  "sas-010-spellshadow"
+  "sas-010-spellshadow",
+  "sas-011-extended-thread",
+  "sas-012-clean-geometry",
+  "sas-013-widened-aperture",
+  "sas-014-effortless-transition",
+  "sas-015-trait-in-harmony",
+  "sas-016-backwash-barrier",
+  "sas-017-reactions-drowned-out",
+  "sas-018-stable-center",
+  "sas-019-harmonic-resistance",
+  "sas-020-magic-knows-its-way-back"
 ]);
 
 const surgeBySlug = new Map(surges.map((card) => [card.id.split(".").at(-1), card]));
 const automatedSurges = surges.filter((card) => card.effect !== null);
 const manualSurges = surges.filter((card) => card.effect === null);
-assert.equal(automatedSurges.length, 5);
-assert.equal(manualSurges.length, 5);
+assert.equal(automatedSurges.length, 8);
+assert.equal(manualSurges.length, 12);
 assert.ok(automatedSurges.every((card) => card.tags.includes("effect")));
 assert.ok(manualSurges.every((card) => card.tags.includes("manual")));
-assert.equal(surges.filter((card) => card.impact === "light").length, 2);
-assert.equal(surges.filter((card) => card.impact === "moderate").length, 8);
-assert.equal(surges.filter((card) => card.impact === "strong").length, 0);
+assert.equal(surges.filter((card) => card.impact === "light").length, 3);
+assert.equal(surges.filter((card) => card.impact === "moderate").length, 16);
+assert.equal(surges.filter((card) => card.impact === "strong").length, 1);
 
 for (const card of automatedSurges) {
   assert.equal(card.effect.definition.schemaVersion, 2);
@@ -270,4 +280,34 @@ assert.ok(surgeBySlug.get("sas-006-resonance-mark").tags.includes("conditional-c
 assert.ok(surgeBySlug.get("sas-007-pattern-exposed").tags.includes("cover"));
 assert.ok(surgeBySlug.get("sas-009-no-place-to-fade").tags.includes("teleportation"));
 
-console.log("PF2E Critical Forge: Arcane Backlash 0.3.0 validation passed.");
+assert.equal(surgeBySlug.get("sas-016-backwash-barrier").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-018-stable-center").effect.target, "source");
+assert.equal(surgeBySlug.get("sas-019-harmonic-resistance").effect.target, "source");
+assert.deepEqual(
+  surgeBySlug.get("sas-016-backwash-barrier").effect.definition.components[0],
+  { type: "modifier", selector: "ac", value: 1, modifierType: "circumstance", predicate: [] }
+);
+assert.deepEqual(
+  surgeBySlug.get("sas-018-stable-center").effect.definition.components[0],
+  {
+    type: "modifier",
+    selector: ["fortitude-dc", "reflex-dc"],
+    value: 1,
+    modifierType: "circumstance",
+    predicate: []
+  }
+);
+assert.deepEqual(
+  surgeBySlug.get("sas-019-harmonic-resistance").effect.definition.components[0],
+  { type: "resistance", resistanceType: "energy", value: 3 }
+);
+assert.ok(surgeBySlug.get("sas-011-extended-thread").tags.includes("range"));
+assert.ok(surgeBySlug.get("sas-012-clean-geometry").tags.includes("line-of-effect"));
+assert.ok(surgeBySlug.get("sas-013-widened-aperture").tags.includes("free-action"));
+assert.ok(surgeBySlug.get("sas-014-effortless-transition").tags.includes("conditional-consumption"));
+assert.ok(surgeBySlug.get("sas-015-trait-in-harmony").tags.includes("counteract"));
+assert.equal(surgeBySlug.get("sas-017-reactions-drowned-out").impact, "strong");
+assert.equal(surgeBySlug.get("sas-018-stable-center").weight, 2);
+assert.ok(surgeBySlug.get("sas-020-magic-knows-its-way-back").tags.includes("saving-throw"));
+
+console.log("PF2E Critical Forge: Arcane Backlash 0.3.1 validation passed.");

@@ -2,7 +2,7 @@
   "id": "pf2e-critical-forge-arcane-backlash",
   "title": "PF2E Critical Forge: Arcane Backlash",
   "description": "Magical card packs for PF2E Critical Forge, focused on unstable spellcasting, arcane recoil, magical reversals, and resonant aftermaths.",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "authors": [
     {
       "name": "Bully"
@@ -47,6 +47,6 @@
   "readme": "README.md",
   "license": "LICENSE",
   "url": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash",
-  "manifest": "https://raw.githubusercontent.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash/main/module.json",
-  "download": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash/releases/download/0.4.3/pf2e-critical-forge-arcane-backlash.zip"
+  "manifest": "https://raw.githubusercontent.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash/refs/heads/main/module.json",
+  "download": "https://github.com/crypto-vbrthr/pf2e-critical-forge-arcane-backlash/releases/download/0.4.4/pf2e-critical-forge-arcane-backlash.zip"
 }
